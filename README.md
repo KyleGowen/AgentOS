@@ -40,7 +40,7 @@ Canonical tracker: `PROJECT_TRACKER.md`
 |---|---|---|
 | 00 - OS Thought Partner | `projects/00-os-thought-partner/` | Complete |
 | 01 - Context | `projects/01-context/` | Complete |
-| 02 - First Skills | `projects/02-first-skills/` | Not started |
+| 02 - Your Context | `projects/02-your-context/` | Not started |
 | 03 - Memory | `projects/03-memory/` | Not started |
 | 04 - Second Agent | `projects/04-second-agent/` | Not started |
 | 05 - Agent Workflows | `projects/05-agent-workflows/` | Not started |

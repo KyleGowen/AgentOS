@@ -4,14 +4,15 @@ Source: <https://aidbagentos.ai/projects>
 
 | Project | Title | Local Folder | Status | Completed Date | Source |
 |---|---|---|---|---|---|
-| 00 - OS Thought Partner | OS Thought Partner | `projects/00-os-thought-partner/` | Complete | 2026-07-01 | <https://aidbagentos.ai/projects> |
-| 01 - Context | Context | `projects/01-context/` | Complete | 2026-07-01 | <https://aidbagentos.ai/projects> |
-| 02 - First Skills | First Skills | `projects/02-first-skills/` | Not started | - | <https://aidbagentos.ai/projects> |
-| 03 - Memory | Memory | `projects/03-memory/` | Not started | - | <https://aidbagentos.ai/projects> |
-| 04 - Second Agent | Second Agent | `projects/04-second-agent/` | Not started | - | <https://aidbagentos.ai/projects> |
-| 05 - Agent Workflows | Agent Workflows | `projects/05-agent-workflows/` | Not started | - | <https://aidbagentos.ai/projects> |
-| 06 - Verification and Evals | Verification and Evals | `projects/06-verification-evals/` | Not started | - | <https://aidbagentos.ai/projects> |
-| 07 - Connections | Connections | `projects/07-connections/` | Not started | - | <https://aidbagentos.ai/projects> |
-| 08 - Automations | Automations | `projects/08-automations/` | Not started | - | <https://aidbagentos.ai/projects> |
-| 09 - Agent Team | Agent Team | `projects/09-agent-team/` | Not started | - | <https://aidbagentos.ai/projects> |
-| 10 - Playbook | Playbook | `projects/10-playbook/` | Not started | - | <https://aidbagentos.ai/projects> |
+| 00 - Your OS Thought Partner | Your OS Thought Partner | `projects/00-your-os-thought-partner/` | Complete | 2026-07-01 | <https://aidbagentos.ai/projects> |
+| 01 - Your Identity | Your Identity | `projects/01-your-identity/` | Complete | 2026-07-01 | <https://aidbagentos.ai/projects> |
+| 02 - Your Context | Your Context | `projects/02-your-context/` | Not started | - | <https://aidbagentos.ai/projects> |
+| 03 - Your First Skills | Your First Skills | `projects/03-your-first-skills/` | Not started | - | <https://aidbagentos.ai/projects> |
+| 04 - Your Memory | Your Memory | `projects/04-your-memory/` | Not started | - | <https://aidbagentos.ai/projects> |
+| 05 - Your Connections | Your Connections | `projects/05-your-connections/` | Not started | - | <https://aidbagentos.ai/projects> |
+| 06 - The Job | The Job | `projects/06-the-job/` | Not started | - | <https://aidbagentos.ai/projects> |
+| 07 - The Build | The Build | `projects/07-the-build/` | Not started | - | <https://aidbagentos.ai/projects> |
+| 08 - Test & Verify | Test & Verify | `projects/08-test-and-verify/` | Not started | - | <https://aidbagentos.ai/projects> |
+| 09 - The Second Agent | The Second Agent | `projects/09-the-second-agent/` | Not started | - | <https://aidbagentos.ai/projects> |
+| 10 - Your Playbook | Your Playbook | `projects/10-your-playbook/` | Not started | - | <https://aidbagentos.ai/projects> |
+| 11 - Automations | Automations | `projects/11-automations/` | Not started | - | <https://aidbagentos.ai/projects> |
