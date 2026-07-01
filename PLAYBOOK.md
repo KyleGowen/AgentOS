@@ -1,0 +1,93 @@
+# My Agentic OS Playbook
+
+Last updated: 2026-07-01
+
+## My OS Foundation
+
+### Identity
+
+| Scope | File | Summary | Status |
+|---|---|---|---|
+| Me | `os/context/identity.md` | Personal preferences, rules, voice, and operating principles. | Draft |
+
+### Context
+
+| File | What It Covers | Status |
+|---|---|---|
+| `os/context/context-portfolio.md` | Durable background context for agents. | Draft |
+
+### Skills
+
+| Scope | Skill Name | When I Use It | What It Produces |
+|---|---|---|---|
+| Me | TBD | TBD | TBD |
+| Agent-specific | TBD | TBD | TBD |
+
+### Memory
+
+| Type | How It Works | Update Cadence | Status |
+|---|---|---|---|
+| Working memory | Tool or agent-native memory plus local notes. | Per project | Planned |
+| Persistent memory | `os/memory/` files with periodic consolidation. | Weekly | Planned |
+
+### Connections
+
+| Service | What I Use It For | Connection Type | Status |
+|---|---|---|---|
+| GitHub | Version control and evidence links. | Git / GitHub | Active |
+
+### Verification
+
+My checks before using AI output:
+
+- [ ] Are factual claims traceable to a source?
+- [ ] Does the output match my intent and constraints?
+- [ ] Would I put my name on this?
+
+## My Agents
+
+### Agent 1: OS Thought Partner
+
+| | |
+|---|---|
+| Job | Help translate course projects into my chosen agentic tool and keep the system coherent. |
+| Identity files | `os/agents/os-thought-partner.md` |
+| Agent-specific skills | TBD |
+| Connections used | GitHub, local files |
+| What's working | TBD |
+| What needs improvement | TBD |
+
+### How My Agents Relate
+
+TBD.
+
+## Automations
+
+| Automation | Trigger | What It Does | Status |
+|---|---|---|---|
+| TBD | TBD | TBD | Planned |
+
+## What's Working Best
+
+1. TBD
+
+## Gaps & Next Steps
+
+### This Month
+
+- Complete Project 00 and establish the first reusable OS context files.
+
+### Next Quarter
+
+- Turn the strongest repeated workflows into skills, agents, and automations.
+
+## Reflection
+
+**Before AgentOS:** TBD
+
+**Now:** TBD
+
+**What surprised me:** TBD
+
+**What I'd tell someone starting:** TBD
+
