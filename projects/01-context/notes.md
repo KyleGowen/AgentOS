@@ -1,6 +1,8 @@
 # Project 01: Context
 
-Status: Not started
+Status: Complete
+
+Completed: 2026-07-01
 
 ## Goal
 

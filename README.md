@@ -39,7 +39,7 @@ Canonical tracker: `PROJECT_TRACKER.md`
 | Project | Local Folder | Status |
 |---|---|---|
 | 00 - OS Thought Partner | `projects/00-os-thought-partner/` | Complete |
-| 01 - Context | `projects/01-context/` | Not started |
+| 01 - Context | `projects/01-context/` | Complete |
 | 02 - First Skills | `projects/02-first-skills/` | Not started |
 | 03 - Memory | `projects/03-memory/` | Not started |
 | 04 - Second Agent | `projects/04-second-agent/` | Not started |
