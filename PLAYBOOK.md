@@ -20,7 +20,7 @@ Last updated: 2026-07-01
 
 | Scope | Skill Name | When I Use It | What It Produces |
 |---|---|---|---|
-| Me | TBD | TBD | TBD |
+| Me | `/complete` | Mark AgentOS course projects complete. | Updated tracker, project notes, README, and related docs. |
 | Agent-specific | TBD | TBD | TBD |
 
 ### Memory
@@ -90,4 +90,3 @@ TBD.
 **What surprised me:** TBD
 
 **What I'd tell someone starting:** TBD
-

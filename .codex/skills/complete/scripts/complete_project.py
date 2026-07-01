@@ -1,0 +1,259 @@
+#!/usr/bin/env python3
+"""Mark an AgentOS project complete and mirror status into docs."""
+
+from __future__ import annotations
+
+import argparse
+import datetime as dt
+import re
+import sys
+from dataclasses import dataclass
+from pathlib import Path
+
+
+PROJECTS = {
+    "00": "OS Thought Partner",
+    "01": "Context",
+    "02": "First Skills",
+    "03": "Memory",
+    "04": "Second Agent",
+    "05": "Agent Workflows",
+    "06": "Verification and Evals",
+    "07": "Connections",
+    "08": "Automations",
+    "09": "Agent Team",
+    "10": "Playbook",
+}
+
+ROOT = Path.cwd()
+TRACKER = ROOT / "PROJECT_TRACKER.md"
+README = ROOT / "README.md"
+PLAYBOOK = ROOT / "PLAYBOOK.md"
+SKILLS_README = ROOT / "os" / "skills" / "README.md"
+SOURCE_URL = "https://aidbagentos.ai/projects"
+
+
+@dataclass
+class TrackerRow:
+    number: str
+    title: str
+    folder: str
+    status: str
+    completed_date: str
+    source: str
+
+
+def slugify(title: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")
+
+
+def project_folder(number: str, title: str) -> Path:
+    matches = sorted((ROOT / "projects").glob(f"{number}-*"))
+    if matches:
+        return matches[0]
+    return ROOT / "projects" / f"{number}-{slugify(title)}"
+
+
+def tracker_seed() -> list[TrackerRow]:
+    rows: list[TrackerRow] = []
+    for number, title in PROJECTS.items():
+        folder = project_folder(number, title)
+        notes = folder / "notes.md"
+        status = "Not started"
+        completed_date = ""
+        if notes.exists():
+            text = notes.read_text()
+            match = re.search(r"^Status:\s*(.+)$", text, re.MULTILINE)
+            if match:
+                status = match.group(1).strip()
+            date_match = re.search(r"Completed:\s*(\d{4}-\d{2}-\d{2})", text)
+            if date_match:
+                completed_date = date_match.group(1)
+        rows.append(
+            TrackerRow(
+                number=number,
+                title=title,
+                folder=f"`{folder.as_posix().replace(str(ROOT) + '/', '')}/`",
+                status=status,
+                completed_date=completed_date,
+                source=f"<{SOURCE_URL}>",
+            )
+        )
+    return rows
+
+
+def parse_tracker(text: str) -> list[TrackerRow]:
+    rows: list[TrackerRow] = []
+    for line in text.splitlines():
+        if not line.startswith("|"):
+            continue
+        cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+        if len(cells) != 6 or cells[0] in {"Project", "---"} or set(cells[0]) == {"-"}:
+            continue
+        project_match = re.match(r"(\d{2})", cells[0])
+        if not project_match:
+            continue
+        rows.append(
+            TrackerRow(
+                number=project_match.group(1),
+                title=re.sub(r"^\d{2}\s*-\s*", "", cells[0]).strip(),
+                folder=cells[2],
+                status=cells[3],
+                completed_date="" if cells[4] == "-" else cells[4],
+                source=cells[5],
+            )
+        )
+    return rows
+
+
+def render_tracker(rows: list[TrackerRow]) -> str:
+    lines = [
+        "# AgentOS Project Tracker",
+        "",
+        f"Source: <{SOURCE_URL}>",
+        "",
+        "| Project | Title | Local Folder | Status | Completed Date | Source |",
+        "|---|---|---|---|---|---|",
+    ]
+    for row in rows:
+        completed = row.completed_date or "-"
+        lines.append(
+            f"| {row.number} - {row.title} | {row.title} | {row.folder} | "
+            f"{row.status} | {completed} | {row.source} |"
+        )
+    return "\n".join(lines) + "\n"
+
+
+def load_or_create_tracker() -> tuple[list[TrackerRow], bool]:
+    if TRACKER.exists():
+        return parse_tracker(TRACKER.read_text()), False
+    return tracker_seed(), True
+
+
+def folder_from_cell(cell: str) -> Path:
+    value = cell.strip().strip("`").rstrip("/")
+    return ROOT / value
+
+
+def update_notes(row: TrackerRow, today: str) -> str:
+    folder = folder_from_cell(row.folder)
+    notes = folder / "notes.md"
+    if not notes.exists():
+        raise SystemExit(f"Project {row.number} is tracked, but {notes} does not exist.")
+    text = notes.read_text()
+    text = re.sub(r"^Status:\s*.*$", "Status: Complete", text, count=1, flags=re.MULTILINE)
+    if f"Completed: {today}" not in text and "Completed:" not in text:
+        marker = "Status: Complete\n"
+        text = text.replace(marker, f"{marker}\nCompleted: {today}\n", 1)
+    return text
+
+
+def render_readme_index(rows: list[TrackerRow]) -> str:
+    lines = [
+        "## Project Index",
+        "",
+        "Canonical tracker: `PROJECT_TRACKER.md`",
+        "",
+        "| Project | Local Folder | Status |",
+        "|---|---|---|",
+    ]
+    for row in rows:
+        lines.append(f"| {row.number} - {row.title} | {row.folder} | {row.status} |")
+    return "\n".join(lines)
+
+
+def update_readme(rows: list[TrackerRow]) -> str:
+    text = README.read_text()
+    index = render_readme_index(rows)
+    pattern = r"## Project Index\n\n(?:Canonical tracker: `PROJECT_TRACKER\.md`\n\n)?\| Project \| Local Folder \| Status \|\n\|---\|---\|---\|\n(?:\|.*\|\n?)+"
+    if not re.search(pattern, text):
+        raise SystemExit("Could not find README Project Index table.")
+    return re.sub(pattern, index + "\n", text, count=1)
+
+
+def update_playbook(row: TrackerRow, today: str) -> str:
+    text = PLAYBOOK.read_text()
+    text = re.sub(r"^Last updated: .*$", f"Last updated: {today}", text, count=1, flags=re.MULTILINE)
+
+    if row.number == "02" and "| Me | `/complete` |" not in text:
+        old = "| Me | TBD | TBD | TBD |"
+        new = "| Me | `/complete` | Mark AgentOS course projects complete. | Updated tracker, project notes, README, and related docs. |"
+        text = text.replace(old, new, 1)
+    if row.number == "03":
+        text = text.replace("| Persistent memory | `os/memory/` files with periodic consolidation. | Weekly | Planned |", "| Persistent memory | `os/memory/` files with periodic consolidation. | Weekly | Draft |")
+    if row.number == "04":
+        text = text.replace("| Agent-specific skills | TBD |", "| Agent-specific skills | `/complete` plus future agent-specific workflows. |")
+    if row.number == "07":
+        text = text.replace("| GitHub | Version control and evidence links. | Git / GitHub | Active |", "| GitHub | Version control, evidence links, commits, and pushes. | Git / GitHub | Active |")
+    if row.number == "08":
+        text = text.replace("| TBD | TBD | TBD | Planned |", "| Completion workflow | Manual `/complete NN` trigger | Updates completion docs and pushes changes. | Active |", 1)
+    if row.number == "10":
+        text = text.replace("### This Month\n\n- Complete Project 00 and establish the first reusable OS context files.", "### This Month\n\n- Keep project tracker and completion workflow current.")
+    return text
+
+
+def update_skills_readme() -> str:
+    text = SKILLS_README.read_text()
+    if "`/complete NN`" in text:
+        return text
+    addition = """\n## `/complete NN`\n\n- Trigger: `/complete NN`, where `NN` is a two-digit AgentOS project number.\n- Inputs: Existing `PROJECT_TRACKER.md` entry and matching project notes folder.\n- Process: Mark the project complete, mirror status into docs, validate the skill, then commit and push.\n- Output: Updated tracker, README Project Index, project notes, and any related playbook sections.\n- Verification: Run the skill validator and dry-run invalid or unknown inputs before committing.\n"""
+    return text.rstrip() + "\n" + addition
+
+
+def write_if_changed(path: Path, new_text: str, dry_run: bool, changed: list[str]) -> None:
+    old_text = path.read_text() if path.exists() else None
+    if old_text == new_text:
+        return
+    changed.append(str(path.relative_to(ROOT)))
+    if not dry_run:
+        path.write_text(new_text)
+
+
+def complete_project(number: str, dry_run: bool = False) -> int:
+    if not re.fullmatch(r"\d{2}", number):
+        print("Expected exactly one two-digit project number, such as 02.", file=sys.stderr)
+        return 2
+
+    rows, created = load_or_create_tracker()
+    row_by_number = {row.number: row for row in rows}
+    if number not in row_by_number:
+        print(
+            f"Project {number} is not in PROJECT_TRACKER.md. Add a tracker entry from {SOURCE_URL} before completing it.",
+            file=sys.stderr,
+        )
+        return 3
+
+    today = dt.date.today().isoformat()
+    row = row_by_number[number]
+    row.status = "Complete"
+    row.completed_date = row.completed_date or today
+
+    changed: list[str] = []
+    write_if_changed(TRACKER, render_tracker(rows), dry_run, changed)
+    write_if_changed(folder_from_cell(row.folder) / "notes.md", update_notes(row, row.completed_date), dry_run, changed)
+    write_if_changed(README, update_readme(rows), dry_run, changed)
+    write_if_changed(PLAYBOOK, update_playbook(row, today), dry_run, changed)
+    write_if_changed(SKILLS_README, update_skills_readme(), dry_run, changed)
+
+    prefix = "Would update" if dry_run else "Updated"
+    if changed:
+        print(f"{prefix}:")
+        for path in changed:
+            print(f"- {path}")
+    else:
+        print(f"Project {number} is already complete; no file changes needed.")
+    if created and dry_run:
+        print("PROJECT_TRACKER.md does not exist yet and would be created.")
+    return 0
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description="Mark an AgentOS project complete.")
+    parser.add_argument("project_number", help="Two-digit project number, such as 02")
+    parser.add_argument("--dry-run", action="store_true", help="Show changes without writing files")
+    args = parser.parse_args()
+    return complete_project(args.project_number, args.dry_run)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

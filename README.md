@@ -21,6 +21,7 @@ This repository tracks my work through [AgentOS](https://aidbagentos.ai/home), a
 | `prompts/` | Reusable prompts developed during the course. |
 | `resources/` | Links, notes, and source material from the course and related research. |
 | `templates/` | Local templates for project notes, check-ins, and the final playbook. |
+| `PROJECT_TRACKER.md` | Canonical course project status tracker. |
 
 ## Working Rhythm
 
@@ -32,6 +33,8 @@ This repository tracks my work through [AgentOS](https://aidbagentos.ai/home), a
 6. Keep `PLAYBOOK.md` current as the operating manual for the system.
 
 ## Project Index
+
+Canonical tracker: `PROJECT_TRACKER.md`
 
 | Project | Local Folder | Status |
 |---|---|---|
