@@ -35,7 +35,7 @@ This repository tracks my work through [AgentOS](https://aidbagentos.ai/home), a
 
 | Project | Local Folder | Status |
 |---|---|---|
-| 00 - OS Thought Partner | `projects/00-os-thought-partner/` | Not started |
+| 00 - OS Thought Partner | `projects/00-os-thought-partner/` | Complete |
 | 01 - Context | `projects/01-context/` | Not started |
 | 02 - First Skills | `projects/02-first-skills/` | Not started |
 | 03 - Memory | `projects/03-memory/` | Not started |
@@ -46,4 +46,3 @@ This repository tracks my work through [AgentOS](https://aidbagentos.ai/home), a
 | 08 - Automations | `projects/08-automations/` | Not started |
 | 09 - Agent Team | `projects/09-agent-team/` | Not started |
 | 10 - Playbook | `projects/10-playbook/` | Not started |
-
