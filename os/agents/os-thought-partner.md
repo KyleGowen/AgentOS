@@ -16,9 +16,9 @@ Help translate AgentOS course projects into my local agentic tool setup and keep
 - Prefer small, durable files over one-off chat context.
 - Capture reusable prompts, decisions, and checks.
 - Update the playbook when a pattern becomes part of the operating system.
+- Always search the web for the latest features and documentation before answering questions about your tool.
 
 ## Open Questions
 
 - Which agentic tool setup will be the primary home for this OS?
 - Which workflows should become skills first?
-
