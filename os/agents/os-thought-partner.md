@@ -111,3 +111,9 @@ Concrete goals have not been defined yet. Add them here when they become clear.
 
 - Which workflows should become skills first?
 - What concrete goals should this AgentOS optimize for?
+
+## What I Would Add With More Time
+
+- Context files for Excelsior.
+- Context files for Planted.
+- Context files for Vimanas.

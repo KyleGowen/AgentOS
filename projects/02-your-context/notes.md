@@ -1,6 +1,8 @@
 # Project 02: Your Context
 
-Status: Not started
+Status: Complete
+
+Completed: 2026-07-02
 
 Course page: <https://aidbagentos.ai/projects>
 

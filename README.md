@@ -38,14 +38,15 @@ Canonical tracker: `PROJECT_TRACKER.md`
 
 | Project | Local Folder | Status |
 |---|---|---|
-| 00 - OS Thought Partner | `projects/00-os-thought-partner/` | Complete |
-| 01 - Context | `projects/01-context/` | Complete |
-| 02 - Your Context | `projects/02-your-context/` | Not started |
-| 03 - Memory | `projects/03-memory/` | Not started |
-| 04 - Second Agent | `projects/04-second-agent/` | Not started |
-| 05 - Agent Workflows | `projects/05-agent-workflows/` | Not started |
-| 06 - Verification and Evals | `projects/06-verification-evals/` | Not started |
-| 07 - Connections | `projects/07-connections/` | Not started |
-| 08 - Automations | `projects/08-automations/` | Not started |
-| 09 - Agent Team | `projects/09-agent-team/` | Not started |
-| 10 - Playbook | `projects/10-playbook/` | Not started |
+| 00 - Your OS Thought Partner | `projects/00-your-os-thought-partner/` | Complete |
+| 01 - Your Identity | `projects/01-your-identity/` | Complete |
+| 02 - Your Context | `projects/02-your-context/` | Complete |
+| 03 - Your First Skills | `projects/03-your-first-skills/` | Not started |
+| 04 - Your Memory | `projects/04-your-memory/` | Not started |
+| 05 - Your Connections | `projects/05-your-connections/` | Not started |
+| 06 - The Job | `projects/06-the-job/` | Not started |
+| 07 - The Build | `projects/07-the-build/` | Not started |
+| 08 - Test & Verify | `projects/08-test-and-verify/` | Not started |
+| 09 - The Second Agent | `projects/09-the-second-agent/` | Not started |
+| 10 - Your Playbook | `projects/10-your-playbook/` | Not started |
+| 11 - Automations | `projects/11-automations/` | Not started |
