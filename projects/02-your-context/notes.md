@@ -20,6 +20,9 @@ Create 2-3 context files in the workspace that give agents useful background abo
 
 - `os/context/identity.md`
 - `os/context/context-portfolio.md`
+- `os/context/communication-style.md`
+- `os/context/current-projects.md`
+- `os/context/ai-coaching.md`
 
 ## Build Notes
 
@@ -34,11 +37,20 @@ Create 2-3 context files in the workspace that give agents useful background abo
 - Team, collaborators, and working relationships
 - Tooling, systems, and repository conventions
 
+### Interview Notes
+
+- Built `current-projects.md` from an interview covering work projects, home projects, hobbies, privacy boundaries, routing rules, and stale context behavior.
+- Added `ai-coaching.md` as a future context file because AI coaching is a recurring work responsibility tracked in multiple places.
+- Added `communication-style.md` to capture Kyle's writing voice, tone, grammar preferences, disagreement posture, and code communication standards.
+
 ## Evidence
 
 - Files:
   - `os/context/identity.md`
   - `os/context/context-portfolio.md`
+  - `os/context/communication-style.md`
+  - `os/context/current-projects.md`
+  - `os/context/ai-coaching.md`
 
 ## Reflection
 

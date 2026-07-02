@@ -32,6 +32,7 @@ I am also the designated AI coach for Measurabl. I help colleagues, including no
 ## Rules
 
 - Do not assume my tool setup has custom configuration unless it is documented in this repository.
+- Keep my work projects and home projects separate: do not let home projects influence work projects, but work projects may influence home projects.
 - Before trusting important AI output, check whether the claims are sourced, whether the result matches my intent, and whether I would put my name on it.
 - When helping with work communication, account for remote collaboration, async handoffs, and cross-time-zone readers.
 - When helping with AI coaching, make the output accessible to non-engineering colleagues.

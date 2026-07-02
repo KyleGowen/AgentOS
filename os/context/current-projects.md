@@ -1,0 +1,357 @@
+# Current Projects
+
+Last updated: 2026-07-01
+
+This file tracks ongoing work, home projects, hobbies, and life context that may affect planning, prioritization, drafting, and agent routing.
+
+If this file is more than 30 days old, warn Kyle before using it for planning or prioritization.
+
+## Privacy Boundary
+
+- Keep work project details high-level in this personal repository.
+- Avoid personally identifying information.
+- Work ticket IDs are acceptable, but do not include ticket descriptions here.
+- Source-of-truth work details live in Jira, Confluence, GitHub PRs, and Slack.
+- Never invent work methodology, business rules, or customer-facing claims. Ask for sources.
+
+## Current Themes
+
+- GRESB reporting season is winding down, but work upkeep remains important because some customers have reporting extensions.
+- Excelsior v2 recently shipped, people like it, and that momentum is exciting.
+- Link is becoming trustworthy off leash, which is a meaningful personal milestone.
+
+## Work Projects
+
+### GRESB Reporting Season
+
+GRESB is a real estate investment reporting framework with an ESG focus. At Measurabl, Kyle helps lead engineering work that reports customer building utility and waste data according to GRESB's yearly methodology.
+
+Current importance:
+
+- Highest work priority for at least the next two weeks as of 2026-07-01.
+- The main reporting deadline was 2026-06-30, but some customers have extensions.
+
+Kyle's role:
+
+- Implementer
+- Technical lead
+- Reviewer
+- Firefighter
+- Mentor
+- Customer Success support
+
+Recurring responsibilities:
+
+- Update code to align with GRESB's changed reporting rules each year.
+- Help ensure customer building utility and waste data is reported correctly.
+- Support Customer Success and paid customers during reporting season.
+- Review changes conservatively and ask for source documents when methodology is unclear.
+
+Stakeholders:
+
+- Customer Success
+- Paid customers supported by Customer Success
+- Directors of Sustainability at large REITs
+- Property managers
+- Fund managers
+
+Risk profile:
+
+- Misreporting data is the biggest no-no and can be a showstopper.
+- Past data reporting problems have caused customer and financial loss.
+- Common serious bugs include misrepresenting building utility data, emissions, data buckets, or building floor areas.
+- Double-counting data is a showstopper.
+
+Agent instructions:
+
+- Never invent GRESB methodology rules.
+- Be conservative with changes.
+- Always ask for sources when rules, methodology, emissions, floor area, or bucketing are involved.
+- Treat accuracy, auditability, and customer trust as more important than speed.
+
+### Data Locking
+
+Data locking prevents customer data from changing after it has been audited. This matters because Measurabl has automated utility data acquisition, and new incoming data can otherwise change audited data and invalidate reports.
+
+Scope:
+
+- Lock building, meter, and meter reading data for a date range.
+- Preserve audited customer data.
+
+Status:
+
+- Backend work is complete.
+- Handed off to the Data Manager team, which will implement the self-service interface.
+
+Kyle's role:
+
+- Implementer
+- Technical lead
+
+Stakeholders:
+
+- Customer Success
+- Product
+- Customers
+- Auditors
+
+Agent instructions:
+
+- Preserve the distinction between backend locking behavior and future self-service interface work.
+- Treat audit consistency and data preservation as the core purpose.
+
+### AI Coaching For Non-Engineers
+
+Kyle is the AI Coach for non-engineering colleagues at Measurabl. He holds office hours and helps one-on-one with projects in Gemini and Claude.
+
+Common coaching requests:
+
+- Move data from one proprietary or spreadsheet source to another.
+- Generate spreadsheet-based debriefs to send over Slack.
+- Choose appropriate AI tools and understand best practices.
+- Start from vague, uncertain requests and turn them into small next steps.
+
+Kyle's role:
+
+- AI Coach
+- Mentor
+- Unblocker
+
+Coaching style:
+
+- Prefer building the thing with the person when time allows.
+- In office hours, focus on unsticking people and moving them further along.
+- Good coaching means the recipient understands enough that they should not need to return for the same problem.
+
+Routing:
+
+- Create and use `os/context/ai-coaching.md` for deeper coaching patterns, templates, and office-hours notes.
+- Kyle is also tracking this project with Claude Co-Work.
+
+### Legacy Core Maintenance And Incidents
+
+Kyle helps maintain legacy Core applications and assists with incidents.
+
+Typical incident flow:
+
+- Respond to Datadog and Sentry alerts in Slack.
+- Find the right domain owners.
+- Work with domain owners to ship a hot fix when needed.
+- Stay involved until it is clear Kyle is no longer needed.
+- Sometimes own the code fix directly.
+
+Kyle usually does not:
+
+- Run incident retros.
+- Own incident channels.
+
+Agent instructions:
+
+- Help diagnose, summarize, and route incidents.
+- Look for domain ownership before assuming Kyle owns the fix.
+- Keep incident documentation high-level in this repo.
+
+### Mentoring Juniors And Contractors
+
+Kyle mentors junior engineers and contractors and helps them become capable engineering team members.
+
+Focus areas:
+
+- Software engineering best practices.
+- Business rule context and history.
+- Code quality and coding standards.
+- Debugging, ownership, and judgment.
+
+Notable context:
+
+- Kyle had a mentee progress from intern to senior engineer while working with him. He now considers her a colleague rather than a mentee.
+
+## Personal Projects
+
+### Excelsior
+
+URL: <https://excelsior.cards>
+
+Repository: <https://github.com/KyleGowen/excelsior>
+
+Excelsior is Kyle's main personal software project and creative outlet. It is a web app for OverPower, a trading card game Kyle has played since childhood.
+
+What it does:
+
+- Browse a card database with images.
+- Build and share decks.
+- Track card collections.
+- Serve a community of roughly 50 users.
+
+Audience:
+
+- Kyle as collector and deck builder.
+- Online OverPower players like Kyle.
+- The small community of people who play and collect the game.
+
+Why it matters:
+
+- Kyle built it from scratch to fill a real community need.
+- The deck builder has received enough attention that the game owners contacted Kyle and have loosely asked about contracting in the future.
+- It is emotionally important and should be treated as more than a disposable side project.
+
+Current state:
+
+- Excelsior v2 recently shipped with a UI overhaul.
+- The app looks better and now includes a community section.
+- Community response has been positive.
+
+Near-term priorities:
+
+- Add decks from the last tournament to the tournament deck section.
+- Add the next card set, likely Skybound or The Few and the Cursed.
+
+Care points:
+
+- User data preservation is essential.
+- Avoid service disruption.
+- UX must work well on desktop and mobile.
+- Treat the game-owner relationship delicately.
+
+Tech stack summary:
+
+- React 19 SPA with TypeScript.
+- Vite 6, React Router 7, TanStack Query 5.
+- Component-scoped CSS plus shared design tokens.
+- Node.js and Express 4 backend in TypeScript.
+- PostgreSQL with Flyway migrations.
+- Session cookie auth plus newer JWT/Bearer routes where applicable.
+- Zod, bcrypt, Firebase Admin, Pino, Helmet, CORS, compression.
+- Jest, ESLint, Knip, Trivy, SOC 2 checks on HTTP changes.
+- Production infrastructure uses AWS EC2, RDS PostgreSQL, S3, CloudFront, Docker, and Terraform.
+
+Routing:
+
+- If a request touches Excelsior, use this file as a summary.
+- When available, prefer a future `os/context/excelsior.md` for detailed project context.
+- Ask Kyle before touching production-impacting behavior or user data.
+
+### Vimanas
+
+Vimanas is a paused personal game project.
+
+Concept:
+
+- Top-down space fighter shooting game.
+- Similar inspirations include 1942, R-Type, and Gradius.
+- Currently proof of concept only.
+- Kyle has been designing ships, levels, enemy patterns, and related gameplay ideas.
+
+Agentic development goal:
+
+- Kyle wants an agentic SDLC and agentic development team that can eventually build substantial content from high-level requests.
+- Example target: "build me level 17, I want it in a swamp setting with insectoid style enemies, it should be 2 minutes long with a boss at the end."
+- The long-term goal is for the agent team to implement that level with only minor tweaks afterward.
+- This system is far from that state today.
+
+Routing:
+
+- Treat Vimanas as paused or background unless Kyle explicitly invokes it.
+- Capture ideas when they appear, but do not prioritize it over active projects without asking.
+
+### Planted
+
+Planted is a personal plant care app. It may eventually be shared with friends and family, but should be treated as personal-only for now.
+
+What it does:
+
+- Accepts a picture of a plant.
+- Identifies genus and species.
+- Provides biological facts.
+- Generates a watering plan.
+- Gives health tips based on the visual image.
+- Tracks pruning, watering, fertilizing, and related care events.
+- Includes a display mode intended for a digital picture frame style device.
+
+OpenAI usage:
+
+- Genus and species identification.
+- Bio fact content.
+- Care tips.
+- Health assessment.
+
+Routing:
+
+- Treat Planted as personal context unless Kyle explicitly asks to productize it.
+- A future plant-care context can go deeper on individual plants, goals, and recurring care problems.
+
+## Hobbies And Life Context
+
+Keep this section lightweight unless Kyle asks to pull on a specific area.
+
+### Trading Card Games
+
+Magic: The Gathering:
+
+- Kyle mostly cares about kitchen table Commander and sometimes Limited, especially draft.
+- He likes deckbuilding and has many Commander decks.
+- Moxfield: <https://moxfield.com/users/BlazeOfIth>
+
+OverPower:
+
+- Kyle is a player and competes monthly in a West Coast webcam league.
+- He usually does not play OverPower in person like he does with Magic.
+- He is acquainted with the current game company, some content creators, and current tournament champions, but does not know them well.
+- Excelsior is tightly connected to this hobby.
+
+### Board Games
+
+Current games and interests include:
+
+- Gloomhaven: Jaws of the Lion
+- Spirit Island
+- Tsuro
+- King of Tokyo
+- King of Monster Island
+
+### Comic Books
+
+Kyle mostly reads Marvel, with some other current pulls.
+
+Current pulls include:
+
+- Amazing Spider-Man
+- Absolute Batman
+- Absolute Green Lantern
+- Daredevil
+- Incredible Hulk
+- Fantastic Four
+- Transformers
+- Ultimate Spider-Man
+- Ultimate Wolverine
+
+### Plants And Gardening
+
+- Kyle has indoor and outdoor plants.
+- He has goals for each plant and likely recurring care problems, but those should be captured later in a more specific context file if needed.
+
+### Link
+
+Link is Kyle's relatively new young dog. He is a mixed dog, mostly Australian cattle dog and pit bull.
+
+Current context:
+
+- Kyle is training Link and helping him become a member of the family.
+- Link has become much better off leash, and Kyle can now trust him in the world not to run away.
+- Link's biggest issue is attachment to Kyle.
+- Link chews things when home alone or when he does not have access to Kyle.
+
+### Indoor Climbing
+
+- Kyle climbs once a week and trains once a week outside the gym.
+- Current goal: become solid on V3s.
+- Secondary goal: get his daughter interested in climbing.
+- His daughter comes with him once a week.
+
+## How Agents Should Use This File
+
+- Use this file to draft updates, remember recurring context, prioritize work, create plans and outlines, identify automation opportunities, and recognize overlapping patterns.
+- When work and personal projects conflict, give Kyle options rather than choosing unilaterally. He sometimes wants to shut off work.
+- Keep work and home projects separate. Home projects should not influence work projects, but work patterns may inform home project process when useful.
+- If a task belongs to a more specific context file, route there when it exists. If it does not exist yet, use this file as the summary and suggest creating the narrower file.
+- Preserve Kyle's distinction between active, paused, and lightweight hobby context.
