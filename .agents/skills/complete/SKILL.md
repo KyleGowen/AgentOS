@@ -10,13 +10,13 @@ description: Mark AgentOS course projects complete from prompts like "/complete 
 Use this skill only from the AgentOS repository root.
 
 1. Parse the request for exactly one two-digit project number, such as `02`.
-2. Run `python3 .codex/skills/complete/scripts/complete_project.py NN`.
+2. Run `python3 .agents/skills/complete/scripts/complete_project.py NN`.
 3. If the script reports an unknown project, stop and tell the user which tracker entry is missing. Do not create unknown project stubs.
 4. Review `git diff -- PROJECT_TRACKER.md README.md PLAYBOOK.md os/skills/README.md projects`.
-5. Run `python3 /Users/kyle/.codex/skills/.system/skill-creator/scripts/quick_validate.py .codex/skills/complete`.
+5. Run `python3 /Users/kyle/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/complete`.
 6. Run a focused dry-run check for invalid and unknown inputs:
-   - `python3 .codex/skills/complete/scripts/complete_project.py 7 --dry-run`
-   - `python3 .codex/skills/complete/scripts/complete_project.py 13 --dry-run`
+   - `python3 .agents/skills/complete/scripts/complete_project.py 7 --dry-run`
+   - `python3 .agents/skills/complete/scripts/complete_project.py 13 --dry-run`
 7. If validation passes, stage the changed files, commit with `Complete AgentOS project NN`, and push the current branch to `origin`.
 
 ## Behavior

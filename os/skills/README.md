@@ -2,6 +2,10 @@
 
 This folder tracks reusable skills created during the course.
 
+Codex-executable repo skills live in `.agents/skills/`. This `os/skills/`
+folder is the AgentOS catalog for documenting triggers, process, outputs, and
+verification.
+
 For each skill, capture:
 
 - Trigger: when to use it.
@@ -12,6 +16,7 @@ For each skill, capture:
 
 ## `/complete NN`
 
+- Codex location: `.agents/skills/complete/`
 - Trigger: `/complete NN`, where `NN` is a two-digit AgentOS project number.
 - Inputs: Existing `PROJECT_TRACKER.md` entry and matching project notes folder.
 - Process: Mark the project complete, mirror status into docs, validate the skill, then commit and push.
