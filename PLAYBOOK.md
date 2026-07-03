@@ -35,6 +35,11 @@ Last updated: 2026-07-03
 | Service | What I Use It For | Connection Type | Status |
 |---|---|---|---|
 | GitHub | Version control and evidence links. | Git / GitHub | Active |
+| Google Calendar | Meeting prep, schedule awareness, and focus-block planning. | Google Calendar connector | Active, personal Gmail currently |
+| Google Drive | Docs, Sheets, Slides, and file discovery for planning and AI coaching workflows. | Google Drive connector | Active, personal Gmail currently |
+| Atlassian Jira and Confluence | Work ticket research, linked source documents, and implementation planning. | Atlassian connector or MCP | Desired |
+| Slack | Async updates and incident context. | Slack connector | Deferred; requires work admin approval |
+| Excelsior | Personal project automation, card/deck workflows, local app context, and release support. | Custom MCP | Future idea |
 
 ### Verification
 
