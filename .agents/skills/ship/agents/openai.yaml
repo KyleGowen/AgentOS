@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ship"
+  short_description: "Run Excelsior ship checks and push"
+  default_prompt: "Use $ship to run the Excelsior release gate, commit, and push."

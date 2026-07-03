@@ -1,0 +1,44 @@
+# Skill Catalog
+
+This catalog tracks reusable skills in their natural state and the project-local
+translations that make them usable in Codex.
+
+| Skill | Natural Format | Scope | Natural Source | Archived Natural Copy | Codex Translation | Status |
+|---|---|---|---|---|---|---|
+| `/ticket-to-pr` | Claude Code skill | Measurabl work | `/Users/kyle/.claude/skills/ticket-to-pr/SKILL.md` | `os/skills/native/claude/ticket-to-pr/SKILL.md` | `.agents/skills/ticket-to-pr/SKILL.md` | Translated |
+| `/resolve-pr-comments` | Claude Code skill | Measurabl work | `/Users/kyle/.claude/skills/resolve-pr-comments/SKILL.md` | `os/skills/native/claude/resolve-pr-comments/SKILL.md` | `.agents/skills/resolve-pr-comments/SKILL.md` | Translated |
+| `/add-card` | Cursor skill | Excelsior | attachment paste | `os/skills/native/cursor/add-card/SKILL.md` | `.agents/skills/add-card/SKILL.md` | Translated |
+| `/add-community-deck` | Cursor skill | Excelsior | inline paste | `os/skills/native/cursor/add-community-deck/SKILL.md` | `.agents/skills/add-community-deck/SKILL.md` | Translated |
+| `/pdf-to-png` | Cursor skill | Excelsior | inline paste | `os/skills/native/cursor/pdf-to-png/SKILL.md` | `.agents/skills/pdf-to-png/SKILL.md` | Translated |
+| `/ship` | Cursor skill | Excelsior | attachment paste | `os/skills/native/cursor/ship/SKILL.md` | `.agents/skills/ship/SKILL.md` | Translated |
+| `/start` | Cursor skill | Excelsior | attachment paste | `os/skills/native/cursor/start/SKILL.md` | `.agents/skills/start/SKILL.md` | Translated |
+| `/start-aws-db-tunnel` | Cursor skill | Excelsior | attachment paste | `os/skills/native/cursor/start-aws-db-tunnel/SKILL.md` | `.agents/skills/start-aws-db-tunnel/SKILL.md` | Translated |
+
+## `/ticket-to-pr`
+
+- Trigger: a Measurabl Jira ticket id such as `WILD-1234` plus a request to take it through implementation and draft PR.
+- Inputs: Jira ticket id, related ticket context, user-provided constraints, repository code, tests, GitHub access, and any configured Jira/GitHub connectors.
+- Natural state: Claude Code skill, preserved verbatim under `os/skills/native/claude/ticket-to-pr/SKILL.md`.
+- Codex state: repo skill under `.agents/skills/ticket-to-pr/`.
+- Output: draft GitHub PR, implementation summary, test results, and review flags.
+- Verification: Codex skill validation plus real use on a Measurabl ticket before treating the translation as mature.
+
+## `/resolve-pr-comments`
+
+- Trigger: a GitHub PR URL or `owner/repo#number` plus a request to address review comments.
+- Inputs: PR metadata, diff, linked Jira ticket, inline review comments, review summaries, PR conversation comments, thread ids, repository code, tests, and GitHub access.
+- Natural state: Claude Code skill, preserved verbatim under `os/skills/native/claude/resolve-pr-comments/SKILL.md`.
+- Codex state: repo skill under `.agents/skills/resolve-pr-comments/`.
+- Output: pushed fixes for agreed comments, PR replies for disagreements, resolved fixed threads, test results, and human follow-up notes.
+- Verification: Codex skill validation plus real use on a Measurabl PR before treating the translation as mature.
+
+## Excelsior Cursor Skills
+
+- `/add-card`: add one card image to the Excelsior catalog with approval, Flyway migration, thumbnail config, tests, docs, dev restart, and browser verification.
+- `/add-community-deck`: import exported deck JSON into the internal community decks account for the Home rail.
+- `/pdf-to-png`: convert image PDFs to PNG at native resolution through the existing Docker Poppler helper.
+- `/ship`: run the Excelsior release gate, remove debug noise, commit, and push.
+- `/start`: start the v2 local dev stack and report health.
+- `/start-aws-db-tunnel`: prepare or start production RDS access through AWS SSM port forwarding.
+
+Each is preserved verbatim under `os/skills/native/cursor/<skill-name>/` and translated into a Codex repo skill under `.agents/skills/<skill-name>/`.

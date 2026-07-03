@@ -1,6 +1,6 @@
 # My Agentic OS Playbook
 
-Last updated: 2026-07-02
+Last updated: 2026-07-03
 
 ## My OS Foundation
 
@@ -21,7 +21,7 @@ Last updated: 2026-07-02
 | Scope | Skill Name | When I Use It | What It Produces |
 |---|---|---|---|
 | Me | `/complete` | Mark AgentOS course projects complete. | Updated tracker, project notes, README, and related docs. |
-| Agent-specific | TBD | TBD | TBD |
+| Agent-specific | Measurabl and Excelsior skill translations | Repeated work workflows imported from Claude Code and Cursor. | Codex repo skills and native archives. |
 
 ### Memory
 

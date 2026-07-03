@@ -7,7 +7,7 @@ Source: <https://aidbagentos.ai/projects>
 | 00 - Your OS Thought Partner | Your OS Thought Partner | `projects/00-your-os-thought-partner/` | Complete | 2026-07-01 | <https://aidbagentos.ai/projects> |
 | 01 - Your Identity | Your Identity | `projects/01-your-identity/` | Complete | 2026-07-01 | <https://aidbagentos.ai/projects> |
 | 02 - Your Context | Your Context | `projects/02-your-context/` | Complete | 2026-07-02 | <https://aidbagentos.ai/projects> |
-| 03 - Your First Skills | Your First Skills | `projects/03-your-first-skills/` | Not started | - | <https://aidbagentos.ai/projects> |
+| 03 - Your First Skills | Your First Skills | `projects/03-your-first-skills/` | Complete | 2026-07-03 | <https://aidbagentos.ai/projects> |
 | 04 - Your Memory | Your Memory | `projects/04-your-memory/` | Not started | - | <https://aidbagentos.ai/projects> |
 | 05 - Your Connections | Your Connections | `projects/05-your-connections/` | Not started | - | <https://aidbagentos.ai/projects> |
 | 06 - The Job | The Job | `projects/06-the-job/` | Not started | - | <https://aidbagentos.ai/projects> |

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Community Deck"
+  short_description: "Import Excelsior community decks"
+  default_prompt: "Use $add-community-deck to import this exported deck JSON into community decks."

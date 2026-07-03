@@ -1,0 +1,4 @@
+interface:
+  display_name: "Resolve PR Comments"
+  short_description: "Triage and address PR review comments"
+  default_prompt: "Use $resolve-pr-comments to address review comments on https://github.com/OWNER/REPO/pull/123."

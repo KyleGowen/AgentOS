@@ -1,0 +1,4 @@
+interface:
+  display_name: "Start AWS DB Tunnel"
+  short_description: "Start Excelsior production DB tunnel"
+  default_prompt: "Use $start-aws-db-tunnel to prepare production RDS access through SSM."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "PDF to PNG"
+  short_description: "Convert card-art PDFs to PNG"
+  default_prompt: "Use $pdf-to-png to convert this PDF card artwork to PNG."

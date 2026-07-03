@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ticket to PR"
+  short_description: "Take a Jira ticket to draft PR"
+  default_prompt: "Use $ticket-to-pr to take WILD-1234 from Jira ticket research through a draft PR."

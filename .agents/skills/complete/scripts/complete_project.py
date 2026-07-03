@@ -12,17 +12,18 @@ from pathlib import Path
 
 
 PROJECTS = {
-    "00": "OS Thought Partner",
-    "01": "Context",
-    "02": "First Skills",
-    "03": "Memory",
-    "04": "Second Agent",
-    "05": "Agent Workflows",
-    "06": "Verification and Evals",
-    "07": "Connections",
-    "08": "Automations",
-    "09": "Agent Team",
-    "10": "Playbook",
+    "00": "Your OS Thought Partner",
+    "01": "Your Identity",
+    "02": "Your Context",
+    "03": "Your First Skills",
+    "04": "Your Memory",
+    "05": "Your Connections",
+    "06": "The Job",
+    "07": "The Build",
+    "08": "Test & Verify",
+    "09": "The Second Agent",
+    "10": "Your Playbook",
+    "11": "Automations",
 }
 
 ROOT = Path.cwd()
@@ -179,15 +180,17 @@ def update_playbook(row: TrackerRow, today: str) -> str:
         old = "| Me | TBD | TBD | TBD |"
         new = "| Me | `/complete` | Mark AgentOS course projects complete. | Updated tracker, project notes, README, and related docs. |"
         text = text.replace(old, new, 1)
-    if row.number == "03":
+    if row.title == "Your First Skills":
+        text = text.replace("| Agent-specific | TBD | TBD | TBD |", "| Agent-specific | Measurabl and Excelsior skill translations | Repeated work workflows imported from Claude Code and Cursor. | Codex repo skills and native archives. |")
+    if row.title == "Your Memory":
         text = text.replace("| Persistent memory | `os/memory/` files with periodic consolidation. | Weekly | Planned |", "| Persistent memory | `os/memory/` files with periodic consolidation. | Weekly | Draft |")
-    if row.number == "04":
+    if row.title == "The Second Agent":
         text = text.replace("| Agent-specific skills | TBD |", "| Agent-specific skills | `/complete` plus future agent-specific workflows. |")
-    if row.number == "07":
+    if row.title == "The Build":
         text = text.replace("| GitHub | Version control and evidence links. | Git / GitHub | Active |", "| GitHub | Version control, evidence links, commits, and pushes. | Git / GitHub | Active |")
-    if row.number == "08":
+    if row.title == "Test & Verify":
         text = text.replace("| TBD | TBD | TBD | Planned |", "| Completion workflow | Manual `/complete NN` trigger | Updates completion docs and pushes changes. | Active |", 1)
-    if row.number == "10":
+    if row.title == "Your Playbook":
         text = text.replace("### This Month\n\n- Complete Project 00 and establish the first reusable OS context files.", "### This Month\n\n- Keep project tracker and completion workflow current.")
     return text
 

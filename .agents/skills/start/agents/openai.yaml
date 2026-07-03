@@ -1,0 +1,4 @@
+interface:
+  display_name: "Start Excelsior"
+  short_description: "Start the Excelsior dev stack"
+  default_prompt: "Use $start to start the Excelsior API and frontend dev servers."
