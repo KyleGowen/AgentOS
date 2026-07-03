@@ -27,8 +27,8 @@ Last updated: 2026-07-03
 
 | Type | How It Works | Update Cadence | Status |
 |---|---|---|---|
-| Working memory | Tool or agent-native memory plus local notes. | Per project | Planned |
-| Persistent memory | `os/memory/` files with periodic consolidation. | Weekly | Planned |
+| Working memory | `os/memory/working-memory.md` plus Codex built-in memory for ambient recall. | End of meaningful task | Draft |
+| Persistent memory | `os/memory/` files separated by decisions, patterns, history, lessons, and domain. | End of task, compacted aggressively | Draft |
 
 ### Connections
 

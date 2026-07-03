@@ -69,6 +69,8 @@ The AgentOS should support both engineering work and AI coaching work. It should
 - `README.md`
 - `PLAYBOOK.md`
 - `os/context/`
+- `os/memory/README.md`
+- `os/memory/`
 - Current project folder under `projects/`
 
 ## AgentOS Framework
@@ -83,7 +85,7 @@ Use this file as the starting framework for the operating system. The system sho
 | Identity | `os/context/identity.md` | Capture who I am, how I work, and how agents should adapt to me. | Draft |
 | Context | `os/context/context-portfolio.md` | Track durable background context available to agents. | Draft |
 | Skills | `os/skills/` | Store reusable procedures that can be invoked repeatedly. | Planned |
-| Memory | `os/memory/` | Store durable decisions, patterns, and working memory. | Planned |
+| Memory | `os/memory/` | Store durable decisions, patterns, working memory, lessons, and domain memory. | Draft |
 | Agents | `os/agents/` | Define agent roles, responsibilities, handoffs, and evaluation notes. | Active |
 | Verification | `PLAYBOOK.md` | Define checks before trusting or using agent output. | Draft |
 | Automations | `PLAYBOOK.md` | Track repeated workflows that may become scheduled or event-driven. | Planned |
@@ -101,16 +103,39 @@ Concrete goals have not been defined yet. Add them here when they become clear.
 
 - Prefer small, durable files over one-off chat context.
 - Capture reusable prompts, decisions, and checks.
+- Keep `os/memory/` updated when a task creates durable context, decisions, patterns, lessons, or project state.
 - Update the playbook when a pattern becomes part of the operating system.
 - Before answering any question about Codex, search for the most recent documentation. Do not rely on what you already know - it's probably outdated.
 - Translate generic AgentOS course instructions into the Codex equivalent before building.
 - When Codex already provides a capability out of the box, document it instead of rebuilding it.
 - When Codex lacks a needed capability, represent it as a file, prompt, skill, memory, automation, or agent definition in this repository.
 
+## Memory Stewardship
+
+Use `os/memory/README.md` as the source of truth for memory maintenance.
+
+When finishing meaningful AgentOS work, check whether memory needs an update:
+
+- Update `os/memory/working-memory.md` with current state, next action, blockers, or active handoff context.
+- Add durable choices to `os/memory/decisions.md`.
+- Add repeated workflows or preferences to `os/memory/patterns.md`.
+- Add meaningful milestones or outcomes to `os/memory/project-history.md`.
+- Add durable pitfalls or corrections to `os/memory/lessons-learned.md`.
+- Keep Measurabl work context sanitized in `os/memory/work-memory.md`.
+- Keep personal project context in `os/memory/home-memory.md`.
+- Keep AgentOS system context in `os/memory/agentos-memory.md`.
+
+Do not wait for Codex built-in memory to capture important context. Codex memory is ambient recall; the files under `os/memory/` are the intentional memory layer.
+
+Memory updates should be compact and source-aware. Do not store secrets, private customer details, raw Slack excerpts, full private ticket descriptions, or unnecessary personal data.
+
+When using a skill or automation, prefer teaching the skill to update memory directly if the memory update is predictable. If judgment is required, update memory manually at the end of the task.
+
 ## Open Questions
 
 - Which workflows should become skills first?
 - What concrete goals should this AgentOS optimize for?
+- Which memory updates should become automatic skill behavior instead of manual end-of-task cleanup?
 
 ## What I Would Add With More Time
 

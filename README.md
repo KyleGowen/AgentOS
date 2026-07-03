@@ -42,7 +42,7 @@ Canonical tracker: `PROJECT_TRACKER.md`
 | 01 - Your Identity | `projects/01-your-identity/` | Complete |
 | 02 - Your Context | `projects/02-your-context/` | Complete |
 | 03 - Your First Skills | `projects/03-your-first-skills/` | Complete |
-| 04 - Your Memory | `projects/04-your-memory/` | Not started |
+| 04 - Your Memory | `projects/04-your-memory/` | Complete |
 | 05 - Your Connections | `projects/05-your-connections/` | Not started |
 | 06 - The Job | `projects/06-the-job/` | Not started |
 | 07 - The Build | `projects/07-the-build/` | Not started |

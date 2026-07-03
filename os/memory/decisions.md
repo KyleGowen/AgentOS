@@ -1,0 +1,47 @@
+# Decisions
+
+Durable choices that future agents should understand before making related recommendations.
+
+Each entry should include the date, context, decision, reason, and evidence when available.
+
+## 2026-07-03 - Use Repo Files As Intentional Memory
+
+- Context: Codex memories were enabled, but generated memories are local state and may be delayed, skipped, or imperfect.
+- Decision: Use `os/memory/` as the intentional AgentOS memory layer and Codex memories as ambient recall.
+- Reason: Important project knowledge should be reviewable, portable, and editable.
+- Evidence: Codex memory discussion in this thread; `~/.codex/config.toml` now has `memories = true`.
+
+## 2026-07-03 - Memory Should Be A Lightweight Notebook
+
+- Context: Project 04 asks for working memory, persistent memory, and instructions for managing both.
+- Decision: Keep memory lightweight, file-based, and separated by domain, with separate work, home, and AgentOS files.
+- Reason: Kyle prefers practical systems that are easy to maintain during real project work.
+- Evidence: Interview answers: notebook style, end-of-task updates, aggressive compaction, separate project files, and root `AGENTS.md` guidance.
+
+## 2026-07-03 - Keep Work Memory Sanitized
+
+- Context: AgentOS is a personal repository, but Kyle uses it to support Measurabl work.
+- Decision: Store sanitized work project summaries, risks, workflows, and source pointers, but not private ticket descriptions, customer-specific details, secrets, or raw private excerpts.
+- Reason: Future agents need enough context to help without turning this repo into a private work data store.
+- Evidence: `os/context/current-projects.md` privacy boundary and memory interview answers.
+
+## 2026-07-03 - Add Lightweight Repo Guidance For Memory
+
+- Context: Codex does not automatically load `os/memory/README.md` unless directed there.
+- Decision: Add a lightweight root `AGENTS.md` that points agents to memory rules and key context files when continuity, decisions, patterns, or AgentOS maintenance are relevant.
+- Reason: Memory rules should be discoverable without duplicating the full memory manual.
+- Evidence: Kyle answered "yes" to adding root guidance.
+
+## 2026-07-03 - Use Roles Or First Names For People Memory
+
+- Context: People memory can improve collaboration, but it should not become a store of unnecessary personal detail.
+- Decision: Use roles, stakeholder groups, first names, or private aliases when helpful.
+- Reason: This preserves useful collaboration context while keeping the personal repository appropriately restrained.
+- Evidence: Kyle said "Roles or first names is fine."
+
+## 2026-07-03 - Align Course Artifacts To Canonical Project Paths
+
+- Context: The repo had an older `projects/03-memory/` scaffold, while the canonical tracker says Project 04 is `projects/04-your-memory/`.
+- Decision: Use `projects/04-your-memory/` as the canonical folder and remove the stale memory scaffold.
+- Reason: Duplicate project folders create drift and make future project completion harder to trust.
+- Evidence: Kyle chose "align canonical."

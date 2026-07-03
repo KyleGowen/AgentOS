@@ -31,6 +31,9 @@ TRACKER = ROOT / "PROJECT_TRACKER.md"
 README = ROOT / "README.md"
 PLAYBOOK = ROOT / "PLAYBOOK.md"
 SKILLS_README = ROOT / "os" / "skills" / "README.md"
+MEMORY_DIR = ROOT / "os" / "memory"
+WORKING_MEMORY = MEMORY_DIR / "working-memory.md"
+PROJECT_HISTORY = MEMORY_DIR / "project-history.md"
 SOURCE_URL = "https://aidbagentos.ai/projects"
 
 
@@ -203,7 +206,66 @@ def update_skills_readme() -> str:
     return text.rstrip() + "\n" + addition
 
 
+def completed_project_heading(row: TrackerRow) -> str:
+    return f"{row.number} - {row.title}"
+
+
+def update_project_history(row: TrackerRow) -> str:
+    if not PROJECT_HISTORY.exists():
+        return ""
+    text = PROJECT_HISTORY.read_text()
+    heading = f"### {row.completed_date} - Project {completed_project_heading(row)} Completed"
+    if heading in text:
+        return text
+
+    entry = "\n".join(
+        [
+            heading,
+            "",
+            f"- Marked AgentOS Project {completed_project_heading(row)} complete.",
+            f"- Evidence: `{folder_from_cell(row.folder).relative_to(ROOT).as_posix()}/notes.md`.",
+            "",
+            "",
+        ]
+    )
+    marker = "## Work\n"
+    if marker in text:
+        return text.replace(marker, entry + marker, 1)
+    return text.rstrip() + "\n\n" + entry
+
+
+def remove_active_project_section(text: str, title: str) -> tuple[str, bool]:
+    pattern = re.compile(
+        rf"^### {re.escape(title)}\n(?:^- .*\n?|\n)*",
+        flags=re.MULTILINE,
+    )
+    return pattern.subn("", text, count=1)
+
+
+def update_working_memory(row: TrackerRow) -> str:
+    if not WORKING_MEMORY.exists():
+        return ""
+    text = WORKING_MEMORY.read_text()
+    text, removed = remove_active_project_section(text, row.title)
+    heading = f"- {row.completed_date}: Completed Project {completed_project_heading(row)}."
+    if "## Recently Completed" not in text:
+        insert = f"\n## Recently Completed\n\n{heading}\n"
+        marker = "\n## Clear Soon\n"
+        if marker in text:
+            text = text.replace(marker, insert + marker, 1)
+        else:
+            text = text.rstrip() + insert + "\n"
+    elif heading not in text:
+        text = text.replace("## Recently Completed\n\n", f"## Recently Completed\n\n{heading}\n", 1)
+
+    if not removed and heading in text:
+        return text
+    return text
+
+
 def write_if_changed(path: Path, new_text: str, dry_run: bool, changed: list[str]) -> None:
+    if new_text == "":
+        return
     old_text = path.read_text() if path.exists() else None
     if old_text == new_text:
         return
@@ -237,6 +299,8 @@ def complete_project(number: str, dry_run: bool = False) -> int:
     write_if_changed(README, update_readme(rows), dry_run, changed)
     write_if_changed(PLAYBOOK, update_playbook(row, today), dry_run, changed)
     write_if_changed(SKILLS_README, update_skills_readme(), dry_run, changed)
+    write_if_changed(PROJECT_HISTORY, update_project_history(row), dry_run, changed)
+    write_if_changed(WORKING_MEMORY, update_working_memory(row), dry_run, changed)
 
     prefix = "Would update" if dry_run else "Updated"
     if changed:
