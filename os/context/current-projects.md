@@ -1,6 +1,6 @@
 # Current Projects
 
-Last updated: 2026-07-01
+Last updated: 2026-07-05
 
 This file tracks ongoing work, home projects, hobbies, and life context that may affect planning, prioritization, drafting, and agent routing.
 
@@ -230,6 +230,82 @@ Routing:
 - If a request touches Excelsior, use this file as a summary.
 - When available, prefer a future `os/context/excelsior.md` for detailed project context.
 - Ask Kyle before touching production-impacting behavior or user data.
+
+### Home Media Server
+
+Repository: <https://github.com/KyleGowen/plex-server-hardware>
+
+Context: `os/context/home-media-server.md`
+
+Home Media Server is Kyle's Windows-native Plex server and media automation ecosystem. It documents and supports the Korlash Plex server, including Plex and qBittorrent on Windows plus a Docker media stack for the Arr ecosystem and related services.
+
+Current state:
+
+- The hardware rebuild is stable as of 2026-07-05.
+- The project remains active as a home operations project.
+- AgentOS should keep summary-level project context; the GitHub repo remains the source of truth for detailed inventories, service docs, media ledgers, crash history, and operational scripts.
+
+Near-term priorities:
+
+- Balance operational reliability with media automation work.
+- Keep drive/path safety, backups, service validation, skill sync, media additions, downloads/imports, collections, and poster curation in view.
+
+Remote workflow:
+
+- Kyle often uses Codex remotely from a mobile device because the server usually does not have a monitor attached.
+- Parsec is the fallback remote desktop path when a GUI session is needed.
+- Agents should prefer concise, stepwise output that works well in a mobile remote session.
+
+Care points:
+
+- Do not format, initialize, repartition, wipe, or casually change existing media drives.
+- Confirm drive letters, qBittorrent paths, and Docker bind mounts before trusting media automation after boot, crash, Docker restart, WSL restart, or storage work.
+- Treat Plex tokens, Arr API keys, qBittorrent credentials, tracker data, cookies, passkeys, and provider credentials as secrets.
+- Avoid mirroring detailed media library, collection, torrent, tracker, or credential data in AgentOS.
+
+Routing:
+
+- Use `os/context/home-media-server.md` for durable project context.
+- Use the Plex repo for detailed current state and source docs.
+- Read-only checks are acceptable when relevant.
+- Plex writes, downloads, deletes, path repairs, drive changes, service setting changes, and other live-server mutations require clear user intent or confirmation.
+
+### DDR/ITG Machine
+
+Tooling repository: <https://github.com/KyleGowen/itgmania-backup>
+
+Backup and digest repository: <https://github.com/KyleGowen/Thraximundar-Backup>
+
+Context: `os/context/stepmania-ddr.md`
+
+DDR/ITG Machine is Kyle's StepMania, DDR, and ITGMania hobby-log project. The physical Windows nukbox machine is Thraximundar. The project is primarily about rhythm-game play, exercise, score history, and progress over time, with backup tooling preserving saves and producing score digests.
+
+Current state:
+
+- Scheduled backups and digest generation are working as of 2026-07-05.
+- Kyle plays for exercise about 1-2 times per week.
+- The ITGMania backup tool protects install and save data, but songs are intentionally not backed up.
+- The backup and digest repo remains the source of truth for scores, play history, and generated digest evidence.
+
+Fitness and progress framing:
+
+- Treat DDR/ITG as a fun exercise habit and rhythm-game skill project.
+- Use play cadence, song time, difficulty range, and score improvement as lightweight fitness and progress signals.
+- Avoid medical claims or prescriptive fitness advice.
+
+Agent default:
+
+- Act as a digest coach: summarize recent activity, trends, progress, and notable scores from the backup digest.
+- It is acceptable to mention non-secret score details, representative songs, player labels, levels, percentages, play time, and digest summaries.
+- Protect GitHub PATs, local `config.json`, private credentials, raw backup files, and unnecessary personal detail.
+
+Routing:
+
+- Use `os/context/stepmania-ddr.md` for durable project context.
+- Use `KyleGowen/itgmania-backup` for backup tool behavior, install flow, cron, digest generation, and score parsing.
+- Use `KyleGowen/Thraximundar-Backup` for current score, backup, and digest evidence.
+- Read and summarize freely; force-push, restore, schedule changes, save/config edits, backup repo mutation, or live machine mutation require explicit confirmation.
+- Give remote-friendly Windows guidance when useful.
 
 ### Vimanas
 

@@ -29,3 +29,15 @@ Compact history of meaningful outcomes and milestones. This is not a full change
 ## Home
 
 - Store meaningful personal project milestones when they affect future priorities, risks, or workflow.
+
+### 2026-07-05 - Home Media Server Added To AgentOS
+
+- Added Kyle's Plex server ecosystem to AgentOS as the active Home Media Server project.
+- Source: <https://github.com/KyleGowen/plex-server-hardware>.
+- AgentOS now stores summary context, remote/mobile Codex workflow, live-server safety boundaries, memory entries, and non-executable Plex skill archives while the Plex repo remains source of truth for detailed operations.
+
+### 2026-07-05 - DDR/ITG Machine Added To AgentOS
+
+- Added Kyle's StepMania, DDR, and ITGMania setup to AgentOS as the active DDR/ITG Machine hobby-log project.
+- Sources: <https://github.com/KyleGowen/itgmania-backup> and <https://github.com/KyleGowen/Thraximundar-Backup>.
+- AgentOS now stores summary context, fitness-progress framing, digest-coach routing, backup safety boundaries, and catalog-only workflow notes while the tooling and backup repos remain source of truth.

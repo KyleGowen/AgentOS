@@ -1,0 +1,3 @@
+display_name: Overnight Media Audit
+short_description: Check overnight downloads, imports, and blockers with compact output.
+default_prompt: What new media downloaded overnight? Use compact script output and only inspect queue details if blockers appear.

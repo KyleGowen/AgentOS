@@ -56,3 +56,38 @@ For each skill, capture:
 - Process: Preserve native Cursor skill text, translate to Codex `SKILL.md` frontmatter/body, validate the Codex skill, and mature through real Excelsior use.
 - Output: Tool-specific Excelsior workflow results such as catalog migrations, community deck imports, image conversions, dev stack health, release pushes, or DB tunnels.
 - Verification: Validate each Codex skill and forward-test in the Excelsior repo before marking mature.
+
+## Home Media Server Codex Skills
+
+- Native archive: `os/skills/native/codex/plex-server-hardware/<skill-name>/`
+- Runtime source: <https://github.com/KyleGowen/plex-server-hardware>
+- Codex locations: owned by the Plex server repo and installed on the Windows server, not by AgentOS `.agents/skills/`
+- Trigger: Home Media Server requests about Plex stack health, Arr downloads, overnight activity, public media facts, media acquisition, or Plex collection curation.
+- Inputs: Plex repo docs, local Windows server state, relevant installed skill helpers, and explicit user confirmation for live-server mutations.
+- Process: Use `os/context/home-media-server.md` for AgentOS routing, then defer to the Plex repo skill catalog and installed skill docs for exact operational steps.
+- Output: Compact readouts, confirmations, or Plex repo updates appropriate to the invoked server-specific skill.
+- Verification: Treat AgentOS copies as non-executable archives; verify live behavior from the Plex repo and Windows installed skill copies.
+
+Archived skills:
+
+- `arr-current-downloads`
+- `plex-stack-health-check`
+- `media-internet-search`
+- `overnight-media-audit`
+- `add-media-to-plex`
+- `plex-collection-curator`
+
+Do not copy executable PowerShell helper scripts, generated logs, media ledgers, credentials, or live service configuration into AgentOS. Catalog helper script source paths instead.
+
+## ITGMania Backup/Digest Workflow
+
+- Runtime source: <https://github.com/KyleGowen/itgmania-backup>
+- Evidence source: <https://github.com/KyleGowen/Thraximundar-Backup>
+- AgentOS context: `os/context/stepmania-ddr.md`
+- Trigger: DDR/ITG Machine requests about backup status, digest summaries, play cadence, difficulty trends, score progress, or restore/schedule safety.
+- Inputs: tool repo README/context docs, backup repo README, `digests/`, and explicit user confirmation for mutations.
+- Process: Use AgentOS context for routing, read the backup repo for current evidence, and read the tool repo for backup, install, cron, force-push, digest, and score-parsing behavior.
+- Output: compact digest-coach summaries, source-aware trend readouts, or careful backup-tool plans.
+- Verification: Treat this as catalog-only documentation. Do not archive PowerShell scripts, Cursor rules, backup data, raw XML uploads, or large digest mirrors in AgentOS.
+
+Force-push, restore, schedule changes, save/config edits, backup repo mutation, or live Thraximundar machine changes require explicit confirmation.

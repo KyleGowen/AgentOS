@@ -1,0 +1,3 @@
+display_name: Plex Collection Curator
+short_description: Audit, create, fill, or posterize Plex collections using the smallest requested workflow.
+default_prompt: Audit or update the requested Plex collection using the smallest mode implied by the request, and avoid adding media, triggering searches, or applying posters unless explicitly requested.

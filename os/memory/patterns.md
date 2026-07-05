@@ -23,3 +23,18 @@ Repeated workflows, preferences, and recurring shapes that may become skills, au
 - Once preferences are clear, make concrete progress.
 - Challenge assumptions when evidence is weak, especially for work that affects customers, reporting, auditability, or data correctness.
 - When interviewing Kyle, prefer a few meaningful tradeoff questions over a broad questionnaire.
+
+## Monitorless Home Server Work
+
+- When helping with Kyle's Home Media Server, assume Codex may be used remotely from mobile and the server may not have a monitor attached.
+- Prefer read-first checks, compact summaries, explicit next actions, and stepwise instructions that are easy to follow remotely.
+- Treat storage, drive letters, Docker bind mounts, Plex writes, downloads, deletes, path repairs, and service setting changes as live-server safety concerns.
+- Use the project repo as source of truth for detailed current state; keep AgentOS memory summary-level and free of secrets, tracker details, torrent data, and raw operational logs.
+
+## Fitness Digest From Repo Evidence
+
+- When helping with Kyle's DDR/ITG Machine, use the backup and digest repo as source evidence for play cadence, song time, difficulty range, score progress, and notable songs.
+- Summarize trends compactly and encouragingly, but avoid medical advice or claims that the source data does not support.
+- Treat non-secret scores, player labels, levels, percentages, play time, and digest summaries as acceptable context.
+- Protect GitHub PATs, local config, raw backup files, raw XML uploads, and unnecessary personal detail.
+- Confirm before force-push, restore, schedule changes, save/config edits, backup repo mutation, or live-machine changes.
