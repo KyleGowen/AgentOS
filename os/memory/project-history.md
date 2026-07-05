@@ -21,6 +21,11 @@ Compact history of meaningful outcomes and milestones. This is not a full change
 - Marked AgentOS Project 05 - Your Connections complete.
 - Evidence: `projects/05-your-connections/notes.md`.
 
+### 2026-07-05 - Project 06 - The Job Completed
+
+- Marked AgentOS Project 06 - The Job complete.
+- Evidence: `projects/06-the-job/notes.md`.
+
 ## Work
 
 - Keep detailed work source material in Jira, GitHub, Confluence, Slack, or other source systems.

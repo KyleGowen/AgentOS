@@ -45,3 +45,24 @@ Each entry should include the date, context, decision, reason, and evidence when
 - Decision: Use `projects/04-your-memory/` as the canonical folder and remove the stale memory scaffold.
 - Reason: Duplicate project folders create drift and make future project completion harder to trust.
 - Evidence: Kyle chose "align canonical."
+
+## 2026-07-05 - First Job Agent Is AI Office Hours Prep
+
+- Context: Project 06, The Job, asks for a one-page job description for the first agent that runs on this AgentOS.
+- Decision: Create the AI Office Hours Prep Agent as the first job agent.
+- Reason: Weekly AI office-hours preparation is recurring, bounded, source-groundable, and easier to verify than a broad AI coaching assistant.
+- Evidence: Kyle chose weekly office-hours prep, agenda brief output, user-provided inputs, source grounding, and no follow-up drafting during Project 06 planning.
+
+## 2026-07-05 - Split AI Office Hours Prep And Follow-Up
+
+- Context: Kyle wanted AI Coach follow-ups to be a separate agent because he prefers single-responsibility agents.
+- Decision: Add the AI Office Hours Follow-Up Agent as a post-session agent instead of expanding the prep agent.
+- Reason: Prep and follow-up have different triggers, inputs, outputs, and trust checks.
+- Evidence: Kyle asked to do the same for a post-office-hours agent after creating the AI Office Hours Prep Agent.
+
+## 2026-07-05 - PR Review Prep Is A Separate Read-Only Agent
+
+- Context: Kyle wants an agent that finds Measurabl PRs where he is review-requested or mentioned and prepares him to review them correctly.
+- Decision: Add the PR Review Prep Agent as a separate read-only agent with a minimal local state file for previously reported merged PRs.
+- Reason: Review prep has different inputs, output shape, and GitHub safety boundaries than comment resolution or implementation work.
+- Evidence: Kyle requested compact linked PR digests with repository, changed file count, build status, high-level gist, suggested review prompts, and no repeated merged PRs.

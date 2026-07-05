@@ -2,5 +2,16 @@
 
 This folder tracks agent definitions, roles, handoffs, and evaluation notes.
 
-Start with `os-thought-partner.md`, then add project-specific agents as they become real.
+## Active Agents
 
+| Agent | Job | Status |
+|---|---|---|
+| `os-thought-partner.md` | Translate AgentOS course projects into this Codex setup and keep the system coherent as it grows. | Active |
+| `ai-office-hours-prep-agent.md` | Prepare source-grounded agenda briefs before weekly AI office hours. | Active v1 |
+| `ai-office-hours-follow-up-agent.md` | Turn completed AI office-hours sessions into source-grounded follow-up packets. | Active v1 |
+| `pr-review-prep-agent.md` | Find Measurabl PRs where Kyle is tagged and prepare compact review-prep digests. | Active v1 |
+
+## Notes
+
+- Keep agents single-responsibility when possible.
+- Add project-specific agents here as they become real.

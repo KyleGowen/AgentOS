@@ -16,6 +16,11 @@ Repeated workflows, preferences, and recurring shapes that may become skills, au
 - Start by checking the canonical project tracker, then inspect the relevant project folder and `os/` artifact area.
 - If a project scaffold exists under the wrong name, align it with the canonical tracker instead of letting duplicate project folders drift.
 - Keep build notes concrete: inputs, decisions, output, evidence, and reflection.
+- Prefer single-responsibility agents over broad assistants when creating new AgentOS jobs.
+- Split workflows into separate agents when the trigger, inputs, or outputs differ meaningfully, such as pre-session prep versus post-session follow-up.
+- When shaping AgentOS context or agent jobs with Kyle, interview with focused follow-up questions until the goal, inputs, boundaries, and success criteria are clear.
+- Review-prep digests should be compact, link-heavy, source-grounded, and use bullets instead of long paragraphs.
+- Review-prep agents should separate prompts or possible comment angles from final PR comments unless Kyle explicitly asks for draft comments.
 
 ## Kyle Collaboration
 

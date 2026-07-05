@@ -1,6 +1,6 @@
 # My Agentic OS Playbook
 
-Last updated: 2026-07-03
+Last updated: 2026-07-05
 
 ## My OS Foundation
 
@@ -62,15 +62,56 @@ My checks before using AI output:
 | What's working | TBD |
 | What needs improvement | TBD |
 
+### Agent 2: AI Office Hours Prep Agent
+
+| | |
+|---|---|
+| Job | Prepare source-grounded agenda briefs before weekly AI office hours. |
+| Identity files | `os/agents/ai-office-hours-prep-agent.md` |
+| Agent-specific skills | TBD |
+| Connections used | Local AgentOS context; user-provided office-hours inputs |
+| What's working | Single-responsibility pre-session prep with a source-grounded trust gate. |
+| What needs improvement | Future automation before Tuesday office hours; separate follow-up agent for post-session work. |
+
+### Agent 3: AI Office Hours Follow-Up Agent
+
+| | |
+|---|---|
+| Job | Turn completed AI office-hours sessions into source-grounded follow-up packets. |
+| Identity files | `os/agents/ai-office-hours-follow-up-agent.md` |
+| Agent-specific skills | TBD |
+| Connections used | Local AgentOS context; user-provided post-session inputs |
+| What's working | Single-responsibility post-session follow-up with drafts and record updates kept review-only. |
+| What needs improvement | Future automation after office hours; possible skill for processing session documents. |
+
+### Agent 4: PR Review Prep Agent
+
+| | |
+|---|---|
+| Job | Find Measurabl PRs where Kyle is tagged and prepare compact review-prep digests. |
+| Identity files | `os/agents/pr-review-prep-agent.md` |
+| Agent-specific skills | TBD |
+| Connections used | GitHub; `os/context/engineering-review.md`; `os/memory/pr-review-prep-state.md` |
+| What's working | Read-only review prep with links, repository, changed file count, build status, gist, and suggested review prompts. |
+| What needs improvement | Replace `MEASURABL_GITHUB_LOGIN` with Kyle's exact work GitHub identity; future scheduled digest. |
+
 ### How My Agents Relate
 
-TBD.
+The OS Thought Partner helps design, maintain, and evolve the AgentOS. The AI
+Office Hours Prep Agent is a narrower job agent that prepares Kyle for a
+recurring work responsibility. The AI Office Hours Follow-Up Agent handles the
+separate post-session responsibility of turning completed sessions into
+reviewable follow-up packets. The PR Review Prep Agent supports Kyle's
+engineering review work by preparing a read-only digest of PRs that need his
+attention.
 
 ## Automations
 
 | Automation | Trigger | What It Does | Status |
 |---|---|---|---|
-| TBD | TBD | TBD | Planned |
+| AI office-hours prep | Weekly before Tuesday office hours | Run the AI Office Hours Prep Agent once Kyle has provided current agenda inputs. | Future candidate |
+| AI office-hours follow-up | After Tuesday office hours | Run the AI Office Hours Follow-Up Agent once Kyle has provided current post-session notes. | Future candidate |
+| PR review prep | Workday morning or on demand | Run the PR Review Prep Agent to find tagged Measurabl PRs and prepare the review queue. | Future candidate |
 
 ## What's Working Best
 

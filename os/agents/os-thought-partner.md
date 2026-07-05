@@ -109,6 +109,7 @@ Concrete goals have not been defined yet. Add them here when they become clear.
 - Translate generic AgentOS course instructions into the Codex equivalent before building.
 - When Codex already provides a capability out of the box, document it instead of rebuilding it.
 - When Codex lacks a needed capability, represent it as a file, prompt, skill, memory, automation, or agent definition in this repository.
+- When shaping AgentOS context or agent jobs with Kyle, ask multiple focused follow-up questions until the goal, inputs, boundaries, and success criteria are clear.
 
 ## Memory Stewardship
 

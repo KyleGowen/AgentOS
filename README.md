@@ -44,7 +44,7 @@ Canonical tracker: `PROJECT_TRACKER.md`
 | 03 - Your First Skills | `projects/03-your-first-skills/` | Complete |
 | 04 - Your Memory | `projects/04-your-memory/` | Complete |
 | 05 - Your Connections | `projects/05-your-connections/` | Complete |
-| 06 - The Job | `projects/06-the-job/` | Not started |
+| 06 - The Job | `projects/06-the-job/` | Complete |
 | 07 - The Build | `projects/07-the-build/` | Not started |
 | 08 - Test & Verify | `projects/08-test-and-verify/` | Not started |
 | 09 - The Second Agent | `projects/09-the-second-agent/` | Not started |
