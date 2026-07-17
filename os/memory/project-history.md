@@ -4,6 +4,16 @@ Compact history of meaningful outcomes and milestones. This is not a full change
 
 ## AgentOS
 
+### 2026-07-16 - Accept Sender Appointments Skill Created
+
+- Promoted the repeated Gmail and Google Calendar cleanup workflow into the Codex skill `.agents/skills/accept-sender-appointments/`.
+- The skill accepts appointments from a named sender and can mark the sender's matching Gmail messages read when requested.
+
+### 2026-07-16 - First AgentOS Automation Added
+
+- Added `os/automations/auto-accept-appointments.md` as the first harness-neutral automation spec.
+- Created a Codex scheduled automation to run the appointment-acceptance skill every 2 hours from 7:00 AM through 11:00 PM for active allowlisted senders.
+
 ### 2026-07-03 - Project 04 Memory Framework Drafted
 
 - Built a memory organization plan around working memory, persistent memory, domain-separated files, and explicit maintenance rules.

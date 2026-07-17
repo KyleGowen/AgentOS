@@ -13,6 +13,7 @@ translations that make them usable in Codex.
 | `/ship` | Cursor skill | Excelsior | attachment paste | `os/skills/native/cursor/ship/SKILL.md` | `.agents/skills/ship/SKILL.md` | Translated |
 | `/start` | Cursor skill | Excelsior | attachment paste | `os/skills/native/cursor/start/SKILL.md` | `.agents/skills/start/SKILL.md` | Translated |
 | `/start-aws-db-tunnel` | Cursor skill | Excelsior | attachment paste | `os/skills/native/cursor/start-aws-db-tunnel/SKILL.md` | `.agents/skills/start-aws-db-tunnel/SKILL.md` | Translated |
+| `accept-sender-appointments` | Codex skill | Personal productivity | live Gmail/Calendar workflow | None | `.agents/skills/accept-sender-appointments/SKILL.md` | Created |
 | `arr-current-downloads` | Codex skill | Home Media Server | `KyleGowen/plex-server-hardware/skills/arr-current-downloads` | `os/skills/native/codex/plex-server-hardware/arr-current-downloads/SKILL.md` | Plex repo installed skill | Archived |
 | `plex-stack-health-check` | Codex skill | Home Media Server | `KyleGowen/plex-server-hardware/skills/plex-stack-health-check` | `os/skills/native/codex/plex-server-hardware/plex-stack-health-check/SKILL.md` | Plex repo installed skill | Archived |
 | `media-internet-search` | Codex skill | Home Media Server | `KyleGowen/plex-server-hardware/tools/codex-skills/media-internet-search` | `os/skills/native/codex/plex-server-hardware/media-internet-search/SKILL.md` | Plex repo installed skill | Archived |
@@ -49,6 +50,15 @@ translations that make them usable in Codex.
 - `/start-aws-db-tunnel`: prepare or start production RDS access through AWS SSM port forwarding.
 
 Each is preserved verbatim under `os/skills/native/cursor/<skill-name>/` and translated into a Codex repo skill under `.agents/skills/<skill-name>/`.
+
+## `accept-sender-appointments`
+
+- Trigger: Kyle asks to accept all appointments, meeting invites, or calendar invitations from a named sender and optionally mark that sender's messages read.
+- Inputs: sender name, company, or email/domain; Gmail access; Google Calendar access; optional read-state scope.
+- Natural state: live workflow learned from accepting Samantha Young invitations and Rula appointment invites in Gmail/Google Calendar.
+- Codex state: repo skill under `.agents/skills/accept-sender-appointments/`.
+- Output: accepted Calendar RSVP responses, matching Gmail messages marked read when requested, compact count/date summary.
+- Verification: Codex skill validation plus a post-action Gmail unread search for the sender; Calendar RSVP results should show the authenticated user as accepted.
 
 ## Home Media Server Codex Skills
 

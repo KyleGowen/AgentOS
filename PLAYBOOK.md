@@ -1,6 +1,6 @@
 # My Agentic OS Playbook
 
-Last updated: 2026-07-05
+Last updated: 2026-07-16
 
 ## My OS Foundation
 
@@ -22,6 +22,7 @@ Last updated: 2026-07-05
 |---|---|---|---|
 | Me | `/complete` | Mark AgentOS course projects complete. | Updated tracker, project notes, README, and related docs. |
 | Agent-specific | Measurabl and Excelsior skill translations | Repeated work workflows imported from Claude Code and Cursor. | Codex repo skills and native archives. |
+| Me | `accept-sender-appointments` | Accept trusted sender appointment invitations and clean up matching mail. | Calendar RSVPs, read-state cleanup, and compact run summary. |
 
 ### Memory
 
@@ -112,6 +113,7 @@ attention.
 | AI office-hours prep | Weekly before Tuesday office hours | Run the AI Office Hours Prep Agent once Kyle has provided current agenda inputs. | Future candidate |
 | AI office-hours follow-up | After Tuesday office hours | Run the AI Office Hours Follow-Up Agent once Kyle has provided current post-session notes. | Future candidate |
 | PR review prep | Workday morning or on demand | Run the PR Review Prep Agent to find tagged Measurabl PRs and prepare the review queue. | Future candidate |
+| Auto-accept appointments | Every 2 hours from 7:00 AM through 11:00 PM | Run `accept-sender-appointments` for active senders in `os/automations/auto-accept-appointments.md`. | Active; Codex id `auto-accept-trusted-appointments` |
 
 ## What's Working Best
 

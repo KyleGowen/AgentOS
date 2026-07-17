@@ -1,0 +1,4 @@
+interface:
+  display_name: "Accept Sender Appointments"
+  short_description: "Accept calendar appointments from a sender"
+  default_prompt: "Use $accept-sender-appointments to accept all unread appointments from Rula and mark the messages read."

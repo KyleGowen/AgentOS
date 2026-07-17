@@ -91,3 +91,12 @@ Do not copy executable PowerShell helper scripts, generated logs, media ledgers,
 - Verification: Treat this as catalog-only documentation. Do not archive PowerShell scripts, Cursor rules, backup data, raw XML uploads, or large digest mirrors in AgentOS.
 
 Force-push, restore, schedule changes, save/config edits, backup repo mutation, or live Thraximundar machine changes require explicit confirmation.
+
+## `accept-sender-appointments`
+
+- Codex location: `.agents/skills/accept-sender-appointments/`
+- Trigger: ask Codex to accept all appointments or meeting invitations from a named sender, optionally marking that sender's messages read.
+- Inputs: sender name/email/company, Gmail search results, Google Calendar event matches.
+- Process: search unread sender mail, identify appointment or invite messages, find bounded matching Calendar events, accept each event once, then remove `UNREAD` from the requested sender messages.
+- Output: accepted appointments, read-state cleanup, and a compact summary with counts and dates.
+- Verification: run the skill validator, verify no matching unread sender messages remain when cleanup was requested, and confirm Calendar RSVP responses are accepted.

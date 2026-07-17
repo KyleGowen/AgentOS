@@ -22,6 +22,12 @@ Repeated workflows, preferences, and recurring shapes that may become skills, au
 - Review-prep digests should be compact, link-heavy, source-grounded, and use bullets instead of long paragraphs.
 - Review-prep agents should separate prompts or possible comment angles from final PR comments unless Kyle explicitly asks for draft comments.
 
+## Personal Productivity Connectors
+
+- When Kyle asks to accept all appointments from a sender, use the `accept-sender-appointments` Codex skill: search bounded unread Gmail from the named sender, accept matching Google Calendar events once, then mark the requested sender messages read.
+- Keep mailbox mutations narrow: operate on explicit Gmail message IDs from the sender search, and do not delete, archive, forward, or broadly mark categories read.
+- For AgentOS automations, keep a harness-neutral spec under `os/automations/` and make the Codex scheduled job a thin runner over that spec so the workflow can be replicated outside Codex.
+
 ## Kyle Collaboration
 
 - Ask focused questions when preferences materially change the system.

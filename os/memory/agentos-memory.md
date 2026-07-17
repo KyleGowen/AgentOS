@@ -12,6 +12,8 @@ Memory about this AgentOS system, the course, and how the pieces should fit toge
 - `os/agents/ai-office-hours-prep-agent.md` is the first real job agent.
 - `os/agents/ai-office-hours-follow-up-agent.md` is the paired post-session agent for AI office hours.
 - `os/agents/pr-review-prep-agent.md` is the review-prep agent for tagged Measurabl PRs.
+- `.agents/skills/accept-sender-appointments/` stores the Gmail plus Google Calendar workflow for accepting appointment invitations from a named sender and marking the related mail read.
+- `os/automations/auto-accept-appointments.md` stores the first harness-neutral automation spec; Codex scheduling should read this file instead of hardcoding the sender list.
 - `PLAYBOOK.md` is the operating manual.
 
 ## Course Progress Notes
