@@ -8,7 +8,7 @@ This file is the harness-neutral source of truth. A scheduler, agent runner, she
 
 ## Schedule
 
-Run every 2 hours between 7:00 AM and 11:00 PM local time.
+Run every 4 hours between 7:00 AM and 11:00 PM Pacific time (7:00 AM, 11:00 AM, 3:00 PM, 7:00 PM, and 11:00 PM), observing PST/PDT.
 
 ## Match List
 
