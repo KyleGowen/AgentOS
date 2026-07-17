@@ -132,6 +132,8 @@ Memory updates should be compact and source-aware. Do not store secrets, private
 
 When using a skill or automation, prefer teaching the skill to update memory directly if the memory update is predictable. If judgment is required, update memory manually at the end of the task.
 
+For wanted-card searches, adding or activating one card should immediately trigger the `find-card-listings` workflow for all active wanted cards so the latest report stays list-wide.
+
 ## Open Questions
 
 - Which workflows should become skills first?

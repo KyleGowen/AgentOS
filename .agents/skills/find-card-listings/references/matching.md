@@ -44,6 +44,8 @@ Use ended auction links only to extract comparable words, photos, variant cues, 
 
 Report rows must link to individual eBay item pages, normally URLs shaped like `https://www.ebay.com/itm/<item-id>` or an international eBay equivalent with an item id.
 
+Listing facts for report rows must come from the opened individual item page, not from search-result cards, eBay product pages, promoted item tiles, web-search snippets, or cached previews. Those discovery surfaces can display stale, alternate-listing, or "from" prices that differ from the selected listing. If a URL resolves to an eBay product page such as `/p/<product-id>`, use it only for discovery and open the specific item listing before reporting price, shipping, days left, or active status.
+
 Use these only for discovery and never as main table links:
 
 - Seller pages.
@@ -76,6 +78,14 @@ Use cached baseline fields from `os/context/wanted-trading-cards.md` when presen
 
 Do not re-query The Orange King or Brute Force MTG on every run for a card with cached baseline values. Search the retail baseline once when the wanted-card entry is missing those values, then update the wanted-card entry so future scheduled runs can reuse it. For OverPower, only use The Orange King retail site at `theorangeking.com`; do not use The Orange King's eBay account, any seller page, or any eBay listing as the retail baseline. Refresh a cached baseline only when Kyle asks for a refresh or the cached value is clearly invalid.
 
+For Magic cards, query Brute Force MTG's CrystalCommerce product search directly:
+
+```text
+https://www.bruteforcemtg.com/products/search?q=<url-encoded-card-name>&c=1
+```
+
+If the endpoint returns `410 Gone` to a plain HTTP client, retry with a normal browser user-agent. The page can include many similarly named products, so match exact product names and categories before reading prices. Product rows marked `Out of stock` can still provide the retail baseline price; record the out-of-stock state in notes. If Kyle accepts any official printing, use the lowest exact official-printing product price as the cached baseline and mention higher variant prices when useful. If Kyle requires a specific printing, use that printing's exact row.
+
 ## Match Classes
 
 Use these classes in notes when helpful:
@@ -104,6 +114,7 @@ Use these classes in notes when helpful:
 - Total price is item price plus shipping.
 - For auctions, use current bid plus shipping as the current total and include days remaining.
 - For buy-it-now listings, use BIN price plus shipping and set days remaining to `n/a` unless an end date is visible.
+- Use the price and shipping displayed on the individual item detail page as authoritative. If an eBay search card, product page, or web result shows a different price, discard the discovery price and use the item-page price plus item-page shipping.
 - Prefer US/domestic shipping for Kyle's report. If both domestic and international shipping appear, use domestic shipping. If only international shipping appears, note `international shipping shown`.
 - If shipping is not available, leave total as `unknown` and note `shipping variable`.
 - Sort known totals ascending, then unknown totals.

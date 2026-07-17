@@ -9,12 +9,14 @@ description: "Find eBay listings for wanted OverPower and Magic: The Gathering c
 
 Use this skill to run the read-only wanted-card marketplace scan. The skill reads Kyle's wanted-card context, searches public eBay listings while logged out, compares candidates against the appropriate retail baseline, and reports only active listings sorted by total price.
 
+When Kyle asks to add a wanted card, or when a wanted-card entry is changed from `Draft` to `Active`, first update `os/context/wanted-trading-cards.md`, then immediately run this scan for all active wanted cards. The newly added card triggers a full-list refresh; it does not narrow the scope to one card unless Kyle explicitly asks for a single-card run.
+
 This skill never bids, buys, messages sellers, watches items, or uses a logged-in eBay session.
 
 ## Required Inputs
 
 - Wanted-card context: default to `os/context/wanted-trading-cards.md`.
-- Automation policy: default to `os/automations/wanted-card-listings.md` when running as a scheduled task.
+- Automation policy: default to `os/automations/wanted-card-listings.md` when running as a scheduled task or add-card-triggered task.
 - Optional one-off card name, description, image path, or ended auction links from the user. Add durable targets to the wanted-card context before relying on them in scheduled runs.
 
 ## References
@@ -26,6 +28,7 @@ This skill never bids, buys, messages sellers, watches items, or uses a logged-i
 
 1. Read the wanted-card context.
    - Process only rows or sections marked `Active`.
+   - If this run follows a new wanted-card addition or a `Draft` to `Active` change, process every active card in the file, not only the changed card.
    - Preserve ended auction links as matching evidence; do not include ended auctions in the output.
    - If image evidence is available, inspect the image before searching and extract concrete visual cues such as art, border, stat bars, set marks, language, foil treatment, and distinctive layout. Use those cues as required matching evidence when the user says the image distinguishes the wanted card.
 
@@ -38,6 +41,7 @@ This skill never bids, buys, messages sellers, watches items, or uses a logged-i
 3. Collect active listing facts.
    - Open each candidate listing detail page while logged out before reporting it.
    - Capture title, listing URL, current bid or buy-it-now price, shipping, total price, listing format, seller-visible condition text, auction end time, and days remaining.
+   - Treat search-result snippets, eBay product pages, item-card tiles, and web-search prices as discovery hints only. Do not copy those prices into the main report unless the same price and shipping are verified on the individual listing detail page or in a user-provided screenshot of that exact item page.
    - Exclude ended, completed, and sold listings from the report even when they match the card.
    - If days remaining or listing URL cannot be verified from an item detail page, omit the candidate from the main table and mention it under skipped/uncertain.
    - Use US/domestic shipping when visible. Do not use international shipping totals for Kyle's report when a US shipping price is visible or supplied by the item page/search result. If only international shipping is visible, mark the shipping basis in notes.
@@ -47,6 +51,8 @@ This skill never bids, buys, messages sellers, watches items, or uses a logged-i
    - Use cached `Retail baseline price`, `Retail baseline checked`, and `Retail baseline URL` values from the wanted-card context when present.
    - Do not re-check retail baseline sites on every run for known values.
    - If a wanted card has no cached baseline, check once and update the wanted-card context. For OverPower cards, use only The Orange King retail site at `https://theorangeking.com/`, not The Orange King's eBay account or any other eBay listing; for Magic: The Gathering cards, use Brute Force MTG at `https://www.bruteforcemtg.com/`.
+   - For Brute Force MTG, search the public CrystalCommerce product search directly with `https://www.bruteforcemtg.com/products/search?q=<url-encoded-card-name>&c=1`. If a plain fetch returns `410 Gone`, retry with a normal browser user-agent before declaring the baseline missing.
+   - Parse exact product rows only. Ignore similarly named cards. If the wanted entry accepts any official printing, use the lowest exact official printing price as the baseline and mention notable variant prices in notes. If Brute Force marks the exact product `Out of stock`, the visible product price can still be cached as the retail baseline, with the stock status noted.
    - Refresh a cached retail baseline only when Kyle asks, the cached value is clearly missing/invalid, or the wanted-card entry says to refresh it.
 
 5. Classify matches.
@@ -58,6 +64,7 @@ This skill never bids, buys, messages sellers, watches items, or uses a logged-i
 6. Report.
    - Produce one table per wanted card.
    - Sort rows by total price plus shipping ascending.
+   - Before finalizing, re-check that every known total equals the displayed item-page price plus displayed item-page shipping. If the item page disagrees with discovery/search pricing, use the item-page values and note the correction when useful.
    - Include days remaining for every row. Use a numeric value for auctions, `n/a` for buy-it-now listings only after verifying the listing detail page has no visible end countdown, and `unknown` only in skipped/uncertain notes.
    - Keep ended, completed, and sold listings out of the tables.
    - Include a compact skipped/uncertain section only when it helps Kyle understand why a likely-looking listing was omitted.

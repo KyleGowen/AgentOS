@@ -63,11 +63,11 @@ Each is preserved verbatim under `os/skills/native/cursor/<skill-name>/` and tra
 
 ## `find-card-listings`
 
-- Trigger: Kyle asks to scan eBay for wanted OverPower or Magic: The Gathering cards, find active card auctions, monitor wanted cards, or run the wanted-card listing automation.
+- Trigger: Kyle asks to scan eBay for wanted OverPower or Magic: The Gathering cards, find active card auctions, monitor wanted cards, add a wanted card, activate a wanted-card entry, or run the wanted-card listing automation.
 - Inputs: `os/context/wanted-trading-cards.md`, public eBay listings checked logged out, ended auction comparables, optional image evidence, and retail baselines from The Orange King or Brute Force MTG.
 - Natural state: AgentOS automation specification under `os/automations/wanted-card-listings.md`.
 - Codex state: repo skill under `.agents/skills/find-card-listings/`.
-- Output: active listing report with one price-sorted table per card, days remaining, links, and compact notes for bulk lots or companion cards.
+- Output: active listing report with one price-sorted table per active card, days remaining, links, and compact notes for bulk lots or companion cards. Adding or activating one card triggers a full-list refresh, not a single-card-only report.
 - Verification: Codex skill validation plus report spot-checks for logged-out eBay access, omitted ended auctions, and ascending total price sort.
 
 ## Home Media Server Codex Skills

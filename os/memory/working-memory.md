@@ -15,7 +15,7 @@ Update this at the end of a meaningful task, project shift, or planning session.
 ## Active Home Projects
 
 - See `home-memory.md` for personal project context.
-- Wanted card listing automation spec, `find-card-listings` skill, and Codex cron automation `wanted-card-listings` were created on 2026-07-17. Next action: add real wanted cards to `os/context/wanted-trading-cards.md`; startup behavior is documented as a runner requirement because the Codex automation API exposed only cron scheduling.
+- Wanted card listing automation spec, `find-card-listings` skill, and Codex cron automation `wanted-card-listings` were created on 2026-07-17. Adding or activating a wanted-card entry should now trigger an immediate full-list scan; startup/list-change behavior is documented as a runner requirement when native hooks are unavailable. Stinging Study is active with any official physical printing acceptable, Brute Force MTG baseline is cached at $18.15. Iron Man IQ character is active with The Orange King baseline cached at $52.50, and the latest report covers 5 active cards. Corrected one eBay row where search/product-card pricing differed from the item page; item page price plus shipping is now documented as authoritative.
 
 ## Recently Completed
 

@@ -1,8 +1,16 @@
 # Wanted Card Listings
 
-Run: 2026-07-17 16:01 UTC  
-Scope: 3 active wanted cards scanned.  
-Access: Public logged-out eBay item pages and public web search only; no account actions were taken. Wanted-card images were inspected first and used as matching constraints. Cached The Orange King retail baselines were reused; no retail baseline sites were rechecked.
+Run: 2026-07-17 20:19 UTC
+Scope: 5 active wanted cards scanned.
+Access: Public, logged-out eBay item pages, web search, and The Orange King public product pages only; no account actions were taken. Wanted-card images were inspected before searching. Cached retail baselines were reused except for the newly added Iron Man IQ character baseline, which was checked and cached.
+
+## Stinging Study
+
+Baseline: $18.15 at Brute Force MTG, checked 2026-07-17. Target: any official physical printing; the reference image is Commander 2021 extended art #371, but that art is not required.
+
+| Total | Price | Shipping | Days Left | Listing | Notes |
+|---:|---:|---:|---:|---|---|
+| $23.83 | $22.84 | $0.99 | n/a | [Stinging Study C21 NM MTG](https://www.ebay.com/itm/147327423845) | exact match; active Buy It Now; Commander 2021 regular, English, near mint; domestic shipping used; above retail baseline |
 
 ## Onslaught Promo Character
 
@@ -10,10 +18,11 @@ Baseline: $15.00 at The Orange King retail site, checked 2026-07-17. Target: blu
 
 No active matching listings found.
 
-Skipped/uncertain:
+## Iron Man IQ Character
 
-- [Marvel Overpower Onslaught Post Holocaust Promos OPD The Fighting Spirit Lives!](https://www.ebay.com/itm/277319091183) is an active $40.00 Buy-It-Now lot with free domestic shipping, but its listing text and available photo evidence do not confirm the required Onslaught character art/stat cues.
-- [Non Sports Promos Inserts Rares Chase cards "You Pick"](https://www.ebay.com/itm/364981165816) marks `Marvel OVERPOWER PROMO Onslaught` out of stock.
+Baseline: $52.50 at The Orange King retail site, checked 2026-07-17. Target: Iron Man IQ character card with red/gold side-profile armor art, blue background, and stat boxes showing Energy 5 / Fighting 3 / Strength 7 / Intellect 7.
+
+No active matching listings found.
 
 ## Brass Chrome/Holofoil Promo Character
 
@@ -21,7 +30,7 @@ Baseline: $9.00 at The Orange King retail site, checked 2026-07-17. Target: Wild
 
 | Total | Price | Shipping | Days Left | Listing | Notes |
 |---:|---:|---:|---:|---|---|
-| $11.43 | $11.43 | Free | n/a | [Marvel OVERPOWER Brass chrome character - Marvel vs Wildstorm - Image - promo](https://www.ebay.com/itm/192307701188) | likely match; active Buy It Now, 2 available; listing text confirms Brass, OverPower, WildStorm, chrome and promo; free domestic shipping used; above retail baseline |
+| $11.43 | $11.43 | Free | n/a | [Marvel OVERPOWER Brass chrome character - Marvel vs Wildstorm - Image - promo](https://www.ebay.com/itm/192307701188) | likely match; active Buy It Now, 2 available; listing text confirms Brass, OverPower, WildStorm, chrome, and promo; free domestic shipping used; above retail baseline |
 
 ## Post Promo Character
 
@@ -29,11 +38,15 @@ Baseline: $5.00 at The Orange King retail site, checked 2026-07-17. Target: oran
 
 | Total | Price | Shipping | Days Left | Listing | Notes |
 |---:|---:|---:|---:|---|---|
-| $1.94 | $0.99 | $0.95 | n/a | [Non Sports Promos Inserts Rares Chase cards "You Pick"](https://www.ebay.com/itm/364981165816) | likely match; selectable `Marvel OVERPOWER POST PROMO` is available; listing text confirms the promo rather than an excluded Post special; domestic shipping used; below retail baseline |
+| $1.94 | $0.99 | $0.95 | n/a | [Non Sports Promos Inserts Rares Chase cards "You Pick"](https://www.ebay.com/itm/364981165816) | likely match; selectable `Marvel OVERPOWER POST PROMO` is available; listing text confirms promo rather than an excluded Post special; domestic shipping used; below retail baseline |
 | $2.24 | $1.25 | $0.99 | n/a | [Marvel Overpower Promos SINGLES * Choose Your Card * NrMint-Mint](https://www.ebay.com/itm/404148687302) | likely match; selectable `Post Hero Card` is available, distinguishing it from excluded Post specials; domestic shipping used; below retail baseline |
 
-Skipped/uncertain:
+## Skipped / uncertain
 
-- The active $40.00 Onslaught/Post/Holocaust lot above names Post but does not verify the required Post art/stat cues.
+- [Marvel Overpower Onslaught Post Holocaust Promos OPD The Fighting Spirit Lives!](https://www.ebay.com/itm/277319091183) is active at $40.00 with free domestic shipping, but neither its title nor accessible photo evidence proves Onslaught's or Post's required art/stat cues.
+- The selectable Onslaught hero card in the Post single listing is out of stock.
+- Several Stinging Study item URLs redirected to eBay product pages in the logged-out scan; they were omitted because an individual item detail page could not be preserved as the report source. Direct public eBay search-result pages were also inconsistent.
+- [Kyle-provided Iron Man IQ seed item](https://www.ebay.com/itm/298438687673) could not be verified from logged-out public access during this run; eBay returned a generic error page, so no price, shipping, or active status was used in the table.
+- [Marvel OVERPOWER Original 3 & 4 stat OP character hero Cards Rare IQ Powersurge](https://www.ebay.com/itm/364796114467) is a multi-variation listing with `IRON MAN` marked out of stock, and its listed IQ character variations do not include Iron Man; skipped as not the wanted IQ Iron Man character.
 
-Access limitations: eBay's public pages allowed logged-out item-page checks but blocked direct search-result pages during this run. Ended, sold, and out-of-stock candidates were omitted from the tables.
+Ended, sold, completed, and out-of-stock candidates are omitted from the tables.

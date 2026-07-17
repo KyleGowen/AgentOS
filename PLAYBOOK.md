@@ -115,7 +115,7 @@ attention.
 | AI office-hours follow-up | After Tuesday office hours | Run the AI Office Hours Follow-Up Agent once Kyle has provided current post-session notes. | Future candidate |
 | PR review prep | Workday morning or on demand | Run the PR Review Prep Agent to find tagged Measurabl PRs and prepare the review queue. | Future candidate |
 | Auto-accept appointments | Every 2 hours from 7:00 AM through 11:00 PM | Run `accept-sender-appointments` for active senders in `os/automations/auto-accept-appointments.md`. | Active; Codex id `auto-accept-trusted-appointments` |
-| Wanted card listings | Every 4 hours from midnight and startup when supported | Run `find-card-listings` for active cards in `os/context/wanted-trading-cards.md`, using logged-out eBay access and retail baselines. | Active; Codex id `wanted-card-listings`; startup hook documented |
+| Wanted card listings | Every 4 hours from midnight, startup when supported, and immediately after adding or activating a wanted card | Run `find-card-listings` for all active cards in `os/context/wanted-trading-cards.md`, using logged-out eBay access and retail baselines. | Active; Codex id `wanted-card-listings`; startup and list-change hooks documented |
 
 ## What's Working Best
 

@@ -10,7 +10,10 @@ This file is the harness-neutral source of truth. A scheduler, agent runner, she
 
 - Run every 4 hours starting at midnight: 12:00 AM, 4:00 AM, 8:00 AM, 12:00 PM, 4:00 PM, and 8:00 PM.
 - Run on startup.
+- Run immediately after a new card is added to `os/context/wanted-trading-cards.md` or an existing card is changed from `Draft` to `Active`.
 - Use Kyle's local timezone when the scheduler supports explicit timezone configuration.
+
+The add-card trigger is a full-list refresh: process every `Active` wanted card and replace the latest report for the whole list. Do not produce a single-card-only report unless Kyle explicitly asks for one.
 
 ## Input Files
 
@@ -39,6 +42,8 @@ For each active wanted card:
 14. Link rows to individual eBay item pages only; seller pages, category pages, and search pages belong in skipped/uncertain notes.
 15. Include notes such as `part of a bulk deal`, `comes with other cards`, `variant uncertain`, `image cues matched`, or `below retail baseline`.
 16. Report search limitations, missing baseline cache, skipped ambiguity, and skipped ended/sold listings compactly.
+
+When the run is triggered by adding or activating a wanted-card entry, follow the same runner contract for every active card. The changed card is the trigger, not the scan scope.
 
 ## Safety Rules
 
@@ -78,6 +83,6 @@ Rows must be sorted by total price plus shipping ascending. Auctions/listings th
 
 - Codex implementation: use `.agents/skills/find-card-listings/`.
 - Current Codex automation ID: `wanted-card-listings`.
-- Codex cron schedule is active. If the runner does not support a native startup trigger, run this automation manually on app or machine startup until a startup hook is available.
+- Codex cron schedule is active. If the runner does not support a native startup or wanted-list-change trigger, run this automation manually on app/machine startup and immediately after adding or activating a wanted card until those hooks are available.
 - Non-Codex implementation: use the same runner contract with equivalent public web or marketplace APIs.
 - Treat this file as policy/config, not generated output. Update wanted cards in `os/context/wanted-trading-cards.md` before changing scheduler prompts.

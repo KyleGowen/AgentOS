@@ -29,9 +29,11 @@ Rules:
 - Sort rows by `Total` ascending.
 - Use `unknown` for unavailable total, price, shipping, or days left.
 - Every main-table listing link must go to an individual eBay item page, not a seller page, shop page, category page, or search result page.
+- Main-table `Price`, `Shipping`, and `Total` values must come from the opened individual item page or a user-provided screenshot of that exact item page. Do not use search-result, product-page, or web-search snippet prices as final report values.
 - Put active auction days remaining in days with one decimal when possible.
 - Use `n/a` for buy-it-now listings without a visible end time.
 - Do not leave `Days Left` blank. If the listing detail page does not expose enough timing to decide between an auction countdown and `n/a`, move the candidate to skipped/uncertain.
+- Recalculate `Total` from the reported `Price` plus `Shipping` after row edits. If the item page price differs from a discovery/source price, use the item page value and note the mismatch only when it explains a correction.
 - Use US/domestic shipping in totals when visible. If only international shipping is visible, say so in notes.
 - Keep links as listing title markdown links.
 - Keep notes compact and evidence-oriented.

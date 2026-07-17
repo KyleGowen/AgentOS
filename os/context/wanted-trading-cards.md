@@ -4,6 +4,8 @@ This file is the source list for the wanted-card listing automation in `os/autom
 
 Add one section per wanted card. Scheduled runs should process only cards with `Status` set to `Active`.
 
+When a new wanted card is added or an existing wanted-card section is changed from `Draft` to `Active`, immediately run the `find-card-listings` skill for all active wanted cards, not just the newly added card. This keeps the latest report fresh and re-sorts every monitored opportunity against the full list.
+
 ## Card Template
 
 Copy this section for each card Kyle wants to monitor.
@@ -32,6 +34,28 @@ Copy this section for each card Kyle wants to monitor.
 
 ## Active Wanted Cards
 
+### Stinging Study
+
+| Field | Value |
+|---|---|
+| Status | Active |
+| Game | Magic: The Gathering |
+| Card name | Stinging Study |
+| Description | Official physical Magic: The Gathering printing of Stinging Study. |
+| Set / edition / variant | Any official paper printing is acceptable, including Commander 2021 #44 regular art, Commander 2021 #371 extended art, Secret Lair Drop #2481 borderless, foil/non-foil, and official language variants. |
+| Must-have details | Official physical MTG card named Stinging Study; not a proxy, custom, altered card, art card, oversized card, or digital-only item. |
+| Nice-to-have details | Near mint or lightly played condition; seller photo or item specifics confirm an official set/collector number. The saved image shows the C21 #371 extended-art version but is no longer a hard matching requirement. |
+| Exclude | Magic Online/digital-only listings; proxy, custom, altered, playtest, oversized, or art-card listings; unrelated cards with similar names such as Rhystic Study. |
+| Image | `os/context/assets/wanted-trading-cards/mtg-stinging-study-c21-371-extended-art.png` |
+| Ended auction comparables |  |
+| Search terms | `Stinging Study`; `MTG Stinging Study`; `Stinging Study Commander 2021`; `Stinging Study C21`; `Stinging Study 44`; `Stinging Study 371`; `Stinging Study extended art`; `Stinging Study Secret Lair`; `Stinging Study borderless` |
+| Negative terms | `Magic Online`; `MTGO`; `digital`; `proxy`; `custom`; `altered`; `playtest`; `art card`; `oversized`; `Rhystic Study`; `study guide`; `book` |
+| Retail baseline source | Brute Force MTG |
+| Retail baseline price | $18.15 |
+| Retail baseline checked | 2026-07-17 |
+| Retail baseline URL | <https://www.bruteforcemtg.com/products/search?q=stinging+study&c=1> |
+| Notes | Added from Kyle-provided image on 2026-07-17. Updated on 2026-07-17: regular art and any official physical printing are acceptable. Brute Force MTG search shows regular Stinging Study at $18.15 and Stinging Study - Extended Art at $20.59; both were out of stock when checked. |
+
 ### Onslaught Promo Character
 
 | Field | Value |
@@ -53,6 +77,28 @@ Copy this section for each card Kyle wants to monitor.
 | Retail baseline checked | 2026-07-17 |
 | Retail baseline URL | <https://theorangeking.com/collections/promos> |
 | Notes | Added from Kyle-provided image and ended eBay comparable on 2026-07-17. |
+
+### Iron Man IQ Character
+
+| Field | Value |
+|---|---|
+| Status | Active |
+| Game | OverPower |
+| Card name | Iron Man |
+| Description | Iron Man character card from the OverPower IQ set. |
+| Set / edition / variant | IQ character card; very rare. |
+| Must-have details | IQ character card titled Iron Man; red/gold Iron Man armor in side-profile pose on blue background; horizontal character layout; stat boxes showing Energy 5, Fighting 3, Strength 7, Intellect 7. |
+| Nice-to-have details | Seller photo confirms exact IQ character card; listings that include IQ character lots or full Iron Man OverPower groups are relevant if the IQ character card is visible or explicitly named. |
+| Exclude | Original/OP Iron Man character card; PowerSurge Iron Man cards; Iron Man specials, power cards, placards, teamworks, or non-character cards; Marvel cards from games other than OverPower; lots where the IQ character card is not visible or named; custom/proxy/reprint cards. |
+| Image | `os/context/assets/wanted-trading-cards/overpower-iron-man-iq-character.png` |
+| Ended auction comparables | <https://www.ebay.com/itm/298438687673?_skw=overpower+iron+man+character&itmmeta=01KXRPC0Q6CKFCW6YQ9C3SJFVE&hash=item457c54fbb9:g:r2AAAeSwU3ZqOBLN&itmprp=enc%3AAQALAAABAGfYFPkwiKCW4ZNSs2u11xCrXhsJM1e5e%2BI29Z99Me4yrjKHwPEVO%2BWZ3k2ZCiJm7ZhD4m1VxPAqzdEPtmokMldAJzRxMYkx7zBAyyA0QtDaRCHwljckzmoTy2EfhsefAKtR4PTSUWUHqFQccmHAAGvi88PCiC96i%2BUdUqS51sqvpDGAeKqHz6qalXNhgZqHVSIMCCdtnx3vYeS3%2FnW1XG%2Bd9ihE5bBtyd42M0jKI66mU2rAIE04LeemiGUk2gpkj1nPX4hrxm%2FT2AocCJx%2Bkdtu%2BA4CEw1qhB0PjeyEUBnpYLlZMMf30QeHlhBVdIreBKTn0yCb9FLu%2FJotwMY4t3k%3D%7Ctkp%3ABk9SR-CLsJbuZw> |
+| Search terms | `overpower iron man iq character`; `iron man iq character overpower`; `iron man iq hero vr`; `marvel overpower iron man iq`; `overpower iq iron man`; `overpower iq character lot iron man`; `overpower iron man character iq`; `iron man iq hero` |
+| Negative terms | `original`; `OP character`; `PowerSurge`; `special`; `concealed arsenal`; `industrial waste`; `heat seeking missile`; `tactical computer`; `stealth armor`; `weapons inventor`; `teamwork`; `power card`; `placard`; `heroclix`; `vs system`; `mtg`; `custom`; `proxy`; `reprint` |
+| Retail baseline source | The Orange King retail site |
+| Retail baseline price | $52.50 |
+| Retail baseline checked | 2026-07-17 |
+| Retail baseline URL | <https://theorangeking.com/products/iron-man-iq-hero-vr> |
+| Notes | Added from Kyle-provided image and eBay seed link on 2026-07-17. The Orange King search showed `IRON MAN - IQ Character - VR` at $52.50 with available quantity 1 when checked. |
 
 ### Brass Chrome/Holofoil Promo Character
 
