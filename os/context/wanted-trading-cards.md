@@ -23,6 +23,7 @@ Copy this section for each card Kyle wants to monitor.
 | Nice-to-have details |  |
 | Exclude |  |
 | Image |  |
+| Seed/reference URLs |  |
 | Ended auction comparables |  |
 | Search terms |  |
 | Negative terms |  |
@@ -47,6 +48,7 @@ Copy this section for each card Kyle wants to monitor.
 | Nice-to-have details | Near mint or lightly played condition; seller photo or item specifics confirm an official set/collector number. The saved image shows the C21 #371 extended-art version but is no longer a hard matching requirement. |
 | Exclude | Magic Online/digital-only listings; proxy, custom, altered, playtest, oversized, or art-card listings; unrelated cards with similar names such as Rhystic Study. |
 | Image | `os/context/assets/wanted-trading-cards/mtg-stinging-study-c21-371-extended-art.png` |
+| Seed/reference URLs | <https://www.bruteforcemtg.com/products/search?q=stinging+study&c=1> |
 | Ended auction comparables |  |
 | Search terms | `Stinging Study`; `MTG Stinging Study`; `Stinging Study Commander 2021`; `Stinging Study C21`; `Stinging Study 44`; `Stinging Study 371`; `Stinging Study extended art`; `Stinging Study Secret Lair`; `Stinging Study borderless` |
 | Negative terms | `Magic Online`; `MTGO`; `digital`; `proxy`; `custom`; `altered`; `playtest`; `art card`; `oversized`; `Rhystic Study`; `study guide`; `book` |
@@ -86,11 +88,12 @@ Copy this section for each card Kyle wants to monitor.
 | Game | OverPower |
 | Card name | Iron Man |
 | Description | Iron Man character card from the OverPower IQ set. |
-| Set / edition / variant | IQ character card; very rare. |
-| Must-have details | IQ character card titled Iron Man; red/gold Iron Man armor in side-profile pose on blue background; horizontal character layout; stat boxes showing Energy 5, Fighting 3, Strength 7, Intellect 7. |
+| Set / edition / variant | IQ Character card; very rare. |
+| Must-have details | IQ Character card titled Iron Man; red/gold Iron Man armor in side-profile pose on blue background; horizontal character layout; stat boxes showing Energy 5, Fighting 3, Strength 7, Intellect 7. |
 | Nice-to-have details | Seller photo confirms exact IQ character card; listings that include IQ character lots or full Iron Man OverPower groups are relevant if the IQ character card is visible or explicitly named. |
 | Exclude | Original/OP Iron Man character card; PowerSurge Iron Man cards; Iron Man specials, power cards, placards, teamworks, or non-character cards; Marvel cards from games other than OverPower; lots where the IQ character card is not visible or named; custom/proxy/reprint cards. |
 | Image | `os/context/assets/wanted-trading-cards/overpower-iron-man-iq-character.png` |
+| Seed/reference URLs | <https://theorangeking.com/products/iron-man-iq-hero-vr>; <https://www.ebay.com/itm/298438687673> |
 | Ended auction comparables | <https://www.ebay.com/itm/298438687673?_skw=overpower+iron+man+character&itmmeta=01KXRPC0Q6CKFCW6YQ9C3SJFVE&hash=item457c54fbb9:g:r2AAAeSwU3ZqOBLN&itmprp=enc%3AAQALAAABAGfYFPkwiKCW4ZNSs2u11xCrXhsJM1e5e%2BI29Z99Me4yrjKHwPEVO%2BWZ3k2ZCiJm7ZhD4m1VxPAqzdEPtmokMldAJzRxMYkx7zBAyyA0QtDaRCHwljckzmoTy2EfhsefAKtR4PTSUWUHqFQccmHAAGvi88PCiC96i%2BUdUqS51sqvpDGAeKqHz6qalXNhgZqHVSIMCCdtnx3vYeS3%2FnW1XG%2Bd9ihE5bBtyd42M0jKI66mU2rAIE04LeemiGUk2gpkj1nPX4hrxm%2FT2AocCJx%2Bkdtu%2BA4CEw1qhB0PjeyEUBnpYLlZMMf30QeHlhBVdIreBKTn0yCb9FLu%2FJotwMY4t3k%3D%7Ctkp%3ABk9SR-CLsJbuZw> |
 | Search terms | `overpower iron man iq character`; `iron man iq character overpower`; `iron man iq hero vr`; `marvel overpower iron man iq`; `overpower iq iron man`; `overpower iq character lot iron man`; `overpower iron man character iq`; `iron man iq hero` |
 | Negative terms | `original`; `OP character`; `PowerSurge`; `special`; `concealed arsenal`; `industrial waste`; `heat seeking missile`; `tactical computer`; `stealth armor`; `weapons inventor`; `teamwork`; `power card`; `placard`; `heroclix`; `vs system`; `mtg`; `custom`; `proxy`; `reprint` |
@@ -98,7 +101,53 @@ Copy this section for each card Kyle wants to monitor.
 | Retail baseline price | $52.50 |
 | Retail baseline checked | 2026-07-17 |
 | Retail baseline URL | <https://theorangeking.com/products/iron-man-iq-hero-vr> |
-| Notes | Added from Kyle-provided image and eBay seed link on 2026-07-17. The Orange King search showed `IRON MAN - IQ Character - VR` at $52.50 with available quantity 1 when checked. |
+| Notes | Added from Kyle-provided image and eBay seed link on 2026-07-17. The Orange King product page <https://theorangeking.com/products/iron-man-iq-hero-vr> is the primary seed/reference for the exact IQ Character target; it showed `IRON MAN - IQ Character - VR` at $52.50 with available quantity 1 when checked. |
+
+### Thor IQ Character
+
+| Field | Value |
+|---|---|
+| Status | Active |
+| Game | OverPower |
+| Card name | Thor |
+| Description | Thor character card from the OverPower IQ set. |
+| Set / edition / variant | IQ character card; very rare. |
+| Must-have details | IQ character card titled Thor; Thor holding Mjolnir over a lightning background; horizontal character layout; stat boxes showing Energy 7, Fighting 5, Strength 7, Intellect 4. |
+| Nice-to-have details | Seller photo confirms exact IQ character card; listings that include IQ character lots or Thor OverPower groups are relevant if the IQ character card is visible or explicitly named. |
+| Exclude | Original/OP Thor character card; PowerSurge Thor cards; Thor specials, power cards, teamworks, or non-character cards; Marvel cards from games other than OverPower; lots where the IQ character card is not visible or named; custom/proxy/reprint cards. |
+| Image | `os/context/assets/wanted-trading-cards/overpower-thor-iq-character.jpg` |
+| Seed/reference URLs | <https://theorangeking.com/products/thor-iq-hero-vr> |
+| Ended auction comparables |  |
+| Search terms | `overpower thor iq character`; `thor iq character overpower`; `thor iq hero vr`; `marvel overpower thor iq`; `overpower iq thor`; `overpower iq character lot thor`; `overpower thor character iq`; `thor iq hero` |
+| Negative terms | `original`; `OP character`; `PowerSurge`; `special`; `teamwork`; `power card`; `heroclix`; `vs system`; `mtg`; `custom`; `proxy`; `reprint` |
+| Retail baseline source | The Orange King retail site |
+| Retail baseline price | $65.00 |
+| Retail baseline checked | 2026-07-17 |
+| Retail baseline URL | <https://theorangeking.com/products/thor-iq-hero-vr> |
+| Notes | Added from The Orange King product page on 2026-07-17. The Orange King product page showed `THOR - IQ character - VR` at $65.00 and available when checked. |
+
+### Rogue IQ Character
+
+| Field | Value |
+|---|---|
+| Status | Active |
+| Game | OverPower |
+| Card name | Rogue |
+| Description | Rogue character card from the OverPower IQ set. |
+| Set / edition / variant | IQ Character card; rare. |
+| Must-have details | IQ Character card titled Rogue; Rogue flying on a blue/green background; horizontal character layout; stat boxes showing Energy 4, Fighting 4, Strength 7, Intellect 2; bottom text says `May not be Spectrum KO'd with Special cards.` |
+| Nice-to-have details | Seller photo confirms exact IQ Character card; listings that include IQ character lots or Rogue OverPower groups are relevant if the IQ Character card is visible or explicitly named. |
+| Exclude | Original/OP Rogue character card; PowerSurge Rogue cards; Rogue specials, power cards, teamworks, or non-character cards; Rogue: Brotherhood of Evil Mutants IQ Character variant; Marvel cards from games other than OverPower; lots where this IQ Character card is not visible or named; custom/proxy/reprint cards. |
+| Image | `os/context/assets/wanted-trading-cards/overpower-rogue-iq-character.png` |
+| Seed/reference URLs | <https://theorangeking.com/products/rogue-iq-hero-r> |
+| Ended auction comparables |  |
+| Search terms | `overpower rogue iq character`; `rogue iq character overpower`; `rogue iq hero r`; `marvel overpower rogue iq`; `overpower iq rogue`; `overpower iq character lot rogue`; `overpower rogue character iq`; `rogue iq hero`; `Marvel Overpower Rogue Iq Hero Card` |
+| Negative terms | `original`; `OP character`; `PowerSurge`; `special`; `teamwork`; `power card`; `Brotherhood of Evil Mutants`; `heroclix`; `vs system`; `mtg`; `custom`; `proxy`; `reprint` |
+| Retail baseline source | The Orange King retail site |
+| Retail baseline price | $25.00 |
+| Retail baseline checked | 2026-07-17 |
+| Retail baseline URL | <https://theorangeking.com/products/rogue-iq-hero-r> |
+| Notes | Added from Kyle-provided image and The Orange King product page on 2026-07-17. The Orange King product page showed `ROGUE - IQ character - R` at $25.00 and available when checked. |
 
 ### Brass Chrome/Holofoil Promo Character
 

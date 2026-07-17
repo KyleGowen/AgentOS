@@ -12,9 +12,11 @@ Start with:
 
 ## Per-Card Section
 
-Use one section per wanted card:
+Group cards by game first, then use one section per wanted card inside each game group. Preserve the game names from the wanted-card context, normally `Magic: The Gathering` and `OverPower`.
 
 ```markdown
+## Game Name
+
 ### Card Name
 
 Baseline: $X.XX at Retail Source, checked YYYY-MM-DD. Target context: short variant summary.
@@ -26,6 +28,8 @@ Baseline: $X.XX at Retail Source, checked YYYY-MM-DD. Target context: short vari
 
 Rules:
 
+- Use `##` headings for game groups and `###` headings for individual cards.
+- Keep all active cards from the same game together. Within each game group, keep the order from `os/context/wanted-trading-cards.md` unless Kyle asks for a different sort.
 - Sort rows by `Total` ascending.
 - Use `unknown` for unavailable total, price, shipping, or days left.
 - Every main-table listing link must go to an individual eBay item page, not a seller page, shop page, category page, or search result page.

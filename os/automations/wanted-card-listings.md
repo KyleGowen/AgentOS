@@ -35,13 +35,15 @@ For each active wanted card:
 7. Compare active candidate listings against the card's cached retail baseline in `os/context/wanted-trading-cards.md`.
 8. If the wanted-card entry has no cached retail baseline, check the relevant retail baseline once, update the wanted-card context, and use that cached value for future runs.
 9. For OverPower cards missing a cached baseline, use only The Orange King retail site at <https://theorangeking.com/> as the retail baseline; do not use The Orange King's eBay account or any eBay listing as a retail baseline.
-10. For Magic: The Gathering cards missing a cached baseline, use Brute Force MTG at <https://www.bruteforcemtg.com/> as the retail baseline.
-11. Produce one table per card, sorted by price plus shipping ascending.
-12. Use US/domestic shipping in totals when visible. If only international shipping is visible, say so in notes.
-13. Include days remaining for every row: numeric days for auctions, `n/a` for verified buy-it-now listings with no visible countdown.
-14. Link rows to individual eBay item pages only; seller pages, category pages, and search pages belong in skipped/uncertain notes.
-15. Include notes such as `part of a bulk deal`, `comes with other cards`, `variant uncertain`, `image cues matched`, or `below retail baseline`.
-16. Report search limitations, missing baseline cache, skipped ambiguity, and skipped ended/sold listings compactly.
+10. For OverPower cards supplied with a The Orange King product URL, use that product page as the preferred retail seed. Normalize away tracking query parameters and cache the canonical product URL, price, checked date, and any stock note.
+11. For Magic: The Gathering cards missing a cached baseline, use Brute Force MTG at <https://www.bruteforcemtg.com/> as the retail baseline.
+12. Group the report by game first, then produce one table per card under the matching game heading, sorted by price plus shipping ascending.
+13. Use US/domestic shipping in totals when visible. If only international shipping is visible, say so in notes.
+14. Include days remaining for every row: numeric days for auctions, `n/a` for verified buy-it-now listings with no visible countdown.
+15. Link rows to individual eBay item pages only; seller pages, category pages, and search pages belong in skipped/uncertain notes.
+16. If eBay returns a generic error page for a candidate item URL, keep it in skipped/uncertain unless an exact item-page screenshot or another accessible item-detail source verifies price, shipping, and active status.
+17. Include notes such as `part of a bulk deal`, `comes with other cards`, `variant uncertain`, `image cues matched`, or `below retail baseline`.
+18. Report search limitations, missing baseline cache, skipped ambiguity, and skipped ended/sold listings compactly.
 
 When the run is triggered by adding or activating a wanted-card entry, follow the same runner contract for every active card. The changed card is the trigger, not the scan scope.
 
@@ -68,6 +70,7 @@ Each card section should include:
 
 | Field | Required |
 |---|---|
+| Game group heading | Yes; group cards by the `Game` field before individual card sections |
 | Card name | Yes |
 | Retail baseline source and price | Best effort |
 | Listing total price | Yes when available |

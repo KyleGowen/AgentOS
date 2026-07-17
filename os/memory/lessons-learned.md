@@ -17,3 +17,5 @@ Durable lessons, pitfalls, and "remember this next time" notes.
 ## Home
 
 - For Excelsior, protect user data and avoid service disruption. Treat the project as a real community tool, not disposable side-project code.
+- For wanted-card eBay scans, public search/result text can reveal promising candidates while direct logged-out item fetches return generic eBay error pages. Do not turn those candidates into active report rows unless an item detail page, exact item-page screenshot, or other accessible item-detail source verifies price, shipping, and active status.
+- For wanted-card retail baselines, The Orange King product pages are more reliable than broad search for OverPower cards; use the canonical product URL and embedded product metadata when Kyle supplies a retailer link.

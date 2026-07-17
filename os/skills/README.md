@@ -107,5 +107,5 @@ Force-push, restore, schedule changes, save/config edits, backup repo mutation, 
 - Trigger: ask Codex to scan eBay for wanted OverPower or Magic: The Gathering cards, add or activate a wanted card, or run the wanted-card listing automation.
 - Inputs: `os/context/wanted-trading-cards.md`, public eBay listings, ended auction comparables, and retail baselines from The Orange King or Brute Force MTG.
 - Process: read active wanted cards, search eBay logged out, classify exact and bulk/lot matches, remove ended auctions, compare against retail baselines, and sort active listings by price plus shipping.
-- Output: one table per card with total price, price, shipping, days remaining, listing link, and notes.
+- Output: game-grouped report with one table per card showing total price, price, shipping, days remaining, listing link, and notes.
 - Verification: run the skill validator, confirm no logged-in eBay context was used, and spot-check that ended auctions are omitted from the report.

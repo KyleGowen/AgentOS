@@ -78,6 +78,14 @@ Use cached baseline fields from `os/context/wanted-trading-cards.md` when presen
 
 Do not re-query The Orange King or Brute Force MTG on every run for a card with cached baseline values. Search the retail baseline once when the wanted-card entry is missing those values, then update the wanted-card entry so future scheduled runs can reuse it. For OverPower, only use The Orange King retail site at `theorangeking.com`; do not use The Orange King's eBay account, any seller page, or any eBay listing as the retail baseline. Refresh a cached baseline only when Kyle asks for a refresh or the cached value is clearly invalid.
 
+When Kyle supplies a The Orange King product URL for an OverPower card:
+
+- Treat it as the preferred retail seed/reference.
+- Normalize the URL by removing tracking query parameters such as `_pos`, `_sid`, and `_ss`.
+- Read the exact product title, price, availability, and image from the product page or embedded Shopify JSON.
+- Cache the canonical product URL, price, and checked date in the wanted-card entry.
+- If Kyle also supplies a cropped card image, use Kyle's image as the wanted-card matching image and use the retailer image only as supporting evidence.
+
 For Magic cards, query Brute Force MTG's CrystalCommerce product search directly:
 
 ```text
@@ -103,6 +111,24 @@ Use these classes in notes when helpful:
 - Treat sealed packs, full sets, starter decks, and bulk lots as relevant only when they plausibly contain the wanted card or include visible/photo evidence.
 - Compare retail against The Orange King.
 
+### OverPower IQ Character Cards
+
+For IQ Character targets, require the visible or textual cues that distinguish the exact character card:
+
+- Character name and `IQ Character`/`IQ character` variant.
+- Stat boxes and values.
+- Art pose and background.
+- Any visible character-card rules text.
+
+Exclude similarly named non-target cards by default:
+
+- Original/OP character cards.
+- PowerSurge cards.
+- Specials, power cards, teamwork cards, placards, and non-character cards.
+- Alternate named IQ variants, such as a `Brotherhood of Evil Mutants` variant, unless Kyle explicitly adds that variant.
+
+The Orange King product titles such as `IRON MAN - IQ Character - VR`, `THOR - IQ character - VR`, or `ROGUE - IQ character - R` are strong baseline evidence, but eBay matches still need item-page or seller-photo/text confirmation before being reported as active rows.
+
 ## Magic Matching
 
 - Verify set, collector number, foil treatment, border, language, edition, and condition when these matter.
@@ -115,6 +141,7 @@ Use these classes in notes when helpful:
 - For auctions, use current bid plus shipping as the current total and include days remaining.
 - For buy-it-now listings, use BIN price plus shipping and set days remaining to `n/a` unless an end date is visible.
 - Use the price and shipping displayed on the individual item detail page as authoritative. If an eBay search card, product page, or web result shows a different price, discard the discovery price and use the item-page price plus item-page shipping.
+- If eBay returns a generic error page for an item URL during logged-out verification, do not promote that candidate to the main table based only on search-result text. Keep it under skipped/uncertain unless Kyle provides a screenshot of that exact item page or another accessible item-detail source verifies price, shipping, and active status.
 - Prefer US/domestic shipping for Kyle's report. If both domestic and international shipping appear, use domestic shipping. If only international shipping appears, note `international shipping shown`.
 - If shipping is not available, leave total as `unknown` and note `shipping variable`.
 - Sort known totals ascending, then unknown totals.

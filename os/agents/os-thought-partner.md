@@ -134,6 +134,13 @@ When using a skill or automation, prefer teaching the skill to update memory dir
 
 For wanted-card searches, adding or activating one card should immediately trigger the `find-card-listings` workflow for all active wanted cards so the latest report stays list-wide.
 
+When a repeated task has been run a few times, pause and harvest the friction into context:
+
+- Promote repeated back-and-forth into the source skill, automation spec, context template, or memory file that will prevent the same clarification next time.
+- Prefer updating the task's reusable components over adding one-off notes to generated output.
+- For wanted-card searches specifically, treat supplied The Orange King product URLs as durable OverPower seed/reference links and retail-baseline sources. Normalize tracking URLs to the canonical product URL, cache price/date/source in `os/context/wanted-trading-cards.md`, and preserve image/stat/text constraints so future runs do not confuse IQ Character, regular character, promo, special, or alternate-variant cards.
+- Treat eBay public result text as discovery only when direct logged-out item pages fail. If eBay returns a generic error page for an item URL, place the candidate in skipped/uncertain unless Kyle provides a screenshot of that exact item page or another accessible item-detail source verifies price, shipping, and status.
+
 ## Open Questions
 
 - Which workflows should become skills first?
