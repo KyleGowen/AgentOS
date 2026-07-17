@@ -1,0 +1,83 @@
+# Wanted Card Listings
+
+## Purpose
+
+Automatically scan public eBay listings for wanted OverPower and Magic: The Gathering cards, then produce a sorted read-only report of active opportunities.
+
+This file is the harness-neutral source of truth. A scheduler, agent runner, shell script, or Codex automation can implement it as long as it follows the contract below.
+
+## Schedule
+
+- Run every 4 hours starting at midnight: 12:00 AM, 4:00 AM, 8:00 AM, 12:00 PM, 4:00 PM, and 8:00 PM.
+- Run on startup.
+- Use Kyle's local timezone when the scheduler supports explicit timezone configuration.
+
+## Input Files
+
+| File | Purpose | Status |
+|---|---|---|
+| `os/context/wanted-trading-cards.md` | Active wanted-card list, search context, ended comparable auction links, image references, and variant notes. | Active |
+| `.agents/skills/find-card-listings/` | Codex skill that performs the scan and report generation. | Active |
+
+## Runner Contract
+
+For each active wanted card:
+
+1. Read card name, game, variant constraints, description, optional image, search terms, negative terms, and ended auction comparables from `os/context/wanted-trading-cards.md`.
+2. If an image is provided, inspect it and extract concrete visual cues before searching.
+3. Search eBay as a logged-out user using public pages, public APIs, or public web results.
+4. Search exact card terms and broader lot/bulk terms that could include the card.
+5. Open individual listing detail pages while logged out for every reportable candidate.
+6. Remove ended, completed, and sold listings from the candidate set.
+7. Compare active candidate listings against the card's cached retail baseline in `os/context/wanted-trading-cards.md`.
+8. If the wanted-card entry has no cached retail baseline, check the relevant retail baseline once, update the wanted-card context, and use that cached value for future runs.
+9. For OverPower cards missing a cached baseline, use only The Orange King retail site at <https://theorangeking.com/> as the retail baseline; do not use The Orange King's eBay account or any eBay listing as a retail baseline.
+10. For Magic: The Gathering cards missing a cached baseline, use Brute Force MTG at <https://www.bruteforcemtg.com/> as the retail baseline.
+11. Produce one table per card, sorted by price plus shipping ascending.
+12. Use US/domestic shipping in totals when visible. If only international shipping is visible, say so in notes.
+13. Include days remaining for every row: numeric days for auctions, `n/a` for verified buy-it-now listings with no visible countdown.
+14. Link rows to individual eBay item pages only; seller pages, category pages, and search pages belong in skipped/uncertain notes.
+15. Include notes such as `part of a bulk deal`, `comes with other cards`, `variant uncertain`, `image cues matched`, or `below retail baseline`.
+16. Report search limitations, missing baseline cache, skipped ambiguity, and skipped ended/sold listings compactly.
+
+## Safety Rules
+
+- Never bid, buy, make offers, add items to cart, message sellers, save searches, watch listings, or sign in to eBay.
+- Use a logged-out eBay context only.
+- Do not use Kyle's eBay cookies, account, watch list, saved searches, seller messages, cart, or purchase history.
+- Do not mutate the wanted-card context during a scheduled run.
+- Do not store raw eBay HTML, account cookies, personal account data, or unnecessary seller data.
+- If a listing requires logged-in access to inspect safely, skip it and note the limitation.
+
+## Output
+
+Primary output is a compact Markdown report.
+
+Suggested scheduled-run artifact:
+
+| Artifact | Purpose |
+|---|---|
+| `os/automation-output/wanted-card-listings/latest.md` | Latest active listing report. |
+
+Each card section should include:
+
+| Field | Required |
+|---|---|
+| Card name | Yes |
+| Retail baseline source and price | Best effort |
+| Listing total price | Yes when available |
+| Listing price | Yes when available |
+| Shipping | Yes when available |
+| Link | Yes; individual eBay item page only |
+| Days remaining | Yes; numeric for auctions, `n/a` for verified buy-it-now listings |
+| Notes | Yes when useful |
+
+Rows must be sorted by total price plus shipping ascending. Auctions/listings that have ended, completed, or sold must be removed from the output.
+
+## Implementation Notes
+
+- Codex implementation: use `.agents/skills/find-card-listings/`.
+- Current Codex automation ID: `wanted-card-listings`.
+- Codex cron schedule is active. If the runner does not support a native startup trigger, run this automation manually on app or machine startup until a startup hook is available.
+- Non-Codex implementation: use the same runner contract with equivalent public web or marketplace APIs.
+- Treat this file as policy/config, not generated output. Update wanted cards in `os/context/wanted-trading-cards.md` before changing scheduler prompts.

@@ -28,6 +28,13 @@ Repeated workflows, preferences, and recurring shapes that may become skills, au
 - Keep mailbox mutations narrow: operate on explicit Gmail message IDs from the sender search, and do not delete, archive, forward, or broadly mark categories read.
 - For AgentOS automations, keep a harness-neutral spec under `os/automations/` and make the Codex scheduled job a thin runner over that spec so the workflow can be replicated outside Codex.
 
+## Personal Collecting Automations
+
+- Wanted trading card scans should be read-only: use logged-out eBay access, never bid or buy, omit ended/completed/sold listings from active reports, and compare OverPower only against The Orange King retail site, not its eBay account; compare Magic against Brute Force MTG.
+- Keep wanted-card targets in `os/context/wanted-trading-cards.md` and treat scheduled listing reports as replaceable output rather than durable memory.
+- Cache retail baseline price, checked date, and source URL in the wanted-card details after the first lookup; scheduled runs should reuse cached baselines unless Kyle asks for a refresh.
+- Use US/domestic shipping for Kyle's listing totals when visible, and never include sold/completed/ended eBay listings in active opportunity tables.
+
 ## Kyle Collaboration
 
 - Ask focused questions when preferences materially change the system.

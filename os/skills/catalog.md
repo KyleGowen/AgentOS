@@ -14,6 +14,7 @@ translations that make them usable in Codex.
 | `/start` | Cursor skill | Excelsior | attachment paste | `os/skills/native/cursor/start/SKILL.md` | `.agents/skills/start/SKILL.md` | Translated |
 | `/start-aws-db-tunnel` | Cursor skill | Excelsior | attachment paste | `os/skills/native/cursor/start-aws-db-tunnel/SKILL.md` | `.agents/skills/start-aws-db-tunnel/SKILL.md` | Translated |
 | `accept-sender-appointments` | Codex skill | Personal productivity | live Gmail/Calendar workflow | None | `.agents/skills/accept-sender-appointments/SKILL.md` | Created |
+| `find-card-listings` | Codex skill | Personal collecting | AgentOS automation spec | None | `.agents/skills/find-card-listings/SKILL.md` | Created |
 | `arr-current-downloads` | Codex skill | Home Media Server | `KyleGowen/plex-server-hardware/skills/arr-current-downloads` | `os/skills/native/codex/plex-server-hardware/arr-current-downloads/SKILL.md` | Plex repo installed skill | Archived |
 | `plex-stack-health-check` | Codex skill | Home Media Server | `KyleGowen/plex-server-hardware/skills/plex-stack-health-check` | `os/skills/native/codex/plex-server-hardware/plex-stack-health-check/SKILL.md` | Plex repo installed skill | Archived |
 | `media-internet-search` | Codex skill | Home Media Server | `KyleGowen/plex-server-hardware/tools/codex-skills/media-internet-search` | `os/skills/native/codex/plex-server-hardware/media-internet-search/SKILL.md` | Plex repo installed skill | Archived |
@@ -59,6 +60,15 @@ Each is preserved verbatim under `os/skills/native/cursor/<skill-name>/` and tra
 - Codex state: repo skill under `.agents/skills/accept-sender-appointments/`.
 - Output: accepted Calendar RSVP responses, matching Gmail messages marked read when requested, compact count/date summary.
 - Verification: Codex skill validation plus a post-action Gmail unread search for the sender; Calendar RSVP results should show the authenticated user as accepted.
+
+## `find-card-listings`
+
+- Trigger: Kyle asks to scan eBay for wanted OverPower or Magic: The Gathering cards, find active card auctions, monitor wanted cards, or run the wanted-card listing automation.
+- Inputs: `os/context/wanted-trading-cards.md`, public eBay listings checked logged out, ended auction comparables, optional image evidence, and retail baselines from The Orange King or Brute Force MTG.
+- Natural state: AgentOS automation specification under `os/automations/wanted-card-listings.md`.
+- Codex state: repo skill under `.agents/skills/find-card-listings/`.
+- Output: active listing report with one price-sorted table per card, days remaining, links, and compact notes for bulk lots or companion cards.
+- Verification: Codex skill validation plus report spot-checks for logged-out eBay access, omitted ended auctions, and ascending total price sort.
 
 ## Home Media Server Codex Skills
 

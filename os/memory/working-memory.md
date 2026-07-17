@@ -15,6 +15,7 @@ Update this at the end of a meaningful task, project shift, or planning session.
 ## Active Home Projects
 
 - See `home-memory.md` for personal project context.
+- Wanted card listing automation spec, `find-card-listings` skill, and Codex cron automation `wanted-card-listings` were created on 2026-07-17. Next action: add real wanted cards to `os/context/wanted-trading-cards.md`; startup behavior is documented as a runner requirement because the Codex automation API exposed only cron scheduling.
 
 ## Recently Completed
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Find Card Listings"
+  short_description: "Find wanted trading card listings"
+  default_prompt: "Use $find-card-listings to scan eBay for wanted OverPower and Magic cards."

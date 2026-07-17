@@ -1,6 +1,6 @@
 # My Agentic OS Playbook
 
-Last updated: 2026-07-16
+Last updated: 2026-07-17
 
 ## My OS Foundation
 
@@ -23,6 +23,7 @@ Last updated: 2026-07-16
 | Me | `/complete` | Mark AgentOS course projects complete. | Updated tracker, project notes, README, and related docs. |
 | Agent-specific | Measurabl and Excelsior skill translations | Repeated work workflows imported from Claude Code and Cursor. | Codex repo skills and native archives. |
 | Me | `accept-sender-appointments` | Accept trusted sender appointment invitations and clean up matching mail. | Calendar RSVPs, read-state cleanup, and compact run summary. |
+| Me | `find-card-listings` | Scan eBay for wanted OverPower and Magic cards without bidding or logging in. | Price-sorted active listing tables with baseline notes. |
 
 ### Memory
 
@@ -114,6 +115,7 @@ attention.
 | AI office-hours follow-up | After Tuesday office hours | Run the AI Office Hours Follow-Up Agent once Kyle has provided current post-session notes. | Future candidate |
 | PR review prep | Workday morning or on demand | Run the PR Review Prep Agent to find tagged Measurabl PRs and prepare the review queue. | Future candidate |
 | Auto-accept appointments | Every 2 hours from 7:00 AM through 11:00 PM | Run `accept-sender-appointments` for active senders in `os/automations/auto-accept-appointments.md`. | Active; Codex id `auto-accept-trusted-appointments` |
+| Wanted card listings | Every 4 hours from midnight and startup when supported | Run `find-card-listings` for active cards in `os/context/wanted-trading-cards.md`, using logged-out eBay access and retail baselines. | Active; Codex id `wanted-card-listings`; startup hook documented |
 
 ## What's Working Best
 
