@@ -58,7 +58,13 @@ When the run is triggered by adding or activating a wanted-card entry, follow th
 
 ## Output
 
-Primary output is a compact Markdown report.
+Primary output is a compact Markdown report. Lead every run with a one-row-per-active-card opportunity chart so Kyle can skim the result without reading the per-card evidence.
+
+| Game | Card Name | Retail Price | Found Listing Combined Price |
+|---|---|---:|---:|
+| Magic: The Gathering | Example Card | $18.15 | [$17.50](https://www.ebay.com/itm/example) |
+
+Include every active card in this chart. Use `—` when no verified active listing was found. List each verified listing separately in the final column, separated by `<br>`, and link each price to its individual eBay item page. Bold a combined price only when it is strictly lower than the retail price. The detailed, per-card tables remain the evidence layer below the chart.
 
 Suggested scheduled-run artifact:
 

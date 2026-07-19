@@ -65,6 +65,7 @@ This skill never bids, buys, messages sellers, watches items, or uses a logged-i
    - Add notes such as `part of a bulk deal`, `comes with other cards`, `variant uncertain`, `shipping variable`, or `below retail baseline`.
 
 6. Report.
+   - Lead with the compact cross-card opportunity chart defined in `references/reporting.md`; include every active card and bold only verified combined listing prices strictly below the cached retail baseline.
    - Group wanted cards by their `Game` field before listing individual cards. Use second-level headings for games such as `## Magic: The Gathering` and `## OverPower`, then third-level headings for each card under the matching game.
    - Produce one table per wanted card.
    - Sort rows by total price plus shipping ascending.

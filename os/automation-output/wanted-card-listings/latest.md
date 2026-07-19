@@ -1,10 +1,24 @@
 # Wanted Card Listings
 
-Run: 2026-07-19 14:56 UTC
+Run: 2026-07-19 15:13 UTC
 
 Scope: 9 active wanted cards scanned.
 
-Access: Public, logged-out eBay item pages and web discovery only; no account actions were taken. All cached retail baselines were reused; no retail sites were rechecked. All wanted-card reference images were inspected before matching.
+Access: Public, logged-out eBay item pages and targeted web discovery only; no account actions were taken. All cached retail baselines were reused; no retail sites were rechecked. All nine wanted-card reference images were inspected before matching. The four retained active listing pages were re-verified in this run.
+
+## Opportunity Summary
+
+| Game | Card Name | Retail Price | Found Listing Combined Price |
+|---|---|---:|---:|
+| Magic: The Gathering | Stinging Study | $18.15 | [$23.83](https://www.ebay.com/itm/147327423845) |
+| OverPower | Onslaught Promo Character | $15.00 | — |
+| OverPower | Beyonder Infinity Promo Character | $399.00 | — |
+| OverPower | Devourer of Worlds Any Character Special | $130.00 | [**$129.99**](https://www.ebay.com/itm/186406454737)<br>[$144.93](https://www.ebay.com/itm/202873207451) |
+| OverPower | Iron Man IQ Character | $52.50 | — |
+| OverPower | Thor IQ Character | $65.00 | — |
+| OverPower | Rogue IQ Character | $25.00 | — |
+| OverPower | Brass Chrome/Holofoil Promo Character | $9.00 | [$11.43](https://www.ebay.com/itm/192307701188) |
+| OverPower | Post Promo Character | $5.00 | — |
 
 ## Magic: The Gathering
 

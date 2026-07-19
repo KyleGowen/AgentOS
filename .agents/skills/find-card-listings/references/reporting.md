@@ -10,6 +10,22 @@ Start with:
 - Scope: number of active wanted cards scanned.
 - Access note: confirm eBay was checked logged out and whether retail baselines were verified.
 
+Then add an `## Opportunity Summary` chart before the detailed game sections. It is the skim layer for every scheduled and on-demand run:
+
+```markdown
+| Game | Card Name | Retail Price | Found Listing Combined Price |
+|---|---|---:|---:|
+| Magic: The Gathering | Stinging Study | $18.15 | [$23.83](https://www.ebay.com/itm/123) |
+| OverPower | Devourer of Worlds | $130.00 | [**$129.99**](https://www.ebay.com/itm/456)<br>[$144.93](https://www.ebay.com/itm/789) |
+| OverPower | Onslaught | $15.00 | — |
+```
+
+- Include one row for every active wanted card, retaining its source-list order.
+- List only verified active item-page totals in the final column; use `—` when there are none.
+- Link each displayed total directly to its individual eBay item page.
+- Bold a displayed total only when it is strictly lower than that card's retail baseline. Do not bold equal, above-baseline, unverified, or unknown totals.
+- Keep the detailed per-card tables below this chart as the evidence layer.
+
 ## Per-Card Section
 
 Group cards by game first, then use one section per wanted card inside each game group. Preserve the game names from the wanted-card context, normally `Magic: The Gathering` and `OverPower`.
