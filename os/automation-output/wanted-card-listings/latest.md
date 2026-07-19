@@ -1,10 +1,10 @@
 # Wanted Card Listings
 
-Run: 2026-07-19 04:29 UTC
+Run: 2026-07-19 14:56 UTC
 
-Scope: 8 active wanted cards scanned.
+Scope: 9 active wanted cards scanned.
 
-Access: Public, logged-out eBay item pages and web discovery only; no account actions were taken. Cached retail baselines were reused for existing cards; Beyonder's The Orange King baseline was checked and cached. All wanted-card reference images were inspected before matching.
+Access: Public, logged-out eBay item pages and web discovery only; no account actions were taken. All cached retail baselines were reused; no retail sites were rechecked. All wanted-card reference images were inspected before matching.
 
 ## Magic: The Gathering
 
@@ -29,6 +29,15 @@ No active matching listings found.
 Baseline: $399.00 at The Orange King retail site, checked 2026-07-19; exact product was sold out. Target: white-jacket Beyonder Infinity promo character with infinity stats and `May play any Special cards.` text.
 
 No active matching listings found.
+
+### Devourer of Worlds Any Character Special
+
+Baseline: $130.00 at The Orange King retail site, checked 2026-07-19; exact product was unavailable. Target: yellow X-Men OverPower Any Character special with Galactus art, `OD` code, and `One Per Deck` text.
+
+| Total | Price | Shipping | Days Left | Listing | Notes |
+|---:|---:|---:|---:|---|---|
+| $129.99 | $129.99 | Free | n/a | [Marvel OVERPOWER X-Men Any Character Devourer of Worlds Galactus Rare, + extras!](https://www.ebay.com/itm/186406454737) | likely match; title confirms Any Character, Devourer of Worlds, and Galactus; comes with other cards; verified active Buy It Now; domestic shipping used; $0.01 below baseline |
+| $144.93 | $144.93 | Free | n/a | [Marvel OVERPOWER X-Men Any Character DEVOURER OF WORLDS - OPD - Galactus - VR](https://www.ebay.com/itm/202873207451) | exact match; item title and specifics confirm Any Character - Devourer of Worlds, Overpower X-Men, Galactus, OPD, and VR; verified active Buy It Now, last item available; domestic shipping used; above baseline |
 
 ### Iron Man IQ Character
 
@@ -65,9 +74,9 @@ No active matching listings found.
 ## Skipped / uncertain
 
 - [Non Sports Promos Inserts Rares Chase cards "You Pick"](https://www.ebay.com/itm/364981165816) exposes an active `Marvel OVERPOWER POST PROMO` selection, but the displayed base price and photo are not bound to the required Post-character variant; its Onslaught selection is out of stock.
-- [Onslaught/Post/Holocaust promo lot](https://www.ebay.com/itm/277319091183) is active at $40.00, but its seller photo shows mission/special cards rather than either required promo character, so it was omitted.
+- [Onslaught/Post/Holocaust promo lot](https://www.ebay.com/itm/277319091183) is active at $40.00 with free domestic shipping, but its accessible item page does not bind the required Onslaught/Post character image or stats to the lot, so it was omitted.
 - [Stinging Study extended art](https://www.ebay.com/itm/286707478670) is active at $9.44, but the accessible item page exposes no US/domestic shipping quote, so it was omitted rather than using a foreign quote or discovery price.
 - Kyle's Beyonder seed item ([item 188353640036](https://www.ebay.com/itm/188353640036)) appeared only as a completed buyer-feedback reference in logged-out web results, so it was treated as an ended/sold comparable rather than an active listing row.
-- The Orange King's [Beyonder promo character product](https://theorangeking.com/products/beyonder-promo-character-vr-w-bonus) verified the exact target and $399.00 retail baseline, but it was sold out and is not an active eBay opportunity.
+- Beyonder search results produced only a completed/sold seed reference or non-target cards; no reportable active detail page confirmed the white-jacket Infinity promo and its infinity-stat/text cues.
 - Active Beyonder discoveries were rejected when they referred to non-target cards, including Monumental `Beyonder & Dr. Doom` mission singles, VS System Beyonder cards, comics, or modern Marvel/Fleer trading cards rather than the OverPower Infinity promo character.
 - A Rogue IQ candidate ([item 358244501409](https://www.ebay.com/itm/358244501409)) returned a generic error when reopened. Other Onslaught, Iron Man IQ, Thor IQ, and Rogue IQ discoveries either lacked an accessible individual detail page or did not confirm the required image/text cues. Ended and sold listings were omitted.

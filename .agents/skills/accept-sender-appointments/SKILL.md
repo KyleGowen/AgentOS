@@ -25,6 +25,8 @@ The workflow is harness-neutral. In Codex, use the Gmail and Google Calendar con
    - Start with `max_results` around 50. Page if `next_page_token` appears and the prompt asks for all matching messages.
    - Keep unrelated lookalikes separate. For example, social notification emails mentioning a person are not appointment invites unless the user explicitly includes them in the read cleanup.
 
+   For a recurring runner that has an approved, opaque reviewed-message ledger, use an ID-only search first and read full details only for IDs not already recorded as confirmed non-calendar. Record a new ID only after it is clearly non-calendar; never record ambiguous messages. The ledger must not contain message bodies or private metadata.
+
 2. Identify appointment/invite messages.
    - Treat subjects like `Invitation:`, `Updated invitation:`, `appointment confirmed`, `appointment rescheduled`, or messages with `invite.ics` as appointment evidence.
    - Prefer accepting the underlying Calendar event, not replying by email.
@@ -47,7 +49,7 @@ The workflow is harness-neutral. In Codex, use the Gmail and Google Calendar con
    - If the request only says "those emails", mark only the appointment/invite messages found for the operation.
 
 6. Verify and report.
-   - Re-run a Gmail unread search for the sender and report whether any remain.
+   - Re-run a Gmail unread search for the sender after a Gmail-label or RSVP change and report whether any remain. If no state changed, the initial ID-only search is sufficient verification.
    - If useful, re-search or read Calendar events to confirm accepted status.
    - Final response should include counts and the event dates/times, not private body details.
 

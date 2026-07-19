@@ -103,6 +103,29 @@ Copy this section for each card Kyle wants to monitor.
 | Retail baseline URL | <https://theorangeking.com/products/beyonder-promo-character-vr-w-bonus> |
 | Notes | Added from Kyle-provided image and eBay seed link on 2026-07-19. The Orange King product page showed `BEYONDER Promo character - VR + bonus (see pictures)` at $399.00 and sold out when checked. |
 
+### Devourer of Worlds Any Character Special
+
+| Field | Value |
+|---|---|
+| Status | Active |
+| Game | OverPower |
+| Card name | Any Character - Devourer of Worlds |
+| Description | Devourer of Worlds Any Character special card from X-Men OverPower, featuring Galactus. |
+| Set / edition / variant | X-Men OverPower Any Character special; OPD / One Per Deck; very rare. |
+| Must-have details | Yellow vertical Any Character special card titled Devourer of Worlds; Galactus art with purple helmet/armor and a yellow energy blast; card code `OD`; bottom text says `One Per Deck`; rules text begins `Play during battle. Opponent cannot use Activator cards...` and says the Special may not be negated. |
+| Nice-to-have details | Seller photo confirms exact yellow Any Character card and visible `OD` / `One Per Deck` cues; listings from X-Men OverPower special lots are relevant if this card is visible or explicitly named. |
+| Exclude | Galactus character cards; Galactus specials other than Devourer of Worlds; mission cards, location cards, comics, toys, statues, HeroClix, VS System cards, Marvel trading cards from games other than OverPower, custom/proxy/reprint cards, and lots where Devourer of Worlds is not visible or named. |
+| Image | `os/context/assets/wanted-trading-cards/overpower-devourer-of-worlds-any-character-special.png` |
+| Seed/reference URLs | <https://theorangeking.com/products/ac-devourer-of-worlds-od-xm-opd-vr>; <https://www.ebay.com/sch/i.html?_nkw=devourer+of+worlds+overpower&_sacat=0&_from=R40&_trksid=p4624852.m570.l1313>; <https://www.ebay.com/itm/202873207451> |
+| Ended auction comparables |  |
+| Search terms | `devourer of worlds overpower`; `overpower devourer of worlds`; `any character devourer of worlds`; `overpower any character devourer`; `marvel overpower devourer of worlds`; `x-men overpower devourer of worlds`; `galactus devourer of worlds overpower`; `overpower OD devourer worlds`; `overpower OPD devourer worlds` |
+| Negative terms | `character card`; `mission`; `location`; `comic`; `toy`; `statue`; `Heroclix`; `VS System`; `Fleer Ultra`; `Marvel Masterpieces`; `custom`; `proxy`; `reprint` |
+| Retail baseline source | The Orange King retail site only; do not use The Orange King eBay listings |
+| Retail baseline price | $130.00 |
+| Retail baseline checked | 2026-07-19 |
+| Retail baseline URL | <https://theorangeking.com/products/ac-devourer-of-worlds-od-xm-opd-vr> |
+| Notes | Added from Kyle-provided image and eBay search link on 2026-07-19. The Orange King product search showed `ANY CHARACTER - DEVOURER OF WORLDS - X-MEN - Galactus - OPD - VR` at $130.00 and unavailable when checked. |
+
 ### Iron Man IQ Character
 
 | Field | Value |
