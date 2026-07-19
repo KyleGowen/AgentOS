@@ -9,10 +9,14 @@ translations that make them usable in Codex.
 | `/resolve-pr-comments` | Claude Code skill | Measurabl work | `/Users/kyle/.claude/skills/resolve-pr-comments/SKILL.md` | `os/skills/native/claude/resolve-pr-comments/SKILL.md` | `.agents/skills/resolve-pr-comments/SKILL.md` | Translated |
 | `/add-card` | Cursor skill | Excelsior | attachment paste | `os/skills/native/cursor/add-card/SKILL.md` | `.agents/skills/add-card/SKILL.md` | Translated |
 | `/add-community-deck` | Cursor skill | Excelsior | inline paste | `os/skills/native/cursor/add-community-deck/SKILL.md` | `.agents/skills/add-community-deck/SKILL.md` | Translated |
+| `/add-tournament-deck` | Cursor skill | Excelsior | `/Users/kyle/cursored/.cursor/skills/add-tournament-deck/SKILL.md` | `os/skills/native/cursor/add-tournament-deck/SKILL.md` | `.agents/skills/add-tournament-deck/SKILL.md` | Translated |
+| `/api-layer-migration` | Cursor skill | Excelsior | `/Users/kyle/Projects/excelsior/.cursor/skills/api-layer-migration/SKILL.md` | `os/skills/native/cursor/api-layer-migration/SKILL.md` | `.agents/skills/api-layer-migration/SKILL.md` | Translated |
 | `/pdf-to-png` | Cursor skill | Excelsior | inline paste | `os/skills/native/cursor/pdf-to-png/SKILL.md` | `.agents/skills/pdf-to-png/SKILL.md` | Translated |
 | `/ship` | Cursor skill | Excelsior | attachment paste | `os/skills/native/cursor/ship/SKILL.md` | `.agents/skills/ship/SKILL.md` | Translated |
 | `/start` | Cursor skill | Excelsior | attachment paste | `os/skills/native/cursor/start/SKILL.md` | `.agents/skills/start/SKILL.md` | Translated |
 | `/start-aws-db-tunnel` | Cursor skill | Excelsior | attachment paste | `os/skills/native/cursor/start-aws-db-tunnel/SKILL.md` | `.agents/skills/start-aws-db-tunnel/SKILL.md` | Translated |
+| `fix-trivy` | Codex skill | Excelsior | `/Users/kyle/cursored/.agents/skills/fix-trivy/SKILL.md` | `os/skills/native/codex/excelsior/fix-trivy/SKILL.md` | Excelsior repo-local skill | Archived |
+| `start-local-dev` | Codex skill | Excelsior | `/Users/kyle/cursored/.agents/skills/start-local-dev/SKILL.md` | `os/skills/native/codex/excelsior/start-local-dev/SKILL.md` | Excelsior repo-local skill | Archived |
 | `accept-sender-appointments` | Codex skill | Personal productivity | live Gmail/Calendar workflow | None | `.agents/skills/accept-sender-appointments/SKILL.md` | Created |
 | `find-card-listings` | Codex skill | Personal collecting | AgentOS automation spec | None | `.agents/skills/find-card-listings/SKILL.md` | Created |
 | `arr-current-downloads` | Codex skill | Home Media Server | `KyleGowen/plex-server-hardware/skills/arr-current-downloads` | `os/skills/native/codex/plex-server-hardware/arr-current-downloads/SKILL.md` | Plex repo installed skill | Archived |
@@ -45,12 +49,21 @@ translations that make them usable in Codex.
 
 - `/add-card`: add one card image to the Excelsior catalog with approval, Flyway migration, thumbnail config, tests, docs, dev restart, and browser verification.
 - `/add-community-deck`: import exported deck JSON into the internal community decks account for the Home rail.
+- `/add-tournament-deck`: import exported deck JSON into the internal tournament decks account for the Home Tournament Winning Decks rail.
+- `/api-layer-migration`: migrate legacy Express routes to the `/api/v1` layer with services, DTOs, docs, tests, local restart, and browser proof.
 - `/pdf-to-png`: convert image PDFs to PNG at native resolution through the existing Docker Poppler helper.
 - `/ship`: run the Excelsior release gate, remove debug noise, commit, and push.
 - `/start`: start the v2 local dev stack and report health.
 - `/start-aws-db-tunnel`: prepare or start production RDS access through AWS SSM port forwarding.
 
 Each is preserved verbatim under `os/skills/native/cursor/<skill-name>/` and translated into a Codex repo skill under `.agents/skills/<skill-name>/`.
+
+Repo-local Codex skills discovered in Excelsior:
+
+- `fix-trivy`: debug and fix Excelsior GitHub Actions Trivy dependency-vulnerability failures, with a helper script in `/Users/kyle/cursored/.agents/skills/fix-trivy/scripts/run_trivy_ci_scan.py`.
+- `start-local-dev`: start or verify the Excelsior root API on 8085 and Vite frontend on 5173, with final `/health` verification via `/Users/kyle/cursored/.agents/skills/start-local-dev/scripts/start_local_dev.py`.
+
+These are archived under `os/skills/native/codex/excelsior/` for AgentOS context. Their executable helper scripts remain owned by the Excelsior repo.
 
 ## `accept-sender-appointments`
 

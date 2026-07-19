@@ -8,6 +8,8 @@ Keep this separate from work memory. Home project details can inform home projec
 
 - Excelsior is Kyle's main personal software project and creative outlet.
 - It serves a small OverPower community with card browsing, deck building, collection tracking, and community features.
+- Current AgentOS detail lives in `os/context/excelsior.md`; verify the Excelsior repo before implementation because multiple local checkouts may exist.
+- Recent verified work includes Columbus Regional dashboard/podium deck surfaces, tournament deck import support, a broad `/api/v1` migration program, collection quantity/back-to-top UX improvements, Add Cards pane polish, ERB foil/alternate-art card migrations, and repo-local `fix-trivy` / `start-local-dev` skills.
 - Care points: preserve user data, avoid service disruption, support desktop and mobile UX, and handle the game-owner relationship delicately.
 - Near-term interests include adding tournament decks and the next card set.
 - Kyle collects OverPower and Magic: The Gathering cards and wants read-only eBay monitoring for wanted cards, with OverPower retail baselines from The Orange King and Magic retail baselines from Brute Force MTG.

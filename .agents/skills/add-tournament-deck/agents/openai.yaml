@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Tournament Deck"
+  short_description: "Import Excelsior tournament decks"
+  default_prompt: "Use $add-tournament-deck to import this exported deck JSON into tournament decks."

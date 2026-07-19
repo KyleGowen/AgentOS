@@ -1,71 +1,73 @@
 # Wanted Card Listings
 
-Run: 2026-07-17 21:08 UTC
-Scope: 7 active wanted cards scanned.
-Access: Public, logged-out eBay item pages, web search, and The Orange King public product pages only; no account actions were taken. Wanted-card images were inspected before searching. Cached retail baselines were reused except for the newly added Rogue IQ character baseline, which was checked and cached.
+Run: 2026-07-19 04:29 UTC
+
+Scope: 8 active wanted cards scanned.
+
+Access: Public, logged-out eBay item pages and web discovery only; no account actions were taken. Cached retail baselines were reused for existing cards; Beyonder's The Orange King baseline was checked and cached. All wanted-card reference images were inspected before matching.
 
 ## Magic: The Gathering
 
 ### Stinging Study
 
-Baseline: $18.15 at Brute Force MTG, checked 2026-07-17. Target: any official physical printing; the reference image is Commander 2021 extended art #371, but that art is not required.
+Baseline: $18.15 at Brute Force MTG, checked 2026-07-17. Target: any official physical printing; the saved extended-art C21 #371 image is reference-only.
 
 | Total | Price | Shipping | Days Left | Listing | Notes |
 |---:|---:|---:|---:|---|---|
-| $23.83 | $22.84 | $0.99 | n/a | [Stinging Study C21 NM MTG](https://www.ebay.com/itm/147327423845) | exact match; active Buy It Now; Commander 2021 regular, English, near mint; domestic shipping used; above retail baseline |
+| $23.83 | $22.84 | $0.99 | n/a | [Stinging Study C21 NM MTG](https://www.ebay.com/itm/147327423845) | exact match; Commander 2021 regular, English, near mint; verified active Buy It Now; domestic shipping used; above baseline |
 
 ## OverPower
 
 ### Onslaught Promo Character
 
-Baseline: $15.00 at The Orange King retail site, checked 2026-07-17. Target: blue-lightning promo character with Energy 8 / Fighting 2 / Strength 6 / Intellect 7.
+Baseline: $15.00 at The Orange King retail site, checked 2026-07-17. Target: blue-lightning promo character, 8 / 2 / 6 / 7 stats.
+
+No active matching listings found.
+
+### Beyonder Infinity Promo Character
+
+Baseline: $399.00 at The Orange King retail site, checked 2026-07-19; exact product was sold out. Target: white-jacket Beyonder Infinity promo character with infinity stats and `May play any Special cards.` text.
 
 No active matching listings found.
 
 ### Iron Man IQ Character
 
-Baseline: $52.50 at The Orange King retail site, checked 2026-07-17. Target: Iron Man IQ character card with red/gold side-profile armor art, blue background, and stat boxes showing Energy 5 / Fighting 3 / Strength 7 / Intellect 7.
+Baseline: $52.50 at The Orange King retail site, checked 2026-07-17. Target: blue-background IQ Character, 5 / 3 / 7 / 7 stats.
 
 No active matching listings found.
 
 ### Thor IQ Character
 
-Baseline: $65.00 at The Orange King retail site, checked 2026-07-17. Target: Thor IQ character card with Thor holding Mjolnir over a lightning background and stat boxes showing Energy 7 / Fighting 5 / Strength 7 / Intellect 4.
+Baseline: $65.00 at The Orange King retail site, checked 2026-07-17. Target: lightning-background IQ Character, 7 / 5 / 7 / 4 stats.
 
 No active matching listings found.
 
 ### Rogue IQ Character
 
-Baseline: $25.00 at The Orange King retail site, checked 2026-07-17. Target: Rogue IQ character card with Rogue flying on a blue/green background, stat boxes showing Energy 4 / Fighting 4 / Strength 7 / Intellect 2, and bottom text `May not be Spectrum KO'd with Special cards.`
+Baseline: $25.00 at The Orange King retail site, checked 2026-07-17. Target: flying Rogue IQ Character, 4 / 4 / 7 / 2 stats and Spectrum-KO text.
 
-No active matching listings verified from an opened item detail page.
+No active matching listings found.
 
 ### Brass Chrome/Holofoil Promo Character
 
-Baseline: $9.00 at The Orange King retail site, checked 2026-07-17. Target: WildStorm chrome/holofoil Brass character with gold name and Energy 7 / Fighting 5 / Strength 6 / Intellect 3.
+Baseline: $9.00 at The Orange King retail site, checked 2026-07-17. Target: shiny WildStorm Brass, 7 / 5 / 6 / 3 stats.
 
 | Total | Price | Shipping | Days Left | Listing | Notes |
 |---:|---:|---:|---:|---|---|
-| $11.43 | $11.43 | Free | n/a | [Marvel OVERPOWER Brass chrome character - Marvel vs Wildstorm - Image - promo](https://www.ebay.com/itm/192307701188) | likely match; active Buy It Now, 2 available; listing text confirms Brass, OverPower, WildStorm, chrome, and promo; free domestic shipping used; above retail baseline |
+| $11.43 | $11.43 | Free | n/a | [Marvel OVERPOWER Brass chrome character - Marvel vs Wildstorm - Image - promo](https://www.ebay.com/itm/192307701188) | title and item specifics confirm Brass, OverPower, Marvel vs. WildStorm, and promo/chrome context; verified active Buy It Now, 2 available; domestic shipping used; photo/stat cues not independently accessible; above baseline |
 
 ### Post Promo Character
 
-Baseline: $5.00 at The Orange King retail site, checked 2026-07-17. Target: orange/gold promo character with rocky art and Energy 1 / Fighting 6 / Strength 4 / Intellect 6.
+Baseline: $5.00 at The Orange King retail site, checked 2026-07-17. Target: orange/gold promo character, 1 / 6 / 4 / 6 stats.
 
-| Total | Price | Shipping | Days Left | Listing | Notes |
-|---:|---:|---:|---:|---|---|
-| $1.94 | $0.99 | $0.95 | n/a | [Non Sports Promos Inserts Rares Chase cards "You Pick"](https://www.ebay.com/itm/364981165816) | likely match; selectable `Marvel OVERPOWER POST PROMO` is available; listing text confirms promo rather than an excluded Post special; domestic shipping used; below retail baseline |
-| $2.24 | $1.25 | $0.99 | n/a | [Marvel Overpower Promos SINGLES * Choose Your Card * NrMint-Mint](https://www.ebay.com/itm/404148687302) | likely match; selectable `Post Hero Card` is available, distinguishing it from excluded Post specials; domestic shipping used; below retail baseline |
+No active matching listings found.
 
 ## Skipped / uncertain
 
-- [Marvel Overpower Onslaught Post Holocaust Promos OPD The Fighting Spirit Lives!](https://www.ebay.com/itm/277319091183) is active at $40.00 with free domestic shipping, but neither its title nor accessible photo evidence proves Onslaught's or Post's required art/stat cues.
-- The selectable Onslaught hero card in the Post single listing is out of stock.
-- Several Stinging Study item URLs redirected to eBay product pages in the logged-out scan; they were omitted because an individual item detail page could not be preserved as the report source. Direct public eBay search-result pages were also inconsistent.
-- [Kyle-provided Iron Man IQ seed item](https://www.ebay.com/itm/298438687673) could not be verified from logged-out public access during this run; eBay returned a generic error page, so no price, shipping, or active status was used in the table.
-- [Marvel OVERPOWER Original 3 & 4 stat OP character hero Cards Rare IQ Powersurge](https://www.ebay.com/itm/364796114467) is a multi-variation listing with `IRON MAN` marked out of stock, and its listed IQ character variations do not include Iron Man; skipped as not the wanted IQ Iron Man character.
-- [Marvel OVERPOWER Original 3 & 4 stat OP character hero Cards Rare IQ Powersurge](https://www.ebay.com/itm/364796114467) also lists `THOR` in the regular/original character options, but its IQ character variations do not include Thor; skipped as not the wanted IQ Thor character.
-- [Marvel Overpower Rogue Iq Hero Card](https://www.ebay.com/itm/358244501409) appears to be a Rogue IQ candidate at $25.00 plus $5.07 shipping in public eBay result text, but direct logged-out item-page fetch returned a generic eBay error page, so it was not promoted to the active table.
-- [Marvel OVERPOWER Original 3 & 4 stat OP character hero Cards Rare IQ Powersurge](https://www.ebay.com/itm/364796114467) lists regular `ROGUE` in the original character options, and `Rogue: Brotherhood of Evil Mutants IQ Character` is a different IQ variant marked out of stock; skipped as not the wanted Rogue IQ Character card.
-
-Ended, sold, completed, and out-of-stock candidates are omitted from the tables.
+- [Non Sports Promos Inserts Rares Chase cards "You Pick"](https://www.ebay.com/itm/364981165816) exposes an active `Marvel OVERPOWER POST PROMO` selection, but the displayed base price and photo are not bound to the required Post-character variant; its Onslaught selection is out of stock.
+- [Onslaught/Post/Holocaust promo lot](https://www.ebay.com/itm/277319091183) is active at $40.00, but its seller photo shows mission/special cards rather than either required promo character, so it was omitted.
+- [Stinging Study extended art](https://www.ebay.com/itm/286707478670) is active at $9.44, but the accessible item page exposes no US/domestic shipping quote, so it was omitted rather than using a foreign quote or discovery price.
+- Kyle's Beyonder seed item ([item 188353640036](https://www.ebay.com/itm/188353640036)) appeared only as a completed buyer-feedback reference in logged-out web results, so it was treated as an ended/sold comparable rather than an active listing row.
+- The Orange King's [Beyonder promo character product](https://theorangeking.com/products/beyonder-promo-character-vr-w-bonus) verified the exact target and $399.00 retail baseline, but it was sold out and is not an active eBay opportunity.
+- Active Beyonder discoveries were rejected when they referred to non-target cards, including Monumental `Beyonder & Dr. Doom` mission singles, VS System Beyonder cards, comics, or modern Marvel/Fleer trading cards rather than the OverPower Infinity promo character.
+- A Rogue IQ candidate ([item 358244501409](https://www.ebay.com/itm/358244501409)) returned a generic error when reopened. Other Onslaught, Iron Man IQ, Thor IQ, and Rogue IQ discoveries either lacked an accessible individual detail page or did not confirm the required image/text cues. Ended and sold listings were omitted.

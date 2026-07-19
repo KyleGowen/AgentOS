@@ -1,0 +1,4 @@
+interface:
+  display_name: "API Layer Migration"
+  short_description: "Migrate Excelsior routes to API v1"
+  default_prompt: "Use $api-layer-migration to migrate the next Excelsior API route to v1."

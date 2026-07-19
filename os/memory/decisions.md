@@ -66,3 +66,10 @@ Each entry should include the date, context, decision, reason, and evidence when
 - Decision: Add the PR Review Prep Agent as a separate read-only agent with a minimal local state file for previously reported merged PRs.
 - Reason: Review prep has different inputs, output shape, and GitHub safety boundaries than comment resolution or implementation work.
 - Evidence: Kyle requested compact linked PR digests with repository, changed file count, build status, high-level gist, suggested review prompts, and no repeated merged PRs.
+
+## 2026-07-19 - Move Excelsior Work Toward Codex
+
+- Context: Kyle has historically worked on Excelsior in Cursor, and several Cursor skills still exist as source material.
+- Decision: Treat Codex as the intended primary working surface for Excelsior going forward, while preserving Cursor skills as archived references and translating durable workflows into Codex skills.
+- Reason: Kyle wants Excelsior work to happen in Codex now, so AgentOS should route future Excelsior implementation, skill use, and workflow improvement toward Codex-native context instead of assuming Cursor is primary.
+- Evidence: Kyle asked the OS Thought Partner to document that he is trying to work on Excelsior in Codex now instead of Cursor.

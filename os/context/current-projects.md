@@ -228,7 +228,7 @@ Tech stack summary:
 Routing:
 
 - If a request touches Excelsior, use this file as a summary.
-- When available, prefer a future `os/context/excelsior.md` for detailed project context.
+- Prefer `os/context/excelsior.md` for detailed project context.
 - Ask Kyle before touching production-impacting behavior or user data.
 
 ### Home Media Server

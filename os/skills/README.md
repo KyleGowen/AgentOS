@@ -49,13 +49,31 @@ For each skill, capture:
 
 ## Excelsior Cursor Skills
 
-- Codex locations: `.agents/skills/add-card/`, `.agents/skills/add-community-deck/`, `.agents/skills/pdf-to-png/`, `.agents/skills/ship/`, `.agents/skills/start/`, `.agents/skills/start-aws-db-tunnel/`
+- Codex locations: `.agents/skills/add-card/`, `.agents/skills/add-community-deck/`, `.agents/skills/add-tournament-deck/`, `.agents/skills/api-layer-migration/`, `.agents/skills/pdf-to-png/`, `.agents/skills/ship/`, `.agents/skills/start/`, `.agents/skills/start-aws-db-tunnel/`
 - Native archives: `os/skills/native/cursor/<skill-name>/SKILL.md`
 - Trigger: Excelsior-specific Cursor slash commands or natural-language equivalents.
 - Inputs: Excelsior repo files, local dev services, images/PDFs/deck JSON, AWS/GitHub/npm tooling depending on the skill.
 - Process: Preserve native Cursor skill text, translate to Codex `SKILL.md` frontmatter/body, validate the Codex skill, and mature through real Excelsior use.
-- Output: Tool-specific Excelsior workflow results such as catalog migrations, community deck imports, image conversions, dev stack health, release pushes, or DB tunnels.
+- Output: Tool-specific Excelsior workflow results such as catalog migrations, community or tournament deck imports, API v1 route migrations, image conversions, dev stack health, release pushes, or DB tunnels.
 - Verification: Validate each Codex skill and forward-test in the Excelsior repo before marking mature.
+
+## Excelsior Repo-Local Codex Skills
+
+- Runtime source: `/Users/kyle/cursored/.agents/skills/`
+- Native archive: `os/skills/native/codex/excelsior/<skill-name>/`
+- Codex locations: owned by the Excelsior repo, not by AgentOS `.agents/skills/`
+- Trigger: Excelsior requests to repair Trivy CI failures or start/verify local development.
+- Inputs: Excelsior repo status, CI metadata, local dev services, and skill-owned helper scripts in the Excelsior repo.
+- Process: Use `os/context/excelsior.md` for routing, then defer to the Excelsior repo skill docs and helper scripts for exact operational steps.
+- Output: CI fix reports, pushed fixes when requested, or local API/frontend health summaries.
+- Verification: Treat AgentOS copies as context archives; verify live behavior from the Excelsior repo-local skill copies.
+
+Archived skills:
+
+- `fix-trivy`
+- `start-local-dev`
+
+Do not copy executable helper scripts out of the Excelsior repo into AgentOS unless the skill ownership decision changes.
 
 ## Home Media Server Codex Skills
 

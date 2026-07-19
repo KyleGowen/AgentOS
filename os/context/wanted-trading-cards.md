@@ -80,6 +80,29 @@ Copy this section for each card Kyle wants to monitor.
 | Retail baseline URL | <https://theorangeking.com/collections/promos> |
 | Notes | Added from Kyle-provided image and ended eBay comparable on 2026-07-17. |
 
+### Beyonder Infinity Promo Character
+
+| Field | Value |
+|---|---|
+| Status | Active |
+| Game | OverPower |
+| Card name | Beyonder |
+| Description | Beyonder Infinity promo character card from Marvel OverPower. |
+| Set / edition / variant | Infinity promo character card; very rare. |
+| Must-have details | Promo character card titled Beyonder; white-jacket Beyonder portrait with glowing eyes on dark blue cosmic background; horizontal character layout; stat icons showing Energy infinity, Fighting infinity, Strength infinity, Intellect infinity; bottom text says `May play any Special cards.` |
+| Nice-to-have details | Seller photo confirms exact Beyonder Infinity promo character card; listings that include rare OverPower promo characters are relevant if Beyonder is visible or explicitly named. |
+| Exclude | Beyonder mission cards such as Secret Wars mission cards; Beyonder comics or Marvel trading cards from games other than OverPower; VS System Beyonder cards; specials, power cards, teamworks, or non-character cards; lots where the Beyonder promo character card is not visible or named; custom/proxy/reprint cards. |
+| Image | `os/context/assets/wanted-trading-cards/overpower-beyonder-infinity-promo-character.png` |
+| Seed/reference URLs | <https://theorangeking.com/products/beyonder-promo-character-vr-w-bonus>; <https://www.ebay.com/itm/188353640036> |
+| Ended auction comparables | <https://www.ebay.com/itm/188353640036?_skw=overpower+beyonder&itmmeta=01KXWA0MJT6D1HBPRW9KD765DD&hash=item2bdac07664:g:mesAAeSwPw9p-t7Q&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xCJ%2F5%2FMLWSN%2BY%2Bv4ZZaf7p2j8TfBHhaKps9hj9RJIp8f09ft4QJmxZlHJOUNLj94ktpHtTh0kJQJ4jUu%2BHiliQ2MTkeyDIycLCbH4IpLiL6rq6HEfu7AMtUNEkT8J%2FYi5uHERILbIEsckJuISVknuYsDeOTvrDR0%2Bjv1APpUAsXnVGDbKIq6l6cIgS1FFV9SKeEzfgClaiZao0j6PNZZ8wlzTpOAsvFILG85GqmQloriISd0a2oyc%2FA8DVZlKV%2FaASysikz3fX2HKTrHl1ws8ch79%2FAbcz2TmoTrEj2g8f54w%3D%3D%7Ctkp%3ABk9SR9bJgorvZw> |
+| Search terms | `overpower beyonder promo character`; `overpower beyonder infinity promo`; `marvel overpower beyonder infinity`; `marvel overpower beyonder character`; `beyonder overpower promo`; `overpower promo character beyonder`; `overpower rare promo character beyonder`; `overpower beyonder infinity character` |
+| Negative terms | `mission`; `Secret Wars`; `Beyonder & Dr. Doom`; `comic`; `Defenders Beyond`; `Fleer`; `VS System`; `TCG`; `Inhuman`; `mtg`; `heroclix`; `custom`; `proxy`; `reprint` |
+| Retail baseline source | The Orange King retail site only; do not use The Orange King eBay listings |
+| Retail baseline price | $399.00 |
+| Retail baseline checked | 2026-07-19 |
+| Retail baseline URL | <https://theorangeking.com/products/beyonder-promo-character-vr-w-bonus> |
+| Notes | Added from Kyle-provided image and eBay seed link on 2026-07-19. The Orange King product page showed `BEYONDER Promo character - VR + bonus (see pictures)` at $399.00 and sold out when checked. |
+
 ### Iron Man IQ Character
 
 | Field | Value |
