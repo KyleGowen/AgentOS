@@ -22,28 +22,43 @@ The add-card trigger is a full-list refresh: process every `Active` wanted card 
 | `os/context/wanted-trading-cards.md` | Active wanted-card list, search context, ended comparable auction links, image references, and variant notes. | Active |
 | `.agents/skills/find-card-listings/` | Codex skill that performs the scan and report generation. | Active |
 
+## Efficient Runner State
+
+Scheduled runners may keep an opaque, runner-owned ledger of **known active item URLs** and **recurring rejected candidate URLs**, keyed to the active wanted-card entry. This ledger is an optimization only; it is not policy, not a retail baseline source, and not a substitute for logged-out item-page verification.
+
+- Start each scheduled run from cached retail baselines in `os/context/wanted-trading-cards.md`, known active item URLs from runner state, and recent rejected candidates.
+- Re-open known active item URLs first. Keep them in the report only if the logged-out item page still verifies active status, price, shipping, and target match.
+- Re-check recurring rejected candidates only when their rejection reason might have changed, such as a generic item-page error, missing domestic shipping, or an unbound multi-variation selection. Do not repeatedly inspect permanently irrelevant non-target items.
+- Run a capped discovery pass for every active card after checking known URLs. Use exact card terms first, then broader lot/bulk terms only when the card has no verified active listing, recent evidence is stale, or the wanted-card context specifically calls for broad discovery.
+- Record only durable, non-private facts needed for future efficiency: item URL, card name, last checked date/time, active/rejected status, compact rejection reason, and the verified total when reportable.
+- Do not record raw eBay HTML, cookies, account data, seller messages, private data, or full page dumps.
+- Do not let runner state suppress safety checks. Every reportable row still requires logged-out item-page verification during the current run.
+
 ## Runner Contract
 
 For each active wanted card:
 
 1. Read card name, game, variant constraints, description, optional image, search terms, negative terms, and ended auction comparables from `os/context/wanted-trading-cards.md`.
 2. If an image is provided, inspect it and extract concrete visual cues before searching.
-3. Search eBay as a logged-out user using public pages, public APIs, or public web results.
-4. Search exact card terms and broader lot/bulk terms that could include the card.
-5. Open individual listing detail pages while logged out for every reportable candidate.
-6. Remove ended, completed, and sold listings from the candidate set.
-7. Compare active candidate listings against the card's cached retail baseline in `os/context/wanted-trading-cards.md`.
-8. If the wanted-card entry has no cached retail baseline, check the relevant retail baseline once, update the wanted-card context, and use that cached value for future runs.
-9. For OverPower cards missing a cached baseline, use only The Orange King retail site at <https://theorangeking.com/> as the retail baseline; do not use The Orange King's eBay account or any eBay listing as a retail baseline.
-10. For OverPower cards supplied with a The Orange King product URL, use that product page as the preferred retail seed. Normalize away tracking query parameters and cache the canonical product URL, price, checked date, and any stock note.
-11. For Magic: The Gathering cards missing a cached baseline, use Brute Force MTG at <https://www.bruteforcemtg.com/> as the retail baseline.
-12. Group the report by game first, then produce one table per card under the matching game heading, sorted by price plus shipping ascending.
-13. Use US/domestic shipping in totals when visible. If only international shipping is visible, say so in notes.
-14. Include days remaining for every row: numeric days for auctions, `n/a` for verified buy-it-now listings with no visible countdown.
-15. Link rows to individual eBay item pages only; seller pages, category pages, and search pages belong in skipped/uncertain notes.
-16. If eBay returns a generic error page for a candidate item URL, keep it in skipped/uncertain unless an exact item-page screenshot or another accessible item-detail source verifies price, shipping, and active status.
-17. Include notes such as `part of a bulk deal`, `comes with other cards`, `variant uncertain`, `image cues matched`, or `below retail baseline`.
-18. Report search limitations, missing baseline cache, skipped ambiguity, and skipped ended/sold listings compactly.
+3. Re-open known active item URLs from runner state, if present, while logged out.
+4. Re-check recent rejected candidates only when their rejection reason might have changed.
+5. Search eBay as a logged-out user using public pages, public APIs, or public web results.
+6. Search exact card terms first, then broader lot/bulk terms only when needed for coverage under the Efficient Runner State rules.
+7. Open individual listing detail pages while logged out for every reportable candidate.
+8. Remove ended, completed, and sold listings from the candidate set.
+9. Compare active candidate listings against the card's cached retail baseline in `os/context/wanted-trading-cards.md`.
+10. If the wanted-card entry has no cached retail baseline, check the relevant retail baseline once, update the wanted-card context, and use that cached value for future runs.
+11. For OverPower cards missing a cached baseline, use only The Orange King retail site at <https://theorangeking.com/> as the retail baseline; do not use The Orange King's eBay account or any eBay listing as a retail baseline.
+12. For OverPower cards supplied with a The Orange King product URL, use that product page as the preferred retail seed. Normalize away tracking query parameters and cache the canonical product URL, price, checked date, and any stock note.
+13. For Magic: The Gathering cards missing a cached baseline, use Brute Force MTG at <https://www.bruteforcemtg.com/> as the retail baseline.
+14. Update runner-owned known-active and rejected-candidate state when the runner supports it.
+15. Group the report by game first, then produce one table per card under the matching game heading, sorted by price plus shipping ascending.
+16. Use US/domestic shipping in totals when visible. If only international shipping is visible, say so in notes.
+17. Include days remaining for every row: numeric days for auctions, `n/a` for verified buy-it-now listings with no visible countdown.
+18. Link rows to individual eBay item pages only; seller pages, category pages, and search pages belong in skipped/uncertain notes.
+19. If eBay returns a generic error page for a candidate item URL, keep it in skipped/uncertain unless an exact item-page screenshot or another accessible item-detail source verifies price, shipping, and active status.
+20. Include notes such as `part of a bulk deal`, `comes with other cards`, `variant uncertain`, `image cues matched`, or `below retail baseline`.
+21. Report search limitations, missing baseline cache, skipped ambiguity, and skipped ended/sold listings compactly.
 
 When the run is triggered by adding or activating a wanted-card entry, follow the same runner contract for every active card. The changed card is the trigger, not the scan scope.
 

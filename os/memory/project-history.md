@@ -4,6 +4,11 @@ Compact history of meaningful outcomes and milestones. This is not a full change
 
 ## AgentOS
 
+### 2026-07-19 - Automation Efficiency Review Added
+
+- Added `os/automations/automation-efficiency-review.md` as a daily 6:30 AM Pacific review-only optimization digest.
+- The automation reviews recent scheduled runs and future automation candidates, then recommends token and efficiency improvements by skill without applying changes until Kyle approves them.
+
 ### 2026-07-16 - Accept Sender Appointments Skill Created
 
 - Promoted the repeated Gmail and Google Calendar cleanup workflow into the Codex skill `.agents/skills/accept-sender-appointments/`.

@@ -17,6 +17,7 @@ This skill never bids, buys, messages sellers, watches items, or uses a logged-i
 
 - Wanted-card context: default to `os/context/wanted-trading-cards.md`.
 - Automation policy: default to `os/automations/wanted-card-listings.md` when running as a scheduled task or add-card-triggered task.
+- Optional runner state: known active item URLs and recurring rejected candidate URLs from the scheduler's private automation memory, when available.
 - Optional one-off card name, description, image path, retail product URL, or ended auction links from the user. Add durable targets to the wanted-card context before relying on them in scheduled runs.
 
 ## References
@@ -36,7 +37,9 @@ This skill never bids, buys, messages sellers, watches items, or uses a logged-i
 2. Search eBay publicly.
    - Use a logged-out browser context, public search pages, public APIs, or web search results.
    - Do not use Kyle's eBay account, cookies, watch list, saved searches, seller messages, cart, bidding pages, or purchase flows.
-   - Search both precise names and broader terms from the wanted-card context so bulk deals and listings with companion cards can surface.
+   - For scheduled runs with runner state, re-open known active item URLs first and re-check only the recurring rejected candidates whose rejection reason might have changed.
+   - Search precise names from the wanted-card context before broader terms.
+   - Use broader lot/bulk terms when the card has no verified active listing, recent evidence is stale, or the wanted-card context specifically calls for broad discovery.
    - Promote only individual listing URLs, normally `https://www.ebay.com/itm/<item-id>...`, to report rows. Seller pages, category pages, search result pages, and generic shop pages are discovery sources only.
 
 3. Collect active listing facts.
@@ -73,6 +76,12 @@ This skill never bids, buys, messages sellers, watches items, or uses a logged-i
    - Include days remaining for every row. Use a numeric value for auctions, `n/a` for buy-it-now listings only after verifying the listing detail page has no visible end countdown, and `unknown` only in skipped/uncertain notes.
    - Keep ended, completed, and sold listings out of the tables.
    - Include a compact skipped/uncertain section only when it helps Kyle understand why a likely-looking listing was omitted.
+
+7. Update runner state when available.
+   - Record known active item URLs with card name, last checked date/time, verified total, and compact status.
+   - Record recurring rejected candidate URLs with card name, last checked date/time, and a compact rejection reason such as `generic item-page error`, `missing domestic shipping`, `variant not bound`, `photo shows non-target`, or `sold/ended`.
+   - Keep state minimal and non-private. Do not store raw HTML, cookies, seller messages, account data, full page dumps, or unnecessary marketplace data.
+   - Do not let state replace current-run verification for reportable rows.
 
 ## Safety Rules
 

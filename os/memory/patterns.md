@@ -27,6 +27,7 @@ Repeated workflows, preferences, and recurring shapes that may become skills, au
 - When Kyle asks to accept all appointments from a sender, use the `accept-sender-appointments` Codex skill: search bounded unread Gmail from the named sender, accept matching Google Calendar events once, then mark the requested sender messages read.
 - Keep mailbox mutations narrow: operate on explicit Gmail message IDs from the sender search, and do not delete, archive, forward, or broadly mark categories read.
 - For AgentOS automations, keep a harness-neutral spec under `os/automations/` and make the Codex scheduled job a thin runner over that spec so the workflow can be replicated outside Codex.
+- Automation efficiency reviews should be read-only daily digests: inspect recent runner memory, output artifacts, scheduler prompts, schedules, and future candidates; recommend prompt trims, state/cache improvements, search narrowing, schedule/config fixes, output compaction, spec drift fixes, or skill refactors; wait for Kyle's approval before changing files or pushing.
 
 ## Personal Collecting Automations
 
