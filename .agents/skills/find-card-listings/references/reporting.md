@@ -53,7 +53,7 @@ Rules:
 - Put active auction days remaining in days with one decimal when possible.
 - Use `n/a` for buy-it-now listings without a visible end time.
 - Do not leave `Days Left` blank. If the listing detail page does not expose enough timing to decide between an auction countdown and `n/a`, move the candidate to skipped/uncertain.
-- Recalculate `Total` from the reported `Price` plus `Shipping` after row edits. If the item page price differs from a discovery/source price, use the item page value and note the mismatch only when it explains a correction.
+- Recalculate `Total` from the reported `Price` plus `Shipping` after row edits. For auctions, do this from a fresh, uncached item-detail response immediately before writing the report; cached detail content, saved state, search snippets, and listing revision timestamps cannot establish the current bid. If the item page price differs from a discovery/source price or an earlier fetch, use the fresh item-page value and note the mismatch only when it explains a correction.
 - Use US/domestic shipping in totals when visible. If only international shipping is visible, say so in notes.
 - Keep links as listing title markdown links.
 - Keep notes compact and evidence-oriented.

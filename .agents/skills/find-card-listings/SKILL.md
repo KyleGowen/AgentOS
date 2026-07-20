@@ -45,6 +45,8 @@ This skill never bids, buys, messages sellers, watches items, or uses a logged-i
 3. Collect active listing facts.
    - Open each candidate listing detail page while logged out before reporting it.
    - Capture title, listing URL, current bid or buy-it-now price, shipping, total price, listing format, seller-visible condition text, auction end time, and days remaining.
+   - For auctions, treat the current bid as volatile data: obtain it from a fresh, uncached item-detail response at the time of the run. Send cache-bypass request headers and a harmless unique query parameter when the client supports them; do not trust an earlier fetch, a browser/web-cache snapshot, a listing revision timestamp, or runner state as the current bid.
+   - If a fresh detail fetch disagrees with a prior response, use the fresh item-page bid and recalculate the total from its displayed domestic shipping. If the client cannot obtain a fresh price after retrying through an independent logged-out detail-page fetch, move the auction to skipped/uncertain rather than retaining a potentially stale price.
    - Treat search-result snippets, eBay product pages, item-card tiles, and web-search prices as discovery hints only. Do not copy those prices into the main report unless the same price and shipping are verified on the individual listing detail page or in a user-provided screenshot of that exact item page.
    - Exclude ended, completed, and sold listings from the report even when they match the card.
    - If days remaining or listing URL cannot be verified from an item detail page, omit the candidate from the main table and mention it under skipped/uncertain.
@@ -53,12 +55,12 @@ This skill never bids, buys, messages sellers, watches items, or uses a logged-i
 
 4. Compare against retail baselines.
    - Use cached `Retail baseline price`, `Retail baseline checked`, and `Retail baseline URL` values from the wanted-card context when present.
-   - Do not re-check retail baseline sites on every run for known values.
+   - Do not re-check retail baseline sites on every run for known values. On the first scheduled run each Monday and Friday in Kyle's local timezone, refresh every active card's cached retail baseline instead; update its price, checked date, canonical URL, and stock note when available.
    - If a wanted card has no cached baseline, check once and update the wanted-card context. For OverPower cards, use only The Orange King retail site at `https://theorangeking.com/`, not The Orange King's eBay account or any other eBay listing; for Magic: The Gathering cards, use Brute Force MTG at `https://www.bruteforcemtg.com/`.
    - For OverPower cards supplied with a The Orange King product URL, prefer that product page over a broad retail search. Read the canonical product URL, title, price, availability, and product image from the page or embedded Shopify product JSON, then cache the canonical URL and price.
    - For Brute Force MTG, search the public CrystalCommerce product search directly with `https://www.bruteforcemtg.com/products/search?q=<url-encoded-card-name>&c=1`. If a plain fetch returns `410 Gone`, retry with a normal browser user-agent before declaring the baseline missing.
    - Parse exact product rows only. Ignore similarly named cards. If the wanted entry accepts any official printing, use the lowest exact official printing price as the baseline and mention notable variant prices in notes. If Brute Force marks the exact product `Out of stock`, the visible product price can still be cached as the retail baseline, with the stock status noted.
-   - Refresh a cached retail baseline only when Kyle asks, the cached value is clearly missing/invalid, or the wanted-card entry says to refresh it.
+   - Outside the Monday/Friday refreshes, refresh a cached retail baseline only when Kyle asks, the cached value is clearly missing/invalid, or the wanted-card entry says to refresh it.
 
 5. Classify matches.
    - Distinguish exact card matches, likely variants, bulk lots containing the target, and weak/ambiguous matches.
@@ -72,7 +74,7 @@ This skill never bids, buys, messages sellers, watches items, or uses a logged-i
    - Group wanted cards by their `Game` field before listing individual cards. Use second-level headings for games such as `## Magic: The Gathering` and `## OverPower`, then third-level headings for each card under the matching game.
    - Produce one table per wanted card.
    - Sort rows by total price plus shipping ascending.
-   - Before finalizing, re-check that every known total equals the displayed item-page price plus displayed item-page shipping. If the item page disagrees with discovery/search pricing, use the item-page values and note the correction when useful.
+   - Immediately before finalizing, re-check every auction's current bid from a fresh, uncached item-detail response, then confirm every known total equals that bid or buy-it-now price plus displayed item-page shipping. If the item page disagrees with discovery/search pricing or an earlier fetch, use the fresh item-page values and note the correction when useful.
    - Include days remaining for every row. Use a numeric value for auctions, `n/a` for buy-it-now listings only after verifying the listing detail page has no visible end countdown, and `unknown` only in skipped/uncertain notes.
    - Keep ended, completed, and sold listings out of the tables.
    - Include a compact skipped/uncertain section only when it helps Kyle understand why a likely-looking listing was omitted.

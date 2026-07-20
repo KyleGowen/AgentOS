@@ -8,9 +8,9 @@ This file is the harness-neutral source of truth. A scheduler, agent runner, she
 
 ## Schedule
 
-- Run every 4 hours starting at midnight: 12:00 AM, 4:00 AM, 8:00 AM, 12:00 PM, 4:00 PM, and 8:00 PM.
-- Run on startup.
+- Run once daily at 6:00 AM Pacific time, observing PST/PDT (`America/Los_Angeles`).
 - Run immediately after a new card is added to `os/context/wanted-trading-cards.md` or an existing card is changed from `Draft` to `Active`.
+- Refresh every active card's cached retail baseline twice weekly: on the first scheduled run each Monday and each Friday, using Kyle's local timezone. On all other scheduled runs, reuse valid cached values unless a baseline is missing or invalid.
 - Use Kyle's local timezone when the scheduler supports explicit timezone configuration.
 
 The add-card trigger is a full-list refresh: process every `Active` wanted card and replace the latest report for the whole list. Do not produce a single-card-only report unless Kyle explicitly asks for one.
@@ -45,9 +45,11 @@ For each active wanted card:
 5. Search eBay as a logged-out user using public pages, public APIs, or public web results.
 6. Search exact card terms first, then broader lot/bulk terms only when needed for coverage under the Efficient Runner State rules.
 7. Open individual listing detail pages while logged out for every reportable candidate.
+   - For auctions, retrieve the current bid through a fresh, uncached detail-page request immediately before report generation. Do not reuse cached HTML, a prior fetch, item revision time, search snippets, or runner-state totals as a current auction price. If a fresh bid cannot be verified after a logged-out retry, move the listing to skipped/uncertain.
 8. Remove ended, completed, and sold listings from the candidate set.
 9. Compare active candidate listings against the card's cached retail baseline in `os/context/wanted-trading-cards.md`.
 10. If the wanted-card entry has no cached retail baseline, check the relevant retail baseline once, update the wanted-card context, and use that cached value for future runs.
+    - On the first scheduled run each Monday and Friday in Kyle's local timezone, refresh the retail baseline for every active card and update its price, checked date, canonical URL, and stock note when available.
 11. For OverPower cards missing a cached baseline, use only The Orange King retail site at <https://theorangeking.com/> as the retail baseline; do not use The Orange King's eBay account or any eBay listing as a retail baseline.
 12. For OverPower cards supplied with a The Orange King product URL, use that product page as the preferred retail seed. Normalize away tracking query parameters and cache the canonical product URL, price, checked date, and any stock note.
 13. For Magic: The Gathering cards missing a cached baseline, use Brute Force MTG at <https://www.bruteforcemtg.com/> as the retail baseline.
@@ -107,6 +109,6 @@ Rows must be sorted by total price plus shipping ascending. Auctions/listings th
 
 - Codex implementation: use `.agents/skills/find-card-listings/`.
 - Current Codex automation ID: `wanted-card-listings`.
-- Codex cron schedule is active. If the runner does not support a native startup or wanted-list-change trigger, run this automation manually on app/machine startup and immediately after adding or activating a wanted card until those hooks are available.
+- Codex cron schedule is active for 6:00 AM Pacific daily. The list-change full refresh remains an event trigger; no separate startup run is scheduled.
 - Non-Codex implementation: use the same runner contract with equivalent public web or marketplace APIs.
 - Treat this file as policy/config, not generated output. Update wanted cards in `os/context/wanted-trading-cards.md` before changing scheduler prompts.

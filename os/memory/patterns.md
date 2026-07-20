@@ -33,7 +33,8 @@ Repeated workflows, preferences, and recurring shapes that may become skills, au
 
 - Wanted trading card scans should be read-only: use logged-out eBay access, never bid or buy, omit ended/completed/sold listings from active reports, and compare OverPower only against The Orange King retail site, not its eBay account; compare Magic against Brute Force MTG.
 - Keep wanted-card targets in `os/context/wanted-trading-cards.md` and treat scheduled listing reports as replaceable output rather than durable memory.
-- Cache retail baseline price, checked date, and source URL in the wanted-card details after the first lookup; scheduled runs should reuse cached baselines unless Kyle asks for a refresh.
+- Cache retail baseline price, checked date, and source URL in the wanted-card details after the first lookup; scheduled runs reuse cached values except for the first Monday and Friday runs, which refresh every active baseline.
+- Schedule the wanted-card scan daily at 6:00 AM Pacific; retain the immediate full-list refresh after a card is added or activated.
 - Use US/domestic shipping for Kyle's listing totals when visible, and never include sold/completed/ended eBay listings in active opportunity tables.
 - Adding or activating a wanted-card target should immediately run the wanted-card listing workflow for all active cards and replace the latest full-list report.
 - For Magic wanted-card retail baselines, use Brute Force MTG's direct product search URL (`/products/search?q=<card>&c=1`) with a browser user-agent if needed, match exact product rows, and allow out-of-stock rows to provide the cached retail baseline price with stock status noted.

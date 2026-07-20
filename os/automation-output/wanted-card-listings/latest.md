@@ -1,16 +1,22 @@
 # Wanted Card Listings
 
-Run: 2026-07-19 15:13 UTC
+Run: 2026-07-20 17:56 UTC
 
-Scope: 9 active wanted cards scanned.
+Scope: 15 active wanted cards scanned.
 
-Access: Public, logged-out eBay item pages and targeted web discovery only; no account actions were taken. All cached retail baselines were reused; no retail sites were rechecked. All nine wanted-card reference images were inspected before matching. The four retained active listing pages were re-verified in this run.
+Access: Public, logged-out eBay item pages and targeted web discovery only; no account actions were taken. The five new exact-printing targets received fresh Brute Force MTG baselines and capped eBay discovery; no new detail page proved all required collector-number constraints. Existing retained item pages were re-opened; Mjölnir's $25.00 bid remains Kyle's live item-page correction because the public fetcher returned a stale auction snapshot.
 
 ## Opportunity Summary
 
 | Game | Card Name | Retail Price | Found Listing Combined Price |
 |---|---|---:|---:|
 | Magic: The Gathering | Stinging Study | $18.15 | [$23.83](https://www.ebay.com/itm/147327423845) |
+| Magic: The Gathering | Mjölnir, Hammer of Thor | $30.77 | [**$26.19**](https://www.ebay.com/itm/298457351326) |
+| Magic: The Gathering | Iron Man, Tony Stark | $6.79 | — |
+| Magic: The Gathering | Namor the Sub-Mariner | $12.23 | — |
+| Magic: The Gathering | The Vision and Scarlet Witch | $68.00 | — |
+| Magic: The Gathering | Ultron, Artificial Malevolence | $15.90 | — |
+| Magic: The Gathering | Hulk, Brutal Brawler | $44.10 | — |
 | OverPower | Onslaught Promo Character | $15.00 | — |
 | OverPower | Beyonder Infinity Promo Character | $399.00 | — |
 | OverPower | Devourer of Worlds Any Character Special | $130.00 | [**$129.99**](https://www.ebay.com/itm/186406454737)<br>[$144.93](https://www.ebay.com/itm/202873207451) |
@@ -29,6 +35,44 @@ Baseline: $18.15 at Brute Force MTG, checked 2026-07-17. Target: any official ph
 | Total | Price | Shipping | Days Left | Listing | Notes |
 |---:|---:|---:|---:|---|---|
 | $23.83 | $22.84 | $0.99 | n/a | [Stinging Study C21 NM MTG](https://www.ebay.com/itm/147327423845) | exact match; Commander 2021 regular, English, near mint; verified active Buy It Now; domestic shipping used; above baseline |
+
+### Mjölnir, Hammer of Thor
+
+Baseline: $30.77 at [Brute Force MTG](https://www.bruteforcemtg.com/catalog/magic_the_gathering_singles-universes_beyond_marvel_super_heroes_singles-marvel_super_heroes/mjolnir_hammer_of_thor/521370), checked 2026-07-20; Near Mint English, 6 in stock. Target: Marvel Super Heroes (MSH) #146, official English paper card, foil or nonfoil.
+
+| Total | Price | Shipping | Days Left | Listing | Notes |
+|---:|---:|---:|---:|---|---|
+| $26.19 | $25.00 | $1.19 | 1.5 | [MTG * Mjolnir, Hammer of Thor Marvel Super Heroes * 1X * NM](https://www.ebay.com/itm/298457351326) | exact match; current bid corrected from Kyle's live item-page observation; title and item specifics confirm Marvel Super Heroes, mythic, English, regular finish, and #146; domestic shipping used; below retail baseline |
+
+### Iron Man, Tony Stark
+
+Baseline: $6.79 at [Brute Force MTG](https://www.bruteforcemtg.com/catalog/magic_the_gathering_singles-universes_beyond_marvel_super_heroes_singles-marvel_super_heroes_commander/iron_man_tony_stark/522513), checked 2026-07-20; exact MSC #851 Near Mint English product was out of stock. Target: regular/nonfoil MSC #851.
+
+No active matching listings found.
+
+### Namor the Sub-Mariner
+
+Baseline: $12.23 at [Brute Force MTG](https://www.bruteforcemtg.com/catalog/magic_the_gathering_singles-universes_beyond_marvel_super_heroes_singles-marvel_super_heroes/namor_the_submariner/521065), checked 2026-07-20. Target: MSH #69, nonfoil or foil.
+
+No active matching listings found.
+
+### The Vision and Scarlet Witch
+
+Baseline: $68.00 at [Brute Force MTG](https://www.bruteforcemtg.com/catalog/magic_the_gathering_singles-universes_beyond_marvel_super_heroes_singles-marvel_super_heroes_commander/the_vision_and_scarlet_witch/522704), checked 2026-07-20. Target: MSC #707, nonfoil or foil.
+
+No active matching listings found.
+
+### Ultron, Artificial Malevolence
+
+Baseline: $15.90 at [Brute Force MTG](https://www.bruteforcemtg.com/catalog/magic_the_gathering_singles-universes_beyond_marvel_super_heroes_singles-marvel_super_heroes/ultron_artificial_malevolence/521683), checked 2026-07-20. Target: MSH #252, nonfoil or foil.
+
+No active matching listings found.
+
+### Hulk, Brutal Brawler
+
+Baseline: $44.10 at [Brute Force MTG](https://www.bruteforcemtg.com/catalog/magic_the_gathering_singles-universes_beyond_marvel_super_heroes_singles-marvel_super_heroes_commander/hulk_brutal_brawler/522526), checked 2026-07-20. Target: MSC #833, nonfoil or foil.
+
+No active matching listings found.
 
 ## OverPower
 
@@ -87,6 +131,7 @@ No active matching listings found.
 
 ## Skipped / uncertain
 
+- [Namor the Sub-Mariner](https://www.ebay.com/itm/800142926723) is active at $5.49 plus $5.50 domestic shipping, but its detail page confirms only the set/name/regular finish—not the required MSH #69—so it was kept out of the table.
 - [Non Sports Promos Inserts Rares Chase cards "You Pick"](https://www.ebay.com/itm/364981165816) exposes an active `Marvel OVERPOWER POST PROMO` selection, but the displayed base price and photo are not bound to the required Post-character variant; its Onslaught selection is out of stock.
 - [Onslaught/Post/Holocaust promo lot](https://www.ebay.com/itm/277319091183) is active at $40.00 with free domestic shipping, but its accessible item page does not bind the required Onslaught/Post character image or stats to the lot, so it was omitted.
 - [Stinging Study extended art](https://www.ebay.com/itm/286707478670) is active at $9.44, but the accessible item page exposes no US/domestic shipping quote, so it was omitted rather than using a foreign quote or discovery price.

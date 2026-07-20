@@ -58,6 +58,144 @@ Copy this section for each card Kyle wants to monitor.
 | Retail baseline URL | <https://www.bruteforcemtg.com/products/search?q=stinging+study&c=1> |
 | Notes | Added from Kyle-provided image on 2026-07-17. Updated on 2026-07-17: regular art and any official physical printing are acceptable. Brute Force MTG search shows regular Stinging Study at $18.15 and Stinging Study - Extended Art at $20.59; both were out of stock when checked. |
 
+### Mjölnir, Hammer of Thor
+
+| Field | Value |
+|---|---|
+| Status | Active |
+| Game | Magic: The Gathering |
+| Card name | Mjölnir, Hammer of Thor |
+| Description | Official physical Magic: The Gathering card from Marvel Super Heroes, collector number 146. |
+| Set / edition / variant | Marvel Super Heroes (MSH) #146, English, nonfoil or foil. |
+| Must-have details | Official paper Magic card named `Mjölnir, Hammer of Thor`; Marvel Super Heroes set code `MSH`; collector number 146; Legendary Artifact — Equipment. |
+| Nice-to-have details | Near mint or lightly played; seller photo or item specifics confirm the MSH set and #146. |
+| Exclude | Digital-only/MTGO listings; proxies, custom cards, altered cards, art cards, oversized cards, unrelated Thor or Mjölnir items, and listings not for the physical card. |
+| Image | <https://cards.scryfall.io/normal/front/e/0/e0c7f566-5351-44e3-a346-b84b0eb10209.jpg?1783902926> |
+| Seed/reference URLs | <https://scryfall.com/card/msh/146/mj%C3%B6lnir-hammer-of-thor> |
+| Ended auction comparables |  |
+| Search terms | `Mjölnir Hammer of Thor MSH 146`; `Mjolnir Hammer of Thor MSH 146`; `Mjölnir Hammer of Thor Marvel Super Heroes`; `MTG Mjolnir Hammer of Thor 146` |
+| Negative terms | `MTGO`; `digital`; `proxy`; `custom`; `altered`; `art card`; `oversized`; `Thor hammer replica`; `Marvel Legends`; `comic`; `Mjolnir card sleeve` |
+| Retail baseline source | Brute Force MTG |
+| Retail baseline price | $30.77 |
+| Retail baseline checked | 2026-07-20 |
+| Retail baseline URL | <https://www.bruteforcemtg.com/catalog/magic_the_gathering_singles-universes_beyond_marvel_super_heroes_singles-marvel_super_heroes/mjolnir_hammer_of_thor/521370> |
+| Notes | Added from Kyle-provided Scryfall reference on 2026-07-19. Scryfall confirms Marvel Super Heroes #146, mythic, released 2026-06-26. Brute Force MTG exact search returned no matching product row when first checked. Kyle supplied the exact Brute Force product page on 2026-07-20; it verified Near Mint English at $30.77, with 6 in stock. |
+
+### Iron Man, Tony Stark
+
+| Field | Value |
+|---|---|
+| Status | Active |
+| Game | Magic: The Gathering |
+| Card name | Iron Man, Tony Stark |
+| Description | Official physical Magic card from Marvel Super Heroes Commander, collector number 851. |
+| Set / edition / variant | Marvel Super Heroes Commander (MSC) #851, English, nonfoil. |
+| Must-have details | Exact official paper `Iron Man, Tony Stark`, set code `MSC`, collector number `851`; regular/nonfoil printing. |
+| Nice-to-have details | Near mint or lightly played; seller photo or item specifics confirm MSC #851. |
+| Exclude | MTGO/digital, proxy, custom, altered, art-card, oversized, or other Iron Man printings. |
+| Image | <https://cards.scryfall.io/normal/front/e/c/ec18d8cd-67ed-4338-8ae7-69628469cd43.jpg?1783902992> |
+| Seed/reference URLs | <https://scryfall.com/card/msc/851/iron-man-tony-stark> |
+| Ended auction comparables |  |
+| Search terms | `Iron Man Tony Stark MSC 851`; `Iron Man Tony Stark Marvel Super Heroes Commander 851` |
+| Negative terms | `MTGO`; `digital`; `proxy`; `custom`; `altered`; `art card`; `oversized`; `Iron Man 851 comic` |
+| Retail baseline source | Brute Force MTG |
+| Retail baseline price | $6.79 |
+| Retail baseline checked | 2026-07-20 |
+| Retail baseline URL | <https://www.bruteforcemtg.com/catalog/magic_the_gathering_singles-universes_beyond_marvel_super_heroes_singles-marvel_super_heroes_commander/iron_man_tony_stark/522513> |
+| Notes | Added from Kyle-provided Scryfall URL on 2026-07-20. Brute Force exact product showed Near Mint English at $6.79 and out of stock when checked. |
+
+### Namor the Sub-Mariner
+
+| Field | Value |
+|---|---|
+| Status | Active |
+| Game | Magic: The Gathering |
+| Card name | Namor the Sub-Mariner |
+| Description | Official physical Magic card from Marvel Super Heroes, collector number 69. |
+| Set / edition / variant | Marvel Super Heroes (MSH) #69, English, nonfoil or foil. |
+| Must-have details | Exact official paper `Namor the Sub-Mariner`, set code `MSH`, collector number `69`. |
+| Nice-to-have details | Near mint or lightly played; seller photo or item specifics confirm MSH #69. |
+| Exclude | MTGO/digital, proxy, custom, altered, art-card, oversized, or other Namor printings. |
+| Image | <https://cards.scryfall.io/normal/front/7/a/7aaefcf9-fbe1-4767-92a5-09825761d116.jpg?1783902956> |
+| Seed/reference URLs | <https://scryfall.com/card/msh/69/namor-the-sub-mariner> |
+| Ended auction comparables |  |
+| Search terms | `Namor the Sub-Mariner MSH 69`; `Namor Sub-Mariner Marvel Super Heroes 69 MTG` |
+| Negative terms | `MTGO`; `digital`; `proxy`; `custom`; `altered`; `art card`; `oversized`; `Namor comic` |
+| Retail baseline source | Brute Force MTG |
+| Retail baseline price | $12.23 |
+| Retail baseline checked | 2026-07-20 |
+| Retail baseline URL | <https://www.bruteforcemtg.com/catalog/magic_the_gathering_singles-universes_beyond_marvel_super_heroes_singles-marvel_super_heroes/namor_the_submariner/521065> |
+| Notes | Added from Kyle-provided Scryfall URL on 2026-07-20. Brute Force exact product showed Near Mint English at $12.23 when checked. |
+
+### The Vision and Scarlet Witch
+
+| Field | Value |
+|---|---|
+| Status | Active |
+| Game | Magic: The Gathering |
+| Card name | The Vision and Scarlet Witch |
+| Description | Official physical Magic card from Marvel Super Heroes Commander, collector number 707. |
+| Set / edition / variant | Marvel Super Heroes Commander (MSC) #707, English, nonfoil or foil. |
+| Must-have details | Exact official paper `The Vision and Scarlet Witch`, set code `MSC`, collector number `707`. |
+| Nice-to-have details | Near mint or lightly played; seller photo or item specifics confirm MSC #707. |
+| Exclude | MTGO/digital, proxy, custom, altered, art-card, oversized, or other Vision/Scarlet Witch printings. |
+| Image | <https://cards.scryfall.io/normal/front/9/3/930afb5f-54b7-4cca-8c28-3e48938f3a43.jpg?1783903042> |
+| Seed/reference URLs | <https://scryfall.com/card/msc/707/the-vision-and-scarlet-witch> |
+| Ended auction comparables |  |
+| Search terms | `The Vision and Scarlet Witch MSC 707`; `Vision Scarlet Witch Marvel Super Heroes Commander 707 MTG` |
+| Negative terms | `MTGO`; `digital`; `proxy`; `custom`; `altered`; `art card`; `oversized`; `Vision Scarlet Witch comic` |
+| Retail baseline source | Brute Force MTG |
+| Retail baseline price | $68.00 |
+| Retail baseline checked | 2026-07-20 |
+| Retail baseline URL | <https://www.bruteforcemtg.com/catalog/magic_the_gathering_singles-universes_beyond_marvel_super_heroes_singles-marvel_super_heroes_commander/the_vision_and_scarlet_witch/522704> |
+| Notes | Added from Kyle-provided Scryfall URL on 2026-07-20. Brute Force exact product showed Near Mint English at $68.00 when checked. |
+
+### Ultron, Artificial Malevolence
+
+| Field | Value |
+|---|---|
+| Status | Active |
+| Game | Magic: The Gathering |
+| Card name | Ultron, Artificial Malevolence |
+| Description | Official physical Magic card from Marvel Super Heroes, collector number 252. |
+| Set / edition / variant | Marvel Super Heroes (MSH) #252, English, nonfoil or foil. |
+| Must-have details | Exact official paper `Ultron, Artificial Malevolence`, set code `MSH`, collector number `252`. |
+| Nice-to-have details | Near mint or lightly played; seller photo or item specifics confirm MSH #252. |
+| Exclude | MTGO/digital, proxy, custom, altered, art-card, oversized, or other Ultron printings. |
+| Image | <https://cards.scryfall.io/normal/front/3/2/32ddd5ac-57ed-4e78-8932-a65980191f6e.jpg?1783902889> |
+| Seed/reference URLs | <https://scryfall.com/card/msh/252/ultron-artificial-malevolence> |
+| Ended auction comparables |  |
+| Search terms | `Ultron Artificial Malevolence MSH 252`; `Ultron Artificial Malevolence Marvel Super Heroes 252 MTG` |
+| Negative terms | `MTGO`; `digital`; `proxy`; `custom`; `altered`; `art card`; `oversized`; `Ultron comic` |
+| Retail baseline source | Brute Force MTG |
+| Retail baseline price | $15.90 |
+| Retail baseline checked | 2026-07-20 |
+| Retail baseline URL | <https://www.bruteforcemtg.com/catalog/magic_the_gathering_singles-universes_beyond_marvel_super_heroes_singles-marvel_super_heroes/ultron_artificial_malevolence/521683> |
+| Notes | Added from Kyle-provided Scryfall URL on 2026-07-20. Brute Force exact product showed Near Mint English at $15.90 when checked. |
+
+### Hulk, Brutal Brawler
+
+| Field | Value |
+|---|---|
+| Status | Active |
+| Game | Magic: The Gathering |
+| Card name | Hulk, Brutal Brawler |
+| Description | Official physical Magic card from Marvel Super Heroes Commander, collector number 833. |
+| Set / edition / variant | Marvel Super Heroes Commander (MSC) #833, English, nonfoil or foil. |
+| Must-have details | Exact official paper `Hulk, Brutal Brawler`, set code `MSC`, collector number `833`. |
+| Nice-to-have details | Near mint or lightly played; seller photo or item specifics confirm MSC #833. |
+| Exclude | MTGO/digital, proxy, custom, altered, art-card, oversized, or other Hulk printings. |
+| Image | <https://cards.scryfall.io/normal/front/4/6/46d9f159-715e-4450-9f83-0fd050e2382e.jpg?1783902999> |
+| Seed/reference URLs | <https://scryfall.com/card/msc/833/hulk-brutal-brawler> |
+| Ended auction comparables |  |
+| Search terms | `Hulk Brutal Brawler MSC 833`; `Hulk Brutal Brawler Marvel Super Heroes Commander 833 MTG` |
+| Negative terms | `MTGO`; `digital`; `proxy`; `custom`; `altered`; `art card`; `oversized`; `Hulk comic` |
+| Retail baseline source | Brute Force MTG |
+| Retail baseline price | $44.10 |
+| Retail baseline checked | 2026-07-20 |
+| Retail baseline URL | <https://www.bruteforcemtg.com/catalog/magic_the_gathering_singles-universes_beyond_marvel_super_heroes_singles-marvel_super_heroes_commander/hulk_brutal_brawler/522526> |
+| Notes | Added from Kyle-provided Scryfall URL on 2026-07-20. Brute Force exact product showed Near Mint English at $44.10 when checked. |
+
 ### Onslaught Promo Character
 
 | Field | Value |

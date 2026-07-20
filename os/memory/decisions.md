@@ -73,3 +73,10 @@ Each entry should include the date, context, decision, reason, and evidence when
 - Decision: Treat Codex as the intended primary working surface for Excelsior going forward, while preserving Cursor skills as archived references and translating durable workflows into Codex skills.
 - Reason: Kyle wants Excelsior work to happen in Codex now, so AgentOS should route future Excelsior implementation, skill use, and workflow improvement toward Codex-native context instead of assuming Cursor is primary.
 - Evidence: Kyle asked the OS Thought Partner to document that he is trying to work on Excelsior in Codex now instead of Cursor.
+
+## 2026-07-20 - Daily Wanted-Card Scan At 6 AM Pacific
+
+- Context: The public wanted-card monitor had been scheduled every four hours.
+- Decision: Run its scheduled scan once per day at 6:00 AM Pacific (`America/Los_Angeles`), while retaining the immediate full-list refresh after a card is added or activated.
+- Reason: Kyle requested a lower-frequency automatic search without changing the list-change safety workflow.
+- Evidence: `os/automations/wanted-card-listings.md`, `PLAYBOOK.md`, and Codex automation `wanted-card-listings`.
