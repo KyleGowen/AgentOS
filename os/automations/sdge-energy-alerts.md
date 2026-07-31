@@ -35,11 +35,14 @@ Run once weekly on Monday at 7:00 AM Pacific time, observing PST/PDT
 5. Use the skill helper's `summary`, `run-plan`, and `diff-ids` commands to
    avoid unnecessary Gmail body reads.
 6. Read full email bodies only for message IDs absent from the processed ledger.
-7. Save all parsed facts to the flat-file database and regenerate the dashboard
+7. When the skill parser has gained new usage fields, use `usage-backfill-ids`
+   to find already-processed usage-report IDs missing normalized meter metrics,
+   then re-read only those IDs for enrichment.
+8. Save all parsed facts to the flat-file database and regenerate the dashboard
    according to the skill's storage and charting rules.
-8. Mark only successfully processed unread message IDs read, then verify unread
+9. Mark only successfully processed unread message IDs read, then verify unread
    cleanup.
-9. Leave ambiguous or failed messages eligible for a future run and report the
+10. Leave ambiguous or failed messages eligible for a future run and report the
    blocker compactly.
 
 ## Safety Rules

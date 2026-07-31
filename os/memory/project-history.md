@@ -9,6 +9,7 @@ Compact history of meaningful outcomes and milestones. This is not a full change
 - Added `.agents/skills/catalog-sdge-energy-alerts/` to process unread SDGE Energy Use Alert emails through the Gmail connector.
 - The skill stores parsed utility facts in `os/data/sdge-energy-alerts/records.jsonl`, regenerates `os/reports/sdge-energy-alerts/index.html`, and marks only successfully processed SDGE message IDs read.
 - Added `os/automations/sdge-energy-alerts.md` and scheduled Codex automation `sdge-energy-alerts` to run the skill weekly Monday at 7:00 AM Pacific.
+- Expanded parser and dashboard coverage for SDGE usage-report meter data: electric usage to date, on/off/super-off-peak kWh, gas therms, and meter endings.
 
 ### 2026-07-29 - Project 07 AI Coaching Context Interview
 

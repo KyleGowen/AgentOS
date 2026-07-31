@@ -58,11 +58,18 @@ Recommended record shape:
   },
   "usage": {
     "electricity": {
+      "meter_ending": "1459",
       "kwh_to_date": null,
       "kwh_projected_min": null,
-      "kwh_projected_max": null
+      "kwh_projected_max": null,
+      "time_of_use": {
+        "on_peak_kwh_to_date": null,
+        "off_peak_kwh_to_date": null,
+        "super_off_peak_kwh_to_date": null
+      }
     },
     "gas": {
+      "meter_ending": "7348",
       "therms_to_date": null,
       "therms_projected_min": null,
       "therms_projected_max": null
@@ -103,6 +110,7 @@ Keep private data minimized to SDGE alert facts Kyle explicitly asked to track. 
    - If `run-plan` returns `page_all_message_ids_then_diff`, page Gmail message IDs using `_search_email_ids` with query `from:notices@sdge.com -in:spam -in:trash` and label IDs `[SDGE_LABEL_ID]`. Do not read bodies yet.
    - After paging IDs, run `scripts/sdge_energy_store.py diff-ids --message-ids-json '<json-array>'`.
    - Read full email details only for `unprocessed_ids` from `diff-ids`. Never read bodies just to confirm already ledgered IDs.
+   - When the parser gains new metric coverage, run `scripts/sdge_energy_store.py usage-backfill-ids` to find already-processed usage-report messages that are missing normalized usage metrics. Re-read only those returned IDs, upsert refreshed records, and keep the existing processed ledger entries.
 
 4. Process unrecorded messages one at a time until none remain.
    - Read the first unprocessed message.
@@ -110,7 +118,7 @@ Keep private data minimized to SDGE alert facts Kyle explicitly asked to track. 
    - Extract all obtainable fields from the message text, HTML text, attachments, and inline images that the Gmail connector exposes.
    - Preserve the message ID, thread ID, subject, sender, and email date for traceability.
    - Normalize money as numbers without `$`; normalize projected ranges into `*_min` and `*_max`; normalize dates as ISO `YYYY-MM-DD` when possible.
-   - Capture gas therms, electric kWh, solar returned/exported-to-grid kWh, projected bill ranges, line-item charges, account ending, service address, bill-period dates or days remaining, and any other metric-like fact present.
+   - Capture electric usage to date, electric meter ending, time-of-use kWh buckets such as on-peak, off-peak, and super off-peak, gas therms to date, gas meter ending, solar returned/exported-to-grid kWh, projected bill ranges, line-item charges, account ending, service address, bill-period dates or days remaining, and any other metric-like fact present.
    - If the email contains an image-only table, use the connector's inline image/attachment access when available; otherwise record the limitation in `observations.notes`.
 
 5. Upsert and regenerate the dashboard.
@@ -119,10 +127,13 @@ Keep private data minimized to SDGE alert facts Kyle explicitly asked to track. 
    - The script updates the JSONL database and `processed-emails.jsonl` idempotently. It regenerates the dashboard unless `--no-report` is passed.
    - Inspect script output for `records_written`, `upserted`, `report_written`, and the dashboard path.
    - Chart only metrics with at least one normalized data point. Omit empty chart groups and empty series entirely; do not render placeholder kWh, therms, solar, or other charts from missing data.
-   - Keep chart cards large and readable. Split unrelated metrics into separate chart cards instead of layering several dense series together; for charge data, render separate charts for charge to date, projected low, projected high, and bill amount due.
+   - Keep chart cards large and readable. Split unrelated metrics into separate chart cards instead of layering several dense series together.
+   - Render only the current dashboard chart set, in this order when those metrics exist: Electric Usage To Date, Gas Usage To Date, Charge To Date, Bill Amount Due, On-Peak Electric Usage, Off-Peak Electric Usage, and Super Off-Peak Electric Usage.
+   - Do not draw projected bill range, solar, or bill-period charts unless Kyle explicitly asks to bring them back. Keep those facts in the JSONL database and table when available.
    - Show readable date ticks on chart x-axes so the time scale is visible without inspecting individual points. Keep ticks sparse enough that adjacent labels do not overlap.
    - Render dashboard charts over a fixed rolling one-year window ending at the latest available chart point. Keep the full historical JSONL records available in the table/database, but avoid compressing multiple years into the visible charts.
    - Prefer pleasant trend-oriented charts over jagged raw plotting: use restrained gridlines, rounded/smoothed line joins through real points, subtle fills, and sparse point markers on dense series.
+   - Add a simple hover interaction on each chart: snap to the nearest plotted date, show a vertical guide, highlight the point, and display a compact stacked tooltip with the date, series label, and value.
 
 6. Mark processed messages read.
    - Only after the upsert succeeds, remove the Gmail `UNREAD` label from exact processed `message_id` values if they are unread.
@@ -153,6 +164,7 @@ python3 .agents/skills/catalog-sdge-energy-alerts/scripts/sdge_energy_store.py p
 python3 .agents/skills/catalog-sdge-energy-alerts/scripts/sdge_energy_store.py run-plan --gmail-total 246 --unread-ids-json '["..."]'
 python3 .agents/skills/catalog-sdge-energy-alerts/scripts/sdge_energy_store.py diff-ids --message-ids-json '["..."]'
 python3 .agents/skills/catalog-sdge-energy-alerts/scripts/sdge_energy_store.py sync-ledger
+python3 .agents/skills/catalog-sdge-energy-alerts/scripts/sdge_energy_store.py usage-backfill-ids --limit 25
 ```
 
 Useful options:
@@ -165,8 +177,9 @@ Useful options:
 - `--gmail-total <count>`: for `run-plan`, pass the `SDGE` Gmail label total from `list_labels`.
 - `--unread-ids-json <json>`: for `run-plan`, pass unread matching message IDs from `_search_email_ids`.
 - `--message-ids-json <json>`: for `diff-ids`, pass paged Gmail IDs before reading bodies.
+- `--limit <count>`: for `usage-backfill-ids`, return at most this many already-processed usage-report IDs missing normalized usage metrics, newest first.
 
-For JSON options, pass inline JSON, `@path/to/file.json`, or `-` for stdin. `run-plan` and `diff-ids` are designed to keep normal runs cheap: decide whether a fast path is safe before paging all IDs, and read full emails only for IDs absent from the local ledger.
+For JSON options, pass inline JSON, `@path/to/file.json`, or `-` for stdin. `run-plan` and `diff-ids` are designed to keep normal runs cheap: decide whether a fast path is safe before paging all IDs, and read full emails only for IDs absent from the local ledger. `usage-backfill-ids` is only for enrichment passes after parser improvements; it should not replace the processed-email ledger.
 
 The dashboard is a single static HTML file styled with shadcn-style CSS variables, cards, tabs, tables, and muted borders. It uses inline JavaScript and SVG charts so it can be opened directly in Codex or Chrome without a dev server. The dashboard should only chart metrics present in the flat-file database; empty metric families are omitted instead of shown as blank or "no data" charts. Prefer a quiet shadcn-like dashboard style with a Darcula dark palette: editor-charcoal background, darker cards, muted blue-gray text, restrained borders, compact metadata, large chart surfaces, minimal legends, visible axes, one-year chart windows, and softened trend lines.
 

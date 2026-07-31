@@ -17,6 +17,7 @@ from typing import Any
 DEFAULT_DB_FILE = Path("os/data/sdge-energy-alerts/records.jsonl")
 DEFAULT_PROCESSED_FILE = Path("os/data/sdge-energy-alerts/processed-emails.jsonl")
 DEFAULT_REPORT_FILE = Path("os/reports/sdge-energy-alerts/index.html")
+SIGNED_NUMBER_PATTERN = r"(-?[\d,]+(?:\.\d+)?)"
 
 
 def coerce_money(value: Any) -> Any:
@@ -47,6 +48,16 @@ def coerce_number(value: Any) -> Any:
     return value
 
 
+def compact_source_text(text: str) -> str:
+    cleaned = html.unescape(text)
+    cleaned = re.sub(r"<br\s*/?>", "\n", cleaned, flags=re.I)
+    cleaned = re.sub(r"</(?:p|div|tr|td|th|table|h[1-6])>", "\n", cleaned, flags=re.I)
+    cleaned = re.sub(r"<[^>]+>", " ", cleaned)
+    cleaned = cleaned.replace("\xa0", " ")
+    cleaned = re.sub(r"[ \t]+", " ", cleaned)
+    return re.sub(r"\s*\n\s*", "\n", cleaned)
+
+
 def get_path(record: dict[str, Any], path: str) -> Any:
     current: Any = record
     for part in path.split("."):
@@ -62,6 +73,12 @@ def set_path(record: dict[str, Any], path: str, value: Any) -> None:
     for part in parts[:-1]:
         current = current.setdefault(part, {})
     current[parts[-1]] = value
+
+
+def set_numeric_path(record: dict[str, Any], path: str, value: Any) -> None:
+    number = coerce_number(value)
+    if isinstance(number, (int, float)):
+        set_path(record, path, number)
 
 
 def normalize_iso_date(value: Any) -> Any:
@@ -90,8 +107,7 @@ def infer_from_source_text(record: dict[str, Any]) -> None:
     if not isinstance(text, str) or not text.strip():
         return
 
-    compact = re.sub(r"[ \t]+", " ", text)
-    compact = re.sub(r"\s*\n\s*", "\n", compact)
+    compact = compact_source_text(text)
 
     money_pattern = r"(-?\$?[\d,.]+|\$-?[\d,.]+)"
 
@@ -178,13 +194,45 @@ def infer_from_source_text(record: dict[str, Any]) -> None:
     if line_items and not get_path(record, "charges.line_items"):
         set_path(record, "charges.line_items", line_items)
 
-    kwh = re.search(r"([\d,.]+)\s*kWh", compact, re.I)
-    if kwh:
-        set_path(record, "usage.electricity.kwh_to_date", coerce_number(kwh.group(1)))
+    electric_meter = re.search(r"Electric Usage to Date\s+Meter Ending\s+(\d+)", compact, re.I)
+    if electric_meter:
+        set_path(record, "usage.electricity.meter_ending", electric_meter.group(1))
 
-    therms = re.search(r"([\d,.]+)\s*therms?", compact, re.I)
-    if therms:
-        set_path(record, "usage.gas.therms_to_date", coerce_number(therms.group(1)))
+    electric_usage = re.search(
+        rf"Electric Usage to Date.*?Usage to date\s+{SIGNED_NUMBER_PATTERN}\s*kWh",
+        compact,
+        re.I | re.S,
+    )
+    if not electric_usage:
+        electric_usage = re.search(rf"Usage to date\s+{SIGNED_NUMBER_PATTERN}\s*kWh", compact, re.I)
+    if electric_usage:
+        set_numeric_path(record, "usage.electricity.kwh_to_date", electric_usage.group(1))
+
+    tou_patterns = {
+        "usage.electricity.time_of_use.on_peak_kwh_to_date": rf"\bOn[-\s]?Peak\b\s+{SIGNED_NUMBER_PATTERN}\s*kWh",
+        "usage.electricity.time_of_use.off_peak_kwh_to_date": rf"(?<!Super )\bOff[-\s]?Peak\b\s+{SIGNED_NUMBER_PATTERN}\s*kWh",
+        "usage.electricity.time_of_use.super_off_peak_kwh_to_date": rf"\bSuper\s+Off[-\s]?Peak\b\s+{SIGNED_NUMBER_PATTERN}\s*kWh",
+    }
+    for path, pattern in tou_patterns.items():
+        match = re.search(pattern, compact, re.I)
+        if match:
+            set_numeric_path(record, path, match.group(1))
+
+    gas = re.search(
+        rf"Gas Usage to Date\s+Meter Ending\s+(\d+).*?{SIGNED_NUMBER_PATTERN}\s*Therms?",
+        compact,
+        re.I | re.S,
+    )
+    if gas:
+        set_path(record, "usage.gas.meter_ending", gas.group(1))
+        set_numeric_path(record, "usage.gas.therms_to_date", gas.group(2))
+    else:
+        gas_meter = re.search(r"Gas Usage to Date\s+Meter Ending\s+(\d+)", compact, re.I)
+        if gas_meter:
+            set_path(record, "usage.gas.meter_ending", gas_meter.group(1))
+        therms = re.search(rf"{SIGNED_NUMBER_PATTERN}\s*therms?", compact, re.I)
+        if therms:
+            set_numeric_path(record, "usage.gas.therms_to_date", therms.group(1))
 
     solar = re.search(r"(?:returned|sent|exported)\s+[^.\n]*?grid[^.\n]*?([\d,.]+)\s*kWh", compact, re.I)
     if solar:
@@ -227,6 +275,9 @@ def normalize_record(record: dict[str, Any]) -> dict[str, Any]:
         "usage.electricity.kwh_to_date",
         "usage.electricity.kwh_projected_min",
         "usage.electricity.kwh_projected_max",
+        "usage.electricity.time_of_use.on_peak_kwh_to_date",
+        "usage.electricity.time_of_use.off_peak_kwh_to_date",
+        "usage.electricity.time_of_use.super_off_peak_kwh_to_date",
         "usage.gas.therms_to_date",
         "usage.gas.therms_projected_min",
         "usage.gas.therms_projected_max",
@@ -341,11 +392,21 @@ def write_records(db_file: Path, records: list[dict[str, Any]]) -> None:
             handle.write("\n")
 
 
+def merge_record(existing: dict[str, Any], incoming: dict[str, Any]) -> dict[str, Any]:
+    merged = dict(existing)
+    for key, value in incoming.items():
+        if isinstance(value, dict) and isinstance(merged.get(key), dict):
+            merged[key] = merge_record(merged[key], value)
+        else:
+            merged[key] = value
+    return merged
+
+
 def upsert_records(db_file: Path, processed_file: Path, incoming: list[dict[str, Any]]) -> list[dict[str, Any]]:
     existing = {str(record.get("message_id")): record for record in load_records(db_file)}
     for raw in incoming:
         record = normalize_record(raw)
-        existing[record["message_id"]] = {**existing.get(record["message_id"], {}), **record}
+        existing[record["message_id"]] = merge_record(existing.get(record["message_id"], {}), record)
     records = list(existing.values())
     write_records(db_file, records)
     records = sorted(records, key=record_sort_key)
@@ -389,27 +450,27 @@ def build_dashboard_html(records: list[dict[str, Any]], db_file: Path) -> str:
     generated_at = dt.datetime.now(dt.timezone.utc).isoformat()
     chart_specs = [
         {
+            "id": "electricity-total",
+            "title": "Electric Usage To Date",
+            "description": "Total electric usage captured from each usage alert.",
+            "series": [
+                {"label": "kWh to date", "unit": " kWh", "points": chart_points(records, "usage.electricity.kwh_to_date")},
+            ],
+        },
+        {
+            "id": "gas",
+            "title": "Gas Usage To Date",
+            "description": "Gas therms to date from SDGE usage alerts.",
+            "series": [
+                {"label": "Therms to date", "unit": " therms", "points": chart_points(records, "usage.gas.therms_to_date")},
+            ],
+        },
+        {
             "id": "charge-to-date",
             "title": "Charge To Date",
             "description": "Estimated charges at the time each usage alert was sent.",
             "series": [
                 {"label": "To date", "unit": "$", "points": chart_points(records, "charges.total.to_date")},
-            ],
-        },
-        {
-            "id": "projected-low",
-            "title": "Projected Bill Low",
-            "description": "Lower end of the projected bill range.",
-            "series": [
-                {"label": "Projected low", "unit": "$", "points": chart_points(records, "charges.total.projected_min")},
-            ],
-        },
-        {
-            "id": "projected-high",
-            "title": "Projected Bill High",
-            "description": "Upper end of the projected bill range.",
-            "series": [
-                {"label": "Projected high", "unit": "$", "points": chart_points(records, "charges.total.projected_max")},
             ],
         },
         {
@@ -421,73 +482,39 @@ def build_dashboard_html(records: list[dict[str, Any]], db_file: Path) -> str:
             ],
         },
         {
-            "id": "electricity",
-            "title": "Electricity",
-            "description": "Electric usage tracked from SDGE alerts.",
+            "id": "electricity-on-peak",
+            "title": "On-Peak Electric Usage",
+            "description": "On-peak kWh to date from SDGE usage alerts.",
             "series": [
-                {"label": "kWh to date", "unit": " kWh", "points": chart_points(records, "usage.electricity.kwh_to_date")},
                 {
-                    "label": "Projected low",
+                    "label": "On-peak",
                     "unit": " kWh",
-                    "points": chart_points(records, "usage.electricity.kwh_projected_min"),
-                },
-                {
-                    "label": "Projected high",
-                    "unit": " kWh",
-                    "points": chart_points(records, "usage.electricity.kwh_projected_max"),
+                    "points": chart_points(records, "usage.electricity.time_of_use.on_peak_kwh_to_date"),
                 },
             ],
         },
         {
-            "id": "gas",
-            "title": "Gas",
-            "description": "Gas therms tracked from SDGE alerts.",
+            "id": "electricity-off-peak",
+            "title": "Off-Peak Electric Usage",
+            "description": "Off-peak kWh to date from SDGE usage alerts.",
             "series": [
-                {"label": "Therms to date", "unit": " therms", "points": chart_points(records, "usage.gas.therms_to_date")},
                 {
-                    "label": "Projected low",
-                    "unit": " therms",
-                    "points": chart_points(records, "usage.gas.therms_projected_min"),
-                },
-                {
-                    "label": "Projected high",
-                    "unit": " therms",
-                    "points": chart_points(records, "usage.gas.therms_projected_max"),
+                    "label": "Off-peak",
+                    "unit": " kWh",
+                    "points": chart_points(records, "usage.electricity.time_of_use.off_peak_kwh_to_date"),
                 },
             ],
         },
         {
-            "id": "solar",
-            "title": "Solar Export",
-            "description": "Energy returned or exported to the grid.",
+            "id": "electricity-super-off-peak",
+            "title": "Super Off-Peak Electric Usage",
+            "description": "Super off-peak kWh to date from SDGE usage alerts.",
             "series": [
                 {
-                    "label": "Returned to grid",
+                    "label": "Super off-peak",
                     "unit": " kWh",
-                    "points": chart_points(records, "usage.solar.returned_to_grid_kwh_to_date"),
+                    "points": chart_points(records, "usage.electricity.time_of_use.super_off_peak_kwh_to_date"),
                 },
-                {
-                    "label": "Projected low",
-                    "unit": " kWh",
-                    "points": chart_points(records, "usage.solar.returned_to_grid_kwh_projected_min"),
-                },
-                {
-                    "label": "Projected high",
-                    "unit": " kWh",
-                    "points": chart_points(records, "usage.solar.returned_to_grid_kwh_projected_max"),
-                },
-            ],
-        },
-        {
-            "id": "bill-period",
-            "title": "Bill Period",
-            "description": "Days remaining when each alert was sent.",
-            "series": [
-                {
-                    "label": "Days left",
-                    "unit": " days",
-                    "points": chart_points(records, "billing.days_left_in_bill_period"),
-                }
             ],
         },
     ]
@@ -606,6 +633,7 @@ def build_dashboard_html(records: list[dict[str, Any]], db_file: Path) -> str:
     }}
     .chart-card {{
       min-height: 500px;
+      position: relative;
     }}
     .chart-head {{
       display: flex;
@@ -630,6 +658,48 @@ def build_dashboard_html(records: list[dict[str, Any]], db_file: Path) -> str:
       border: 1px solid hsl(var(--border));
       border-radius: var(--radius);
       background: hsl(220 3% 18%);
+    }}
+    .chart-tooltip {{
+      position: absolute;
+      z-index: 10;
+      min-width: 156px;
+      max-width: 240px;
+      border: 1px solid hsl(var(--border));
+      border-radius: 6px;
+      background: hsl(220 3% 13%);
+      color: hsl(var(--foreground));
+      box-shadow: 0 12px 32px rgb(0 0 0 / 0.32);
+      padding: 9px 10px;
+      font-size: 12px;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(2px);
+      transition: opacity 120ms ease, transform 120ms ease;
+    }}
+    .chart-tooltip.visible {{
+      opacity: 1;
+      transform: translateY(0);
+    }}
+    .tooltip-date {{
+      color: hsl(var(--muted-foreground));
+      margin-bottom: 6px;
+    }}
+    .tooltip-row {{
+      display: grid;
+      grid-template-columns: 10px minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 7px;
+      line-height: 1.4;
+    }}
+    .tooltip-label {{
+      color: hsl(var(--muted-foreground));
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }}
+    .tooltip-value {{
+      color: hsl(var(--foreground));
+      font-weight: 650;
     }}
     .legend {{
       display: flex;
@@ -721,11 +791,13 @@ def build_dashboard_html(records: list[dict[str, Any]], db_file: Path) -> str:
     const data = JSON.parse(document.getElementById("dashboard-data").textContent);
     const colors = ["#6897bb", "#6a8759", "#cc7832", "#9876aa", "#ffc66d", "#bc3f3c"];
     const chartColors = {{
+      "electricity-total": "#6897bb",
+      "gas": "#ffc66d",
       "charge-to-date": "#6897bb",
-      "projected-low": "#6a8759",
-      "projected-high": "#cc7832",
       "bill-amount-due": "#9876aa",
-      "bill-period": "#ffc66d",
+      "electricity-on-peak": "#cc7832",
+      "electricity-off-peak": "#6a8759",
+      "electricity-super-off-peak": "#9876aa",
     }};
     document.getElementById("generated").textContent = new Date(data.generated_at).toLocaleString();
 
@@ -828,10 +900,12 @@ def build_dashboard_html(records: list[dict[str, Any]], db_file: Path) -> str:
           <span class="badge">Past year / ${{count}} points</span>
         </div>
         <svg class="chart" viewBox="0 0 960 390" role="img" aria-label="${{chart.title}} chart"></svg>
+        <div class="chart-tooltip" aria-hidden="true"></div>
         <div class="legend"></div>
       `;
 
       const svg = card.querySelector("svg");
+      const tooltip = card.querySelector(".chart-tooltip");
       const legend = card.querySelector(".legend");
       const left = 78, top = 34, width = 830, height = 270;
       const bottom = top + height;
@@ -851,11 +925,13 @@ def build_dashboard_html(records: list[dict[str, Any]], db_file: Path) -> str:
         <line x1="${{left}}" y1="${{bottom}}" x2="${{left + width}}" y2="${{bottom}}" stroke="#5e6366" />
       `;
 
+      const plottedSeries = [];
       series.forEach((entry, index) => {{
         const color = chartColors[chart.id] || colors[index % colors.length];
         const points = entry.points
           .map((point) => ({{ ...point, dateValue: Date.parse(point.date) || 0 }}))
           .sort((a, b) => a.dateValue - b.dateValue);
+        plottedSeries.push({{ entry, color, points }});
         const path = smoothPath(points, xScale, yScale);
         const areaPath = points.length > 1
           ? `${{path}} L ${{xScale(points[points.length - 1].dateValue).toFixed(2)}} ${{bottom}} L ${{xScale(points[0].dateValue).toFixed(2)}} ${{bottom}} Z`
@@ -894,6 +970,98 @@ def build_dashboard_html(records: list[dict[str, Any]], db_file: Path) -> str:
         item.innerHTML = `<span class="swatch" style="background:${{color}}"></span>${{entry.label}}`;
         legend.appendChild(item);
       }});
+
+      const hoverGroup = document.createElementNS("http://www.w3.org/2000/svg", "g");
+      hoverGroup.setAttribute("opacity", "0");
+      hoverGroup.setAttribute("pointer-events", "none");
+      const hoverLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      hoverLine.setAttribute("y1", top);
+      hoverLine.setAttribute("y2", bottom);
+      hoverLine.setAttribute("stroke", "#a9b7c6");
+      hoverLine.setAttribute("stroke-width", "1");
+      hoverLine.setAttribute("stroke-dasharray", "4 5");
+      hoverLine.setAttribute("opacity", "0.72");
+      hoverGroup.appendChild(hoverLine);
+      const hoverDots = plottedSeries.map((entry) => {{
+        const dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        dot.setAttribute("r", "5");
+        dot.setAttribute("fill", entry.color);
+        dot.setAttribute("stroke", "#2b2b2b");
+        dot.setAttribute("stroke-width", "2");
+        hoverGroup.appendChild(dot);
+        return dot;
+      }});
+      svg.appendChild(hoverGroup);
+
+      const hoverOverlay = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+      hoverOverlay.setAttribute("x", left);
+      hoverOverlay.setAttribute("y", top);
+      hoverOverlay.setAttribute("width", width);
+      hoverOverlay.setAttribute("height", height);
+      hoverOverlay.setAttribute("fill", "transparent");
+      hoverOverlay.style.cursor = "crosshair";
+      svg.appendChild(hoverOverlay);
+
+      function nearestPoint(points, dateValue) {{
+        return points.reduce((nearest, point) => (
+          Math.abs(point.dateValue - dateValue) < Math.abs(nearest.dateValue - dateValue) ? point : nearest
+        ), points[0]);
+      }}
+
+      function hideHover() {{
+        hoverGroup.setAttribute("opacity", "0");
+        tooltip.classList.remove("visible");
+        tooltip.setAttribute("aria-hidden", "true");
+      }}
+
+      function showHover(event) {{
+        const svgRect = svg.getBoundingClientRect();
+        const cardRect = card.getBoundingClientRect();
+        const svgX = ((event.clientX - svgRect.left) / Math.max(svgRect.width, 1)) * 960;
+        const boundedX = Math.max(left, Math.min(left + width, svgX));
+        const dateValue = minX + ((boundedX - left) / width) * (maxX - minX);
+        const anchor = nearestPoint(allPoints, dateValue);
+        const rows = plottedSeries
+          .map((entry, index) => {{
+            const point = nearestPoint(entry.points, anchor.dateValue);
+            hoverDots[index].setAttribute("cx", xScale(point.dateValue));
+            hoverDots[index].setAttribute("cy", yScale(point.value));
+            return {{ ...entry, point }};
+          }})
+          .filter((entry) => entry.point);
+        const guideX = xScale(anchor.dateValue);
+        hoverLine.setAttribute("x1", guideX);
+        hoverLine.setAttribute("x2", guideX);
+        tooltip.innerHTML = `
+          <div class="tooltip-date">${{new Date(anchor.dateValue).toLocaleDateString(undefined, {{ month: "short", day: "numeric", year: "numeric" }})}}</div>
+          ${{rows.map((row) => `
+            <div class="tooltip-row">
+              <span class="swatch" style="background:${{row.color}}"></span>
+              <span class="tooltip-label">${{row.entry.label}}</span>
+              <span class="tooltip-value">${{formatValue(row.point.value, row.entry.unit)}}</span>
+            </div>
+          `).join("")}}
+        `;
+        hoverGroup.setAttribute("opacity", "1");
+        tooltip.setAttribute("aria-hidden", "false");
+        tooltip.classList.add("visible");
+        const tooltipLeft = Math.min(
+          Math.max(event.clientX - cardRect.left + 14, 12),
+          Math.max(cardRect.width - tooltip.offsetWidth - 12, 12),
+        );
+        const tooltipTop = Math.min(
+          Math.max(event.clientY - cardRect.top - tooltip.offsetHeight - 12, 76),
+          Math.max(cardRect.height - tooltip.offsetHeight - 12, 76),
+        );
+        tooltip.style.left = `${{tooltipLeft}}px`;
+        tooltip.style.top = `${{tooltipTop}}px`;
+      }}
+
+      hoverOverlay.addEventListener("mousemove", showHover);
+      hoverOverlay.addEventListener("mouseleave", hideHover);
+      hoverOverlay.addEventListener("touchstart", showHover, {{ passive: true }});
+      hoverOverlay.addEventListener("touchmove", showHover, {{ passive: true }});
+      hoverOverlay.addEventListener("touchend", hideHover);
 
       return card;
     }}
@@ -941,10 +1109,38 @@ def build_dashboard_html(records: list[dict[str, Any]], db_file: Path) -> str:
         render: (record) => formatValue(valueAt(record, "usage.electricity.kwh_to_date"), " kWh"),
       }},
       {{
+        label: "Elec meter",
+        path: "usage.electricity.meter_ending",
+        render: (record) => valueAt(record, "usage.electricity.meter_ending") || "--",
+      }},
+      {{
+        label: "On-peak",
+        path: "usage.electricity.time_of_use.on_peak_kwh_to_date",
+        unit: " kWh",
+        render: (record) => formatValue(valueAt(record, "usage.electricity.time_of_use.on_peak_kwh_to_date"), " kWh"),
+      }},
+      {{
+        label: "Off-peak",
+        path: "usage.electricity.time_of_use.off_peak_kwh_to_date",
+        unit: " kWh",
+        render: (record) => formatValue(valueAt(record, "usage.electricity.time_of_use.off_peak_kwh_to_date"), " kWh"),
+      }},
+      {{
+        label: "Super off-peak",
+        path: "usage.electricity.time_of_use.super_off_peak_kwh_to_date",
+        unit: " kWh",
+        render: (record) => formatValue(valueAt(record, "usage.electricity.time_of_use.super_off_peak_kwh_to_date"), " kWh"),
+      }},
+      {{
         label: "Therms",
         path: "usage.gas.therms_to_date",
         unit: " therms",
         render: (record) => formatValue(valueAt(record, "usage.gas.therms_to_date"), " therms"),
+      }},
+      {{
+        label: "Gas meter",
+        path: "usage.gas.meter_ending",
+        render: (record) => valueAt(record, "usage.gas.meter_ending") || "--",
       }},
       {{
         label: "Solar returned",
@@ -960,7 +1156,10 @@ def build_dashboard_html(records: list[dict[str, Any]], db_file: Path) -> str:
       }},
     ];
     const activeColumns = tableColumns.filter((column) => (
-      column.always || data.records.some((record) => typeof valueAt(record, column.path) === "number")
+      column.always || data.records.some((record) => {{
+        const value = valueAt(record, column.path);
+        return typeof value === "number" || (typeof value === "string" && value.length > 0);
+      }})
     ));
     document.getElementById("records-head").innerHTML = activeColumns.map((column) => `<th>${{column.label}}</th>`).join("");
     const tbody = document.getElementById("records-body");
@@ -1036,6 +1235,33 @@ def diff_message_ids(message_ids: list[str], processed_entries: list[dict[str, A
     }
 
 
+def missing_usage_backfill_ids(records: list[dict[str, Any]], limit: int | None) -> list[str]:
+    ids: list[str] = []
+    usage_subjects = ("usage report", "energy use alert")
+    for record in sorted(records, key=record_sort_key, reverse=True):
+        subject = str(record.get("subject") or "").lower()
+        if not any(token in subject for token in usage_subjects):
+            continue
+        if not record.get("message_id"):
+            continue
+        has_usage = any(
+            isinstance(get_path(record, path), (int, float))
+            for path in (
+                "usage.electricity.kwh_to_date",
+                "usage.electricity.time_of_use.on_peak_kwh_to_date",
+                "usage.electricity.time_of_use.off_peak_kwh_to_date",
+                "usage.electricity.time_of_use.super_off_peak_kwh_to_date",
+                "usage.gas.therms_to_date",
+                "usage.solar.returned_to_grid_kwh_to_date",
+            )
+        )
+        if not has_usage:
+            ids.append(str(record["message_id"]))
+            if limit is not None and len(ids) >= limit:
+                break
+    return ids
+
+
 def build_run_plan(
     records: list[dict[str, Any]],
     processed_entries: list[dict[str, Any]],
@@ -1103,6 +1329,12 @@ def main() -> int:
     subparsers.add_parser("processed-ids", help="Print processed Gmail message IDs as JSON.")
     subparsers.add_parser("sync-ledger", help="Backfill the processed-email ledger from existing records.")
 
+    usage_backfill_parser = subparsers.add_parser(
+        "usage-backfill-ids",
+        help="Print already-processed usage-report IDs that are missing normalized usage metrics.",
+    )
+    usage_backfill_parser.add_argument("--limit", type=int, help="Return at most this many IDs, newest first.")
+
     diff_parser = subparsers.add_parser("diff-ids", help="Compare Gmail message IDs with the processed-email ledger.")
     diff_parser.add_argument("--message-ids-json", required=True, help="JSON array, {'message_ids': [...]}, @file, or - for stdin.")
 
@@ -1168,6 +1400,21 @@ def main() -> int:
     if args.command == "processed-ids":
         ids = [entry["message_id"] for entry in processed_entries if entry.get("message_id")]
         print(json.dumps({"status": "ok", "message_ids": ids, "processed_file": str(args.processed_file)}, indent=2))
+        return 0
+
+    if args.command == "usage-backfill-ids":
+        ids = missing_usage_backfill_ids(records, args.limit)
+        print(
+            json.dumps(
+                {
+                    "status": "ok",
+                    "message_ids": ids,
+                    "count": len(ids),
+                    "db_file": str(args.db_file),
+                },
+                indent=2,
+            )
+        )
         return 0
 
     if args.command == "sync-ledger":
