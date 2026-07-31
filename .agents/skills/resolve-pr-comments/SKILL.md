@@ -142,3 +142,12 @@ results, pushed commit, and any comments left for human follow-up.
 
 Keep PR replies professional and factual. Do not paste confidential customer
 data or operational details into PR comments.
+
+## Post-Run Learning
+
+After a meaningful run, capture safe efficiency lessons for future PR comment resolution:
+
+- Record repeated GitHub review-surface issues, test-selection shortcuts, repository patterns, or comment-triage friction in sanitized work memory or skill context.
+- Note helper-script improvements and recurring ambiguity as proposed skill improvements.
+- Do not store raw private ticket content, customer details, secrets, PR comment dumps, or unnecessary work data.
+- Do not rewrite this `SKILL.md` automatically. Promote a change only when the lesson is stable, source-grounded, and likely to reduce future work.

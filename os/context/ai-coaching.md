@@ -1,18 +1,18 @@
 ---
 title: AI Coaching
-domain: AI enablement and coaching for non-engineering teams
+domain: AI enablement and coaching for Measurabl teams
 owner: Kyle Gowen
-role: AI Coach for Measurabl non-engineering organizations
+role: AI Coach and Business Operations Engineer
 company: Measurabl, Inc.
-status: Active; office hours running weekly on Tuesdays
+status: Active; Tuesday office hours primary; unscheduled 1:1s as follow-up
 sessions_completed: 11 as of 2026-06-30
-last_updated: 2026-07-02
+last_updated: 2026-07-29
 ---
 
 # AI Coaching
 
 Working context for helping Kyle run the Measurabl AI Coaching program: office
-hours, 1:1s, and the "get a non-engineer unstuck with AI" workflow.
+hours, follow-up 1:1s, and the "get a colleague unstuck with AI" workflow.
 
 The goal of this file is to make coaching help sharper: better intake questions,
 faster and more accurate tool selection, repeatable recipes, and clear
@@ -21,6 +21,7 @@ boundaries without re-explaining the program every session.
 Grounding rule:
 
 - Never invent participants, sessions, action items, or outcomes.
+- Never invent projects, events, examples, or current-event claims.
 - Treat the named program records as the source of truth.
 - If a real source is not available, ask Kyle instead of filling gaps.
 
@@ -30,22 +31,46 @@ Grounding rule:
 |---|---|
 | Owner / coach | Kyle Gowen |
 | Sponsor | Kumar Brahnmath, CTO |
-| Primary audience | Non-engineering Measurabl teams |
-| Cadence | Weekly Tuesday office hours plus 1:1 working sessions as needed |
+| Kyle's current role | Business Operations Engineer; Matt Richardson is technical lead |
+| Primary audience | Mixed Measurabl colleagues; non-engineers come for help, engineers often join to hang out and explore ideas |
+| Cadence | Weekly Tuesday office hours plus unscheduled 1:1 working sessions when office hours produce follow-up work |
 | Program direction | Chat AI to supervised automation to agentic workflows |
 
 Coaching principle:
 
 - A good session leaves the person further along and understanding enough that
   they should not need to come back for the same problem.
+- Kyle prefers to help inside the office-hours session when possible, then fall
+  back to scheduling a 1:1 when the work needs more time.
 
 Company context:
 
 - Measurabl is a commercial real estate sustainability and ESG platform.
 - Coachees' work often touches sustainability reporting, customer or account
-  data, financial systems, GTM, and internal operations.
+  data, financial systems, GTM, security concerns, tooling requests, accuracy
+  guidance, and internal operations.
 - Assume general familiarity with CRE, ESG, and reporting concepts, but do not
   invent product, customer, contract, or methodology details.
+
+## Project 7 Agent Readiness Target
+
+For Project 7, the AI Office Hours Prep Agent is complete enough when it can
+turn recent meeting transcription notes plus a current, verified topic into a
+pre-meeting agenda Kyle can read in under five minutes.
+
+The brief should help Kyle:
+
+- Recall last week's topics and relevant prior-session threads.
+- Change gears quickly and speak to colleagues' open projects.
+- Bring one current-event discussion starter, with enough source context that
+  Kyle knows what to read before raising it.
+- Include simple confidence/source ratings without adding much length.
+- Prepare during-session coaching guidance and questions, not just a static
+  pre-meeting agenda.
+
+If the agent lacks enough context, it may ask up to five focused follow-up
+questions. It should optimize for quick turnaround because Kyle often reads the
+brief right before office hours.
 
 ## Canonical Source Files
 
@@ -65,6 +90,23 @@ necessarily in this AgentOS repository.
 When preparing for a 1:1, check the relevant participant folder in the AI
 Coaching workspace before assuming the current state.
 
+## Source Authority Model
+
+These source priorities fill current gaps until the AI Coaching workspace defines
+more explicit authority rules.
+
+| Question | Suggested authoritative source |
+|---|---|
+| Current program status, schedule, sponsor, and role context | `PROJECT_CONTEXT.md`, then `Office-Hours-History.md`, then Kyle |
+| Tool recommendations and access guidance | `AI-Tool-Repository.md`, then current IT or licensing notes from Kyle |
+| Participant and session history | `Office-Hours-History.md`, then the relevant participant folder and meeting transcription notes |
+| Current events | Fresh source lookup at briefing time; if current lookup is not available, mark the topic as needing verification |
+| Workflow candidates and department patterns | `MANUAL_PROCESSES.md`, then session notes and Kyle |
+
+The AI Coaching workspace lives in Claude Cowork, referencing files on Kyle's
+work laptop. AgentOS should keep only compact routing context and source
+pointers, not copied source documents.
+
 ## Known Participants And Tracks
 
 Only use these as known examples. Do not invent additional participants.
@@ -74,8 +116,9 @@ Only use these as known examples. Do not invent additional participants.
 | Kumar Brahnmath | CTO, program sponsor; product AI and customer-data analytics track. |
 | Alex Pasquale | AI Club co-lead; adoption and people side; runs the pulse survey. |
 | Riley Donlin | GTM AI lead and CSM; RFP automation is her top 2026 priority. |
-| Matt Richardson | Engineering / governance; owns the "no SDLC outside engineering" concern. |
-| Cindy Leyh | Finance systems; invoice review, sales tax, and BAI bank-file automation. |
+| Matt Richardson | Engineering / governance; owns the "no SDLC outside engineering" concern; technical lead for Kyle's Business Operations Engineer work. |
+| Theresa Hill | Successfully completed AI coaching project; keep details in the AI Coaching workspace. |
+| Cindy Leyh | Finance systems; invoice review, sales tax, and BAI bank-file automation; has both successful completed work and a failed Gemini attempt worth remembering at a high level. |
 | Shaun Czubkowski | Advanced user; Obsidian and Claude workflows, Slack incident bot, design system. |
 | Andrew Thomas | Field hardware; legacy JACE module diagnosis. |
 | Brianna | Gems to Google Workspace connectivity and collections work. |
@@ -86,22 +129,24 @@ Coaching help is only correct if it matches what people actually have access to.
 
 | Tool | Who has it | What it does | Coaching notes |
 |---|---|---|---|
-| Gemini / Gems | Non-engineering, company-wide | Chat, doc analysis, custom Gems, Workspace integration | Starting point for most users; no agentic actions, no external integrations, static uploads. |
+| Gemini / Gems | Non-engineering, company-wide | Chat, doc analysis, custom Gems, Workspace integration | Current default starting point for many users, but hopefully temporary as Claude access expands; no agentic actions, no external integrations, static uploads. |
 | Rovo | Non-engineering | Chat and analysis using Gemini backend | Limited; rarely the right build target. |
-| Claude / Cowork / API | Engineering and a growing set of coachees | Agentic, reliable file and data work | Recommended build target for repeatable automation. Access is IT-gated. |
+| Claude / Cowork / API | Engineering and a growing set of coachees | Agentic, reliable file and data work | Recommended build target for repeatable automation, including for non-engineers when available. Claude licenses are expanding and may become broadly available. Access can still be IT-gated. |
 | Unblocked | Company-wide | Q&A over Confluence, Jira, and GitHub, surfaced in Slack | Publishing coaching docs to Confluence makes them findable here. |
 | Confluence | Company-wide | Wiki and knowledge base | Home for the AI Tool Repository and coaching materials. |
 | Google Workspace | Company-wide | Gmail, Docs, Sheets, Slides | Gems integrate here; enterprise tier tracked in IT-436. |
 | Salesforce, HubSpot, Jira, Zoom, Snowflake, Slack | Varies | Systems of record and data sources | Common data endpoints in "move data" requests. |
 
 Access friction is a first-class issue. Sometimes the correct tool is clear,
-usually Claude, but the real blocker is IT access or approval. When recommending
-a tool the person does not have, the next step should be a concrete IT help-desk
-ticket and a working session, not abstract debate.
+usually Claude, but the real blocker is IT access or governance approval. When
+recommending a tool the person does not have, the next step should be a concrete
+IT help-desk ticket, governance check, and working session, not abstract debate.
 
 ## Office-Hours Intake Questions
 
 Open unfamiliar requests with these before recommending a tool or workflow.
+For pre-office-hours briefs, prioritize meeting transcription notes and ask no
+more than five follow-up questions before producing a useful draft.
 
 1. What is the actual task, end to end? Walk through how it is done today, step
    by step.
@@ -117,6 +162,40 @@ Open unfamiliar requests with these before recommending a tool or workflow.
 
 The intake is itself part of the coaching. Narrating why these questions matter
 helps the person scope their own next problem.
+
+## Prep Brief Shape
+
+The AI Office Hours Prep Agent should produce a brief Kyle can read in under
+five minutes.
+
+Always include:
+
+1. Last week's topics.
+2. Relevant previous-week or prior-session threads.
+3. Colleague open projects to remember.
+4. Questions to ask attendees.
+5. Tool-choice and governance notes.
+6. One current-event discussion starter with source note and read-ahead prompt.
+7. Simple confidence/source rating for each topic.
+
+Use prep notes, not scripts. Kyle does not need suggested words to say unless he
+asks for them.
+
+## During-Session Guidance
+
+During office hours, bias toward helping in the session. If the work is too
+large, sensitive, access-blocked, or too detailed for the group setting, suggest
+a follow-up 1:1.
+
+The agent's during-session guidance should be:
+
+- Open and curious.
+- Non-prescriptive.
+- Solution-oriented.
+- Willing to make more time when the problem deserves it.
+
+Avoid patronizing tones and avoid implying the colleague should already know or
+already have something.
 
 ## Tool-Selection Rules
 
@@ -134,6 +213,9 @@ helps the person scope their own next problem.
 - When correctness matters and the person has Claude, prefer Claude over Gemini
   for repeatable workflows because Gemini has shown instability on some file and
   data tasks.
+- The most common coaching needs right now are tool choice and governance.
+- Current recurring request types include security concerns, tool requests, and
+  accuracy guidance.
 
 Decision shortcut:
 
@@ -205,6 +287,8 @@ Human review before posting is both a governance rule and a trust-builder.
   Tool Repository's "Safe with customer data?" column and loop in Matt
   Richardson's team on contract language when needed.
 - When unsure, treat customer data as not safe until confirmed.
+- Never give agents or AI systems secrets, credit card information, payment
+  information, or similar sensitive credentials or financial data.
 - Human-in-the-loop is mandatory for anything that writes to a system of record,
   sends external communications, or runs unattended.
 - Prototyping should happen in Measurabl-owned sandboxes with guardrails, not
@@ -216,8 +300,16 @@ Human review before posting is both a governance rule and a trust-builder.
   Solution Builder.
 - Do not bake account names, contract values, usage metrics, or operational data
   into templates or examples.
+- Do not use made-up examples in coaching materials or reusable prompts.
 - Escalate rather than improvise on pricing or contract terms, legal language,
   customer-facing communications, and feature or roadmap claims.
+- Involve Matt Richardson's team, IT, or the relevant governance owner when the
+  work needs tool access, governance approval, or security review.
+
+Outputs that need human review before use include external communications,
+system-of-record writes, customer-facing material, security or governance
+recommendations, reusable workflow templates, and anything that changes access,
+approval, payment, or operational data.
 
 ## Prompting Recipe
 
@@ -270,8 +362,14 @@ Common thread:
 
 ## Maintenance Notes
 
+- Refresh this file weekly after the office-hours session.
 - Update tool-selection rules and cross-session signals as the program evolves.
 - Re-sync stakeholder and status facts from `PROJECT_CONTEXT.md` and
   `Office-Hours-History.md`.
 - Keep detailed participant progress in the AI Coaching workspace, not in this
   repo, unless Kyle intentionally promotes a summary here.
+- Promote changes here when they affect program operations, schedule, key
+  players, Kyle's immediate team structure, durable tool guidance, or durable
+  boundaries.
+- Keep names when they help Kyle prepare, but avoid expanding this file beyond
+  the recommended agent context size.

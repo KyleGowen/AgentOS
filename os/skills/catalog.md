@@ -19,6 +19,7 @@ translations that make them usable in Codex.
 | `start-local-dev` | Codex skill | Excelsior | `/Users/kyle/cursored/.agents/skills/start-local-dev/SKILL.md` | `os/skills/native/codex/excelsior/start-local-dev/SKILL.md` | Excelsior repo-local skill | Archived |
 | `accept-sender-appointments` | Codex skill | Personal productivity | live Gmail/Calendar workflow | None | `.agents/skills/accept-sender-appointments/SKILL.md` | Created |
 | `find-card-listings` | Codex skill | Personal collecting | AgentOS automation spec | None | `.agents/skills/find-card-listings/SKILL.md` | Created |
+| `catalog-sdge-energy-alerts` | Codex skill | Personal utilities | live Gmail SDGE alerts | None | `.agents/skills/catalog-sdge-energy-alerts/SKILL.md` | Created |
 | `arr-current-downloads` | Codex skill | Home Media Server | `KyleGowen/plex-server-hardware/skills/arr-current-downloads` | `os/skills/native/codex/plex-server-hardware/arr-current-downloads/SKILL.md` | Plex repo installed skill | Archived |
 | `plex-stack-health-check` | Codex skill | Home Media Server | `KyleGowen/plex-server-hardware/skills/plex-stack-health-check` | `os/skills/native/codex/plex-server-hardware/plex-stack-health-check/SKILL.md` | Plex repo installed skill | Archived |
 | `media-internet-search` | Codex skill | Home Media Server | `KyleGowen/plex-server-hardware/tools/codex-skills/media-internet-search` | `os/skills/native/codex/plex-server-hardware/media-internet-search/SKILL.md` | Plex repo installed skill | Archived |
@@ -82,6 +83,15 @@ These are archived under `os/skills/native/codex/excelsior/` for AgentOS context
 - Codex state: repo skill under `.agents/skills/find-card-listings/`.
 - Output: active listing report grouped by game, with one price-sorted table per active card, days remaining, links, and compact notes for bulk lots or companion cards. Adding or activating one card triggers a full-list refresh, not a single-card-only report.
 - Verification: Codex skill validation plus report spot-checks for logged-out eBay access, omitted ended auctions, and ascending total price sort.
+
+## `catalog-sdge-energy-alerts`
+
+- Trigger: Kyle asks to process SDGE Energy Use Alert emails, catalog SDGE utility metrics, backfill read or unread SDGE mail, or regenerate the SDGE usage dashboard.
+- Inputs: Gmail access to `notices@sdge.com` messages in the `SDGE` label, plus `os/data/sdge-energy-alerts/processed-emails.jsonl` when present.
+- Natural state: live Gmail workflow over Kyle's filtered SDGE notices.
+- Codex state: repo skill under `.agents/skills/catalog-sdge-energy-alerts/`.
+- Output: JSONL utility records, a processed-email ledger, and `os/reports/sdge-energy-alerts/index.html` with charges, projections, kWh, therms, solar export, and other tracked metrics.
+- Verification: helper-script sample ingest/report check, all-status Gmail ID comparison against the local ledger, and final Gmail unread re-query after any read-state cleanup.
 
 ## Home Media Server Codex Skills
 

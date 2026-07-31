@@ -35,7 +35,10 @@ This skill never bids, buys, messages sellers, watches items, or uses a logged-i
    - If image evidence is available, inspect the image before searching and extract concrete visual cues such as art, border, stat bars, set marks, language, foil treatment, and distinctive layout. Use those cues as required matching evidence when the user says the image distinguishes the wanted card.
 
 2. Search eBay publicly.
-   - Use a logged-out browser context, public search pages, public APIs, or web search results.
+   - Use a logged-out interactive browser context as the required primary eBay access method. Kyle has authorized a browser that Codex launches itself, but never his normal browser profile or eBay account.
+   - Launch a separate temporary browser profile in private/incognito mode for every run. Confirm the eBay page visibly offers sign-in/register before searching; never attach to or reuse Kyle's normal browser profile, eBay cookies, or account session.
+   - Read price, shipping, item URL, and availability from the browser-rendered individual item page. Browser automation must remain read-only: do not sign in, watch, message, add to cart, make offers, bid, or buy.
+   - Use raw public requests, public APIs, or web search results only as supplementary discovery. Never perform a raw-client-only scan or treat a raw-client `403`, CAPTCHA, or challenge as evidence that the browser has no listings.
    - Do not use Kyle's eBay account, cookies, watch list, saved searches, seller messages, cart, bidding pages, or purchase flows.
    - For scheduled runs with runner state, re-open known active item URLs first and re-check only the recurring rejected candidates whose rejection reason might have changed.
    - Search precise names from the wanted-card context before broader terms.
@@ -48,7 +51,11 @@ This skill never bids, buys, messages sellers, watches items, or uses a logged-i
    - For auctions, treat the current bid as volatile data: obtain it from a fresh, uncached item-detail response at the time of the run. Send cache-bypass request headers and a harmless unique query parameter when the client supports them; do not trust an earlier fetch, a browser/web-cache snapshot, a listing revision timestamp, or runner state as the current bid.
    - If a fresh detail fetch disagrees with a prior response, use the fresh item-page bid and recalculate the total from its displayed domestic shipping. If the client cannot obtain a fresh price after retrying through an independent logged-out detail-page fetch, move the auction to skipped/uncertain rather than retaining a potentially stale price.
    - Treat search-result snippets, eBay product pages, item-card tiles, and web-search prices as discovery hints only. Do not copy those prices into the main report unless the same price and shipping are verified on the individual listing detail page or in a user-provided screenshot of that exact item page.
-   - Exclude ended, completed, and sold listings from the report even when they match the card.
+   - When discovery visibly supplies a title, item price, and domestic shipping but the item page cannot be opened, retain those values as `shown` values in the compact `Discovery-only` notes section. Calculate a `shown total` when both are visible; label it `unverified`, do not put it in the Opportunity Summary or per-card table, and record the item URL when the discovery surface exposes one.
+   - If the required logged-out browser cannot launch or cannot open the relevant item page, say that explicitly in the access note. Do not substitute a raw-client-only scan, do not write `no listings found`, and include any safely classified discovery-only candidates that were actually visible.
+   - Exclude ended, completed, sold, and out-of-stock listings from the candidate set immediately, even when they match the card. An item-page URL, cached state, search result, or prior report never proves current availability.
+   - Immediately before adding any row to the opportunity summary or a card table, confirm current purchasable status from a freshly opened logged-out item page: an auction must expose a live bid action and countdown; a buy-it-now listing must expose a current guest checkout/purchase action and no sold, ended, unavailable, or out-of-stock status. If current availability is ambiguous, omit the candidate from all report lists and record it as `sold/ended` or `availability unverified` in runner state.
+   - A historical sales count such as `8 sold` is not, by itself, a sold status when the same page explicitly shows available quantity and a current purchase action.
    - If days remaining or listing URL cannot be verified from an item detail page, omit the candidate from the main table and mention it under skipped/uncertain.
    - Use US/domestic shipping when visible. Do not use international shipping totals for Kyle's report when a US shipping price is visible or supplied by the item page/search result. If only international shipping is visible, mark the shipping basis in notes.
    - When shipping is missing or variable, mark it explicitly and sort after listings with known total price unless the listing is otherwise clearly relevant.
@@ -76,8 +83,9 @@ This skill never bids, buys, messages sellers, watches items, or uses a logged-i
    - Sort rows by total price plus shipping ascending.
    - Immediately before finalizing, re-check every auction's current bid from a fresh, uncached item-detail response, then confirm every known total equals that bid or buy-it-now price plus displayed item-page shipping. If the item page disagrees with discovery/search pricing or an earlier fetch, use the fresh item-page values and note the correction when useful.
    - Include days remaining for every row. Use a numeric value for auctions, `n/a` for buy-it-now listings only after verifying the listing detail page has no visible end countdown, and `unknown` only in skipped/uncertain notes.
-   - Keep ended, completed, and sold listings out of the tables.
+   - Keep ended, completed, sold, and out-of-stock listings out of the opportunity summary and every card table. Perform the fresh current-availability check after all other matching and price checks, so a listing that sells during the scan cannot remain in the final output.
    - Include a compact skipped/uncertain section only when it helps Kyle understand why a likely-looking listing was omitted.
+   - When eBay detail-page verification is blocked, include a `Discovery-only` subsection under skipped/uncertain. Use bullets, not a table: title; `shown $price + $shipping = $total`; match rationale; individual item URL if available; and `unverified because item page could not be opened`. Never bold, sort with, or describe these as active opportunities.
 
 7. Update runner state when available.
    - Record known active item URLs with card name, last checked date/time, verified total, and compact status.
@@ -101,3 +109,12 @@ Use the table shape from `references/reporting.md`. At minimum include:
 - Game-group headings, with each wanted card nested under the matching game.
 - Listing rows with title, total price, price, shipping, days remaining, link, and notes.
 - Run timestamp and whether eBay/retail baseline access was complete.
+
+## Post-Run Learning
+
+After a meaningful run, capture safe efficiency lessons for future marketplace scans:
+
+- Record known active item URLs, recurring rejected candidates, and cached retail baselines only in the approved runner state or wanted-card context.
+- Note repeated search noise, marketplace access failures, variant-confusion patterns, and report compaction opportunities as proposed skill improvements.
+- Do not store raw HTML, cookies, account data, seller messages, secrets, or unnecessary marketplace data.
+- Do not rewrite this `SKILL.md` automatically. Promote a change only when the lesson is stable, source-grounded, and likely to reduce future work.

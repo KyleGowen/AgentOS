@@ -21,7 +21,7 @@ Then add an `## Opportunity Summary` chart before the detailed game sections. It
 ```
 
 - Include one row for every active wanted card, retaining its source-list order.
-- List only verified active item-page totals in the final column; use `—` when there are none.
+- List only verified currently purchasable item-page totals in the final column; use `—` when there are none. Re-open every selected item immediately before finalizing; remove it if it is sold, ended, unavailable, or out of stock.
 - Link each displayed total directly to its individual eBay item page.
 - Bold a displayed total only when it is strictly lower than that card's retail baseline. Do not bold equal, above-baseline, unverified, or unknown totals.
 - Keep the detailed per-card tables below this chart as the evidence layer.
@@ -52,7 +52,7 @@ Rules:
 - Main-table `Price`, `Shipping`, and `Total` values must come from the opened individual item page or a user-provided screenshot of that exact item page. Do not use search-result, product-page, or web-search snippet prices as final report values.
 - Put active auction days remaining in days with one decimal when possible.
 - Use `n/a` for buy-it-now listings without a visible end time.
-- Do not leave `Days Left` blank. If the listing detail page does not expose enough timing to decide between an auction countdown and `n/a`, move the candidate to skipped/uncertain.
+- Do not leave `Days Left` blank. If the listing detail page does not expose enough timing to decide between an auction countdown and `n/a`, or does not confirm it remains currently purchasable, move the candidate to skipped/uncertain.
 - Recalculate `Total` from the reported `Price` plus `Shipping` after row edits. For auctions, do this from a fresh, uncached item-detail response immediately before writing the report; cached detail content, saved state, search snippets, and listing revision timestamps cannot establish the current bid. If the item page price differs from a discovery/source price or an earlier fetch, use the fresh item-page value and note the mismatch only when it explains a correction.
 - Use US/domestic shipping in totals when visible. If only international shipping is visible, say so in notes.
 - Keep links as listing title markdown links.
@@ -72,9 +72,23 @@ Use this section for candidates that look promising but fail report-row requirem
 
 Include enough information for Kyle to search manually, but do not present these as active listing rows.
 
+### Discovery-only visibility when eBay blocks detail pages
+
+When an accessible logged-out search page, web result, or user-provided screenshot visibly shows a plausible candidate's title, price, and domestic shipping but its individual item page cannot be opened, preserve the evidence as bullets under `## Skipped / uncertain`:
+
+```markdown
+### Discovery-only
+
+- `Stinging Study Commander 2021 Regular` — shown $11.25 + $5.62 domestic shipping = $16.87; official-printing title; unverified because the logged-out item page could not be opened.
+```
+
+- These are visibility notes, not active listing rows: do not add them to the Opportunity Summary, bold them, or call their shown total a verified price.
+- Use only values visibly supplied by the discovery source. If either price or domestic shipping is missing, say `shown total unknown` rather than infer it.
+- If eBay returns `403`, a CAPTCHA, or a challenge before discovery results can be read, report `listing access blocked`; never report that as `no listings found`.
+
 ## Omit Ended Auctions
 
-Ended, completed, or sold auctions/listings may be used as similarity evidence, but they must not appear in the active listing tables.
+Ended, completed, sold, or out-of-stock auctions/listings may be used as similarity evidence, but they must not appear in the opportunity summary or active listing tables. Re-check selected rows immediately before report writeout, since a listing may sell during the scan. A historical `N sold` counter is not enough to exclude an item that also shows available quantity and a current purchase action.
 
 If an item ended or sold during the scan, omit it and optionally add:
 

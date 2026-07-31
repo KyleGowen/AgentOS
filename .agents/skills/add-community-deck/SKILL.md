@@ -49,3 +49,12 @@ npm run import:community-deck -- tmp/community-deck-import.json
 - `scripts/import-community-deck.ts`
 - `src/services/deckExportImport/`
 - `frontend/src/features/home/COMMUNITY_DECKS.md`
+
+## Post-Run Learning
+
+After a meaningful run, capture safe efficiency lessons for future community deck imports:
+
+- Record repeated export-shape issues, importer errors, validation shortcuts, or home-rail update friction in the appropriate AgentOS memory or Excelsior context.
+- Note helper-script improvements and recurring ambiguity as proposed skill improvements.
+- Do not store secrets, private work data, raw logs, or unnecessary local machine details.
+- Do not rewrite this `SKILL.md` automatically. Promote a change only when the lesson is stable, source-grounded, and likely to reduce future work.

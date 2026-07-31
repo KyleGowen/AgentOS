@@ -87,3 +87,12 @@ Keep the final answer compact:
 - Event titles and exact dates/times.
 - Number of messages marked read.
 - Verification result, especially whether unread sender messages remain.
+
+## Post-Run Learning
+
+After a meaningful run, capture safe efficiency lessons for future runs:
+
+- Record predictable non-calendar false positives only in the approved runner ledger, using message IDs and compact row names.
+- Note repeated ambiguity, redundant searches, or cleanup wording that should become policy in `os/automations/auto-accept-appointments.md`.
+- Do not store message bodies, appointment notes, receipts, secrets, or unnecessary personal details.
+- Do not rewrite this `SKILL.md` automatically. Recommend a skill update only when the lesson is stable and likely to reduce future work.

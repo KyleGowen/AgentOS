@@ -60,3 +60,12 @@ Do not commit if any required gate fails.
 If HTTP contracts changed, update the applicable API docs according to
 `.cursorrules` and `AGENTS.md`. Ship does not replace integration tests for
 large or risky changes.
+
+## Post-Run Learning
+
+After a meaningful run, capture safe efficiency lessons for future releases:
+
+- Record repeated release-gate friction, test-selection signals, CI failures, or documentation drift in the appropriate AgentOS memory or Excelsior context.
+- Note helper-script improvements and recurring verification shortcuts as proposed skill improvements.
+- Do not store secrets, private work data, raw logs, or unnecessary local machine details.
+- Do not rewrite this `SKILL.md` automatically. Promote a change only when the lesson is stable, source-grounded, and likely to reduce future work.

@@ -65,3 +65,12 @@ available in the active environment.
 - Documenting v1 behavior in `API_DOCUMENTATION.md` instead of `API_V1.md`.
 - Missing HTTP module unit coverage or required integration coverage.
 - Skipping local browser verification after route migration work.
+
+## Post-Run Learning
+
+After a meaningful run, capture safe efficiency lessons for future API migrations:
+
+- Record repeated route patterns, test gaps, integration-test triggers, or documentation drift in the appropriate AgentOS memory or Excelsior context.
+- Note reusable migration templates, helper-script improvements, and recurring failure signatures as proposed skill improvements.
+- Do not store secrets, private work data, raw logs, or unnecessary local machine details.
+- Do not rewrite this `SKILL.md` automatically. Promote a change only when the lesson is stable, source-grounded, and likely to reduce future work.

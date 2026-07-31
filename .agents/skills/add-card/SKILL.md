@@ -118,3 +118,12 @@ Do not commit or ship unless the user explicitly asks to ship.
 - Unknown `foil_card_map` base row.
 - Ally insert uses removed bonus columns.
 - Attempt to edit checklist source files.
+
+## Post-Run Learning
+
+After a meaningful run, capture safe efficiency lessons for future card additions:
+
+- Record repeated schema, migration, image-path, or card-type friction in the appropriate AgentOS memory or Excelsior context.
+- Note reusable validation shortcuts, helper-script improvements, and recurring failure signatures as proposed skill improvements.
+- Do not store secrets, private work data, raw logs, or unnecessary local machine details.
+- Do not rewrite this `SKILL.md` automatically. Promote a change only when the lesson is stable, source-grounded, and likely to reduce future work.

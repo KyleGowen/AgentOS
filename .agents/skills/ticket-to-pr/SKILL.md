@@ -82,3 +82,12 @@ refactors.
 ## Done
 
 Summarize what changed, test results, PR URL, and any flags for human review.
+
+## Post-Run Learning
+
+After a meaningful run, capture safe efficiency lessons for future ticket-to-PR work:
+
+- Record repeated Jira/GitHub/code-research friction, test-selection shortcuts, repository patterns, or branch/PR setup issues in sanitized work memory or skill context.
+- Note helper-script improvements and recurring ambiguity as proposed skill improvements.
+- Do not store raw private ticket content, customer details, secrets, PR comment dumps, or unnecessary work data.
+- Do not rewrite this `SKILL.md` automatically. Promote a change only when the lesson is stable, source-grounded, and likely to reduce future work.

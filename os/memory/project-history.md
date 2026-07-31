@@ -4,10 +4,22 @@ Compact history of meaningful outcomes and milestones. This is not a full change
 
 ## AgentOS
 
+### 2026-07-30 - SDGE Energy Alert Skill Created
+
+- Added `.agents/skills/catalog-sdge-energy-alerts/` to process unread SDGE Energy Use Alert emails through the Gmail connector.
+- The skill stores parsed utility facts in `os/data/sdge-energy-alerts/records.jsonl`, regenerates `os/reports/sdge-energy-alerts/index.html`, and marks only successfully processed SDGE message IDs read.
+- Added `os/automations/sdge-energy-alerts.md` and scheduled Codex automation `sdge-energy-alerts` to run the skill weekly Monday at 7:00 AM Pacific.
+
+### 2026-07-29 - Project 07 AI Coaching Context Interview
+
+- Interviewed Kyle on what would make the AI Office Hours Prep Agent complete enough for Project 07.
+- Updated `os/context/ai-coaching.md` with the sub-five-minute prep-brief target, current-event discussion starter requirement, source authority suggestions, Business Operations Engineer role context, during-session guidance, and sharper coaching safety boundaries.
+
 ### 2026-07-19 - Automation Efficiency Review Added
 
 - Added `os/automations/automation-efficiency-review.md` as a daily 6:30 AM Pacific review-only optimization digest.
-- The automation reviews recent scheduled runs and future automation candidates, then recommends token and efficiency improvements by skill without applying changes until Kyle approves them.
+- Replaced the daily automation-efficiency review with skill-local post-run learning loops and removed the scheduled review policy.
+- The retired automation reviewed recent scheduled runs and future automation candidates, then recommended token and efficiency improvements by skill without applying changes until Kyle approved them.
 
 ### 2026-07-16 - Accept Sender Appointments Skill Created
 

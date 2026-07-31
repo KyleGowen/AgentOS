@@ -76,10 +76,10 @@ Copy this section for each card Kyle wants to monitor.
 | Search terms | `Mjölnir Hammer of Thor MSH 146`; `Mjolnir Hammer of Thor MSH 146`; `Mjölnir Hammer of Thor Marvel Super Heroes`; `MTG Mjolnir Hammer of Thor 146` |
 | Negative terms | `MTGO`; `digital`; `proxy`; `custom`; `altered`; `art card`; `oversized`; `Thor hammer replica`; `Marvel Legends`; `comic`; `Mjolnir card sleeve` |
 | Retail baseline source | Brute Force MTG |
-| Retail baseline price | $30.77 |
-| Retail baseline checked | 2026-07-20 |
+| Retail baseline price | $28.08 |
+| Retail baseline checked | 2026-07-27 |
 | Retail baseline URL | <https://www.bruteforcemtg.com/catalog/magic_the_gathering_singles-universes_beyond_marvel_super_heroes_singles-marvel_super_heroes/mjolnir_hammer_of_thor/521370> |
-| Notes | Added from Kyle-provided Scryfall reference on 2026-07-19. Scryfall confirms Marvel Super Heroes #146, mythic, released 2026-06-26. Brute Force MTG exact search returned no matching product row when first checked. Kyle supplied the exact Brute Force product page on 2026-07-20; it verified Near Mint English at $30.77, with 6 in stock. |
+| Notes | Added from Kyle-provided Scryfall reference on 2026-07-19. Scryfall confirms Marvel Super Heroes #146, mythic, released 2026-06-26. Brute Force MTG exact product price refreshed to $30.00 on 2026-07-24; stock state was not captured. |
 
 ### Iron Man, Tony Stark
 
@@ -99,10 +99,10 @@ Copy this section for each card Kyle wants to monitor.
 | Search terms | `Iron Man Tony Stark MSC 851`; `Iron Man Tony Stark Marvel Super Heroes Commander 851` |
 | Negative terms | `MTGO`; `digital`; `proxy`; `custom`; `altered`; `art card`; `oversized`; `Iron Man 851 comic` |
 | Retail baseline source | Brute Force MTG |
-| Retail baseline price | $6.79 |
-| Retail baseline checked | 2026-07-20 |
+| Retail baseline price | $6.21 |
+| Retail baseline checked | 2026-07-27 |
 | Retail baseline URL | <https://www.bruteforcemtg.com/catalog/magic_the_gathering_singles-universes_beyond_marvel_super_heroes_singles-marvel_super_heroes_commander/iron_man_tony_stark/522513> |
-| Notes | Added from Kyle-provided Scryfall URL on 2026-07-20. Brute Force exact product showed Near Mint English at $6.79 and out of stock when checked. |
+| Notes | Added from Kyle-provided Scryfall URL on 2026-07-20. Brute Force exact product price refreshed to $6.54 on 2026-07-24; stock state was not captured. |
 
 ### Namor the Sub-Mariner
 
@@ -122,10 +122,10 @@ Copy this section for each card Kyle wants to monitor.
 | Search terms | `Namor the Sub-Mariner MSH 69`; `Namor Sub-Mariner Marvel Super Heroes 69 MTG` |
 | Negative terms | `MTGO`; `digital`; `proxy`; `custom`; `altered`; `art card`; `oversized`; `Namor comic` |
 | Retail baseline source | Brute Force MTG |
-| Retail baseline price | $12.23 |
-| Retail baseline checked | 2026-07-20 |
+| Retail baseline price | $10.62 |
+| Retail baseline checked | 2026-07-27 |
 | Retail baseline URL | <https://www.bruteforcemtg.com/catalog/magic_the_gathering_singles-universes_beyond_marvel_super_heroes_singles-marvel_super_heroes/namor_the_submariner/521065> |
-| Notes | Added from Kyle-provided Scryfall URL on 2026-07-20. Brute Force exact product showed Near Mint English at $12.23 when checked. |
+| Notes | Added from Kyle-provided Scryfall URL on 2026-07-20. Brute Force exact product price refreshed to $10.40 on 2026-07-24; stock state was not captured. |
 
 ### The Vision and Scarlet Witch
 
@@ -145,10 +145,10 @@ Copy this section for each card Kyle wants to monitor.
 | Search terms | `The Vision and Scarlet Witch MSC 707`; `Vision Scarlet Witch Marvel Super Heroes Commander 707 MTG` |
 | Negative terms | `MTGO`; `digital`; `proxy`; `custom`; `altered`; `art card`; `oversized`; `Vision Scarlet Witch comic` |
 | Retail baseline source | Brute Force MTG |
-| Retail baseline price | $68.00 |
-| Retail baseline checked | 2026-07-20 |
+| Retail baseline price | $64.79 |
+| Retail baseline checked | 2026-07-27 |
 | Retail baseline URL | <https://www.bruteforcemtg.com/catalog/magic_the_gathering_singles-universes_beyond_marvel_super_heroes_singles-marvel_super_heroes_commander/the_vision_and_scarlet_witch/522704> |
-| Notes | Added from Kyle-provided Scryfall URL on 2026-07-20. Brute Force exact product showed Near Mint English at $68.00 when checked. |
+| Notes | Added from Kyle-provided Scryfall URL on 2026-07-20. Brute Force exact product price refreshed to $66.15 on 2026-07-24; stock state was not captured. |
 
 ### Ultron, Artificial Malevolence
 
@@ -168,10 +168,10 @@ Copy this section for each card Kyle wants to monitor.
 | Search terms | `Ultron Artificial Malevolence MSH 252`; `Ultron Artificial Malevolence Marvel Super Heroes 252 MTG` |
 | Negative terms | `MTGO`; `digital`; `proxy`; `custom`; `altered`; `art card`; `oversized`; `Ultron comic` |
 | Retail baseline source | Brute Force MTG |
-| Retail baseline price | $15.90 |
-| Retail baseline checked | 2026-07-20 |
+| Retail baseline price | $15.10 |
+| Retail baseline checked | 2026-07-27 |
 | Retail baseline URL | <https://www.bruteforcemtg.com/catalog/magic_the_gathering_singles-universes_beyond_marvel_super_heroes_singles-marvel_super_heroes/ultron_artificial_malevolence/521683> |
-| Notes | Added from Kyle-provided Scryfall URL on 2026-07-20. Brute Force exact product showed Near Mint English at $15.90 when checked. |
+| Notes | Added from Kyle-provided Scryfall URL on 2026-07-20. Brute Force exact product price refreshed to $15.57 on 2026-07-24; stock state was not captured. |
 
 ### Hulk, Brutal Brawler
 
@@ -191,10 +191,10 @@ Copy this section for each card Kyle wants to monitor.
 | Search terms | `Hulk Brutal Brawler MSC 833`; `Hulk Brutal Brawler Marvel Super Heroes Commander 833 MTG` |
 | Negative terms | `MTGO`; `digital`; `proxy`; `custom`; `altered`; `art card`; `oversized`; `Hulk comic` |
 | Retail baseline source | Brute Force MTG |
-| Retail baseline price | $44.10 |
-| Retail baseline checked | 2026-07-20 |
+| Retail baseline price | $25.27 |
+| Retail baseline checked | 2026-07-27 |
 | Retail baseline URL | <https://www.bruteforcemtg.com/catalog/magic_the_gathering_singles-universes_beyond_marvel_super_heroes_singles-marvel_super_heroes_commander/hulk_brutal_brawler/522526> |
-| Notes | Added from Kyle-provided Scryfall URL on 2026-07-20. Brute Force exact product showed Near Mint English at $44.10 when checked. |
+| Notes | Added from Kyle-provided Scryfall URL on 2026-07-20. Brute Force exact product price refreshed to $30.10 on 2026-07-24; stock state was not captured. |
 
 ### Onslaught Promo Character
 
@@ -237,7 +237,7 @@ Copy this section for each card Kyle wants to monitor.
 | Negative terms | `mission`; `Secret Wars`; `Beyonder & Dr. Doom`; `comic`; `Defenders Beyond`; `Fleer`; `VS System`; `TCG`; `Inhuman`; `mtg`; `heroclix`; `custom`; `proxy`; `reprint` |
 | Retail baseline source | The Orange King retail site only; do not use The Orange King eBay listings |
 | Retail baseline price | $399.00 |
-| Retail baseline checked | 2026-07-19 |
+| Retail baseline checked | 2026-07-27 |
 | Retail baseline URL | <https://theorangeking.com/products/beyonder-promo-character-vr-w-bonus> |
 | Notes | Added from Kyle-provided image and eBay seed link on 2026-07-19. The Orange King product page showed `BEYONDER Promo character - VR + bonus (see pictures)` at $399.00 and sold out when checked. |
 
@@ -260,7 +260,7 @@ Copy this section for each card Kyle wants to monitor.
 | Negative terms | `character card`; `mission`; `location`; `comic`; `toy`; `statue`; `Heroclix`; `VS System`; `Fleer Ultra`; `Marvel Masterpieces`; `custom`; `proxy`; `reprint` |
 | Retail baseline source | The Orange King retail site only; do not use The Orange King eBay listings |
 | Retail baseline price | $130.00 |
-| Retail baseline checked | 2026-07-19 |
+| Retail baseline checked | 2026-07-27 |
 | Retail baseline URL | <https://theorangeking.com/products/ac-devourer-of-worlds-od-xm-opd-vr> |
 | Notes | Added from Kyle-provided image and eBay search link on 2026-07-19. The Orange King product search showed `ANY CHARACTER - DEVOURER OF WORLDS - X-MEN - Galactus - OPD - VR` at $130.00 and unavailable when checked. |
 
@@ -283,7 +283,7 @@ Copy this section for each card Kyle wants to monitor.
 | Negative terms | `original`; `OP character`; `PowerSurge`; `special`; `concealed arsenal`; `industrial waste`; `heat seeking missile`; `tactical computer`; `stealth armor`; `weapons inventor`; `teamwork`; `power card`; `placard`; `heroclix`; `vs system`; `mtg`; `custom`; `proxy`; `reprint` |
 | Retail baseline source | The Orange King retail site |
 | Retail baseline price | $52.50 |
-| Retail baseline checked | 2026-07-17 |
+| Retail baseline checked | 2026-07-27 |
 | Retail baseline URL | <https://theorangeking.com/products/iron-man-iq-hero-vr> |
 | Notes | Added from Kyle-provided image and eBay seed link on 2026-07-17. The Orange King product page <https://theorangeking.com/products/iron-man-iq-hero-vr> is the primary seed/reference for the exact IQ Character target; it showed `IRON MAN - IQ Character - VR` at $52.50 with available quantity 1 when checked. |
 
@@ -306,7 +306,7 @@ Copy this section for each card Kyle wants to monitor.
 | Negative terms | `original`; `OP character`; `PowerSurge`; `special`; `teamwork`; `power card`; `heroclix`; `vs system`; `mtg`; `custom`; `proxy`; `reprint` |
 | Retail baseline source | The Orange King retail site |
 | Retail baseline price | $65.00 |
-| Retail baseline checked | 2026-07-17 |
+| Retail baseline checked | 2026-07-27 |
 | Retail baseline URL | <https://theorangeking.com/products/thor-iq-hero-vr> |
 | Notes | Added from The Orange King product page on 2026-07-17. The Orange King product page showed `THOR - IQ character - VR` at $65.00 and available when checked. |
 
@@ -329,7 +329,7 @@ Copy this section for each card Kyle wants to monitor.
 | Negative terms | `original`; `OP character`; `PowerSurge`; `special`; `teamwork`; `power card`; `Brotherhood of Evil Mutants`; `heroclix`; `vs system`; `mtg`; `custom`; `proxy`; `reprint` |
 | Retail baseline source | The Orange King retail site |
 | Retail baseline price | $25.00 |
-| Retail baseline checked | 2026-07-17 |
+| Retail baseline checked | 2026-07-27 |
 | Retail baseline URL | <https://theorangeking.com/products/rogue-iq-hero-r> |
 | Notes | Added from Kyle-provided image and The Orange King product page on 2026-07-17. The Orange King product page showed `ROGUE - IQ character - R` at $25.00 and available when checked. |
 
@@ -351,7 +351,7 @@ Copy this section for each card Kyle wants to monitor.
 | Negative terms | `non-chrome`; `non foil`; `non-foil`; `regular`; `mtg`; `heroclix`; `vs system`; `custom`; `proxy`; `reprint` |
 | Retail baseline source | The Orange King retail site only; do not use The Orange King eBay listings |
 | Retail baseline price | $9.00 |
-| Retail baseline checked | 2026-07-17 |
+| Retail baseline checked | 2026-07-27 |
 | Retail baseline URL | <https://theorangeking.com/products/brass-chrome-promo-character-x-r> |
 | Notes | Added from Kyle-provided image and eBay comparable on 2026-07-17. |
 
@@ -373,6 +373,6 @@ Copy this section for each card Kyle wants to monitor.
 | Negative terms | `lethal tester`; `herald of onslaught`; `strategic assault`; `gather info`; `protective plates`; `obfuscate`; `comic`; `x-men #50`; `mtg`; `heroclix`; `vs system`; `custom`; `proxy` |
 | Retail baseline source | The Orange King retail site |
 | Retail baseline price | $5.00 |
-| Retail baseline checked | 2026-07-17 |
+| Retail baseline checked | 2026-07-27 |
 | Retail baseline URL | <https://theorangeking.com/collections/promos> |
 | Notes | Added from Kyle-provided image and eBay comparable on 2026-07-17. |

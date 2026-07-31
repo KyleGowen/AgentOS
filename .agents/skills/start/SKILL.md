@@ -74,3 +74,12 @@ curl -s http://localhost:8085/health | jq -r -f scripts/dev-health-check.jq
 - `.cursor/rules/v2-dev-server.mdc`
 - `.cursor/rules/local-dev-lan.mdc`
 - `docs/current/FRONTEND_V2.md`
+
+## Post-Run Learning
+
+After a meaningful run, capture safe efficiency lessons for future dev-server starts:
+
+- Record repeated install, port, Postgres, migration, Vite, API health, or browser-verification friction in the appropriate AgentOS memory or Excelsior context.
+- Note helper-script improvements and recurring validation shortcuts as proposed skill improvements.
+- Do not store secrets, private work data, raw logs, or unnecessary local machine details.
+- Do not rewrite this `SKILL.md` automatically. Promote a change only when the lesson is stable, source-grounded, and likely to reduce future work.

@@ -42,11 +42,11 @@ For each active wanted card:
 2. If an image is provided, inspect it and extract concrete visual cues before searching.
 3. Re-open known active item URLs from runner state, if present, while logged out.
 4. Re-check recent rejected candidates only when their rejection reason might have changed.
-5. Search eBay as a logged-out user using public pages, public APIs, or public web results.
+5. Search eBay as a logged-out user in a browser Codex launches itself. Kyle has authorized this separate browser, but never use his normal browser profile, cookies, or account session. Start every run in a new temporary private/incognito profile and confirm eBay shows its sign-in/register affordance before searching. Public pages, public APIs, and web results are supplementary discovery only; never run a raw-client-only scan or treat its `403`, CAPTCHA, or challenge as a zero-results outcome.
 6. Search exact card terms first, then broader lot/bulk terms only when needed for coverage under the Efficient Runner State rules.
 7. Open individual listing detail pages while logged out for every reportable candidate.
    - For auctions, retrieve the current bid through a fresh, uncached detail-page request immediately before report generation. Do not reuse cached HTML, a prior fetch, item revision time, search snippets, or runner-state totals as a current auction price. If a fresh bid cannot be verified after a logged-out retry, move the listing to skipped/uncertain.
-8. Remove ended, completed, and sold listings from the candidate set.
+8. Remove ended, completed, sold, and out-of-stock listings from the candidate set. Immediately before creating a summary or table row, re-open the individual item page and confirm current purchasable status: auctions need a live bid action and countdown; buy-it-now listings need a current guest checkout/purchase action and no sold, ended, unavailable, or out-of-stock status. A historical `N sold` count alone is not a sold status when availability and purchase action remain explicit.
 9. Compare active candidate listings against the card's cached retail baseline in `os/context/wanted-trading-cards.md`.
 10. If the wanted-card entry has no cached retail baseline, check the relevant retail baseline once, update the wanted-card context, and use that cached value for future runs.
     - On the first scheduled run each Monday and Friday in Kyle's local timezone, refresh the retail baseline for every active card and update its price, checked date, canonical URL, and stock note when available.
@@ -58,7 +58,7 @@ For each active wanted card:
 16. Use US/domestic shipping in totals when visible. If only international shipping is visible, say so in notes.
 17. Include days remaining for every row: numeric days for auctions, `n/a` for verified buy-it-now listings with no visible countdown.
 18. Link rows to individual eBay item pages only; seller pages, category pages, and search pages belong in skipped/uncertain notes.
-19. If eBay returns a generic error page for a candidate item URL, keep it in skipped/uncertain unless an exact item-page screenshot or another accessible item-detail source verifies price, shipping, and active status.
+19. If eBay returns a generic error page for a candidate item URL, keep it in skipped/uncertain unless an exact item-page screenshot or another accessible item-detail source verifies price, shipping, and active status. When a discovery source visibly shows title, price, and domestic shipping, preserve the shown values as a compact `Discovery-only` bullet with its unverified status; never include it in the summary or active tables.
 20. Include notes such as `part of a bulk deal`, `comes with other cards`, `variant uncertain`, `image cues matched`, or `below retail baseline`.
 21. Report search limitations, missing baseline cache, skipped ambiguity, and skipped ended/sold listings compactly.
 
@@ -103,7 +103,7 @@ Each card section should include:
 | Days remaining | Yes; numeric for auctions, `n/a` for verified buy-it-now listings |
 | Notes | Yes when useful |
 
-Rows must be sorted by total price plus shipping ascending. Auctions/listings that have ended, completed, or sold must be removed from the output.
+Rows must be sorted by total price plus shipping ascending. Auctions/listings that have ended, completed, sold, or become out of stock must be removed from the opportunity summary and detailed output, including when that status changes during the scan.
 
 ## Implementation Notes
 

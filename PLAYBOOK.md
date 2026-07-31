@@ -15,6 +15,7 @@ Last updated: 2026-07-17
 | File | What It Covers | Status |
 |---|---|---|
 | `os/context/context-portfolio.md` | Durable background context for agents. | Draft |
+| `os/future-features.md` | Potential follow-ups and later ideas before they become projects, skills, agents, or automations. | Active |
 
 ### Skills
 
@@ -24,6 +25,7 @@ Last updated: 2026-07-17
 | Agent-specific | Measurabl and Excelsior skill translations | Repeated work workflows imported from Claude Code and Cursor. | Codex repo skills and native archives. |
 | Me | `accept-sender-appointments` | Accept trusted sender appointment invitations and clean up matching mail. | Calendar RSVPs, read-state cleanup, and compact run summary. |
 | Me | `find-card-listings` | Scan eBay for wanted OverPower and Magic cards without bidding or logging in. | Price-sorted active listing tables with baseline notes. |
+| Me | `catalog-sdge-energy-alerts` | Process unread SDGE Energy Use Alert emails from Gmail. | Structured utility records and an HTML time-series dashboard. |
 
 ### Memory
 
@@ -116,7 +118,7 @@ attention.
 | PR review prep | Workday morning or on demand | Run the PR Review Prep Agent to find tagged Measurabl PRs and prepare the review queue. | Future candidate |
 | Auto-accept appointments | Every 2 hours from 7:00 AM through 11:00 PM | Run `accept-sender-appointments` for active senders in `os/automations/auto-accept-appointments.md`. | Active; Codex id `auto-accept-trusted-appointments` |
 | Wanted card listings | Daily at 6:00 AM Pacific, and immediately after adding or activating a wanted card | Run `find-card-listings` for all active cards in `os/context/wanted-trading-cards.md`, using logged-out eBay access and retail baselines. | Active; Codex id `wanted-card-listings`; list-change trigger documented |
-| Automation efficiency review | Daily at 6:30 AM Pacific | Review recent and upcoming scheduled automation runs for token and efficiency improvements, then print a digest of recommendations by skill. | Active; Codex id `automation-efficiency-review`; review-only until Kyle approves changes |
+| SDGE energy alerts | Weekly Monday at 7:00 AM Pacific | Run `catalog-sdge-energy-alerts` for SDGE-label mail from `notices@sdge.com`, update the flat-file database, clean processed unread messages, and regenerate the dashboard. | Active; Codex id `sdge-energy-alerts` |
 
 ## What's Working Best
 
@@ -131,6 +133,7 @@ attention.
 ### Next Quarter
 
 - Turn the strongest repeated workflows into skills, agents, and automations.
+- Review `os/future-features.md` and promote selected ideas into their owning source files.
 
 ## Reflection
 

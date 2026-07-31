@@ -1,0 +1,4 @@
+interface:
+  display_name: "Catalog SDGE Energy Alerts"
+  short_description: "Track SDGE energy alert metrics"
+  default_prompt: "Use $catalog-sdge-energy-alerts to process unread SDGE energy-use emails and regenerate the usage dashboard."

@@ -104,6 +104,7 @@ Concrete goals have not been defined yet. Add them here when they become clear.
 - Prefer small, durable files over one-off chat context.
 - Capture reusable prompts, decisions, and checks.
 - Keep `os/memory/` updated when a task creates durable context, decisions, patterns, lessons, or project state.
+- Catalogue promising but unapproved follow-up ideas in `os/future-features.md` before they become project work.
 - Update the playbook when a pattern becomes part of the operating system.
 - Before answering any question about Codex, search for the most recent documentation. Do not rely on what you already know - it's probably outdated.
 - Translate generic AgentOS course instructions into the Codex equivalent before building.
@@ -121,6 +122,7 @@ When finishing meaningful AgentOS work, check whether memory needs an update:
 - Add durable choices to `os/memory/decisions.md`.
 - Add repeated workflows or preferences to `os/memory/patterns.md`.
 - Add meaningful milestones or outcomes to `os/memory/project-history.md`.
+- Add potential later ideas or feature candidates to `os/future-features.md`.
 - Add durable pitfalls or corrections to `os/memory/lessons-learned.md`.
 - Keep Measurabl work context sanitized in `os/memory/work-memory.md`.
 - Keep personal project context in `os/memory/home-memory.md`.
@@ -131,6 +133,14 @@ Do not wait for Codex built-in memory to capture important context. Codex memory
 Memory updates should be compact and source-aware. Do not store secrets, private customer details, raw Slack excerpts, full private ticket descriptions, or unnecessary personal data.
 
 When using a skill or automation, prefer teaching the skill to update memory directly if the memory update is predictable. If judgment is required, update memory manually at the end of the task.
+
+Skills should improve through a post-run learning loop instead of relying on a broad daily efficiency-review automation:
+
+- At the end of a meaningful skill run, capture compact lessons about wasted work, reusable state, clarified inputs, recurring ambiguity, verification shortcuts, and source-of-truth drift.
+- Write safe, durable facts to the appropriate `os/memory/`, `os/context/`, automation policy, or skill-owned state file. Do not store secrets, raw private content, customer details, cookies, API keys, or unnecessary personal data.
+- Let skills update predictable caches or ledgers when their policy allows it, but do not silently rewrite their own `SKILL.md` after every run.
+- Promote a lesson into `SKILL.md` only when it is stable, source-grounded, and likely to prevent repeated friction.
+- If a proposed skill change requires judgment, list it for Kyle or the OS Thought Partner instead of applying it automatically.
 
 For wanted-card searches, adding or activating one card should immediately trigger the `find-card-listings` workflow for all active wanted cards so the latest report stays list-wide.
 

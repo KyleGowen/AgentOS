@@ -27,7 +27,7 @@ Repeated workflows, preferences, and recurring shapes that may become skills, au
 - When Kyle asks to accept all appointments from a sender, use the `accept-sender-appointments` Codex skill: search bounded unread Gmail from the named sender, accept matching Google Calendar events once, then mark the requested sender messages read.
 - Keep mailbox mutations narrow: operate on explicit Gmail message IDs from the sender search, and do not delete, archive, forward, or broadly mark categories read.
 - For AgentOS automations, keep a harness-neutral spec under `os/automations/` and make the Codex scheduled job a thin runner over that spec so the workflow can be replicated outside Codex.
-- Automation efficiency reviews should be read-only daily digests: inspect recent runner memory, output artifacts, scheduler prompts, schedules, and future candidates; recommend prompt trims, state/cache improvements, search narrowing, schedule/config fixes, output compaction, spec drift fixes, or skill refactors; wait for Kyle's approval before changing files or pushing.
+- Skills should improve through post-run learning loops: after meaningful use, capture safe reusable facts, repeated friction, ambiguity, redundant reads, cache opportunities, verification shortcuts, and proposed skill improvements in the approved context, memory, output, or runner-owned ledger; promote changes into `SKILL.md` only after the lesson is stable, source-grounded, and likely to reduce future work.
 
 ## Personal Collecting Automations
 
@@ -39,6 +39,8 @@ Repeated workflows, preferences, and recurring shapes that may become skills, au
 - Adding or activating a wanted-card target should immediately run the wanted-card listing workflow for all active cards and replace the latest full-list report.
 - For Magic wanted-card retail baselines, use Brute Force MTG's direct product search URL (`/products/search?q=<card>&c=1`) with a browser user-agent if needed, match exact product rows, and allow out-of-stock rows to provide the cached retail baseline price with stock status noted.
 - For eBay wanted-card listing prices, treat search results, product pages, and item-card tiles as discovery only; the individual item detail page price plus shipping is authoritative for reports.
+- Prefer a logged-out interactive browser for eBay scans. A raw-client `403`, CAPTCHA, or challenge is an access limitation, not a zero-results outcome; preserve any visible price and domestic-shipping discovery facts as explicitly unverified bullets rather than silently dropping them.
+- When browser control is authorized, launch a separate temporary private/incognito profile and verify the eBay page is signed out before scanning; do not attach to Kyle's normal browser profile or reuse its cookies.
 - For OverPower wanted-card retail baselines, a supplied The Orange King product page is the best seed: normalize away tracking params, read Shopify product JSON/title/price/availability/image, and cache the canonical URL and price in the wanted-card entry.
 - For OverPower IQ Character wanted cards, require exact character, IQ Character variant, stats, art/background, and visible text cues; exclude regular/original characters, PowerSurge, specials, power cards, teamworks, and alternate named IQ variants by default.
 

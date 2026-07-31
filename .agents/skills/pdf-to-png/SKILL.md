@@ -60,3 +60,12 @@ image for a single-page conversion when available.
 
 - `add-card` skill.
 - `docs/current/IMAGE_PIPELINE.md`.
+
+## Post-Run Learning
+
+After a meaningful run, capture safe efficiency lessons for future image conversions:
+
+- Record repeated PDF export, resolution, filename, or image-pipeline friction in the appropriate AgentOS memory or Excelsior context.
+- Note helper-script improvements and recurring validation shortcuts as proposed skill improvements.
+- Do not store secrets, private work data, raw logs, or unnecessary local machine details.
+- Do not rewrite this `SKILL.md` automatically. Promote a change only when the lesson is stable, source-grounded, and likely to reduce future work.

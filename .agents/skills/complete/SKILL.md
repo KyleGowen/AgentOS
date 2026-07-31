@@ -35,3 +35,12 @@ Use this skill only from the AgentOS repository root.
 ## Script
 
 Use `scripts/complete_project.py` for all tracker and documentation updates. Use `--dry-run` when checking behavior without writing files.
+
+## Post-Run Learning
+
+After a meaningful run, capture safe efficiency lessons for future project completions:
+
+- Record repeated tracker, README, project-note, or validation friction in the appropriate AgentOS memory file.
+- Note helper-script improvements and recurring documentation drift as proposed skill improvements.
+- Do not store secrets, raw private content, or unnecessary personal data.
+- Do not rewrite this `SKILL.md` automatically. Promote a change only when the lesson is stable, source-grounded, and likely to reduce future work.

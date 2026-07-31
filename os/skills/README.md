@@ -17,6 +17,17 @@ For each skill, capture:
 - Process: steps the agent should follow.
 - Output: expected artifact or decision.
 - Verification: how to check the result.
+- Post-run learning: what safe facts, repeated friction, caches, or proposed skill improvements should be recorded after meaningful use.
+
+## Post-Run Learning
+
+Each executable skill should include a compact learning step near the end of its workflow.
+
+- Record predictable, safe state in the skill's approved context, memory, output, or runner-owned ledger.
+- Capture repeated friction, ambiguity, redundant reads, cache opportunities, and verification shortcuts as proposed improvements.
+- Do not store secrets, raw private content, customer details, cookies, API keys, or unnecessary personal data.
+- Do not silently rewrite `SKILL.md` after every run. Promote changes into the skill only when the lesson is stable, source-grounded, and likely to reduce future work.
+- When judgment is required, leave a short recommendation for Kyle or the OS Thought Partner instead of applying the skill change automatically.
 
 ## `/complete NN`
 
@@ -118,6 +129,15 @@ Force-push, restore, schedule changes, save/config edits, backup repo mutation, 
 - Process: search unread sender mail, identify appointment or invite messages, find bounded matching Calendar events, accept each event once, then remove `UNREAD` from the requested sender messages.
 - Output: accepted appointments, read-state cleanup, and a compact summary with counts and dates.
 - Verification: run the skill validator, verify no matching unread sender messages remain when cleanup was requested, and confirm Calendar RSVP responses are accepted.
+
+## `catalog-sdge-energy-alerts`
+
+- Codex location: `.agents/skills/catalog-sdge-energy-alerts/`
+- Trigger: ask Codex to process SDGE Energy Use Alert emails, track SDGE electric/gas/solar usage, backfill read or unread SDGE mail, or regenerate the SDGE utility dashboard.
+- Inputs: Gmail messages from `notices@sdge.com` in the `SDGE` label, plus the existing `os/data/sdge-energy-alerts/processed-emails.jsonl` ledger when present.
+- Process: search ID-first across read and unread SDGE messages, skip only IDs in the local processed-email ledger, read each unprocessed SDGE alert, extract billing/usage/solar facts, upsert the JSONL flat-file database, regenerate the HTML dashboard, update the processed-email ledger, then mark successfully processed message IDs read.
+- Output: structured SDGE alert records and `os/reports/sdge-energy-alerts/index.html` with shadcn-styled time-series graphs.
+- Verification: run the helper against a sample record, confirm the dashboard regenerates, re-query Gmail until processed IDs are no longer unread, and confirm every matching SDGE ID is either in the local ledger or reported as blocked.
 
 ## `find-card-listings`
 

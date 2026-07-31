@@ -117,3 +117,12 @@ postgresql://postgres:YOUR_PASSWORD@127.0.0.1:15432/overpower?sslmode=require
 
 Use the documented SSM parameter path for the password and URL-encode special
 characters. Never paste real production passwords into files, commits, or logs.
+
+## Post-Run Learning
+
+After a meaningful run, capture safe efficiency lessons for future tunnel starts:
+
+- Record repeated SSM, port, profile, connectivity, or TablePlus setup friction in the appropriate AgentOS memory or Excelsior context.
+- Note helper-script improvements and recurring validation shortcuts as proposed skill improvements.
+- Do not store production passwords, secrets, connection credentials, raw logs, or unnecessary local machine details.
+- Do not rewrite this `SKILL.md` automatically. Promote a change only when the lesson is stable, source-grounded, and likely to reduce future work.

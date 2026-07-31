@@ -80,3 +80,10 @@ Each entry should include the date, context, decision, reason, and evidence when
 - Decision: Run its scheduled scan once per day at 6:00 AM Pacific (`America/Los_Angeles`), while retaining the immediate full-list refresh after a card is added or activated.
 - Reason: Kyle requested a lower-frequency automatic search without changing the list-change safety workflow.
 - Evidence: `os/automations/wanted-card-listings.md`, `PLAYBOOK.md`, and Codex automation `wanted-card-listings`.
+
+## 2026-07-21 - Replace Daily Efficiency Review With Skill Learning Loops
+
+- Context: The AgentOS had a daily 6:30 AM Pacific automation that reviewed scheduled automations for token and efficiency improvements.
+- Decision: Delete the scheduled efficiency-review automation and move efficiency learning into each skill's post-run workflow.
+- Reason: Skill-local learning captures real friction at the moment it happens, avoids a broad daily review job, and keeps behavior changes reviewable before they are promoted into `SKILL.md`.
+- Evidence: Kyle asked to make the change and delete the scheduled task; `os/agents/os-thought-partner.md` now documents post-run learning rules.

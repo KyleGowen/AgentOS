@@ -64,3 +64,12 @@ migration so stable deck and card row IDs ship with the release.
 - `scripts/seed-tournament-decks.ts`
 - `src/services/deckExportImport/`
 - Home tournament deck feature documentation in the Excelsior repo
+
+## Post-Run Learning
+
+After a meaningful run, capture safe efficiency lessons for future tournament deck imports:
+
+- Record repeated export-shape issues, seeding errors, validation shortcuts, or home-rail update friction in the appropriate AgentOS memory or Excelsior context.
+- Note helper-script improvements and recurring ambiguity as proposed skill improvements.
+- Do not store secrets, private work data, raw logs, or unnecessary local machine details.
+- Do not rewrite this `SKILL.md` automatically. Promote a change only when the lesson is stable, source-grounded, and likely to reduce future work.
