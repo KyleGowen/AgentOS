@@ -1,6 +1,6 @@
 # My Agentic OS Playbook
 
-Last updated: 2026-08-13
+Last updated: 2026-08-16
 
 Project status source: `PROJECT_TRACKER.md` (last audited 2026-08-13).
 
@@ -28,6 +28,7 @@ Project status source: `PROJECT_TRACKER.md` (last audited 2026-08-13).
 | Me | `accept-sender-appointments` | Accept trusted sender appointment invitations and clean up matching mail. | Calendar RSVPs, read-state cleanup, and compact run summary. |
 | Me | `find-card-listings` | Scan eBay for wanted OverPower and Magic cards without bidding or logging in. | Price-sorted active listing tables with baseline notes. |
 | Me | `catalog-sdge-energy-alerts` | Process unread SDGE Energy Use Alert emails from Gmail. | Structured utility records and an HTML time-series dashboard. |
+| Agent-specific | `thraxos` | Safely inspect, configure, and maintain Thraximundar and its ITGMania ecosystem. | Verified machine status, guarded operations, and durable ThraxOS memory. |
 
 ### Memory
 
@@ -109,6 +110,17 @@ tracker and project notes.
 | What's working | Read-only review prep with links, repository, changed file count, build status, gist, and suggested review prompts. |
 | What needs improvement | Replace `MEASURABL_GITHUB_LOGIN` with Kyle's exact work GitHub identity; future scheduled digest. |
 
+### Agent 5: ThraxOS
+
+| | |
+|---|---|
+| Job | Safely operate and maintain Thraximundar, its ITGMania ecosystem, backups, song packs, play data, and machine memory. |
+| Identity files | `KyleGowen/ThraxOS` root `AGENTS.md`; `.codex/agents/thraxos.toml` |
+| Agent-specific skills | `KyleGowen/ThraxOS/.agents/skills/thraxos/` and routed project skills |
+| Connections used | Local Windows host, GitHub source repositories, live machine state |
+| What's working | Real custom Codex specialist with context, runbooks, guarded scripts, persistent memory, and operating history. |
+| What needs improvement | Add the compact Project 07 representative-run evidence and reflection to AgentOS. |
+
 ### How My Agents Relate
 
 The OS Thought Partner helps design, maintain, and evolve the AgentOS. The AI
@@ -117,7 +129,9 @@ recurring work responsibility. The AI Office Hours Follow-Up Agent handles the
 separate post-session responsibility of turning completed sessions into
 reviewable follow-up packets. The PR Review Prep Agent supports Kyle's
 engineering review work by preparing a read-only digest of PRs that need his
-attention.
+attention. ThraxOS is the dedicated machine specialist and the selected Project
+07 working-agent build; its detailed source of truth remains the separate
+`KyleGowen/ThraxOS` repository.
 
 ## Automations
 
@@ -138,8 +152,8 @@ attention.
 
 ### Current Next Steps
 
-- Complete the Project 07 real-agent test and evidence packet.
-- Use that test as the first Project 08 verification record.
+- Capture a sanitized representative ThraxOS run, verified result, and reflection to complete Project 07.
+- Use that ThraxOS evidence as the first Project 08 verification record.
 - Select one additional agent for the Project 09 evaluation.
 - Finish the Project 10 operating-manual cleanup and Project 11 completion notes.
 

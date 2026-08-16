@@ -173,6 +173,11 @@ Do not wait for Codex built-in memory to capture important context. Codex memory
 
 Memory updates should be compact and source-aware. Do not store secrets, private customer details, raw Slack excerpts, full private ticket descriptions, or unnecessary personal data.
 
+At the end of a chat that makes substantial changes to `os/memory/` or
+`os/context/`, explicitly propose committing and pushing those changes to
+GitHub so every Codex and ChatGPT instance can read the same durable state. Do
+not commit or push without Kyle's approval.
+
 When using a skill or automation, prefer teaching the skill to update memory directly if the memory update is predictable. If judgment is required, update memory manually at the end of the task.
 
 Skills should improve through a post-run learning loop instead of relying on a broad daily efficiency-review automation:

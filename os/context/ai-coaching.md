@@ -52,11 +52,15 @@ Company context:
 - Assume general familiarity with CRE, ESG, and reporting concepts, but do not
   invent product, customer, contract, or methodology details.
 
-## Project 7 Agent Readiness Target
+## AI Office Hours Prep Agent Readiness Target
 
-For Project 7, the AI Office Hours Prep Agent is complete enough when it can
+The AI Office Hours Prep Agent is complete enough when it can
 turn recent meeting transcription notes plus a current, verified topic into a
 pre-meeting agenda Kyle can read in under five minutes.
+
+This was originally drafted as the Project 7 completion target. On 2026-08-16,
+Kyle selected ThraxOS for Project 7 instead; this target remains useful for the
+future evaluation of the office-hours agent.
 
 The brief should help Kyle:
 

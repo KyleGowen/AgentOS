@@ -4,6 +4,11 @@ Status: Complete
 
 Completed: 2026-07-05
 
+Historical note: Project 06 selected the AI Office Hours Prep Agent as the
+first job definition. On 2026-08-16, Kyle selected the already-operating
+ThraxOS specialist as the Project 07 build. This preserves the Project 06
+artifact while allowing Project 07 to use the stronger working-agent evidence.
+
 Course page: <https://aidbagentos.ai/projects>
 
 ## Goal

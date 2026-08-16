@@ -34,15 +34,18 @@ Keep this separate from work memory. Home project details can inform home projec
 
 ## DDR/ITG Machine
 
-- 2026-08-13 audit: current status is unverified. The documented source repos
-  were not present locally and remote refresh failed; the last AgentOS snapshot
-  remains 2026-07-05.
+- 2026-08-16: `KyleGowen/ThraxOS` was verified as the public checked-in control
+  plane and Codex specialist for Thraximundar. It owns machine context,
+  runbooks, skills, guarded scripts, durable memory, and operational evidence;
+  live machine state still requires a host-side check.
 - DDR/ITG Machine is Kyle's active StepMania, DDR, and ITGMania hobby-log and exercise project.
 - Physical machine identity: Thraximundar, a Windows nukbox DDR/ITG setup.
+- Control-plane and specialist repo: <https://github.com/KyleGowen/ThraxOS>.
 - Tooling repo: <https://github.com/KyleGowen/itgmania-backup>.
 - Backup and digest repo: <https://github.com/KyleGowen/Thraximundar-Backup>.
 - Kyle plays for exercise about 1-2 times per week.
-- Scheduled backups and digest generation are working as of 2026-07-05.
+- Checked-in backup-health and operations evidence exists in ThraxOS; verify
+  the live host before asserting current health.
 - Future agents should default to digest-coach behavior: summarize recent play activity, consistency, difficulty range, score progress, and notable songs from source digests.
 - Care points: protect GitHub PATs and local config, never casually mutate saves or backup history, avoid medical claims, and confirm before force-push, restore, schedule, save/config, backup repo, or live-machine changes.
 

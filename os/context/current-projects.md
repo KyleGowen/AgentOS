@@ -1,6 +1,6 @@
 # Current Projects
 
-Last updated: 2026-08-13
+Last updated: 2026-08-16
 
 Status scope: personal-project status was audited on 2026-08-13 against the
 available local source repositories and artifacts below. Work-project details
@@ -295,7 +295,9 @@ Routing:
 - Read-only checks are acceptable when relevant.
 - Plex writes, downloads, deletes, path repairs, drive changes, service setting changes, and other live-server mutations require clear user intent or confirmation.
 
-### DDR/ITG Machine
+### ThraxOS And DDR/ITG Machine
+
+Control-plane repository: <https://github.com/KyleGowen/ThraxOS>
 
 Tooling repository: <https://github.com/KyleGowen/itgmania-backup>
 
@@ -303,13 +305,14 @@ Backup and digest repository: <https://github.com/KyleGowen/Thraximundar-Backup>
 
 Context: `os/context/stepmania-ddr.md`
 
-DDR/ITG Machine is Kyle's StepMania, DDR, and ITGMania hobby-log project. The physical Windows nukbox machine is Thraximundar. The project is primarily about rhythm-game play, exercise, score history, and progress over time, with backup tooling preserving saves and producing score digests.
+DDR/ITG Machine is Kyle's StepMania, DDR, and ITGMania hobby-log project. The physical Windows nukbox machine is Thraximundar. ThraxOS is its checked-in Codex control plane and specialist, with machine context, runbooks, skills, guarded scripts, memory, and operational evidence. The broader project is primarily about rhythm-game play, exercise, score history, and progress over time, with backup tooling preserving saves and producing score digests.
 
 Current state:
 
-- Scheduled backups and digest generation were documented as working on
-  2026-07-05, but current operation was not reverified because the source repos
-  are not present locally and remote refresh failed during this audit.
+- The public ThraxOS repository and its agent architecture were verified on
+  2026-08-16. Live machine state still requires a ThraxOS host-side check.
+- Scheduled backups and digest generation have checked-in health and operations
+  evidence in ThraxOS, but any current-state claim should be verified live.
 - Kyle plays for exercise about 1-2 times per week.
 - The ITGMania backup tool protects install and save data, but songs are intentionally not backed up.
 - The backup and digest repo remains the source of truth for scores, play history, and generated digest evidence.
@@ -328,6 +331,8 @@ Agent default:
 
 Routing:
 
+- Use `KyleGowen/ThraxOS` for machine operations, agent instructions, runbooks,
+  guarded skills, and current checked-in machine memory.
 - Use `os/context/stepmania-ddr.md` for durable project context.
 - Use `KyleGowen/itgmania-backup` for backup tool behavior, install flow, cron, digest generation, and score parsing.
 - Use `KyleGowen/Thraximundar-Backup` for current score, backup, and digest evidence.

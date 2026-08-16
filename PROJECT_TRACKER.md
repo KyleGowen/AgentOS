@@ -2,7 +2,7 @@
 
 Source: <https://aidbagentos.ai/projects>
 
-Last audited: 2026-08-13
+Last audited: 2026-08-16
 
 Statuses are evidence-based: `Complete` means the project artifact and completion notes are present; `In progress` means meaningful implementation exists but a documented completion gate is still open; `Not started` means no project-specific build or verification evidence exists yet.
 
@@ -15,7 +15,7 @@ Statuses are evidence-based: `Complete` means the project artifact and completio
 | 04 - Your Memory | Your Memory | `projects/04-your-memory/` | Complete | 2026-07-03 | Intentional memory layer, domain separation, and maintenance rules exist. | <https://aidbagentos.ai/projects> |
 | 05 - Your Connections | Your Connections | `projects/05-your-connections/` | Complete | 2026-07-03 | GitHub, Google Calendar, and Google Drive are documented; deferred connections are explicit. | <https://aidbagentos.ai/projects> |
 | 06 - The Job | The Job | `projects/06-the-job/` | Complete | 2026-07-05 | First-job definition and agent boundary are documented. | <https://aidbagentos.ai/projects> |
-| 07 - The Build | The Build | `projects/07-working-agent/` | In progress | - | Prep-agent identity/context exist; real test prompt/output, playbook update, and completion evidence remain. | <https://aidbagentos.ai/projects> |
+| 07 - The Build | The Build | `projects/07-working-agent/` | In progress | - | ThraxOS is the selected working agent and its architecture is evidenced; capture one sanitized representative run, verified result, and reflection. | <https://aidbagentos.ai/projects> |
 | 08 - Test & Verify | Test & Verify | `projects/08-test-and-verify/` | Not started | - | No executed verification artifact or evaluation record is tracked yet. | <https://aidbagentos.ai/projects> |
 | 09 - The Second Agent | The Second Agent | `projects/09-agent-team/` | In progress | - | Follow-up and PR-review agent definitions exist; second-agent evaluation and completion evidence remain. | <https://aidbagentos.ai/projects> |
 | 10 - Your Playbook | Your Playbook | `projects/10-playbook/` | In progress | - | `PLAYBOOK.md` exists but needs current project/automation statuses and final operating-manual cleanup. | <https://aidbagentos.ai/projects> |

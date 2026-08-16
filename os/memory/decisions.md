@@ -111,3 +111,11 @@ Each entry should include the date, context, decision, reason, and evidence when
 - Reason: GitHub makes the system reviewable, portable, and available to both the ChatGPT GitHub app and local Codex checkouts without pretending that chat history or built-in model memory is synchronized.
 - Boundary: ChatGPT/Codex conversation history and built-in memory remain surface-specific. A conclusion is not durable or shared until it is recorded in the repository.
 - Evidence: Kyle explicitly requested a shared memory scheme across all signed-in instances; `os/memory/README.md` defines the operating protocol.
+
+## 2026-08-16 - Use ThraxOS For Project 07
+
+- Context: Project 07 was previously scoped to the AI Office Hours Prep Agent, but `KyleGowen/ThraxOS` now contains a working Codex specialist with durable instructions, context, skills, memory, safety boundaries, verification procedures, and real operating history.
+- Decision: Use ThraxOS as the Project 07 build. Keep the AI Office Hours Prep Agent and the completed Project 06 record, but do not treat it as the Project 07 candidate.
+- Reason: ThraxOS is a stronger demonstration of the course requirement to build a real first agent on top of an intentional operating system.
+- Completion boundary: Do not mark Project 07 complete until AgentOS contains a compact representative invocation, verified result, and Kyle's reflection.
+- Evidence: `projects/07-working-agent/notes.md` and <https://github.com/KyleGowen/ThraxOS>.

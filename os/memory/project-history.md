@@ -13,6 +13,16 @@ Compact history of meaningful outcomes and milestones. This is not a full change
 
 ## AgentOS
 
+### 2026-08-16 - Project 07 Re-scoped To ThraxOS
+
+- Kyle selected the working ThraxOS specialist as the Project 07 build instead
+  of the AI Office Hours Prep Agent.
+- Verified that `KyleGowen/ThraxOS` contains a custom Codex agent, operating
+  contract, context, skills, guarded scripts, memory, safety boundaries, and
+  real operations evidence.
+- Kept Project 07 in progress pending a compact representative invocation,
+  verified result, and reflection in the AgentOS completion packet.
+
 ### 2026-07-30 - SDGE Energy Alert Skill Created
 
 - Added `.agents/skills/catalog-sdge-energy-alerts/` to process unread SDGE Energy Use Alert emails through the Gmail connector.
