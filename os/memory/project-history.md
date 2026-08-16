@@ -2,6 +2,14 @@
 
 Compact history of meaningful outcomes and milestones. This is not a full changelog.
 
+### 2026-08-16 - Project 08 Started
+
+- Began Project 08, Test & Verify, using ThraxOS as the verification target.
+- Added a verification plan, four-item checklist, scenario set, and sanitized
+  evaluation-record template.
+- The next gate is an executed representative read-only health snapshot with
+  checklist results and Kyle's reflection.
+
 ### 2026-08-13 - AgentOS Project Tracker Audit
 
 - Reconciled `PROJECT_TRACKER.md`, `README.md`, project notes, AgentOS artifacts,

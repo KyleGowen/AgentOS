@@ -29,9 +29,8 @@ Memory about this AgentOS system, the course, and how the pieces should fit toge
 ## Course Progress Notes
 
 - On 2026-08-13, the project tracker was audited against the repository and
-  live Codex automation configuration. Projects 00–06 remain complete; Project
-  07 is in progress; Project 08 has not started; and Projects 09–11 are in
-  progress with explicit evidence gaps in `PROJECT_TRACKER.md`.
+  live Codex automation configuration. That audit established the evidence
+  gaps that remain recorded in `PROJECT_TRACKER.md`.
 - Project 04, Your Memory, is focused on separating working memory from persistent memory and documenting how agents should maintain both.
 - The memory framework should adapt Codex built-in memory rather than pretending Codex lacks memory.
 - The canonical Project 04 folder is `projects/04-your-memory/`.
@@ -41,6 +40,10 @@ Memory about this AgentOS system, the course, and how the pieces should fit toge
 - The AI Office Hours Follow-Up Agent was added as a separate single-responsibility post-session agent instead of expanding the prep agent.
 - The PR Review Prep Agent was added as a separate read-only engineering review agent with minimal local state for merged PR digest suppression.
 - On 2026-08-16, Kyle selected the ThraxOS specialist as the Project 07 working-agent assignment. `KyleGowen/ThraxOS` contains the custom Codex agent, operating contract, context, skills, guarded scripts, memory, and real operations evidence. Project 07 is complete; Project 08 owns the compact representative run, verified result, checklist evaluation, and reflection.
+- On 2026-08-16, Kyle began Project 08. Its ThraxOS verification plan,
+  under-one-minute checklist, scenario set, and sanitized run-record template
+  are in `projects/08-test-and-verify/`; the first executed representative run
+  is the next gate.
 
 ## Open System Questions
 
