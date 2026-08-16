@@ -8,7 +8,7 @@ Update this at the end of a meaningful task, project shift, or planning session.
 
 - Cross-device memory protocol is active: committed `main` in `KyleGowen/AgentOS` is the shared durable source for every signed-in Codex and ChatGPT instance. Chat history and built-in memory are surface-specific; record portable knowledge in `os/context/` or `os/memory/`, then commit and push it from Codex.
 - Project 07 is complete using ThraxOS, not the AI Office Hours Prep Agent. ThraxOS already has a custom Codex agent, context, skills, memory, safety rules, verification procedures, and real operating history.
-- Next handoff: capture one compact, sanitized representative ThraxOS invocation and verified result plus Kyle's reflection as the first Project 08 verification artifact.
+- Project 08 is in progress with a ThraxOS verification plan, four-item under-one-minute checklist, scenario set, and sanitized run-record template in `projects/08-test-and-verify/verification-plan.md`. Next handoff: execute the representative read-only health snapshot, score it, and capture Kyle's reflection.
 
 ## Active Work Projects
 

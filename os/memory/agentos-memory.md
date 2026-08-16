@@ -40,7 +40,7 @@ Memory about this AgentOS system, the course, and how the pieces should fit toge
 - Project 06, The Job, created the AI Office Hours Prep Agent as a single-responsibility pre-session prep agent for weekly AI office hours.
 - The AI Office Hours Follow-Up Agent was added as a separate single-responsibility post-session agent instead of expanding the prep agent.
 - The PR Review Prep Agent was added as a separate read-only engineering review agent with minimal local state for merged PR digest suppression.
-- On 2026-08-16, Kyle selected the ThraxOS specialist as the Project 07 working-agent assignment. `KyleGowen/ThraxOS` contains the custom Codex agent, operating contract, context, skills, guarded scripts, memory, and real operations evidence. Project 07 remains open only for a compact representative run, verified result, and reflection recorded in AgentOS.
+- On 2026-08-16, Kyle selected the ThraxOS specialist as the Project 07 working-agent assignment. `KyleGowen/ThraxOS` contains the custom Codex agent, operating contract, context, skills, guarded scripts, memory, and real operations evidence. Project 07 is complete; Project 08 owns the compact representative run, verified result, checklist evaluation, and reflection.
 
 ## Open System Questions
 

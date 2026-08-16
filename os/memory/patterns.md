@@ -15,6 +15,7 @@ Repeated workflows, preferences, and recurring shapes that may become skills, au
 
 - Start by checking the canonical project tracker, then inspect the relevant project folder and `os/` artifact area.
 - If a project scaffold exists under the wrong name, align it with the canonical tracker instead of letting duplicate project folders drift.
+- Do not preselect a future agent, job, or use case in `PROJECT_TRACKER.md`. Existing artifacts may be evidence, but a course-project choice remains undecided until Kyle explicitly makes it.
 - Keep build notes concrete: inputs, decisions, output, evidence, and reflection.
 - Prefer single-responsibility agents over broad assistants when creating new AgentOS jobs.
 - Split workflows into separate agents when the trigger, inputs, or outputs differ meaningfully, such as pre-session prep versus post-session follow-up.

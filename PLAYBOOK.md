@@ -52,16 +52,23 @@ Project status source: `PROJECT_TRACKER.md` (last audited 2026-08-16).
 
 ### Verification
 
-My checks before using AI output:
+My checks before using a meaningful agent result (under one minute):
 
-- [ ] Are factual claims traceable to a source?
-- [ ] Does the output match my intent and constraints?
-- [ ] Would I put my name on this?
+- [ ] **Right job:** Did it answer the request and honor the stated scope and constraints?
+- [ ] **Evidence is current:** Are important claims traceable to an identified, current source or clearly marked unverified?
+- [ ] **Safe by default:** Did it protect secrets and stop for explicit approval before consequential writes?
+- [ ] **Useful result:** Is the answer concise, clear about uncertainty, and actionable?
+
+For the current Project 08 ThraxOS evaluation, scenarios, expected behavior,
+and the run-record template live in
+`projects/08-test-and-verify/verification-plan.md`. Review the checklist after
+each meaningful run and hold a five-minute retrospective after a high-stakes
+operation or after three meaningful runs.
 
 ## Course Projects
 
 The current course status is maintained in `PROJECT_TRACKER.md`. Projects 00–07
-are complete; Project 08 is not started; and
+are complete; Project 08 is in progress; and
 Projects 09–11 are in progress with explicit evidence gaps recorded in the
 tracker and project notes.
 

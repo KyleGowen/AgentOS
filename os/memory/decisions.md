@@ -117,7 +117,7 @@ Each entry should include the date, context, decision, reason, and evidence when
 - Context: Project 07 was previously scoped to the AI Office Hours Prep Agent, but `KyleGowen/ThraxOS` now contains a working Codex specialist with durable instructions, context, skills, memory, safety boundaries, verification procedures, and real operating history.
 - Decision: Use ThraxOS as the Project 07 build. Keep the AI Office Hours Prep Agent and the completed Project 06 record, but do not treat it as the Project 07 candidate.
 - Reason: ThraxOS is a stronger demonstration of the course requirement to build a real first agent on top of an intentional operating system.
-- Completion boundary: Do not mark Project 07 complete until AgentOS contains a compact representative invocation, verified result, and Kyle's reflection.
+- Historical completion boundary: Project 07 was completed on 2026-08-16 based on its demonstrated agent architecture and real operating evidence. Project 08 now owns the compact representative invocation, verified result, checklist evaluation, and Kyle's reflection.
 - Evidence: `projects/07-working-agent/notes.md` and <https://github.com/KyleGowen/ThraxOS>.
 
 ## 2026-08-16 - Give Excelsior Permanent Scoped AgentOS Inheritance
