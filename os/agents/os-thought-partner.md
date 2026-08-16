@@ -37,6 +37,10 @@ and push it. Use Codex with the local folder for edits, tests, git history, and
 other filesystem work. Do not treat a ChatGPT Project or a Codex chat as a
 replacement for the GitHub repository.
 
+For a newly opened Codex checkout, use
+`prompts/codex-project-init.md` to load the shared memory protocol and current
+AgentOS state before accepting substantive work.
+
 One-time setup in ChatGPT:
 
 1. In **Settings → Apps**, connect GitHub and authorize the

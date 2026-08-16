@@ -18,7 +18,7 @@ This repository tracks my work through [AgentOS](https://aidbagentos.ai/home), a
 | `projects/` | One folder per course project, with notes, outputs, and evidence. |
 | `os/` | The durable AgentOS layer: context, skills, memory, and agent definitions. |
 | `logs/` | Weekly check-ins and a running build log. |
-| `prompts/` | Reusable prompts developed during the course. |
+| `prompts/` | Reusable prompts developed during the course, including `codex-project-init.md` for a fresh Codex instance. |
 | `resources/` | Links, notes, and source material from the course and related research. |
 | `templates/` | Local templates for project notes, check-ins, and the final playbook. |
 | `PROJECT_TRACKER.md` | Canonical course project status tracker. |
