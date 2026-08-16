@@ -1,8 +1,5 @@
-# Project 05: Agent Workflows
+# Legacy misplaced scaffold: Agent Workflows
 
-Status: Not started
-
-## Goal
-
-Design handoffs and workflows between agents, skills, context, and memory.
-
+This folder is retained only as an early pre-course-numbering scaffold. Current
+course tracking lives in `PROJECT_TRACKER.md`; the canonical Project 05 notes
+are in `projects/05-your-connections/notes.md`.

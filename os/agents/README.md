@@ -15,3 +15,6 @@ This folder tracks agent definitions, roles, handoffs, and evaluation notes.
 
 - Keep agents single-responsibility when possible.
 - Add project-specific agents here as they become real.
+- The OS Thought Partner has a portable ChatGPT Project companion in
+  `os-thought-partner-chatgpt-project.md`; keep it aligned with the main agent
+  definition and repository memory rules.

@@ -1,5 +1,9 @@
 # Home Media Server
 
+Status audit: 2026-08-13. The local Korlash repository last changed on
+2026-05-22, and its README/WIP tracker still describe the pre-boot hardware
+rebuild plan. The physical server state was not verified in this workspace.
+
 This file summarizes Kyle's Plex server project for AgentOS routing and planning. The source of truth for detailed operations is the project repo:
 
 <https://github.com/KyleGowen/plex-server-hardware>
@@ -8,7 +12,10 @@ This file summarizes Kyle's Plex server project for AgentOS routing and planning
 
 Home Media Server is Kyle's Windows-native Plex server and media automation ecosystem. It exists to operate, document, and safely evolve the Korlash Plex server without losing media, corrupting paths, leaking secrets, or making risky live-server changes casually.
 
-The hardware rebuild is stable as of 2026-07-05. Treat the project as active home operations with balanced priorities across reliability, backups, service validation, media automation, collections, and poster curation.
+Treat the project as active home operations with balanced priorities across
+reliability, backups, service validation, media automation, collections, and
+poster curation. Do not treat the older "stable as of 2026-07-05" note as
+current without a fresh server-side check.
 
 ## Architecture Summary
 

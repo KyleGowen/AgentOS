@@ -1,8 +1,5 @@
-# Project 08: Automations
+# Legacy misplaced scaffold: Project 11 Automations
 
-Status: Not started
-
-## Goal
-
-Turn repeated agent workflows into scheduled or event-driven automations.
+This folder is retained only as a historical scaffold. The canonical notes are
+now in `projects/11-automations/notes.md`.
 

@@ -4,7 +4,7 @@ Use this file as the index for durable background context.
 
 | Context Area | File or Location | Notes | Status |
 |---|---|---|---|
-| Identity | `os/context/identity.md` | Personal preferences and rules. | Draft |
+| Identity | `os/context/identity.md` | Personal preferences and rules. | Active |
 | Communication style | `os/context/communication-style.md` | Writing voice, tone, and technical communication preferences. | Active |
 | Engineering review | `os/context/engineering-review.md` | Code review priorities, comment style, testing expectations, and reporting-review rules. | Active |
 | Current projects | `os/context/current-projects.md` | Ongoing work, home projects, hobbies, priorities, and routing rules. | Active |
@@ -12,4 +12,4 @@ Use this file as the index for durable background context.
 | Home Media Server | `os/context/home-media-server.md` | Plex server, media automation, remote Codex workflow, and live-server safety context. | Active |
 | DDR/ITG Machine | `os/context/stepmania-ddr.md` | StepMania, DDR, ITGMania fitness habit, score digest, and backup-tool context. | Active |
 | Projects | `projects/` | Course project artifacts and notes. | Active |
-| Playbook | `PLAYBOOK.md` | Operating manual. | Draft |
+| Playbook | `PLAYBOOK.md` | Operating manual. | In progress |

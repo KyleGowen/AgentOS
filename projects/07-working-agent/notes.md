@@ -1,6 +1,8 @@
-# Project 07: Working Agent
+# Project 07: The Build
 
 Status: In progress
+
+Last audited: 2026-08-13
 
 Course page: <https://aidbagentos.ai/projects>
 
@@ -75,3 +77,11 @@ Hard boundaries:
 - Project notes.
 - Playbook update.
 - Memory update.
+
+## Current State
+
+The agent identity and coaching context are implemented, and the readiness
+target is explicit. Completion is still open because this repository does not
+contain a real test prompt/output pair, a playbook update for the finished
+agent, or an end-to-end evidence record showing source grounding, current-event
+verification, compact output, open-project recall, and missing-data handling.

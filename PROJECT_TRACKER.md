@@ -2,17 +2,21 @@
 
 Source: <https://aidbagentos.ai/projects>
 
-| Project | Title | Local Folder | Status | Completed Date | Source |
-|---|---|---|---|---|---|
-| 00 - Your OS Thought Partner | Your OS Thought Partner | `projects/00-your-os-thought-partner/` | Complete | 2026-07-01 | <https://aidbagentos.ai/projects> |
-| 01 - Your Identity | Your Identity | `projects/01-your-identity/` | Complete | 2026-07-01 | <https://aidbagentos.ai/projects> |
-| 02 - Your Context | Your Context | `projects/02-your-context/` | Complete | 2026-07-02 | <https://aidbagentos.ai/projects> |
-| 03 - Your First Skills | Your First Skills | `projects/03-your-first-skills/` | Complete | 2026-07-03 | <https://aidbagentos.ai/projects> |
-| 04 - Your Memory | Your Memory | `projects/04-your-memory/` | Complete | 2026-07-03 | <https://aidbagentos.ai/projects> |
-| 05 - Your Connections | Your Connections | `projects/05-your-connections/` | Complete | 2026-07-03 | <https://aidbagentos.ai/projects> |
-| 06 - The Job | The Job | `projects/06-the-job/` | Complete | 2026-07-05 | <https://aidbagentos.ai/projects> |
-| 07 - The Build | The Build | `projects/07-the-build/` | Not started | - | <https://aidbagentos.ai/projects> |
-| 08 - Test & Verify | Test & Verify | `projects/08-test-and-verify/` | Not started | - | <https://aidbagentos.ai/projects> |
-| 09 - The Second Agent | The Second Agent | `projects/09-the-second-agent/` | Not started | - | <https://aidbagentos.ai/projects> |
-| 10 - Your Playbook | Your Playbook | `projects/10-your-playbook/` | Not started | - | <https://aidbagentos.ai/projects> |
-| 11 - Automations | Automations | `projects/11-automations/` | Not started | - | <https://aidbagentos.ai/projects> |
+Last audited: 2026-08-13
+
+Statuses are evidence-based: `Complete` means the project artifact and completion notes are present; `In progress` means meaningful implementation exists but a documented completion gate is still open; `Not started` means no project-specific build or verification evidence exists yet.
+
+| Project | Title | Local Evidence / Notes | Status | Completed Date | Current Evidence / Next Gate | Source |
+|---|---|---|---|---|---|---|
+| 00 - Your OS Thought Partner | Your OS Thought Partner | `projects/00-os-thought-partner/` | Complete | 2026-07-01 | Thought-partner framework and tool foundation documented. | <https://aidbagentos.ai/projects> |
+| 01 - Your Identity | Your Identity | `projects/01-context/` | Complete | 2026-07-01 | Identity and operating preferences are documented; folder is a retained historical scaffold name. | <https://aidbagentos.ai/projects> |
+| 02 - Your Context | Your Context | `projects/02-your-context/` | Complete | 2026-07-02 | Context portfolio, current projects, communication style, and AI coaching context exist. | <https://aidbagentos.ai/projects> |
+| 03 - Your First Skills | Your First Skills | `projects/03-your-first-skills/` | Complete | 2026-07-03 | Codex skills and native skill archives are catalogued. | <https://aidbagentos.ai/projects> |
+| 04 - Your Memory | Your Memory | `projects/04-your-memory/` | Complete | 2026-07-03 | Intentional memory layer, domain separation, and maintenance rules exist. | <https://aidbagentos.ai/projects> |
+| 05 - Your Connections | Your Connections | `projects/05-your-connections/` | Complete | 2026-07-03 | GitHub, Google Calendar, and Google Drive are documented; deferred connections are explicit. | <https://aidbagentos.ai/projects> |
+| 06 - The Job | The Job | `projects/06-the-job/` | Complete | 2026-07-05 | First-job definition and agent boundary are documented. | <https://aidbagentos.ai/projects> |
+| 07 - The Build | The Build | `projects/07-working-agent/` | In progress | - | Prep-agent identity/context exist; real test prompt/output, playbook update, and completion evidence remain. | <https://aidbagentos.ai/projects> |
+| 08 - Test & Verify | Test & Verify | `projects/08-test-and-verify/` | Not started | - | No executed verification artifact or evaluation record is tracked yet. | <https://aidbagentos.ai/projects> |
+| 09 - The Second Agent | The Second Agent | `projects/09-agent-team/` | In progress | - | Follow-up and PR-review agent definitions exist; second-agent evaluation and completion evidence remain. | <https://aidbagentos.ai/projects> |
+| 10 - Your Playbook | Your Playbook | `projects/10-playbook/` | In progress | - | `PLAYBOOK.md` exists but needs current project/automation statuses and final operating-manual cleanup. | <https://aidbagentos.ai/projects> |
+| 11 - Automations | Automations | `projects/11-automations/` | In progress | - | Three automation policies exist; appointment and SDGE jobs are active, wanted-card job is paused, and project notes were missing. | <https://aidbagentos.ai/projects> |

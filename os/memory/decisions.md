@@ -87,3 +87,11 @@ Each entry should include the date, context, decision, reason, and evidence when
 - Decision: Delete the scheduled efficiency-review automation and move efficiency learning into each skill's post-run workflow.
 - Reason: Skill-local learning captures real friction at the moment it happens, avoids a broad daily review job, and keeps behavior changes reviewable before they are promoted into `SKILL.md`.
 - Evidence: Kyle asked to make the change and delete the scheduled task; `os/agents/os-thought-partner.md` now documents post-run learning rules.
+
+## 2026-08-16 - Use ChatGPT Project As Cross-device Thought-partner Surface
+
+- Context: Kyle wants the OS Thought Partner available across devices and is willing to keep Codex or ChatGPT open while using it.
+- Decision: Keep the GitHub AgentOS repository as the durable source of truth and use a ChatGPT Project named `AgentOS / OS Thought Partner` as a portable working surface with selected uploaded source files and explicit project instructions.
+- Reason: ChatGPT Projects keep related chats, files, and instructions available across phone, web, and desktop, while local Codex filesystem work remains desktop-bound.
+- Boundary: Uploaded project files are snapshots; refresh them after meaningful repository changes. Use Codex with the local folder for edits, tests, and git operations.
+- Evidence: `os/agents/os-thought-partner.md`, `os/agents/os-thought-partner-chatgpt-project.md`, and official OpenAI documentation on Projects and ChatGPT Work/Codex.

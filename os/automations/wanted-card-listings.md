@@ -109,6 +109,9 @@ Rows must be sorted by total price plus shipping ascending. Auctions/listings th
 
 - Codex implementation: use `.agents/skills/find-card-listings/`.
 - Current Codex automation ID: `wanted-card-listings`.
-- Codex cron schedule is active for 6:00 AM Pacific daily. The list-change full refresh remains an event trigger; no separate startup run is scheduled.
+- Codex cron schedule is configured for 6:00 AM Pacific daily, but the live job
+  is currently paused because the required isolated logged-out browser is
+  unavailable. The list-change full refresh remains an event trigger; no
+  separate startup run is scheduled.
 - Non-Codex implementation: use the same runner contract with equivalent public web or marketplace APIs.
 - Treat this file as policy/config, not generated output. Update wanted cards in `os/context/wanted-trading-cards.md` before changing scheduler prompts.

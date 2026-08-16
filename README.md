@@ -38,15 +38,15 @@ Canonical tracker: `PROJECT_TRACKER.md`
 
 | Project | Local Folder | Status |
 |---|---|---|
-| 00 - Your OS Thought Partner | `projects/00-your-os-thought-partner/` | Complete |
-| 01 - Your Identity | `projects/01-your-identity/` | Complete |
+| 00 - Your OS Thought Partner | `projects/00-os-thought-partner/` | Complete |
+| 01 - Your Identity | `projects/01-context/` | Complete |
 | 02 - Your Context | `projects/02-your-context/` | Complete |
 | 03 - Your First Skills | `projects/03-your-first-skills/` | Complete |
 | 04 - Your Memory | `projects/04-your-memory/` | Complete |
 | 05 - Your Connections | `projects/05-your-connections/` | Complete |
 | 06 - The Job | `projects/06-the-job/` | Complete |
-| 07 - The Build | `projects/07-the-build/` | Not started |
+| 07 - The Build | `projects/07-working-agent/` | In progress |
 | 08 - Test & Verify | `projects/08-test-and-verify/` | Not started |
-| 09 - The Second Agent | `projects/09-the-second-agent/` | Not started |
-| 10 - Your Playbook | `projects/10-your-playbook/` | Not started |
-| 11 - Automations | `projects/11-automations/` | Not started |
+| 09 - The Second Agent | `projects/09-agent-team/` | In progress |
+| 10 - Your Playbook | `projects/10-playbook/` | In progress |
+| 11 - Automations | `projects/11-automations/` | In progress |

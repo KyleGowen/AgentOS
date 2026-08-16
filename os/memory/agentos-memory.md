@@ -21,6 +21,10 @@ Memory about this AgentOS system, the course, and how the pieces should fit toge
 
 ## Course Progress Notes
 
+- On 2026-08-13, the project tracker was audited against the repository and
+  live Codex automation configuration. Projects 00–06 remain complete; Project
+  07 is in progress; Project 08 has not started; and Projects 09–11 are in
+  progress with explicit evidence gaps in `PROJECT_TRACKER.md`.
 - Project 04, Your Memory, is focused on separating working memory from persistent memory and documenting how agents should maintain both.
 - The memory framework should adapt Codex built-in memory rather than pretending Codex lacks memory.
 - The canonical Project 04 folder is `projects/04-your-memory/`.

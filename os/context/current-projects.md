@@ -1,6 +1,12 @@
 # Current Projects
 
-Last updated: 2026-07-05
+Last updated: 2026-08-13
+
+Status scope: personal-project status was audited on 2026-08-13 against the
+available local source repositories and artifacts below. Work-project details
+remain high-level context and were not revalidated in this pass; consult Jira,
+Confluence, GitHub, or Slack before using them for work planning or
+prioritization.
 
 This file tracks ongoing work, home projects, hobbies, and life context that may affect planning, prioritization, drafting, and agent routing.
 
@@ -168,6 +174,16 @@ Notable context:
 
 ## Personal Projects
 
+### Personal Project Status Audit
+
+| Project | Status on 2026-08-13 | Evidence | Confidence / next action |
+|---|---|---|---|
+| Excelsior | Active development; v2/product work is ongoing | `/Users/kyle/cursored` is on `main` at `2fc8a1a7` dated 2026-08-01; the older `/Users/kyle/Projects/excelsior` checkout is at April 11 | High for local code status; production/runtime health was not verified because DNS and local services were unavailable. Reconcile the two checkouts before implementation. |
+| Home Media Server / Korlash | Rebuild remains unverified and documented as awaiting minimal boot | Local repo last changed 2026-05-22; README and WIP tracker still describe the pre-boot rebuild plan with all execution checklists open | Medium for documented state, low for physical live state. Confirm hardware/Windows/drive status through the server or a fresh Korlash update. |
+| DDR/ITG Machine | Active hobby project, current operational status unverified | AgentOS snapshot is from 2026-07-05; documented source repos were not present locally and remote refresh failed in this run | Low for current activity/data. Refresh `itgmania-backup` and `Thraximundar-Backup` before summarizing recent play or backup health. |
+| Vimanas | Paused / background | `os/context/current-projects.md` concept and routing notes | High for priority state; no active implementation source was found or needed. |
+| Planted | Personal/background concept; not separately status-tracked | `os/context/current-projects.md` description and personal-only routing note | Medium; create a dedicated project context only if it becomes active. |
+
 ### Excelsior
 
 URL: <https://excelsior.cards>
@@ -197,9 +213,13 @@ Why it matters:
 
 Current state:
 
-- Excelsior v2 recently shipped with a UI overhaul.
-- The app looks better and now includes a community section.
-- Community response has been positive.
+- Excelsior v2 has shipped with the UI overhaul and community surfaces.
+- The active local development checkout is `/Users/kyle/cursored`, whose latest
+  local commit is `2fc8a1a7` on 2026-08-01 (`Add deck privacy visibility toggle`).
+- `/Users/kyle/Projects/excelsior` is an older April checkout; do not treat it
+  as the current implementation without reconciling it with `/Users/kyle/cursored`.
+- Production and local runtime health were not verified during the 2026-08-13
+  audit because DNS and the local `:8085`/`:5173` services were unavailable.
 
 Near-term priorities:
 
@@ -241,8 +261,13 @@ Home Media Server is Kyle's Windows-native Plex server and media automation ecos
 
 Current state:
 
-- The hardware rebuild is stable as of 2026-07-05.
-- The project remains active as a home operations project.
+- The project remains active as a home operations project, but its current
+  physical state is not verified in this workspace.
+- The local source repo last changed on 2026-05-22. Its README and rebuild WIP
+  tracker still describe the pre-boot plan: wait for parts, boot with the OS
+  SSD only, then reconnect media drives incrementally.
+- Do not carry forward the 2026-07-05 "stable" claim without a fresh server-side
+  check or user update.
 - AgentOS should keep summary-level project context; the GitHub repo remains the source of truth for detailed inventories, service docs, media ledgers, crash history, and operational scripts.
 
 Near-term priorities:
@@ -282,7 +307,9 @@ DDR/ITG Machine is Kyle's StepMania, DDR, and ITGMania hobby-log project. The ph
 
 Current state:
 
-- Scheduled backups and digest generation are working as of 2026-07-05.
+- Scheduled backups and digest generation were documented as working on
+  2026-07-05, but current operation was not reverified because the source repos
+  are not present locally and remote refresh failed during this audit.
 - Kyle plays for exercise about 1-2 times per week.
 - The ITGMania backup tool protects install and save data, but songs are intentionally not backed up.
 - The backup and digest repo remains the source of truth for scores, play history, and generated digest evidence.

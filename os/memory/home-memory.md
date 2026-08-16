@@ -6,6 +6,10 @@ Keep this separate from work memory. Home project details can inform home projec
 
 ## Excelsior
 
+- 2026-08-13 audit: active development is evidenced by `/Users/kyle/cursored`
+  `main` at `2fc8a1a7` from 2026-08-01. `/Users/kyle/Projects/excelsior` is an
+  older April checkout; reconcile before implementation. Production and local
+  runtime health were not verified in this pass.
 - Excelsior is Kyle's main personal software project and creative outlet.
 - It serves a small OverPower community with card browsing, deck building, collection tracking, and community features.
 - Current AgentOS detail lives in `os/context/excelsior.md`; verify the Excelsior repo before implementation because multiple local checkouts may exist.
@@ -17,6 +21,9 @@ Keep this separate from work memory. Home project details can inform home projec
 
 ## Home Media Server
 
+- 2026-08-13 audit: local Korlash docs still describe the pre-boot hardware
+  rebuild plan, with execution checklists open; physical server state is not
+  verified. The repo last changed 2026-05-22.
 - Home Media Server is Kyle's active Plex server and media automation project.
 - Source repo: <https://github.com/KyleGowen/plex-server-hardware>.
 - The rebuild is stable as of 2026-07-05.
@@ -27,6 +34,9 @@ Keep this separate from work memory. Home project details can inform home projec
 
 ## DDR/ITG Machine
 
+- 2026-08-13 audit: current status is unverified. The documented source repos
+  were not present locally and remote refresh failed; the last AgentOS snapshot
+  remains 2026-07-05.
 - DDR/ITG Machine is Kyle's active StepMania, DDR, and ITGMania hobby-log and exercise project.
 - Physical machine identity: Thraximundar, a Windows nukbox DDR/ITG setup.
 - Tooling repo: <https://github.com/KyleGowen/itgmania-backup>.

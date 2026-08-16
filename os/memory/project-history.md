@@ -2,6 +2,15 @@
 
 Compact history of meaningful outcomes and milestones. This is not a full changelog.
 
+### 2026-08-13 - AgentOS Project Tracker Audit
+
+- Reconciled `PROJECT_TRACKER.md`, `README.md`, project notes, AgentOS artifacts,
+  and live Codex automation configuration.
+- Confirmed Projects 00–06 complete; recorded Project 07 as in progress, Project
+  08 as not started, and Projects 09–11 as in progress.
+- Recorded the missing completion evidence instead of inferring completion from
+  agent definitions or automation policies alone.
+
 ## AgentOS
 
 ### 2026-07-30 - SDGE Energy Alert Skill Created
@@ -62,6 +71,17 @@ Compact history of meaningful outcomes and milestones. This is not a full change
 ## Home
 
 - Store meaningful personal project milestones when they affect future priorities, risks, or workflow.
+
+### 2026-08-13 - Personal Project Status Audit
+
+- Audited personal-project context against available local source repositories.
+- Confirmed Excelsior active development in `/Users/kyle/cursored`; identified
+  `/Users/kyle/Projects/excelsior` as an older divergent checkout.
+- Confirmed Korlash documentation still describes an unverified pre-boot
+  rebuild state.
+- Marked DDR/ITG current status as unverified because its source repositories
+  were unavailable locally and remote refresh failed.
+- Kept Vimanas paused and Planted background based on their documented routing.
 
 ### 2026-07-05 - Home Media Server Added To AgentOS
 

@@ -1,6 +1,6 @@
 # Excelsior Context
 
-Last checked: 2026-07-19 from local repos `/Users/kyle/Projects/excelsior`
+Last checked: 2026-08-13 from local repos `/Users/kyle/Projects/excelsior`
 and `/Users/kyle/cursored`.
 
 Excelsior is Kyle's main personal software project and creative outlet. It is a
@@ -21,6 +21,22 @@ small but real user community.
 
 When the two local checkouts disagree, prefer the checkout that matches the
 current task's source files and verify with git before editing.
+
+## Status Audit — 2026-08-13
+
+- `/Users/kyle/cursored` is the current local implementation evidence: `main`
+  is at `2fc8a1a7` from 2026-08-01, `Add deck privacy visibility toggle`, and
+  is aligned with its recorded `origin/main`.
+- `/Users/kyle/Projects/excelsior` is an older local checkout at `db89e665`
+  from 2026-04-11, so it should not be used as the default implementation
+  source without reconciliation.
+- `/Users/kyle/cursored` has an unrelated modified `data/sessions.json`; preserve
+  it and inspect before any work that overlaps that file.
+- Production DNS and local `:8085`/`:5173` runtime checks were unavailable in
+  this audit. Code-repository status is verified; deployed behavior is not.
+- Current conclusion: Excelsior is active development, with v2 and recent
+  collection, deck privacy, catalog, and API work present in the current
+  checkout.
 
 ## Current Product Shape
 

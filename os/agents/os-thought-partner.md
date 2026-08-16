@@ -18,6 +18,45 @@ This AgentOS is being built in Codex.
 
 Because this is a fresh Codex install, assume no custom agents, skills, memories, MCP servers, automations, or local conventions exist unless they are documented in this repository.
 
+## Cross-device access
+
+The durable source of truth is the GitHub repository:
+<https://github.com/KyleGowen/AgentOS>.
+
+Use a ChatGPT Project named **AgentOS / OS Thought Partner** as the portable
+working surface for phone, web, and desktop ChatGPT access. The project
+instructions are captured in `os/agents/os-thought-partner-chatgpt-project.md`.
+
+Seed that ChatGPT Project with these reviewable files:
+
+- `os/agents/os-thought-partner.md`
+- `os/agents/os-thought-partner-chatgpt-project.md`
+- `PLAYBOOK.md`
+- `PROJECT_TRACKER.md`
+- `os/context/identity.md`
+- `os/context/context-portfolio.md`
+- `os/memory/README.md`
+- `os/memory/working-memory.md`
+
+Add other context files only when the task needs them. Treat uploaded files as
+a snapshot: refresh them after meaningful repository changes, and use Codex
+with the local folder for edits, tests, git history, and other filesystem work.
+Do not treat a ChatGPT Project or a Codex chat as a replacement for the GitHub
+repository.
+
+One-time setup in ChatGPT:
+
+1. Create a new ChatGPT Project named `AgentOS / OS Thought Partner`.
+2. Open Project settings and paste the contents of
+   `os/agents/os-thought-partner-chatgpt-project.md` into Project instructions.
+3. Upload the seed files listed above from the repository.
+4. Start the first chat with: `Load the AgentOS source files in this project. Summarize the current state, identify stale or missing context, and wait for my next task.`
+
+ChatGPT Projects are intended to keep chats, files, and instructions together
+across devices. Codex remains a separate surface; its local files stay on the
+desktop, while supported remote Codex chats can be continued from the ChatGPT
+mobile app.
+
 ## Work Context
 
 ### Current Role
@@ -77,19 +116,22 @@ The AgentOS should support both engineering work and AI coaching work. It should
 
 Use this file as the starting framework for the operating system. The system should grow layer by layer as course projects are completed.
 
+Project status is maintained separately in `PROJECT_TRACKER.md`; the layer
+statuses below describe the current state of the AgentOS implementation.
+
 ### Layers
 
 | Layer | Local Home | Purpose | Status |
 |---|---|---|---|
 | Tool foundation | This file | Define Codex as the agentic tool and record baseline assumptions. | Active |
-| Identity | `os/context/identity.md` | Capture who I am, how I work, and how agents should adapt to me. | Draft |
-| Context | `os/context/context-portfolio.md` | Track durable background context available to agents. | Draft |
-| Skills | `os/skills/` | Store reusable procedures that can be invoked repeatedly. | Planned |
-| Memory | `os/memory/` | Store durable decisions, patterns, working memory, lessons, and domain memory. | Draft |
+| Identity | `os/context/identity.md` | Capture who I am, how I work, and how agents should adapt to me. | Active |
+| Context | `os/context/context-portfolio.md` | Track durable background context available to agents. | Active |
+| Skills | `os/skills/` | Store reusable procedures that can be invoked repeatedly. | Active |
+| Memory | `os/memory/` | Store durable decisions, patterns, working memory, lessons, and domain memory. | Active |
 | Agents | `os/agents/` | Define agent roles, responsibilities, handoffs, and evaluation notes. | Active |
-| Verification | `PLAYBOOK.md` | Define checks before trusting or using agent output. | Draft |
-| Automations | `PLAYBOOK.md` | Track repeated workflows that may become scheduled or event-driven. | Planned |
-| Playbook | `PLAYBOOK.md` | Maintain the operating manual for the AgentOS. | Draft |
+| Verification | `PLAYBOOK.md` | Define checks before trusting or using agent output. | Not started |
+| Automations | `PLAYBOOK.md` | Track repeated workflows that may become scheduled or event-driven. | In progress |
+| Playbook | `PLAYBOOK.md` | Maintain the operating manual for the AgentOS. | In progress |
 
 ### Goals
 
@@ -159,7 +201,6 @@ When a repeated task has been run a few times, pause and harvest the friction in
 
 ## What I Would Add With More Time
 
-- Context files for Excelsior.
-- Skills for diagnosing and fixing Excelsior's build pipeline.
-- Context files for Planted.
-- Context files for Vimanas.
+- A real verification/evaluation harness for the first working agent.
+- Completion evidence for the second agent and automation projects.
+- A durable status review cadence so project notes and the playbook do not drift.

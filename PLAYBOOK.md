@@ -1,6 +1,8 @@
 # My Agentic OS Playbook
 
-Last updated: 2026-07-17
+Last updated: 2026-08-13
+
+Project status source: `PROJECT_TRACKER.md` (last audited 2026-08-13).
 
 ## My OS Foundation
 
@@ -8,13 +10,13 @@ Last updated: 2026-07-17
 
 | Scope | File | Summary | Status |
 |---|---|---|---|
-| Me | `os/context/identity.md` | Personal preferences, rules, voice, and operating principles. | Draft |
+| Me | `os/context/identity.md` | Personal preferences, rules, voice, and operating principles. | Active |
 
 ### Context
 
 | File | What It Covers | Status |
 |---|---|---|
-| `os/context/context-portfolio.md` | Durable background context for agents. | Draft |
+| `os/context/context-portfolio.md` | Durable background context for agents. | Active |
 | `os/future-features.md` | Potential follow-ups and later ideas before they become projects, skills, agents, or automations. | Active |
 
 ### Skills
@@ -31,8 +33,8 @@ Last updated: 2026-07-17
 
 | Type | How It Works | Update Cadence | Status |
 |---|---|---|---|
-| Working memory | `os/memory/working-memory.md` plus Codex built-in memory for ambient recall. | End of meaningful task | Draft |
-| Persistent memory | `os/memory/` files separated by decisions, patterns, history, lessons, and domain. | End of task, compacted aggressively | Draft |
+| Working memory | `os/memory/working-memory.md` plus Codex built-in memory for ambient recall. | End of meaningful task | Active |
+| Persistent memory | `os/memory/` files separated by decisions, patterns, history, lessons, and domain. | End of task, compacted aggressively | Active |
 
 ### Connections
 
@@ -41,6 +43,7 @@ Last updated: 2026-07-17
 | GitHub | Version control and evidence links. | Git / GitHub | Active |
 | Google Calendar | Meeting prep, schedule awareness, and focus-block planning. | Google Calendar connector | Active, personal Gmail currently |
 | Google Drive | Docs, Sheets, Slides, and file discovery for planning and AI coaching workflows. | Google Drive connector | Active, personal Gmail currently |
+| ChatGPT Project | Cross-device OS Thought Partner chats, portable instructions, and selected source files. | ChatGPT Project with uploaded repository files | Setup in progress |
 | Atlassian Jira and Confluence | Work ticket research, linked source documents, and implementation planning. | Atlassian connector or MCP | Desired |
 | Slack | Async updates and incident context. | Slack connector | Deferred; requires work admin approval |
 | Excelsior | Personal project automation, card/deck workflows, local app context, and release support. | Custom MCP | Future idea |
@@ -52,6 +55,13 @@ My checks before using AI output:
 - [ ] Are factual claims traceable to a source?
 - [ ] Does the output match my intent and constraints?
 - [ ] Would I put my name on this?
+
+## Course Projects
+
+The current course status is maintained in `PROJECT_TRACKER.md`. Projects 00–06
+are complete; Project 07 is in progress; Project 08 is not started; and
+Projects 09–11 are in progress with explicit evidence gaps recorded in the
+tracker and project notes.
 
 ## My Agents
 
@@ -116,8 +126,8 @@ attention.
 | AI office-hours prep | Weekly before Tuesday office hours | Run the AI Office Hours Prep Agent once Kyle has provided current agenda inputs. | Future candidate |
 | AI office-hours follow-up | After Tuesday office hours | Run the AI Office Hours Follow-Up Agent once Kyle has provided current post-session notes. | Future candidate |
 | PR review prep | Workday morning or on demand | Run the PR Review Prep Agent to find tagged Measurabl PRs and prepare the review queue. | Future candidate |
-| Auto-accept appointments | Every 2 hours from 7:00 AM through 11:00 PM | Run `accept-sender-appointments` for active senders in `os/automations/auto-accept-appointments.md`. | Active; Codex id `auto-accept-trusted-appointments` |
-| Wanted card listings | Daily at 6:00 AM Pacific, and immediately after adding or activating a wanted card | Run `find-card-listings` for all active cards in `os/context/wanted-trading-cards.md`, using logged-out eBay access and retail baselines. | Active; Codex id `wanted-card-listings`; list-change trigger documented |
+| Auto-accept appointments | Daily at 6:00 AM Pacific | Run `accept-sender-appointments` for active senders in `os/automations/auto-accept-appointments.md`. | Active; Codex id `auto-accept-trusted-appointments` |
+| Wanted card listings | Daily at 6:00 AM Pacific, and immediately after adding or activating a wanted card | Run `find-card-listings` for all active cards in `os/context/wanted-trading-cards.md`, using logged-out eBay access and retail baselines. | Paused; Codex id `wanted-card-listings`; list-change trigger documented; isolated browser access is currently unavailable |
 | SDGE energy alerts | Weekly Monday at 7:00 AM Pacific | Run `catalog-sdge-energy-alerts` for SDGE-label mail from `notices@sdge.com`, update the flat-file database, clean processed unread messages, and regenerate the dashboard. | Active; Codex id `sdge-energy-alerts` |
 
 ## What's Working Best
@@ -126,9 +136,12 @@ attention.
 
 ## Gaps & Next Steps
 
-### This Month
+### Current Next Steps
 
-- Complete Project 00 and establish the first reusable OS context files.
+- Complete the Project 07 real-agent test and evidence packet.
+- Use that test as the first Project 08 verification record.
+- Select one additional agent for the Project 09 evaluation.
+- Finish the Project 10 operating-manual cleanup and Project 11 completion notes.
 
 ### Next Quarter
 

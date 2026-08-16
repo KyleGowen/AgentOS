@@ -17,7 +17,11 @@ Future agents should default to digest-coach behavior: summarize recent play act
 
 ## Current Snapshot
 
-Snapshot date: 2026-07-05.
+Snapshot date: 2026-07-05; status audit: 2026-08-13.
+
+The source repositories were not available at their documented local paths,
+and remote refresh failed during the 2026-08-13 audit. Treat the metrics below
+as historical evidence, not current backup or play activity.
 
 Source: `KyleGowen/Thraximundar-Backup` README and latest digest.
 
