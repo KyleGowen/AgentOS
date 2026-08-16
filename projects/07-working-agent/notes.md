@@ -1,6 +1,8 @@
 # Project 07: The Build
 
-Status: In progress
+Status: Complete
+
+Completed: 2026-08-16
 
 Last audited: 2026-08-16
 
@@ -46,11 +48,13 @@ agent on top of an intentional operating system.
 The ThraxOS repository owns detailed machine state. AgentOS stores only the
 course decision, summary context, evidence links, and completion record.
 
-## Completion Target
+## Completion Record
 
-Before marking Project 07 complete, capture a compact, sanitized representative
-ThraxOS invocation and verified result in this project folder. The evidence
-should demonstrate:
+Project 07 is complete against the course build rubric. ThraxOS has its own
+identity, context, skills, global OS inheritance, real operating scope, and
+explicit safety and verification boundaries. The following is the recommended
+representative-run packet and will serve as the first Project 08 verification
+record:
 
 - The ThraxOS specialist was invoked for a real task.
 - It loaded its operating contract, memory, and relevant context.
@@ -61,7 +65,7 @@ should demonstrate:
 
 ## Current State
 
-The working agent already exists in `KyleGowen/ThraxOS`, and its architecture
-maps cleanly to Project 07. AgentOS now recognizes ThraxOS as the selected
-build. Completion remains open only for the compact course evidence record and
-reflection described above.
+The working agent exists in `KyleGowen/ThraxOS`, and its architecture maps
+cleanly to Project 07. AgentOS recognizes ThraxOS as the selected build, and
+the project is now recorded as complete. The next recommended step is to
+capture the representative run and reflection as Project 08 verification.

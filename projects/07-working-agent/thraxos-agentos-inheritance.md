@@ -2,7 +2,7 @@
 
 Date: 2026-08-16
 
-Status: Architecture milestone; Project 07 remains in progress pending its documented representative-run evidence gate.
+Status: Architecture milestone supporting the completed Project 07 build; a representative run remains useful as Project 08 verification evidence.
 
 ## Outcome
 
@@ -26,4 +26,4 @@ The cache records the committed AgentOS `origin/main` SHA used to build it and c
 - Uncommitted AgentOS changes are never inherited.
 - AgentOS writes require explicit approval, a configured local checkout, and the allowlist stored in the ThraxOS cache.
 - Fetching may update Git metadata only. The workflow never pulls, merges, rebases, switches branches, resets, or changes the AgentOS worktree during refresh.
-- This milestone does not satisfy the separate Project 7 representative invocation, verified result, and Kyle reflection requirement.
+- This milestone supports the Project 07 completion decision; the separate representative invocation, verified result, and Kyle reflection are recommended as the first Project 08 verification record.

@@ -45,6 +45,7 @@ class TrackerRow:
     status: str
     completed_date: str
     source: str
+    current_evidence: str = ""
 
 
 def slugify(title: str) -> str:
@@ -92,11 +93,13 @@ def parse_tracker(text: str) -> list[TrackerRow]:
         if not line.startswith("|"):
             continue
         cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
-        if len(cells) != 6 or cells[0] in {"Project", "---"} or set(cells[0]) == {"-"}:
+        if len(cells) not in {6, 7} or cells[0] in {"Project", "---"} or set(cells[0]) == {"-"}:
             continue
         project_match = re.match(r"(\d{2})", cells[0])
         if not project_match:
             continue
+        current_evidence = cells[5] if len(cells) == 7 else ""
+        source = cells[6] if len(cells) == 7 else cells[5]
         rows.append(
             TrackerRow(
                 number=project_match.group(1),
@@ -104,27 +107,53 @@ def parse_tracker(text: str) -> list[TrackerRow]:
                 folder=cells[2],
                 status=cells[3],
                 completed_date="" if cells[4] == "-" else cells[4],
-                source=cells[5],
+                source=source,
+                current_evidence=current_evidence,
             )
         )
     return rows
 
 
-def render_tracker(rows: list[TrackerRow]) -> str:
+def render_tracker_row(row: TrackerRow, include_current_evidence: bool) -> str:
+    completed = row.completed_date or "-"
+    if include_current_evidence:
+        return (
+            f"| {row.number} - {row.title} | {row.title} | {row.folder} | "
+            f"{row.status} | {completed} | {row.current_evidence} | {row.source} |"
+        )
+    return (
+        f"| {row.number} - {row.title} | {row.title} | {row.folder} | "
+        f"{row.status} | {completed} | {row.source} |"
+    )
+
+
+def render_tracker(rows: list[TrackerRow], original_text: str | None = None) -> str:
+    if original_text is not None:
+        row_by_number = {row.number: row for row in rows}
+        include_current_evidence = "Current Evidence / Next Gate" in original_text
+        rendered: list[str] = []
+        for line in original_text.splitlines():
+            if line.startswith("|"):
+                cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+                project_match = re.match(r"(\d{2})", cells[0]) if cells else None
+                if project_match and project_match.group(1) in row_by_number:
+                    rendered.append(
+                        render_tracker_row(row_by_number[project_match.group(1)], include_current_evidence)
+                    )
+                    continue
+            rendered.append(line)
+        return "\n".join(rendered).rstrip() + "\n"
+
     lines = [
         "# AgentOS Project Tracker",
         "",
         f"Source: <{SOURCE_URL}>",
         "",
-        "| Project | Title | Local Folder | Status | Completed Date | Source |",
-        "|---|---|---|---|---|---|",
+        "| Project | Title | Local Evidence / Notes | Status | Completed Date | Current Evidence / Next Gate | Source |",
+        "|---|---|---|---|---|---|---|",
     ]
     for row in rows:
-        completed = row.completed_date or "-"
-        lines.append(
-            f"| {row.number} - {row.title} | {row.title} | {row.folder} | "
-            f"{row.status} | {completed} | {row.source} |"
-        )
+        lines.append(render_tracker_row(row, include_current_evidence=True))
     return "\n".join(lines) + "\n"
 
 
@@ -191,6 +220,14 @@ def update_playbook(row: TrackerRow, today: str) -> str:
         text = text.replace("| Agent-specific skills | TBD |", "| Agent-specific skills | `/complete` plus future agent-specific workflows. |")
     if row.title == "The Build":
         text = text.replace("| GitHub | Version control and evidence links. | Git / GitHub | Active |", "| GitHub | Version control, evidence links, commits, and pushes. | Git / GitHub | Active |")
+        text = text.replace(
+            "Projects 00–06\nare complete; Project 07 is in progress; Project 08 is not started;",
+            "Projects 00–07\nare complete; Project 08 is not started;",
+        )
+        text = text.replace(
+            "| What needs improvement | Add the compact Project 07 representative-run evidence and reflection to AgentOS. |",
+            "| What needs improvement | Capture a compact representative ThraxOS run and reflection as the first Project 08 verification record. |",
+        )
     if row.title == "Test & Verify":
         text = text.replace("| TBD | TBD | TBD | Planned |", "| Completion workflow | Manual `/complete NN` trigger | Updates completion docs and pushes changes. | Active |", 1)
     if row.title == "Your Playbook":
@@ -246,6 +283,15 @@ def update_working_memory(row: TrackerRow) -> str:
     if not WORKING_MEMORY.exists():
         return ""
     text = WORKING_MEMORY.read_text()
+    if row.number == "07":
+        text = text.replace(
+            "- Project 07 is in progress using ThraxOS, not the AI Office Hours Prep Agent.",
+            "- Project 07 is complete using ThraxOS, not the AI Office Hours Prep Agent.",
+        )
+        text = text.replace(
+            "- Next handoff: capture one compact, sanitized representative ThraxOS invocation and verified result plus Kyle's reflection, then use it as the Project 07 completion packet and first Project 08 verification artifact.",
+            "- Next handoff: capture one compact, sanitized representative ThraxOS invocation and verified result plus Kyle's reflection as the first Project 08 verification artifact.",
+        )
     text, removed = remove_active_project_section(text, row.title)
     heading = f"- {row.completed_date}: Completed Project {completed_project_heading(row)}."
     if "## Recently Completed" not in text:
@@ -294,7 +340,8 @@ def complete_project(number: str, dry_run: bool = False) -> int:
     row.completed_date = row.completed_date or today
 
     changed: list[str] = []
-    write_if_changed(TRACKER, render_tracker(rows), dry_run, changed)
+    original_tracker = TRACKER.read_text() if TRACKER.exists() else None
+    write_if_changed(TRACKER, render_tracker(rows, original_tracker), dry_run, changed)
     write_if_changed(folder_from_cell(row.folder) / "notes.md", update_notes(row, row.completed_date), dry_run, changed)
     write_if_changed(README, update_readme(rows), dry_run, changed)
     write_if_changed(PLAYBOOK, update_playbook(row, today), dry_run, changed)

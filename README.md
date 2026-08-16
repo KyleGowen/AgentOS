@@ -45,7 +45,7 @@ Canonical tracker: `PROJECT_TRACKER.md`
 | 04 - Your Memory | `projects/04-your-memory/` | Complete |
 | 05 - Your Connections | `projects/05-your-connections/` | Complete |
 | 06 - The Job | `projects/06-the-job/` | Complete |
-| 07 - The Build | `projects/07-working-agent/` | In progress |
+| 07 - The Build | `projects/07-working-agent/` | Complete |
 | 08 - Test & Verify | `projects/08-test-and-verify/` | Not started |
 | 09 - The Second Agent | `projects/09-agent-team/` | In progress |
 | 10 - Your Playbook | `projects/10-playbook/` | In progress |

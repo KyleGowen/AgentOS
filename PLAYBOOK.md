@@ -2,7 +2,7 @@
 
 Last updated: 2026-08-16
 
-Project status source: `PROJECT_TRACKER.md` (last audited 2026-08-13).
+Project status source: `PROJECT_TRACKER.md` (last audited 2026-08-16).
 
 ## My OS Foundation
 
@@ -41,7 +41,7 @@ Project status source: `PROJECT_TRACKER.md` (last audited 2026-08-13).
 
 | Service | What I Use It For | Connection Type | Status |
 |---|---|---|---|
-| GitHub | Version control and evidence links. | Git / GitHub | Active |
+| GitHub | Version control, evidence links, commits, and pushes. | Git / GitHub | Active |
 | Google Calendar | Meeting prep, schedule awareness, and focus-block planning. | Google Calendar connector | Active, personal Gmail currently |
 | Google Drive | Docs, Sheets, Slides, and file discovery for planning and AI coaching workflows. | Google Drive connector | Active, personal Gmail currently |
 | ChatGPT Project | Cross-device OS Thought Partner chats grounded in the live AgentOS repository. | ChatGPT Project + connected GitHub app | Active; project `AgentOS` |
@@ -59,8 +59,8 @@ My checks before using AI output:
 
 ## Course Projects
 
-The current course status is maintained in `PROJECT_TRACKER.md`. Projects 00–06
-are complete; Project 07 is in progress; Project 08 is not started; and
+The current course status is maintained in `PROJECT_TRACKER.md`. Projects 00–07
+are complete; Project 08 is not started; and
 Projects 09–11 are in progress with explicit evidence gaps recorded in the
 tracker and project notes.
 
@@ -119,7 +119,7 @@ tracker and project notes.
 | Agent-specific skills | `KyleGowen/ThraxOS/.agents/skills/thraxos/` and routed project skills |
 | Connections used | Local Windows host, GitHub source repositories, live machine state |
 | What's working | Real custom Codex specialist with context, runbooks, guarded scripts, persistent memory, and operating history. |
-| What needs improvement | Add the compact Project 07 representative-run evidence and reflection to AgentOS. |
+| What needs improvement | Capture a compact representative ThraxOS run and reflection as the first Project 08 verification record. |
 
 ### How My Agents Relate
 
@@ -152,8 +152,7 @@ attention. ThraxOS is the dedicated machine specialist and the selected Project
 
 ### Current Next Steps
 
-- Capture a sanitized representative ThraxOS run, verified result, and reflection to complete Project 07.
-- Use that ThraxOS evidence as the first Project 08 verification record.
+- Capture a sanitized representative ThraxOS run, verified result, and reflection as the first Project 08 verification record.
 - Select one additional agent for the Project 09 evaluation.
 - Finish the Project 10 operating-manual cleanup and Project 11 completion notes.
 

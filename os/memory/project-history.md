@@ -73,6 +73,11 @@ Compact history of meaningful outcomes and milestones. This is not a full change
 - Marked AgentOS Project 06 - The Job complete.
 - Evidence: `projects/06-the-job/notes.md`.
 
+### 2026-08-16 - Project 07 - The Build Completed
+
+- Marked AgentOS Project 07 - The Build complete.
+- Evidence: `projects/07-working-agent/notes.md`.
+
 ## Work
 
 - Keep detailed work source material in Jira, GitHub, Confluence, Slack, or other source systems.
