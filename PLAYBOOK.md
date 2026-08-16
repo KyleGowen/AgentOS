@@ -43,7 +43,7 @@ Project status source: `PROJECT_TRACKER.md` (last audited 2026-08-13).
 | GitHub | Version control and evidence links. | Git / GitHub | Active |
 | Google Calendar | Meeting prep, schedule awareness, and focus-block planning. | Google Calendar connector | Active, personal Gmail currently |
 | Google Drive | Docs, Sheets, Slides, and file discovery for planning and AI coaching workflows. | Google Drive connector | Active, personal Gmail currently |
-| ChatGPT Project | Cross-device OS Thought Partner chats grounded in the live AgentOS repository. | ChatGPT Project + connected GitHub app | Setup in progress |
+| ChatGPT Project | Cross-device OS Thought Partner chats grounded in the live AgentOS repository. | ChatGPT Project + connected GitHub app | Active; project `AgentOS` |
 | Atlassian Jira and Confluence | Work ticket research, linked source documents, and implementation planning. | Atlassian connector or MCP | Desired |
 | Slack | Async updates and incident context. | Slack connector | Deferred; requires work admin approval |
 | Excelsior | Personal project automation, card/deck workflows, local app context, and release support. | Custom MCP | Future idea |

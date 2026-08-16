@@ -6,7 +6,7 @@ Update this at the end of a meaningful task, project shift, or planning session.
 
 ## Active AgentOS Work
 
-- Cross-device OS Thought Partner setup is prepared in `os/agents/os-thought-partner-chatgpt-project.md`; GitHub is already live at `KyleGowen/AgentOS` on `main`. Remaining actions: connect ChatGPT's GitHub app to the repo, then create the ChatGPT Project while signed in.
+- Cross-device OS Thought Partner setup is complete: ChatGPT Project `AgentOS` and its first chat `AgentOS Current State` successfully read the live `KyleGowen/AgentOS` repository. Use ChatGPT for cross-device planning/review and Codex for local edits, tests, commits, and pushes.
 - Project 07 is in progress. The tracker audit on 2026-08-13 found the prep-agent identity/context ready for testing, but the real test output and completion packet are still missing. Project 08 has not started; Projects 09–11 are in progress.
 - Next handoff: run a sanitized real prep-agent test, record the evaluation, then use it as the first Project 08 verification artifact.
 

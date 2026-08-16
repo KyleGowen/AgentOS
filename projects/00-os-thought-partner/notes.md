@@ -19,7 +19,7 @@ Set up the first thought partner that can help translate AgentOS coursework into
 - The course site says Project 00 is designed to help translate every project to the user's tool.
 - This project should establish the working relationship, durable context, and first operating rules.
 - Completed by defining Codex as the AgentOS tool foundation and creating `os/agents/os-thought-partner.md` as the companion framework.
-- Cross-device extension: `os/agents/os-thought-partner-chatgpt-project.md` defines the portable ChatGPT Project instructions and GitHub-backed source workflow. The initial cloud project and GitHub app connection still need to be created in ChatGPT.
+- Cross-device extension completed 2026-08-16: `os/agents/os-thought-partner-chatgpt-project.md` defines the portable ChatGPT Project instructions and GitHub-backed source workflow. ChatGPT Project `AgentOS` is active, and its first chat `AgentOS Current State` successfully read the live `KyleGowen/AgentOS` repository.
 
 ## Evidence
 
