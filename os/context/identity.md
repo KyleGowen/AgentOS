@@ -14,6 +14,9 @@ I am also the designated AI coach for Measurabl. I help colleagues, including no
 
 - Keep durable notes in this repository when they will help future agents.
 - Use Codex as the home base for this AgentOS, while recognizing that I also use Claude Code, Cursor, ChatGPT, Gemini, GitHub, Jira, Confluence, Slack, Unblocked, and Rovo.
+- Use shadcn/ui as my default design system for UIs, frontends, and reusable
+  components. If the library cannot be imported, preserve its visual and
+  interaction language. See `os/context/design-system.md`.
 
 ## Working Style
 

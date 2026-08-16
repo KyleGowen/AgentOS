@@ -7,6 +7,7 @@ Update this at the end of a meaningful task, project shift, or planning session.
 ## Active AgentOS Work
 
 - Cross-device memory protocol is active: committed `main` in `KyleGowen/AgentOS` is the shared durable source for every signed-in Codex and ChatGPT instance. Chat history and built-in memory are surface-specific; record portable knowledge in `os/context/` or `os/memory/`, then commit and push it from Codex.
+- Permanent inheritance tracking is active in `os/context/agentos-inheritance-registry.md`: ThraxOS and Excelsior have received the prompt; Excelsior is verified and ThraxOS implementation still needs verification. Remind Kyle before substantive work on any other project that it does not yet inherit AgentOS.
 - Project 07 is complete using ThraxOS, not the AI Office Hours Prep Agent. ThraxOS already has a custom Codex agent, context, skills, memory, safety rules, verification procedures, and real operating history.
 - Project 08 is in progress with a ThraxOS verification plan, four-item under-one-minute checklist, scenario set, and sanitized run-record template in `projects/08-test-and-verify/verification-plan.md`. Next handoff: execute the representative read-only health snapshot, score it, and capture Kyle's reflection.
 

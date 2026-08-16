@@ -134,3 +134,18 @@ Each entry should include the date, context, decision, reason, and evidence when
   Excelsior, and uncommitted AgentOS changes are never inherited.
 - Evidence: Excelsior `AGENTS.md`, `.agentos/`, and
   `docs/current/AGENTOS_INHERITANCE.md`.
+
+## 2026-08-16 - Use shadcn/ui As The Global UI Design System
+
+- Context: Kyle wants a consistent default for all UIs, frontends, and reusable
+  visual components, including work performed in AgentOS-aware subprojects.
+- Decision: Use shadcn/ui as the default component and design foundation. When
+  importing the library is not reasonable, preserve its visual and interaction
+  language rather than inventing an unrelated system.
+- Inheritance: Treat `os/context/design-system.md` as a global rule that scoped
+  subproject inheritance caches must carry or reference with provenance.
+- Boundary: Explicit repository design systems, customer requirements,
+  technical constraints, or direct Kyle instructions may override the default;
+  material overrides should be visible rather than silent.
+- Evidence: Kyle's explicit preference on 2026-08-16 and
+  `os/context/design-system.md`.

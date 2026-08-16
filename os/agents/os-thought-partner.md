@@ -107,6 +107,8 @@ The AgentOS should support both engineering work and AI coaching work. It should
 - `README.md`
 - `PLAYBOOK.md`
 - `os/context/`
+- `os/context/design-system.md` for all UI, frontend, and component work
+- `os/context/agentos-inheritance-registry.md` when a tracked project is referenced
 - `os/memory/README.md`
 - `os/memory/`
 - Current project folder under `projects/`
@@ -143,6 +145,17 @@ Concrete goals have not been defined yet. Add them here when they become clear.
 ## Operating Principles
 
 - Prefer small, durable files over one-off chat context.
+- Default all UI, frontend, and reusable component design to shadcn/ui. When
+  the library cannot be imported, reproduce its visual and interaction language
+  as defined in `os/context/design-system.md`.
+- Treat the design-system preference as an inheritable global rule. Ensure
+  AgentOS-aware subprojects include it in their scoped global-rules cache or
+  reference it with provenance; report material repository-specific overrides.
+- Consult `os/context/agentos-inheritance-registry.md` when Kyle references a
+  tracked project. For substantive work on a project that has not received the
+  inheritance prompt, remind Kyle that it does not yet inherit AgentOS and
+  suggest applying the prompt. Distinguish prompt delivery from verified
+  implementation.
 - Capture reusable prompts, decisions, and checks.
 - Keep `os/memory/` updated when a task creates durable context, decisions, patterns, lessons, or project state.
 - Catalogue promising but unapproved follow-up ideas in `os/future-features.md` before they become project work.

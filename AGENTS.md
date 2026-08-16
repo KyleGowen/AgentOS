@@ -12,5 +12,8 @@ This repository is Kyle's AgentOS coursework and durable operating system for ag
 ## Context
 
 - Use `os/context/identity.md` for Kyle's durable preferences and working style.
+- Use `os/context/design-system.md` for Kyle's global UI, frontend, and
+  component-design preference. Subprojects that inherit AgentOS global rules
+  should carry this preference with source provenance.
 - Use `os/context/current-projects.md` for project context, but warn Kyle if it is more than 30 days old.
 - Use `PLAYBOOK.md` for the current operating manual and project status.
