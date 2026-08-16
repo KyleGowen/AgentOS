@@ -24,33 +24,25 @@ The durable source of truth is the GitHub repository:
 <https://github.com/KyleGowen/AgentOS>.
 
 Use a ChatGPT Project named **AgentOS / OS Thought Partner** as the portable
-working surface for phone, web, and desktop ChatGPT access. The project
+working surface for phone, web, and desktop ChatGPT access. Connect the
+ChatGPT GitHub app to `KyleGowen/AgentOS` so the project can query the live
+repository rather than relying on uploaded snapshots. The project
 instructions are captured in `os/agents/os-thought-partner-chatgpt-project.md`.
 
-Seed that ChatGPT Project with these reviewable files:
-
-- `os/agents/os-thought-partner.md`
-- `os/agents/os-thought-partner-chatgpt-project.md`
-- `PLAYBOOK.md`
-- `PROJECT_TRACKER.md`
-- `os/context/identity.md`
-- `os/context/context-portfolio.md`
-- `os/memory/README.md`
-- `os/memory/working-memory.md`
-
-Add other context files only when the task needs them. Treat uploaded files as
-a snapshot: refresh them after meaningful repository changes, and use Codex
-with the local folder for edits, tests, git history, and other filesystem work.
-Do not treat a ChatGPT Project or a Codex chat as a replacement for the GitHub
-repository.
+Use uploaded files only as a fallback when GitHub access is unavailable. Use
+Codex with the local folder for edits, tests, git history, and other filesystem
+work. Do not treat a ChatGPT Project or a Codex chat as a replacement for the
+GitHub repository.
 
 One-time setup in ChatGPT:
 
-1. Create a new ChatGPT Project named `AgentOS / OS Thought Partner`.
-2. Open Project settings and paste the contents of
+1. In **Settings → Apps**, connect GitHub and authorize the
+   `KyleGowen/AgentOS` repository.
+2. Create a new ChatGPT Project named `AgentOS / OS Thought Partner`.
+3. Open Project settings and paste the contents of
    `os/agents/os-thought-partner-chatgpt-project.md` into Project instructions.
-3. Upload the seed files listed above from the repository.
-4. Start the first chat with: `Load the AgentOS source files in this project. Summarize the current state, identify stale or missing context, and wait for my next task.`
+4. In the first project chat, add GitHub with `@GitHub` or the **+ → More** tools menu.
+5. Start with: `Use the connected GitHub repository KyleGowen/AgentOS as the live source. Summarize the current AgentOS state, identify stale or missing context, and wait for my next task.`
 
 ChatGPT Projects are intended to keep chats, files, and instructions together
 across devices. Codex remains a separate surface; its local files stay on the

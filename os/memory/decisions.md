@@ -95,3 +95,11 @@ Each entry should include the date, context, decision, reason, and evidence when
 - Reason: ChatGPT Projects keep related chats, files, and instructions available across phone, web, and desktop, while local Codex filesystem work remains desktop-bound.
 - Boundary: Uploaded project files are snapshots; refresh them after meaningful repository changes. Use Codex with the local folder for edits, tests, and git operations.
 - Evidence: `os/agents/os-thought-partner.md`, `os/agents/os-thought-partner-chatgpt-project.md`, and official OpenAI documentation on Projects and ChatGPT Work/Codex.
+
+## 2026-08-16 - Prefer Live GitHub Context For The Thought Partner
+
+- Context: The AgentOS repository is already available at `KyleGowen/AgentOS`, and the cross-device ChatGPT Project should not drift from repository state.
+- Decision: Connect ChatGPT's GitHub app to `KyleGowen/AgentOS` and use GitHub as the live source for the OS Thought Partner. Use uploaded files only as a fallback.
+- Reason: The GitHub app can search and cite repository code and documentation without maintaining a second manually refreshed copy in ChatGPT.
+- Boundary: ChatGPT's GitHub app is read-only for repository analysis; use Codex for edits, commits, pushes, and other repository writes.
+- Evidence: `os/agents/os-thought-partner.md`, `os/agents/os-thought-partner-chatgpt-project.md`, and official OpenAI guidance for Connecting GitHub to ChatGPT.

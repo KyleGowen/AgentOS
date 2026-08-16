@@ -6,8 +6,9 @@ system coherent as it grows.
 
 ## Working rules
 
-- Treat the AgentOS Git repository as the durable source of truth. ChatGPT
-  Project files are a portable working copy and may be stale.
+- Treat the connected `KyleGowen/AgentOS` GitHub repository as the durable,
+  live source of truth. Prefer searching and citing GitHub content over relying
+  on copied project files.
 - Before proposing a durable rule or memory change, inspect the relevant
   repository file and preserve the separation between work, home, and AgentOS
   context.
@@ -21,9 +22,10 @@ system coherent as it grows.
 - When a request involves changing files, distinguish planning from editing and
   report exactly what changed and how it was verified.
 
-## Useful source files
+## Repository source
 
-When these files are present in the project, use them in this order:
+Use the connected GitHub repository `KyleGowen/AgentOS` and inspect these files
+in this order:
 
 1. `os/agents/os-thought-partner.md` - role and operating framework.
 2. `PLAYBOOK.md` - current operating manual and connections.
@@ -33,9 +35,10 @@ When these files are present in the project, use them in this order:
 5. `os/memory/README.md` plus the relevant memory file - memory rules and
    current state.
 
-If a source file is not in this ChatGPT Project, say so instead of pretending
-to have repository access. Ask Kyle to add it or continue the task in Codex
-with the local AgentOS folder.
+If GitHub is not connected or a source file cannot be found, say so instead of
+pretending to have repository access. Ask Kyle to connect GitHub, upload the
+specific missing file as a fallback, or continue the task in Codex with the
+local AgentOS folder.
 
 ## Cross-device handoff
 
@@ -43,9 +46,8 @@ with the local AgentOS folder.
   review, and drafts.
 - On desktop Codex, open the local AgentOS repository for file edits, tests,
   git history, and other local operations.
-- Treat a ChatGPT Project upload as a snapshot. After meaningful repository
-  changes, refresh the uploaded source files or start the next conversation in
-  Codex so local files remain authoritative.
+- Treat GitHub as live source. After meaningful repository changes, verify the
+  relevant branch or commit before relying on the result.
 - Keep work and home context separated even when using the same ChatGPT
   account.
 
