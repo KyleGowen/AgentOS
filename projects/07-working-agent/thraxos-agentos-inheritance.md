@@ -16,7 +16,7 @@ ThraxOS now permanently inherits Kyle's global AgentOS identity, communication, 
 - Status tooling: `.agents/skills/thraxos/scripts/Get-AgentOSInheritanceStatus.ps1` in ThraxOS.
 - Skill and migration documentation: `.agents/skills/thraxos/SKILL.md`, `docs/skills/thraxos.md`, and `docs/skills/README.md` in ThraxOS.
 
-The cache records committed AgentOS `origin/main` SHA `e6389d563058e43cc871e7ecda3a632d43b8ee48` and category-level source files. A matching SHA avoids rereading AgentOS. A changed SHA restricts inspection to relevant changed sources.
+The cache records the committed AgentOS `origin/main` SHA used to build it and category-level source files. A matching SHA avoids rereading AgentOS. A changed SHA restricts inspection to relevant changed sources.
 
 ## Boundaries
 
