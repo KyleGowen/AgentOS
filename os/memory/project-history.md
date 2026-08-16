@@ -87,6 +87,15 @@ Compact history of meaningful outcomes and milestones. This is not a full change
 
 - Store meaningful personal project milestones when they affect future priorities, risks, or workflow.
 
+### 2026-08-16 - Excelsior Added Permanent AgentOS Inheritance
+
+- Added a compact, provenance-tracked global AgentOS rules cache and read-only
+  freshness check to Excelsior.
+- Established Excelsior as authority for its product and technical state while
+  limiting AgentOS to global governance and summary-level Excelsior context.
+- Corrected local routing so `/Users/kyle/cursored` is used after confirming its
+  remote, without selecting the older checkout merely because it exists.
+
 ### 2026-08-13 - Personal Project Status Audit
 
 - Audited personal-project context against available local source repositories.

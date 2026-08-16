@@ -17,6 +17,7 @@ Project status source: `PROJECT_TRACKER.md` (last audited 2026-08-16).
 | File | What It Covers | Status |
 |---|---|---|
 | `os/context/context-portfolio.md` | Durable background context for agents. | Active |
+| `os/context/excelsior.md` | Summary-level Excelsior routing and permanent scoped inheritance boundary. | Active |
 | `os/future-features.md` | Potential follow-ups and later ideas before they become projects, skills, agents, or automations. | Active |
 
 ### Skills
@@ -47,7 +48,7 @@ Project status source: `PROJECT_TRACKER.md` (last audited 2026-08-16).
 | ChatGPT Project | Cross-device OS Thought Partner chats grounded in the live AgentOS repository. | ChatGPT Project + connected GitHub app | Active; project `AgentOS` |
 | Atlassian Jira and Confluence | Work ticket research, linked source documents, and implementation planning. | Atlassian connector or MCP | Desired |
 | Slack | Async updates and incident context. | Slack connector | Deferred; requires work admin approval |
-| Excelsior | Personal project automation, card/deck workflows, local app context, and release support. | Custom MCP | Future idea |
+| Excelsior | Product work and release support with compact global AgentOS inheritance. | Repo-local cache plus Git/GitHub | Active |
 
 ### Verification
 

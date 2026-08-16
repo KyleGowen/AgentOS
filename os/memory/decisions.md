@@ -119,3 +119,18 @@ Each entry should include the date, context, decision, reason, and evidence when
 - Reason: ThraxOS is a stronger demonstration of the course requirement to build a real first agent on top of an intentional operating system.
 - Completion boundary: Do not mark Project 07 complete until AgentOS contains a compact representative invocation, verified result, and Kyle's reflection.
 - Evidence: `projects/07-working-agent/notes.md` and <https://github.com/KyleGowen/ThraxOS>.
+
+## 2026-08-16 - Give Excelsior Permanent Scoped AgentOS Inheritance
+
+- Context: Excelsior should reuse Kyle's global operating rules without loading
+  unrelated AgentOS project context or duplicating large source files on every
+  task.
+- Decision: Keep a compact global-rules cache, source-category manifest, and
+  read-only freshness script in `KyleGowen/excelsior`. Excelsior instructions
+  override inherited rules for product and technical behavior; committed
+  AgentOS `main` remains authoritative for global identity and governance.
+- Boundary: AgentOS stores only compact, durable Excelsior summaries through the
+  approved Excelsior write allowlist. Detailed or fast-changing state stays in
+  Excelsior, and uncommitted AgentOS changes are never inherited.
+- Evidence: Excelsior `AGENTS.md`, `.agentos/`, and
+  `docs/current/AGENTOS_INHERITANCE.md`.

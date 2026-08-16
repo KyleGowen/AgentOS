@@ -6,18 +6,18 @@ Keep this separate from work memory. Home project details can inform home projec
 
 ## Excelsior
 
-- 2026-08-13 audit: active development is evidenced by `/Users/kyle/cursored`
-  `main` at `2fc8a1a7` from 2026-08-01. `/Users/kyle/Projects/excelsior` is an
-  older April checkout; reconcile before implementation. Production and local
-  runtime health were not verified in this pass.
 - Excelsior is Kyle's main personal software project and creative outlet.
-- It serves a small OverPower community with card browsing, deck building, collection tracking, and community features.
-- Current AgentOS detail lives in `os/context/excelsior.md`; verify the Excelsior repo before implementation because multiple local checkouts may exist.
-- Recent verified work includes Columbus Regional dashboard/podium deck surfaces, tournament deck import support, a broad `/api/v1` migration program, collection quantity/back-to-top UX improvements, Add Cards pane polish, ERB foil/alternate-art card migrations, and repo-local `fix-trivy` / `start-local-dev` skills.
-- Care points: preserve user data, avoid service disruption, support desktop and mobile UX, and handle the game-owner relationship delicately.
-- Near-term interests include adding tournament decks and the next card set.
-- Kyle collects OverPower and Magic: The Gathering cards and wants read-only eBay monitoring for wanted cards, with OverPower retail baselines from The Orange King and Magic retail baselines from Brute Force MTG.
-- The scheduled wanted-card scan runs daily at 6:00 AM Pacific; a new or activated target still triggers an immediate full-list refresh.
+- It serves a small OverPower community with card browsing, deck building,
+  collection tracking, and community features.
+- `/Users/kyle/cursored` is the current local authority after confirming its
+  remote points to `KyleGowen/excelsior`; do not select another checkout merely
+  because it exists.
+- Excelsior now permanently inherits compact global AgentOS rules through a
+  checked-in cache and provenance contract. Detailed and changing product or
+  technical state remains in the Excelsior repository.
+- Care points: preserve user data and service continuity, verify source/runtime/
+  production state separately, support desktop and mobile UX, and handle the
+  game-owner relationship delicately.
 
 ## Home Media Server
 

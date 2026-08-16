@@ -176,9 +176,9 @@ Notable context:
 
 ### Personal Project Status Audit
 
-| Project | Status on 2026-08-13 | Evidence | Confidence / next action |
+| Project | Latest status | Evidence | Confidence / next action |
 |---|---|---|---|
-| Excelsior | Active development; v2/product work is ongoing | `/Users/kyle/cursored` is on `main` at `2fc8a1a7` dated 2026-08-01; the older `/Users/kyle/Projects/excelsior` checkout is at April 11 | High for local code status; production/runtime health was not verified because DNS and local services were unavailable. Reconcile the two checkouts before implementation. |
+| Excelsior | Active development with permanent scoped AgentOS inheritance | On 2026-08-16, `/Users/kyle/cursored` was confirmed on `main` at `33c1afe5`, aligned to `origin/main`, with `origin` pointing to `KyleGowen/excelsior` | High for repository state. Use this confirmed checkout as local authority after rechecking its remote; do not choose an older checkout merely because it exists. Runtime and production state require separate verification. |
 | Home Media Server / Korlash | Rebuild remains unverified and documented as awaiting minimal boot | Local repo last changed 2026-05-22; README and WIP tracker still describe the pre-boot rebuild plan with all execution checklists open | Medium for documented state, low for physical live state. Confirm hardware/Windows/drive status through the server or a fresh Korlash update. |
 | DDR/ITG Machine | Active hobby project, current operational status unverified | AgentOS snapshot is from 2026-07-05; documented source repos were not present locally and remote refresh failed in this run | Low for current activity/data. Refresh `itgmania-backup` and `Thraximundar-Backup` before summarizing recent play or backup health. |
 | Vimanas | Paused / background | `os/context/current-projects.md` concept and routing notes | High for priority state; no active implementation source was found or needed. |
@@ -190,66 +190,21 @@ URL: <https://excelsior.cards>
 
 Repository: <https://github.com/KyleGowen/excelsior>
 
-Excelsior is Kyle's main personal software project and creative outlet. It is a web app for OverPower, a trading card game Kyle has played since childhood.
+Excelsior is Kyle's main personal software project and creative outlet. It is an
+OverPower card database, deck builder, collection tracker, and community app.
+Kyle built it to fill a real community need, and it should be treated as a
+maintained product rather than a disposable side project.
 
-What it does:
-
-- Browse a card database with images.
-- Build and share decks.
-- Track card collections.
-- Serve a community of roughly 50 users.
-
-Audience:
-
-- Kyle as collector and deck builder.
-- Online OverPower players like Kyle.
-- The small community of people who play and collect the game.
-
-Why it matters:
-
-- Kyle built it from scratch to fill a real community need.
-- The deck builder has received enough attention that the game owners contacted Kyle and have loosely asked about contracting in the future.
-- It is emotionally important and should be treated as more than a disposable side project.
-
-Current state:
-
-- Excelsior v2 has shipped with the UI overhaul and community surfaces.
-- The active local development checkout is `/Users/kyle/cursored`, whose latest
-  local commit is `2fc8a1a7` on 2026-08-01 (`Add deck privacy visibility toggle`).
-- `/Users/kyle/Projects/excelsior` is an older April checkout; do not treat it
-  as the current implementation without reconciling it with `/Users/kyle/cursored`.
-- Production and local runtime health were not verified during the 2026-08-13
-  audit because DNS and the local `:8085`/`:5173` services were unavailable.
-
-Near-term priorities:
-
-- Add decks from the last tournament to the tournament deck section.
-- Add the next card set, likely Skybound or The Few and the Cursed.
-
-Care points:
-
-- User data preservation is essential.
-- Avoid service disruption.
-- UX must work well on desktop and mobile.
-- Treat the game-owner relationship delicately.
-
-Tech stack summary:
-
-- React 19 SPA with TypeScript.
-- Vite 6, React Router 7, TanStack Query 5.
-- Component-scoped CSS plus shared design tokens.
-- Node.js and Express 4 backend in TypeScript.
-- PostgreSQL with Flyway migrations.
-- Session cookie auth plus newer JWT/Bearer routes where applicable.
-- Zod, bcrypt, Firebase Admin, Pino, Helmet, CORS, compression.
-- Jest, ESLint, Knip, Trivy, SOC 2 checks on HTTP changes.
-- Production infrastructure uses AWS EC2, RDS PostgreSQL, S3, CloudFront, Docker, and Terraform.
-
-Routing:
-
-- If a request touches Excelsior, use this file as a summary.
-- Prefer `os/context/excelsior.md` for detailed project context.
-- Ask Kyle before touching production-impacting behavior or user data.
+- Current local authority is `/Users/kyle/cursored` after confirming its remote
+  points to `KyleGowen/excelsior`. Do not substitute another checkout merely
+  because it exists.
+- The Excelsior repository is authoritative for product, implementation,
+  architecture, data, operations, releases, skills, and current status.
+- `os/context/excelsior.md` is AgentOS's summary-level routing context. Do not
+  duplicate fast-changing technical state here.
+- Preserve user data and service continuity, verify runtime and production state
+  separately from source state, support desktop and mobile UX, and ask before
+  production-impacting behavior unless explicitly authorized.
 
 ### Home Media Server
 
