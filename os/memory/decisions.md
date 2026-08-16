@@ -103,3 +103,11 @@ Each entry should include the date, context, decision, reason, and evidence when
 - Reason: The GitHub app can search and cite repository code and documentation without maintaining a second manually refreshed copy in ChatGPT.
 - Boundary: ChatGPT's GitHub app is read-only for repository analysis; use Codex for edits, commits, pushes, and other repository writes.
 - Evidence: `os/agents/os-thought-partner.md`, `os/agents/os-thought-partner-chatgpt-project.md`, and official OpenAI guidance for Connecting GitHub to ChatGPT.
+
+## 2026-08-16 - Make GitHub The Cross-device Memory Protocol
+
+- Context: Kyle wants every signed-in Codex and ChatGPT instance to work from the same AgentOS memory scheme.
+- Decision: Treat the committed `main` branch of `KyleGowen/AgentOS` as the only shared durable memory source. Store reusable context in `os/context/` and `os/memory/`, then commit and push it from Codex.
+- Reason: GitHub makes the system reviewable, portable, and available to both the ChatGPT GitHub app and local Codex checkouts without pretending that chat history or built-in model memory is synchronized.
+- Boundary: ChatGPT/Codex conversation history and built-in memory remain surface-specific. A conclusion is not durable or shared until it is recorded in the repository.
+- Evidence: Kyle explicitly requested a shared memory scheme across all signed-in instances; `os/memory/README.md` defines the operating protocol.

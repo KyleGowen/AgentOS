@@ -9,6 +9,13 @@ Memory about this AgentOS system, the course, and how the pieces should fit toge
 - `.agents/skills/` stores Codex-executable repo skills.
 - `os/skills/` stores the AgentOS skill catalog and native skill archives.
 - `os/memory/` stores intentional memory that should survive sessions.
+- Cross-device memory is the committed `main` branch of
+  `KyleGowen/AgentOS`: Codex and ChatGPT must read the repository files for
+  durable context, while chat history and built-in model memory remain
+  surface-specific.
+- New durable AgentOS knowledge must be recorded in the appropriate
+  `os/memory/` or `os/context/` file and pushed to GitHub before it is treated
+  as shared across devices.
 - `os/agents/ai-office-hours-prep-agent.md` is the first real job agent.
 - `os/agents/ai-office-hours-follow-up-agent.md` is the paired post-session agent for AI office hours.
 - `os/agents/pr-review-prep-agent.md` is the review-prep agent for tagged Measurabl PRs.

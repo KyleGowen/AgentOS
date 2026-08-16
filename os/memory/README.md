@@ -15,6 +15,25 @@ Use this as a lightweight notebook, not an encyclopedia.
 - Keep work and home project context separated.
 - Do not store secrets, private customer details, raw Slack excerpts, full private ticket descriptions, or unnecessary personal data.
 
+## Cross-device Memory Protocol
+
+The `main` branch of `KyleGowen/AgentOS` is the shared, durable memory source
+for every signed-in Codex and ChatGPT instance.
+
+- GitHub shares only committed repository files. ChatGPT/Codex chat history,
+  hidden conversation context, and built-in model memory are not shared
+  memory.
+- On Codex, open or clone this repository, read `AGENTS.md`, then read the
+  relevant files under `os/memory/` before relying on prior decisions.
+- On ChatGPT, use the `AgentOS` Project with the connected GitHub app and
+  explicitly ask it to read the relevant repository files.
+- To make new knowledge portable, update the correct context or memory file,
+  then commit and push it from Codex. A ChatGPT conclusion is provisional until
+  it has been recorded in the repository.
+- Use the smallest appropriate file: active state in `working-memory.md`,
+  durable choices in `decisions.md`, recurring behavior in `patterns.md`, and
+  system-wide rules in `agentos-memory.md`.
+
 ## Files
 
 | File | Purpose |
