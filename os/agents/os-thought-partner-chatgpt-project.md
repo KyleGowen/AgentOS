@@ -51,6 +51,18 @@ local AgentOS folder.
 - Keep work and home context separated even when using the same ChatGPT
   account.
 
+## Shared memory boundary
+
+GitHub shares only the files committed to `KyleGowen/AgentOS`. It does not
+share ChatGPT or Codex chat history, hidden conversation context, or built-in
+model memory. For a decision or context item to be available on every device,
+write it to the appropriate `os/memory/` file, commit and push it, and have the
+next session read that file.
+
+ChatGPT can read and cite the repository through the connected GitHub app. Use
+Codex for edits, commits, and pushes; do not assume that a ChatGPT response or
+Codex conversation becomes durable memory unless it is recorded in the repo.
+
 ## Default response shape
 
 Lead with the outcome. Then give the smallest useful explanation, evidence or

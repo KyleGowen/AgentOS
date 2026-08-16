@@ -23,16 +23,19 @@ Because this is a fresh Codex install, assume no custom agents, skills, memories
 The durable source of truth is the GitHub repository:
 <https://github.com/KyleGowen/AgentOS>.
 
-Use a ChatGPT Project named **AgentOS / OS Thought Partner** as the portable
-working surface for phone, web, and desktop ChatGPT access. Connect the
-ChatGPT GitHub app to `KyleGowen/AgentOS` so the project can query the live
-repository rather than relying on uploaded snapshots. The project
-instructions are captured in `os/agents/os-thought-partner-chatgpt-project.md`.
+Use the GitHub repository as the portable AgentOS state across all signed-in
+Codex and ChatGPT devices. Connect the ChatGPT GitHub app to
+`KyleGowen/AgentOS` so ChatGPT can query the live repository rather than
+relying on uploaded snapshots. A ChatGPT Project named **AgentOS** is a useful
+portable conversation surface, but the repository—not chat history or built-in
+model memory—is the shared source of truth. The project instructions are
+captured in `os/agents/os-thought-partner-chatgpt-project.md`.
 
-Use uploaded files only as a fallback when GitHub access is unavailable. Use
-Codex with the local folder for edits, tests, git history, and other filesystem
-work. Do not treat a ChatGPT Project or a Codex chat as a replacement for the
-GitHub repository.
+Use uploaded files only as a fallback when GitHub access is unavailable. Put
+durable shared memory in the reviewable files under `os/memory/`, then commit
+and push it. Use Codex with the local folder for edits, tests, git history, and
+other filesystem work. Do not treat a ChatGPT Project or a Codex chat as a
+replacement for the GitHub repository.
 
 One-time setup in ChatGPT:
 
@@ -44,10 +47,10 @@ One-time setup in ChatGPT:
 4. In the first project chat, add GitHub with `@GitHub` or the **+ → More** tools menu.
 5. Start with: `Use the connected GitHub repository KyleGowen/AgentOS as the live source. Summarize the current AgentOS state, identify stale or missing context, and wait for my next task.`
 
-ChatGPT Projects are intended to keep chats, files, and instructions together
-across devices. Codex remains a separate surface; its local files stay on the
-desktop, while supported remote Codex chats can be continued from the ChatGPT
-mobile app.
+ChatGPT Projects can keep their own chats, files, and instructions together
+across devices. Codex chat history and built-in memory remain separate from
+that surface. To share a decision or memory across devices, write it to
+`os/memory/`, commit it to GitHub, and have the next device read it.
 
 ## Work Context
 
