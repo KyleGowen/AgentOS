@@ -43,6 +43,7 @@ Update this at the end of a meaningful task, project shift, or planning session.
 
 ## Recently Completed
 
+- 2026-08-17: Completed Project 11 - Automations.
 - 2026-08-17: Completed Project 10 - Your Playbook.
 - 2026-08-16: Completed Project 08 - Test & Verify.
 - 2026-08-17: Completed Project 09 - The Second Agent.

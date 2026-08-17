@@ -128,6 +128,11 @@ Compact history of meaningful outcomes and milestones. This is not a full change
 - Marked AgentOS Project 10 - Your Playbook complete.
 - Evidence: `projects/10-playbook/notes.md`.
 
+### 2026-08-17 - Project 11 - Automations Completed
+
+- Marked AgentOS Project 11 - Automations complete.
+- Evidence: `projects/11-automations/notes.md`.
+
 ## Work
 
 - Keep detailed work source material in Jira, GitHub, Confluence, Slack, or other source systems.

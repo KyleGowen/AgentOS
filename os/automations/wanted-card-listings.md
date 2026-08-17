@@ -46,6 +46,7 @@ For each active wanted card:
 6. Search exact card terms first, then broader lot/bulk terms only when needed for coverage under the Efficient Runner State rules.
 7. Open individual listing detail pages while logged out for every reportable candidate.
    - For auctions, retrieve the current bid through a fresh, uncached detail-page request immediately before report generation. Do not reuse cached HTML, a prior fetch, item revision time, search snippets, or runner-state totals as a current auction price. If a fresh bid cannot be verified after a logged-out retry, move the listing to skipped/uncertain.
+   - If the run cannot retrieve actual auction fields required for output (including current price and days remaining) for any candidate, stop the run immediately and notify the user with the exact candidate(s) and missing-field reason.
 8. Remove ended, completed, sold, and out-of-stock listings from the candidate set. Immediately before creating a summary or table row, re-open the individual item page and confirm current purchasable status: auctions need a live bid action and countdown; buy-it-now listings need a current guest checkout/purchase action and no sold, ended, unavailable, or out-of-stock status. A historical `N sold` count alone is not a sold status when availability and purchase action remain explicit.
 9. Compare active candidate listings against the card's cached retail baseline in `os/context/wanted-trading-cards.md`.
 10. If the wanted-card entry has no cached retail baseline, check the relevant retail baseline once, update the wanted-card context, and use that cached value for future runs.
@@ -72,6 +73,7 @@ When the run is triggered by adding or activating a wanted-card entry, follow th
 - Do not mutate the wanted-card context during a scheduled run.
 - Do not store raw eBay HTML, account cookies, personal account data, or unnecessary seller data.
 - If a listing requires logged-in access to inspect safely, skip it and note the limitation.
+- If auction data required for output is missing (for example, live price or days remaining cannot be verified), exit the run, notify the user, and do not generate a verified listing row.
 
 ## Output
 
