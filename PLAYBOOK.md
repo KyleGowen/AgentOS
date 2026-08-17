@@ -103,10 +103,10 @@ mistake an unprompted project for one governed by AgentOS.
 |---|---|
 | Job | Help translate course projects into my chosen agentic tool and keep the system coherent. |
 | Identity files | `os/agents/os-thought-partner.md` |
-| Agent-specific skills | TBD |
+| Agent-specific skills | `os-map` |
 | Connections used | GitHub, local files |
-| What's working | TBD |
-| What needs improvement | TBD |
+| What's working | Active source-grounded maintenance of the playbook, map, and inherited-project surfaces. |
+| What needs improvement | Define concrete goals, decide which workflows merit skills, and identify which memory updates can safely become automatic. |
 
 ### Agent 2: AI Office Hours Prep Agent
 
@@ -114,7 +114,7 @@ mistake an unprompted project for one governed by AgentOS.
 |---|---|
 | Job | Prepare source-grounded agenda briefs before weekly AI office hours. |
 | Identity files | `os/agents/ai-office-hours-prep-agent.md` |
-| Agent-specific skills | TBD |
+| Agent-specific skills | None yet; the workflow is defined in the agent record. |
 | Connections used | Local AgentOS context; user-provided office-hours inputs |
 | What's working | Single-responsibility pre-session prep with a source-grounded trust gate. |
 | What needs improvement | Future automation before Tuesday office hours; separate follow-up agent for post-session work. |
@@ -125,7 +125,7 @@ mistake an unprompted project for one governed by AgentOS.
 |---|---|
 | Job | Turn completed AI office-hours sessions into source-grounded follow-up packets. |
 | Identity files | `os/agents/ai-office-hours-follow-up-agent.md` |
-| Agent-specific skills | TBD |
+| Agent-specific skills | None yet; the workflow is defined in the agent record. |
 | Connections used | Local AgentOS context; user-provided post-session inputs |
 | What's working | Single-responsibility post-session follow-up with drafts and record updates kept review-only. |
 | What needs improvement | Future automation after office hours; possible skill for processing session documents. |
@@ -136,7 +136,7 @@ mistake an unprompted project for one governed by AgentOS.
 |---|---|
 | Job | Find Measurabl PRs where Kyle is tagged and prepare compact review-prep digests. |
 | Identity files | `os/agents/pr-review-prep-agent.md` |
-| Agent-specific skills | TBD |
+| Agent-specific skills | None yet; the GitHub-oriented workflow is defined in the agent record. |
 | Connections used | GitHub; `os/context/engineering-review.md`; `os/memory/pr-review-prep-state.md` |
 | What's working | Read-only review prep with links, repository, changed file count, build status, gist, and suggested review prompts. |
 | What needs improvement | Replace `MEASURABL_GITHUB_LOGIN` with Kyle's exact work GitHub identity; future scheduled digest. |
@@ -206,6 +206,15 @@ shared operational state, or machine-management authority.
 
 - Turn the strongest repeated workflows into skills, agents, and automations.
 - Review `os/future-features.md` and promote selected ideas into their owning source files.
+
+### Monthly OS Map Review
+
+Once each month, run `os-map` to refresh and review the AgentOS map. Use it to
+recall the installed skills, review the documented recurring-task status at
+each project layer, and identify skills that may be ready to archive or remove.
+Treat the map as an index: confirm each proposed change against its owning
+skill, automation policy, or project source before changing it. This is a
+manual review cadence, not a scheduled automation.
 
 ## Reflection
 

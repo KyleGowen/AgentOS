@@ -39,6 +39,17 @@ remain authoritative for detailed procedures and current state.
 - Preserve the shadcn/ui-inspired quiet visual language in
   `os/context/design-system.md` when editing the map.
 
+## Monthly Review
+
+Once each month, run this workflow as a manual review. Use the map to recall
+installed skills and the documented recurring tasks at each project layer.
+Verify a proposed skill archive or removal against its owning source before
+changing it; do not remove a skill merely because the map looks crowded.
+
+Show a project-local recurring task only when its owning project documents its
+name and schedule. If that source is unavailable, keep the task explicitly
+unverified rather than inferring it from an agent or skill.
+
 ## Post-Run Learning
 
 After a meaningful map refresh, record only durable source-of-truth or

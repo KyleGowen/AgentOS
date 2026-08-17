@@ -8,8 +8,8 @@ Compact history of meaningful outcomes and milestones. This is not a full change
   canonical operating-manual artifact rather than creating a duplicate.
 - Added a source-grounded requirement review and corrected the manual's stale
   Project 09 status and next-step reference.
-- Kyle's concise operating reflection is recorded; the remaining gate is a
-  final manual review and a monthly review cadence.
+- Kyle's concise operating reflection, a source-grounded final review, and a
+  manual monthly `os-map` review cadence are recorded.
 
 ### 2026-08-17 - Playbook Project-Surface Sync Added
 
@@ -122,6 +122,11 @@ Compact history of meaningful outcomes and milestones. This is not a full change
   Agent, a policy-scoped home-utility data steward distinct from ThraxOS.
 - Evidence: `projects/09-agent-team/notes.md` and
   `projects/09-agent-team/runs/2026-08-17-sdge-energy-agent.md`.
+
+### 2026-08-17 - Project 10 - Your Playbook Completed
+
+- Marked AgentOS Project 10 - Your Playbook complete.
+- Evidence: `projects/10-playbook/notes.md`.
 
 ## Work
 

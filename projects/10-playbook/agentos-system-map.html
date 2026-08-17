@@ -197,7 +197,7 @@
     </header>
 
     <section class="tree-panel" aria-label="AgentOS nested structure">
-      <p class="tree-note">Source of truth: AgentOS repository, skills catalog, automation policies, and inheritance registry.</p>
+      <p class="tree-note">Source of truth: AgentOS repository, skills catalog, automation policies, inheritance registry, and documented project task sources.</p>
       <ul class="tree">
         <li>
           <span class="root-name">AgentOS</span>
@@ -216,6 +216,7 @@
               <span class="branch-name">skills</span>
               <ul>
                 <li><span class="item-name">complete</span></li>
+                <li><span class="item-name">os-map</span></li>
                 <li><span class="item-name">ticket-to-pr</span></li>
                 <li><span class="item-name">resolve-pr-comments</span></li>
                 <li><span class="item-name">accept-sender-appointments</span></li>
@@ -232,14 +233,15 @@
               </ul>
             </li>
             <li>
-              <span class="branch-name">automations</span>
+              <span class="branch-name">recurring tasks</span>
               <ul>
-                <li><span class="item-name">auto-accept-trusted-appointments</span> <span class="status active">active</span></li>
-                <li><span class="item-name">sdge-energy-alerts</span> <span class="status active">active</span></li>
-                <li><span class="item-name">wanted-card-listings</span> <span class="status">paused</span></li>
+                <li><span class="item-name">auto-accept-trusted-appointments</span> <span class="status active">daily · 6:00 AM Pacific · active</span></li>
+                <li><span class="item-name">sdge-energy-alerts</span> <span class="status active">Monday · 7:00 AM Pacific · active</span></li>
+                <li><span class="item-name">wanted-card-listings</span> <span class="status">daily · 6:00 AM Pacific · paused</span></li>
                 <li><span class="item-name">AI office-hours prep</span> <span class="status">future candidate</span></li>
                 <li><span class="item-name">AI office-hours follow-up</span> <span class="status">future candidate</span></li>
                 <li><span class="item-name">PR review prep</span> <span class="status">future candidate</span></li>
+                <li><span class="item-name">os-map review</span> <span class="status">monthly · manual</span></li>
               </ul>
             </li>
             <li>
@@ -250,7 +252,7 @@
                   <ul>
                     <li><span class="branch-name">agents</span><ul><li><span class="item-name">ThraxOS specialist</span></li></ul></li>
                     <li><span class="branch-name">skills</span><ul><li><span class="item-name">thraxos</span></li></ul></li>
-                    <li><span class="branch-name">automated tasks</span><ul><li><span class="item-name">project-local tasks not catalogued in AgentOS</span></li></ul></li>
+                    <li><span class="branch-name">recurring tasks</span><ul><li><span class="item-name">project-local automated tasks</span> <span class="status">names and schedules unverified</span></li></ul></li>
                   </ul>
                 </li>
                 <li>
@@ -272,7 +274,7 @@
                         <li><span class="item-name">start-local-dev</span> <span class="status">archived project-local</span></li>
                       </ul>
                     </li>
-                    <li><span class="branch-name">automated tasks</span><ul><li><span class="item-name">project-local tasks not catalogued in AgentOS</span></li></ul></li>
+                    <li><span class="branch-name">recurring tasks</span><ul><li><span class="item-name">CI security/compliance deployment gate</span> <span class="status active">every pull request and push to main/master</span></li></ul></li>
                   </ul>
                 </li>
               </ul>

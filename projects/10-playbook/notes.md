@@ -1,6 +1,8 @@
 # Project 10: Your Playbook
 
-Status: In progress
+Status: Complete
+
+Completed: 2026-08-17
 
 Started: 2026-08-17
 
@@ -42,6 +44,6 @@ generated from `os/context/agentos-inheritance-registry.md` by
   claims marked as open or unverified.
 - [x] Add Kyle's concise reflection on what changed, what works, and what he
   would tell another person building an AgentOS.
-- Confirm the current next steps, automation status, and a lightweight monthly
-  review cadence are accurate, then record the completed-project evidence in
-  this folder and the tracker.
+- [x] Confirm the current next steps, automation status, and a lightweight
+  monthly review cadence are accurate; record the completed-project evidence
+  in this folder and the tracker.

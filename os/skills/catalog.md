@@ -6,6 +6,7 @@ translations that make them usable in Codex.
 | Skill | Natural Format | Scope | Natural Source | Archived Natural Copy | Codex Translation | Status |
 |---|---|---|---|---|---|---|
 | `os-map` | Codex skill | AgentOS maintenance | `projects/10-playbook/agentos-system-map.html` and AgentOS source files | None | `.agents/skills/os-map/SKILL.md` | Created |
+| `complete` | Codex skill | AgentOS course maintenance | Local AgentOS implementation | None | `.agents/skills/complete/SKILL.md` | Created |
 | `/ticket-to-pr` | Claude Code skill | Measurabl work | `/Users/kyle/.claude/skills/ticket-to-pr/SKILL.md` | `os/skills/native/claude/ticket-to-pr/SKILL.md` | `.agents/skills/ticket-to-pr/SKILL.md` | Translated |
 | `/resolve-pr-comments` | Claude Code skill | Measurabl work | `/Users/kyle/.claude/skills/resolve-pr-comments/SKILL.md` | `os/skills/native/claude/resolve-pr-comments/SKILL.md` | `.agents/skills/resolve-pr-comments/SKILL.md` | Translated |
 | `/add-card` | Cursor skill | Excelsior | attachment paste | `os/skills/native/cursor/add-card/SKILL.md` | `.agents/skills/add-card/SKILL.md` | Translated |
