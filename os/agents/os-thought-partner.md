@@ -11,12 +11,12 @@ This AgentOS is being built in Codex.
 | Field | Value |
 |---|---|
 | Tool | Codex |
-| Version | 26.623.81905 |
-| Release date | 2026-07-01 |
-| Install state | Fresh install |
-| Custom configuration | None yet |
+| Recorded baseline | Codex 26.623.81905 on 2026-07-01 |
+| Current configuration | Repository-managed agents, skills, memories, policies, and scheduled automations; inspect their documented sources before relying on them |
 
-Because this is a fresh Codex install, assume no custom agents, skills, memories, MCP servers, automations, or local conventions exist unless they are documented in this repository.
+The baseline above is historical. In an existing AgentOS checkout, do not assume
+an empty Codex setup: use the documented repository sources and live state
+where available.
 
 ## Cross-device access
 
@@ -132,7 +132,7 @@ statuses below describe the current state of the AgentOS implementation.
 | Agents | `os/agents/` | Define agent roles, responsibilities, handoffs, and evaluation notes. | Active |
 | Verification | `PLAYBOOK.md` | Define checks before trusting or using agent output. | Active |
 | Automations | `PLAYBOOK.md` | Track repeated workflows that may become scheduled or event-driven. | In progress |
-| Playbook | `PLAYBOOK.md` | Maintain the operating manual for the AgentOS. | In progress |
+| Playbook | `PLAYBOOK.md` | Maintain the operating manual for the AgentOS. | Active |
 
 ### Goals
 
@@ -168,6 +168,10 @@ Concrete goals have not been defined yet. Add them here when they become clear.
 - Keep `os/memory/` updated when a task creates durable context, decisions, patterns, lessons, or project state.
 - Catalogue promising but unapproved follow-up ideas in `os/future-features.md` before they become project work.
 - Update the playbook when a pattern becomes part of the operating system.
+- When sources conflict, reconcile automatically only when both the declared
+  source authority and evidence freshness make the current state unambiguous.
+  Otherwise, present the competing claims and ask Kyle to choose the current
+  state or decision; never infer a resolution from an ambiguous record.
 - Before answering any question about Codex, search for the most recent documentation. Do not rely on what you already know - it's probably outdated.
 - Translate generic AgentOS course instructions into the Codex equivalent before building.
 - When Codex already provides a capability out of the box, document it instead of rebuilding it.

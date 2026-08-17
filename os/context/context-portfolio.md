@@ -14,4 +14,4 @@ Use this file as the index for durable background context.
 | Home Media Server | `os/context/home-media-server.md` | Plex server, media automation, remote Codex workflow, and live-server safety context. | Active |
 | DDR/ITG Machine | `os/context/stepmania-ddr.md` | StepMania, DDR, ITGMania fitness habit, score digest, and backup-tool context. | Active |
 | Projects | `projects/` | Course project artifacts and notes. | Active |
-| Playbook | `PLAYBOOK.md` | Operating manual. | In progress |
+| Playbook | `PLAYBOOK.md` | Operating manual. | Active |

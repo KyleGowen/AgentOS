@@ -21,13 +21,13 @@ Keep this separate from work memory. Home project details can inform home projec
 
 ## Home Media Server
 
-- 2026-08-13 audit: local Korlash docs still describe the pre-boot hardware
-  rebuild plan, with execution checklists open; physical server state is not
-  verified. The repo last changed 2026-05-22.
+- 2026-08-17 repository-state refresh: Korlash is up and running after the
+  replacement-platform rebuild. Plex runs natively on Windows; the Arr media
+  stack runs through Docker and qBittorrent runs natively. The authoritative
+  repository continues to track unresolved intermittent system crashes, without
+  a confirmed root cause.
 - Home Media Server is Kyle's active Plex server and media automation project.
 - Source repo: <https://github.com/KyleGowen/plex-server-hardware>.
-- The rebuild is stable as of 2026-07-05.
-- The server runs Plex and qBittorrent natively on Windows, with Docker media services for the Arr ecosystem and related tools.
 - Kyle often uses Codex remotely from mobile because the server usually has no monitor attached; Parsec is the fallback remote desktop tool for GUI work.
 - Care points: keep media drive and path safety front and center, protect all credentials and tracker/provider data, keep AgentOS summary-level, and use the Plex repo for detailed current operations.
 - Agent posture: read-only checks are fine when relevant; Plex writes, downloads, deletes, path repairs, drive changes, and service setting changes require clear user intent or confirmation.

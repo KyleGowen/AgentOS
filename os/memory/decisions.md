@@ -180,3 +180,15 @@ Each entry should include the date, context, decision, reason, and evidence when
 - Verification: The sync script has a `--check` mode that exits nonzero when
   the generated table is stale. Run it whenever an external inheritance status
   changes.
+
+## 2026-08-17 - Resolve Ambiguous State Conflicts With Kyle
+
+- Context: AgentOS has multiple context, memory, tracker, and playbook
+  surfaces. Freshness and source authority sometimes identify the current state
+  automatically, but not always.
+- Decision: Reconcile conflicts only when both source authority and freshness
+  make the winner unambiguous. Otherwise, present the competing claims and ask
+  Kyle to choose the current state or decision.
+- Reason: A plausible inference should not silently replace Kyle's intent.
+- Evidence: Kyle's explicit direction during the 2026-08-17 Thought Partner
+  refresh.

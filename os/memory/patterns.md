@@ -10,6 +10,10 @@ Repeated workflows, preferences, and recurring shapes that may become skills, au
 - Prefer source links or source names over copied private content.
 - Use Codex generated memories for ambient recall only; required behavior and durable AgentOS context should live in repo files.
 - If a memory update would include private work source material, store a source pointer instead of copying the content.
+- Resolve a conflict automatically only when the declared source authority and
+  evidence freshness establish one current state. If the record remains
+  ambiguous, show Kyle the competing claims and ask him to choose; do not infer
+  a resolution.
 
 ## AgentOS Project Work
 

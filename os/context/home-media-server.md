@@ -1,8 +1,10 @@
 # Home Media Server
 
-Status audit: 2026-08-13. The local Korlash repository last changed on
-2026-05-22, and its README/WIP tracker still describe the pre-boot hardware
-rebuild plan. The physical server state was not verified in this workspace.
+Repository-state audit: 2026-08-17. The current `main` branch records Korlash
+as up and running after its replacement-platform rebuild, with Plex native to
+Windows and the media-automation stack in Docker. The remaining documented
+risk is intermittent system crashing; do not claim a root cause without new
+evidence.
 
 This file summarizes Kyle's Plex server project for AgentOS routing and planning. The source of truth for detailed operations is the project repo:
 
@@ -14,8 +16,9 @@ Home Media Server is Kyle's Windows-native Plex server and media automation ecos
 
 Treat the project as active home operations with balanced priorities across
 reliability, backups, service validation, media automation, collections, and
-poster curation. Do not treat the older "stable as of 2026-07-05" note as
-current without a fresh server-side check.
+poster curation. The Plex repository is the authoritative documented state;
+verify the host directly before making a claim about its live, moment-to-moment
+health.
 
 ## Architecture Summary
 

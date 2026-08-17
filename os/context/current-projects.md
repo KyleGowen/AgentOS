@@ -1,10 +1,11 @@
 # Current Projects
 
-Last updated: 2026-08-16
+Last updated: 2026-08-17
 
 Status scope: personal-project status was audited on 2026-08-13 against the
-available local source repositories and artifacts below. Work-project details
-remain high-level context and were not revalidated in this pass; consult Jira,
+available local source repositories and artifacts below. Korlash was refreshed
+from its declared GitHub source on 2026-08-17. Work-project details remain
+high-level context and were not revalidated in this pass; consult Jira,
 Confluence, GitHub, or Slack before using them for work planning or
 prioritization.
 
@@ -179,7 +180,7 @@ Notable context:
 | Project | Latest status | Evidence | Confidence / next action |
 |---|---|---|---|
 | Excelsior | Active development with permanent scoped AgentOS inheritance | On 2026-08-16, `/Users/kyle/cursored` was confirmed on `main` at `33c1afe5`, aligned to `origin/main`, with `origin` pointing to `KyleGowen/excelsior` | High for repository state. Use this confirmed checkout as local authority after rechecking its remote; do not choose an older checkout merely because it exists. Runtime and production state require separate verification. |
-| Home Media Server / Korlash | Rebuild remains unverified and documented as awaiting minimal boot | Local repo last changed 2026-05-22; README and WIP tracker still describe the pre-boot rebuild plan with all execution checklists open | Medium for documented state, low for physical live state. Confirm hardware/Windows/drive status through the server or a fresh Korlash update. |
+| Home Media Server / Korlash | Up and running; intermittent system crashes remain unresolved | Current `main` README and supporting docs in `KyleGowen/plex-server-hardware`, refreshed 2026-08-17; newest recorded commit is 2026-08-02 | High for repository-documented deployment and risks. Verify the host directly before a live-health claim or any mutation. |
 | DDR/ITG Machine | Active hobby project, current operational status unverified | AgentOS snapshot is from 2026-07-05; documented source repos were not present locally and remote refresh failed in this run | Low for current activity/data. Refresh `itgmania-backup` and `Thraximundar-Backup` before summarizing recent play or backup health. |
 | Vimanas | Paused / background | `os/context/current-projects.md` concept and routing notes | High for priority state; no active implementation source was found or needed. |
 | Planted | Personal/background concept; not separately status-tracked | `os/context/current-projects.md` description and personal-only routing note | Medium; create a dedicated project context only if it becomes active. |
@@ -216,13 +217,11 @@ Home Media Server is Kyle's Windows-native Plex server and media automation ecos
 
 Current state:
 
-- The project remains active as a home operations project, but its current
-  physical state is not verified in this workspace.
-- The local source repo last changed on 2026-05-22. Its README and rebuild WIP
-  tracker still describe the pre-boot plan: wait for parts, boot with the OS
-  SSD only, then reconnect media drives incrementally.
-- Do not carry forward the 2026-07-05 "stable" claim without a fresh server-side
-  check or user update.
+- The project is up and running: Plex is native to Windows, while the media
+  automation stack runs through Docker Compose and qBittorrent runs natively.
+- The replacement-platform rebuild is documented as complete enough to operate,
+  but randomly timed system crashes remain an open reliability issue. Do not
+  assign a root cause without new evidence.
 - AgentOS should keep summary-level project context; the GitHub repo remains the source of truth for detailed inventories, service docs, media ledgers, crash history, and operational scripts.
 
 Near-term priorities:
