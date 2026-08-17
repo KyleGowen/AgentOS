@@ -1,6 +1,8 @@
 # Project 08: Test & Verify
 
-Status: In progress
+Status: Complete
+
+Completed: 2026-08-16
 
 Started: 2026-08-16
 
@@ -30,8 +32,9 @@ task while being trustworthy in the ways Kyle cares about:
   configuration, or repository mutation; and
 - its answer remains compact and gives an actionable next step.
 
-The course artifact is an executed prompt, a sanitized expected-versus-actual
-evaluation, Kyle's under-one-minute checklist result, and a short retrospective.
+The course artifact is an executed downstream implementation, a sanitized
+expected-versus-actual evaluation, the under-one-minute checklist result, and a
+short retrospective.
 
 ## Start Artifacts
 
@@ -39,12 +42,26 @@ evaluation, Kyle's under-one-minute checklist result, and a short retrospective.
   evaluation record.
 - `../../PLAYBOOK.md` — Kyle's reusable personal verification checklist.
 
-## Next Gate
+## Completion Evidence
 
-Run Scenario 1 from `verification-plan.md` against ThraxOS with a real,
-read-only host/backup-health request. Record only sanitized evidence and note
-whether each checklist item passed, failed, or was not applicable. Do not mark
-the project complete from the plan alone.
+The ThraxOS Arcade Console rebuild exercised a durable, selective AgentOS
+inheritance implementation in a live downstream project. ThraxOS inherited the
+compact global governance and UI preferences, including the shadcn/ui default
+and the requirement to preserve its accessible interaction language in a
+zero-build host. It did not import unrelated AgentOS project context.
+
+Project 08 material was locally available in AgentOS, including both
+`projects/08-automations/` and `projects/08-test-and-verify/`, but no Project 08
+reference appeared in the ThraxOS cache. This is the intended boundary:
+ThraxOS inherits only the commit-pinned compact global cache.
+
+The verification helper confirmed that the configured AgentOS checkout exists
+and that the cached AgentOS SHA matches local committed `main` at
+`bd0e3bf474cacece4a65a66f866053b84bcdce26`. A live `git fetch` freshness check
+was unavailable, so upstream freshness remains explicitly unverified.
+
+The sanitized evaluation and reflection are recorded in
+`runs/2026-08-16-thraxos-selective-inheritance.md`.
 
 ## Related Artifacts
 

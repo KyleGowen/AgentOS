@@ -86,6 +86,16 @@ Compact history of meaningful outcomes and milestones. This is not a full change
 - Marked AgentOS Project 07 - The Build complete.
 - Evidence: `projects/07-working-agent/notes.md`.
 
+### 2026-08-16 - Project 08 - Test & Verify Completed
+
+- Verified selective, durable, policy-level AgentOS inheritance in ThraxOS
+  during the Arcade Console rebuild. Global governance and UI preferences were
+  inherited, while unrelated Project 08 context remained isolated.
+- The cached AgentOS SHA matched local committed `main`; upstream freshness was
+  explicitly unverified because a live fetch check was unavailable.
+- Evidence: `projects/08-test-and-verify/notes.md` and
+  `projects/08-test-and-verify/runs/2026-08-16-thraxos-selective-inheritance.md`.
+
 ## Work
 
 - Keep detailed work source material in Jira, GitHub, Confluence, Slack, or other source systems.

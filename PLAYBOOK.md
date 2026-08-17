@@ -59,8 +59,8 @@ My checks before using a meaningful agent result (under one minute):
 - [ ] **Safe by default:** Did it protect secrets and stop for explicit approval before consequential writes?
 - [ ] **Useful result:** Is the answer concise, clear about uncertainty, and actionable?
 
-For the current Project 08 ThraxOS evaluation, scenarios, expected behavior,
-and the run-record template live in
+The completed Project 08 ThraxOS evaluation, scenarios, expected behavior, and
+run records live in
 `projects/08-test-and-verify/verification-plan.md`. Review the checklist after
 each meaningful run and hold a five-minute retrospective after a high-stakes
 operation or after three meaningful runs.
@@ -68,7 +68,7 @@ operation or after three meaningful runs.
 ## Course Projects
 
 The current course status is maintained in `PROJECT_TRACKER.md`. Projects 00–07
-are complete; Project 08 is in progress; and
+are complete; Project 08 is complete; and
 Projects 09–11 are in progress with explicit evidence gaps recorded in the
 tracker and project notes.
 
@@ -127,7 +127,7 @@ tracker and project notes.
 | Agent-specific skills | `KyleGowen/ThraxOS/.agents/skills/thraxos/` and routed project skills |
 | Connections used | Local Windows host, GitHub source repositories, live machine state |
 | What's working | Real custom Codex specialist with context, runbooks, guarded scripts, persistent memory, and operating history. |
-| What needs improvement | Capture a compact representative ThraxOS run and reflection as the first Project 08 verification record. |
+| What needs improvement | Keep upstream freshness distinct from the locally verified inheritance cache when live fetch checks are unavailable. |
 
 ### How My Agents Relate
 
@@ -160,7 +160,6 @@ attention. ThraxOS is the dedicated machine specialist and the selected Project
 
 ### Current Next Steps
 
-- Capture a sanitized representative ThraxOS run, verified result, and reflection as the first Project 08 verification record.
 - Select one additional agent for the Project 09 evaluation.
 - Finish the Project 10 operating-manual cleanup and Project 11 completion notes.
 
