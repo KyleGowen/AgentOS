@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>AgentOS Map</title>
+  <style>
+    :root {
+      --background: #fafafa;
+      --surface: #ffffff;
+      --foreground: #18181b;
+      --muted: #71717a;
+      --line: #e4e4e7;
+      --accent: #0f766e;
+      --accent-soft: #f0fdfa;
+      --code: #f4f4f5;
+      --radius: 12px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: #18181b;
+        --surface: #27272a;
+        --foreground: #fafafa;
+        --muted: #a1a1aa;
+        --line: #3f3f46;
+        --accent: #5eead4;
+        --accent-soft: #163c3a;
+        --code: #202023;
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--background);
+      color: var(--foreground);
+    }
+
+    main {
+      width: min(920px, calc(100% - 2rem));
+      margin: 0 auto;
+      padding: 4rem 0;
+    }
+
+    header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      letter-spacing: -0.045em;
+      line-height: 1.08;
+    }
+
+    header p {
+      margin: 0.5rem 0 0;
+      color: var(--muted);
+    }
+
+    .badge {
+      flex: 0 0 auto;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.35rem 0.7rem;
+      color: var(--muted);
+      font-size: 0.8125rem;
+      white-space: nowrap;
+    }
+
+    .tree-panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: 0 1px 2px rgb(0 0 0 / 0.04);
+      overflow: hidden;
+    }
+
+    .tree-note {
+      margin: 0;
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.875rem;
+    }
+
+    .tree {
+      margin: 0;
+      padding: 1.25rem;
+      list-style: none;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.875rem;
+      line-height: 1.65;
+    }
+
+    .tree ul {
+      margin: 0;
+      padding-left: 1.5rem;
+      list-style: none;
+    }
+
+    .tree li {
+      position: relative;
+      padding-left: 1.35rem;
+    }
+
+    .tree li::before {
+      content: "├─";
+      position: absolute;
+      left: 0;
+      color: var(--muted);
+    }
+
+    .tree li:last-child::before { content: "└─"; }
+
+    .tree li::after {
+      content: "";
+      position: absolute;
+      top: -0.7rem;
+      bottom: -0.7rem;
+      left: 0.25rem;
+      border-left: 1px solid var(--line);
+    }
+
+    .tree li:last-child::after { bottom: auto; height: 1.55rem; }
+
+    .tree > li {
+      padding-left: 0;
+    }
+
+    .tree > li::before,
+    .tree > li::after { display: none; }
+
+    .root-name,
+    .branch-name {
+      color: var(--foreground);
+      font-weight: 700;
+    }
+
+    .root-name { color: var(--accent); }
+
+    .item-name { color: var(--foreground); }
+
+    .status {
+      color: var(--muted);
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      font-size: 0.78rem;
+    }
+
+    .status.active { color: var(--accent); }
+
+    .inherited {
+      display: inline-block;
+      margin: 0.2rem 0;
+      padding: 0 0.35rem;
+      border-radius: 4px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    footer {
+      margin-top: 1rem;
+      color: var(--muted);
+      font-size: 0.8125rem;
+    }
+
+    @media (max-width: 560px) {
+      main { width: min(100% - 1rem, 920px); padding: 1.5rem 0; }
+      header { display: block; }
+      .badge { display: inline-block; margin-top: 0.8rem; }
+      .tree { padding: 1rem 0.75rem; font-size: 0.78rem; }
+      .tree ul { padding-left: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>AgentOS</h1>
+        <p>A nested map of the current operating system.</p>
+      </div>
+      <span class="badge">Project 10 snapshot</span>
+    </header>
+
+    <section class="tree-panel" aria-label="AgentOS nested structure">
+      <p class="tree-note">Source of truth: AgentOS repository, skills catalog, automation policies, and inheritance registry.</p>
+      <ul class="tree">
+        <li>
+          <span class="root-name">AgentOS</span>
+          <ul>
+            <li>
+              <span class="branch-name">agents</span>
+              <ul>
+                <li><span class="item-name">OS Thought Partner</span></li>
+                <li><span class="item-name">AI Office Hours Prep Agent</span></li>
+                <li><span class="item-name">AI Office Hours Follow-Up Agent</span></li>
+                <li><span class="item-name">PR Review Prep Agent</span></li>
+                <li><span class="item-name">SDGE Energy Agent</span></li>
+              </ul>
+            </li>
+            <li>
+              <span class="branch-name">skills</span>
+              <ul>
+                <li><span class="item-name">complete</span></li>
+                <li><span class="item-name">ticket-to-pr</span></li>
+                <li><span class="item-name">resolve-pr-comments</span></li>
+                <li><span class="item-name">accept-sender-appointments</span></li>
+                <li><span class="item-name">find-card-listings</span></li>
+                <li><span class="item-name">catalog-sdge-energy-alerts</span></li>
+                <li><span class="item-name">add-card</span></li>
+                <li><span class="item-name">add-community-deck</span></li>
+                <li><span class="item-name">add-tournament-deck</span></li>
+                <li><span class="item-name">api-layer-migration</span></li>
+                <li><span class="item-name">pdf-to-png</span></li>
+                <li><span class="item-name">ship</span></li>
+                <li><span class="item-name">start</span></li>
+                <li><span class="item-name">start-aws-db-tunnel</span></li>
+              </ul>
+            </li>
+            <li>
+              <span class="branch-name">automations</span>
+              <ul>
+                <li><span class="item-name">auto-accept-trusted-appointments</span> <span class="status active">active</span></li>
+                <li><span class="item-name">sdge-energy-alerts</span> <span class="status active">active</span></li>
+                <li><span class="item-name">wanted-card-listings</span> <span class="status">paused</span></li>
+                <li><span class="item-name">AI office-hours prep</span> <span class="status">future candidate</span></li>
+                <li><span class="item-name">AI office-hours follow-up</span> <span class="status">future candidate</span></li>
+                <li><span class="item-name">PR review prep</span> <span class="status">future candidate</span></li>
+              </ul>
+            </li>
+            <li>
+              <span class="branch-name">inherited projects</span>
+              <ul>
+                <li>
+                  <span class="item-name">ThraxOS</span> <span class="inherited">verified inheritance</span>
+                  <ul>
+                    <li><span class="branch-name">agents</span><ul><li><span class="item-name">ThraxOS specialist</span></li></ul></li>
+                    <li><span class="branch-name">skills</span><ul><li><span class="item-name">thraxos</span></li></ul></li>
+                    <li><span class="branch-name">automated tasks</span><ul><li><span class="item-name">project-local tasks not catalogued in AgentOS</span></li></ul></li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="item-name">Excelsior</span> <span class="inherited">verified inheritance</span>
+                  <ul>
+                    <li><span class="branch-name">agents</span><ul><li><span class="item-name">no dedicated AgentOS agent registered</span></li></ul></li>
+                    <li>
+                      <span class="branch-name">skills</span>
+                      <ul>
+                        <li><span class="item-name">add-card</span></li>
+                        <li><span class="item-name">add-community-deck</span></li>
+                        <li><span class="item-name">add-tournament-deck</span></li>
+                        <li><span class="item-name">api-layer-migration</span></li>
+                        <li><span class="item-name">pdf-to-png</span></li>
+                        <li><span class="item-name">ship</span></li>
+                        <li><span class="item-name">start</span></li>
+                        <li><span class="item-name">start-aws-db-tunnel</span></li>
+                        <li><span class="item-name">fix-trivy</span> <span class="status">archived project-local</span></li>
+                        <li><span class="item-name">start-local-dev</span> <span class="status">archived project-local</span></li>
+                      </ul>
+                    </li>
+                    <li><span class="branch-name">automated tasks</span><ul><li><span class="item-name">project-local tasks not catalogued in AgentOS</span></li></ul></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <footer>Detailed procedures remain with each agent, skill, automation policy, or owning project.</footer>
+  </main>
+</body>
+</html>

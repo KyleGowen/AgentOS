@@ -38,3 +38,7 @@ canonical definition in `os/agents/` before meaningful work.
 - Use `os/context/agentos-inheritance-registry.md` only for an agent in an
   external project or repository. AgentOS-native agents do not need a
   separate inheritance cache.
+- When changing an external project's inheritance status, run
+  `python3 scripts/sync-playbook-project-surfaces.py` and verify it with
+  `python3 scripts/sync-playbook-project-surfaces.py --check`. The generated
+  playbook table is a projection of the registry, not a second source of truth.

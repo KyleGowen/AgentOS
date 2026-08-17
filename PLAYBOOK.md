@@ -2,7 +2,7 @@
 
 Last updated: 2026-08-17
 
-Project status source: `PROJECT_TRACKER.md` (last audited 2026-08-16).
+Project status source: `PROJECT_TRACKER.md` (last audited 2026-08-17).
 
 ## My OS Foundation
 
@@ -25,6 +25,7 @@ Project status source: `PROJECT_TRACKER.md` (last audited 2026-08-16).
 | Scope | Skill Name | When I Use It | What It Produces |
 |---|---|---|---|
 | Me | `/complete` | Mark AgentOS course projects complete. | Updated tracker, project notes, README, and related docs. |
+| Me | `os-map` | Open or refresh the current AgentOS structure map. | Browser-ready nested map of agents, skills, automations, and inherited projects. |
 | Agent-specific | Measurabl and Excelsior skill translations | Repeated work workflows imported from Claude Code and Cursor. | Codex repo skills and native archives. |
 | Me | `accept-sender-appointments` | Accept trusted sender appointment invitations and clean up matching mail. | Calendar RSVPs, read-state cleanup, and compact run summary. |
 | Me | `find-card-listings` | Scan eBay for wanted OverPower and Magic cards without bidding or logging in. | Price-sorted active listing tables with baseline notes. |
@@ -67,10 +68,32 @@ operation or after three meaningful runs.
 
 ## Course Projects
 
-The current course status is maintained in `PROJECT_TRACKER.md`. Projects 00–07
-are complete; Project 08 is complete; and
-Projects 09–11 are in progress with explicit evidence gaps recorded in the
-tracker and project notes.
+The current course status is maintained in `PROJECT_TRACKER.md`. Projects 00–09
+are complete. Projects 10–11 are in progress with explicit evidence gaps
+recorded in the tracker and project notes.
+
+## Project Surfaces & Ownership
+
+This is the map for navigating AgentOS across project boundaries. It is not a
+second copy of project procedures: AgentOS-native agent definitions live in
+`os/agents/`, the full skill inventory is `os/skills/catalog.md`, and each
+project owns its own detailed agents, skills, runbooks, and current state.
+
+### Inherited Project Surfaces
+
+Only external projects that have received the AgentOS inheritance prompt appear
+below. The table is generated from the inheritance registry, so it does not
+mistake an unprompted project for one governed by AgentOS.
+
+<!-- BEGIN GENERATED INHERITED PROJECT SURFACES -->
+> Generated from `os/context/agentos-inheritance-registry.md` by `scripts/sync-playbook-project-surfaces.py`. Do not edit this table manually.
+> Project-local agents, skills, and runbooks remain authoritative in the linked project.
+
+| Project | Detailed authority | Inheritance state | Evidence / next check |
+|---|---|---|---|
+| ThraxOS | Project-local agents and skills; [https://github.com/KyleGowen/ThraxOS](https://github.com/KyleGowen/ThraxOS) | Prompt delivered; Verified 2026-08-16 | `projects/08-test-and-verify/runs/2026-08-16-thraxos-selective-inheritance.md`; the local cache matched committed AgentOS `main`, while upstream freshness was explicitly unverified. |
+| Excelsior | Project-local agents and skills; [https://github.com/KyleGowen/excelsior](https://github.com/KyleGowen/excelsior) | Prompt delivered; Verified 2026-08-16 | Excelsior commit `33c1afe5`; AgentOS commit `b85ae39`; `os/context/excelsior.md`. |
+<!-- END GENERATED INHERITED PROJECT SURFACES -->
 
 ## My Agents
 
@@ -173,8 +196,10 @@ shared operational state, or machine-management authority.
 
 ### Current Next Steps
 
-- Select one additional agent for the Project 09 evaluation.
-- Finish the Project 10 operating-manual cleanup and Project 11 completion notes.
+- Complete the Project 10 reflection and confirm this manual remains an
+  accurate, useful snapshot of the operating system.
+- Finish the Project 11 completion notes, including end-to-end run and failure
+  handling evidence for the active automations.
 
 ### Next Quarter
 

@@ -4,7 +4,7 @@ Tracks which external projects have received the permanent AgentOS inheritance
 prompt and whether implementation has been verified. This registry prevents a
 prompt handoff from being mistaken for active inheritance.
 
-Last updated: 2026-08-16
+Last updated: 2026-08-17
 
 ## Status Definitions
 
@@ -18,7 +18,7 @@ Last updated: 2026-08-16
 
 | Project | Repository | Prompt status | Implementation status | Evidence / next check |
 |---|---|---|---|---|
-| ThraxOS | <https://github.com/KyleGowen/ThraxOS> | Prompt delivered | Not verified | Inspect the ThraxOS inheritance contract, cache or manifest, status check, and governing instructions after implementation. |
+| ThraxOS | <https://github.com/KyleGowen/ThraxOS> | Prompt delivered | Verified 2026-08-16 | `projects/08-test-and-verify/runs/2026-08-16-thraxos-selective-inheritance.md`; the local cache matched committed AgentOS `main`, while upstream freshness was explicitly unverified. |
 | Excelsior | <https://github.com/KyleGowen/excelsior> | Prompt delivered | Verified 2026-08-16 | Excelsior commit `33c1afe5`; AgentOS commit `b85ae39`; `os/context/excelsior.md`. |
 | GRESB Reporting Season | Work source systems; no standalone repository recorded | Not prompted | Not implemented | Identify the authoritative project surface and applicable work-policy boundary before generating an inheritance prompt. |
 | Data Locking | Work source systems; no standalone repository recorded | Not prompted | Not implemented | Identify the authoritative repository or project surface before generating an inheritance prompt. |
@@ -44,6 +44,22 @@ questions with the reminder.
 When a prompt is delivered, update this registry. Mark implementation verified
 only after inspecting durable evidence in the target project; record its commit
 or another stable evidence pointer.
+
+## Playbook Projection
+
+`PLAYBOOK.md` contains a generated **Inherited Project Surfaces** table. The
+registry is its only data source: when a project's prompt status changes from
+`Not prompted` to `Prompt delivered`, run the sync in the same change so the
+playbook gains its row without duplicating project-local procedures.
+
+```sh
+python3 scripts/sync-playbook-project-surfaces.py
+python3 scripts/sync-playbook-project-surfaces.py --check
+```
+
+The first command updates only the marked generated section in `PLAYBOOK.md`.
+The check mode exits nonzero if that section is stale. Do not edit the generated
+table directly; update this registry instead.
 
 When a project is added to `os/context/current-projects.md` or otherwise becomes
 durable AgentOS project context, add it to this registry in the same change with

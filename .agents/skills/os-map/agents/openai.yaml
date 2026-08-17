@@ -1,0 +1,4 @@
+interface:
+  display_name: "OS Map"
+  short_description: "Open the AgentOS structure map"
+  default_prompt: "Use $os-map to open the current AgentOS structure map."

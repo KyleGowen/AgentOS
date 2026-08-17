@@ -30,7 +30,9 @@ This repository tracks my work through [AgentOS](https://aidbagentos.ai/home), a
 3. Build the artifact in the relevant `os/` or `projects/` folder.
 4. Add evidence links, screenshots, transcripts, or files to the project folder.
 5. Add a weekly entry under `logs/check-ins/`.
-6. Keep `PLAYBOOK.md` current as the operating manual for the system.
+6. Keep `PLAYBOOK.md` current as the operating manual for the system. After an
+   external project's inheritance status changes, run
+   `python3 scripts/sync-playbook-project-surfaces.py` and its `--check` mode.
 
 ## Project Index
 

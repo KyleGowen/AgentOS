@@ -2,6 +2,25 @@
 
 Compact history of meaningful outcomes and milestones. This is not a full changelog.
 
+### 2026-08-17 - Project 10 Started
+
+- Began Project 10, Your Playbook, using the existing `PLAYBOOK.md` as the
+  canonical operating-manual artifact rather than creating a duplicate.
+- Added a source-grounded requirement review and corrected the manual's stale
+  Project 09 status and next-step reference.
+- The next gate is Kyle's concise operating reflection and final manual review.
+
+### 2026-08-17 - Playbook Project-Surface Sync Added
+
+- Added a generated inherited-project-surface section to the Project 10
+  playbook, driven only by the AgentOS inheritance registry.
+- Added a checked-in sync script and stale-state check so new prompted external
+  projects receive a playbook row without duplicating their local procedures.
+- Added a standalone browser-ready nested map of the AgentOS foundation, native
+  agents and skills, and currently inherited project surfaces.
+- Promoted that map into the `os-map` skill so it can be opened and refreshed
+  on demand without treating the visual as the source of truth.
+
 ### 2026-08-16 - Project 08 Started
 
 - Began Project 08, Test & Verify, using ThraxOS as the verification target.

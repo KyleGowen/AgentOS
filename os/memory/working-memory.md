@@ -9,6 +9,18 @@ Update this at the end of a meaningful task, project shift, or planning session.
 - Cross-device memory protocol is active: committed `main` in `KyleGowen/AgentOS` is the shared durable source for every signed-in Codex and ChatGPT instance. Chat history and built-in memory are surface-specific; record portable knowledge in `os/context/` or `os/memory/`, then commit and push it from Codex.
 - Permanent inheritance tracking is active in `os/context/agentos-inheritance-registry.md`: ThraxOS and Excelsior have verified selective implementations. Remind Kyle before substantive work on any other project that it does not yet inherit AgentOS.
 - Project 07 is complete using ThraxOS, not the AI Office Hours Prep Agent. ThraxOS already has a custom Codex agent, context, skills, memory, safety rules, verification procedures, and real operating history.
+- Project 10, Your Playbook, began on 2026-08-17. `PLAYBOOK.md` is the
+  operating-manual artifact and `projects/10-playbook/playbook-review.md`
+  records its source-grounded baseline. The next gate is Kyle's reflection and
+  a final accuracy/usefulness review; Project 11 remains separately in progress.
+- External inherited-project rows in `PLAYBOOK.md` are now generated from
+  `os/context/agentos-inheritance-registry.md` by
+  `scripts/sync-playbook-project-surfaces.py`. Run that script and its
+  `--check` mode whenever an inheritance status changes.
+- Project 10 also has `projects/10-playbook/agentos-system-map.html`, a
+  standalone nested map that can open directly in a modern browser.
+- Invoke `os-map` to verify the map against its canonical AgentOS sources,
+  refresh it if the visible structure is stale, and open or link the page.
 
 ## Active Work Projects
 

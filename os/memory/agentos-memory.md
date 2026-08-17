@@ -18,14 +18,18 @@ Memory about this AgentOS system, the course, and how the pieces should fit toge
   as shared across devices.
 - `os/context/agentos-inheritance-registry.md` tracks which external projects
   have received the permanent inheritance prompt and which implementations
-  have been verified. ThraxOS and Excelsior have received the prompt; only
-  Excelsior is currently verified. The registry must also contain every known
-  unprompted project and be updated whenever durable project context is added.
+  have been verified. ThraxOS and Excelsior have verified selective
+  implementations; the ThraxOS check left upstream freshness explicitly
+  unverified. The registry must also contain every known unprompted project and
+  be updated whenever durable project context is added.
 - `os/agents/ai-office-hours-prep-agent.md` is the first real job agent.
 - `os/agents/ai-office-hours-follow-up-agent.md` is the paired post-session agent for AI office hours.
 - `os/agents/pr-review-prep-agent.md` is the review-prep agent for tagged Measurabl PRs.
 - `.agents/skills/accept-sender-appointments/` stores the Gmail plus Google Calendar workflow for accepting appointment invitations from a named sender and marking the related mail read.
 - `.agents/skills/catalog-sdge-energy-alerts/` stores the Gmail workflow for turning SDGE Energy Use Alert emails into structured utility records and a local dashboard.
+- `.agents/skills/os-map/` opens and refreshes the Project 10 nested AgentOS
+  structure map from the current agent, skill, automation, and inheritance
+  sources.
 - `os/automations/auto-accept-appointments.md` stores the first harness-neutral automation spec; Codex scheduling should read this file instead of hardcoding the sender list.
 - `os/automations/sdge-energy-alerts.md` stores the weekly SDGE Energy Alerts automation spec; Codex automation id `sdge-energy-alerts` runs Monday at 7:00 AM Pacific.
 - AgentOS no longer uses a daily automation-efficiency review. Skills should capture efficiency lessons through post-run learning loops and promote stable improvements into their own instructions only after review.
@@ -45,10 +49,10 @@ Memory about this AgentOS system, the course, and how the pieces should fit toge
 - The AI Office Hours Follow-Up Agent was added as a separate single-responsibility post-session agent instead of expanding the prep agent.
 - The PR Review Prep Agent was added as a separate read-only engineering review agent with minimal local state for merged PR digest suppression.
 - On 2026-08-16, Kyle selected the ThraxOS specialist as the Project 07 working-agent assignment. `KyleGowen/ThraxOS` contains the custom Codex agent, operating contract, context, skills, guarded scripts, memory, and real operations evidence. Project 07 is complete; Project 08 owns the compact representative run, verified result, checklist evaluation, and reflection.
-- On 2026-08-16, Kyle began Project 08. Its ThraxOS verification plan,
-  under-one-minute checklist, scenario set, and sanitized run-record template
-  are in `projects/08-test-and-verify/`; the first executed representative run
-  is the next gate.
+- On 2026-08-16, Project 08 completed its ThraxOS representative evaluation.
+  The verification plan, under-one-minute checklist, scenario set, and
+  sanitized executed run record are in `projects/08-test-and-verify/`; local
+  cache freshness was verified while upstream freshness was left unverified.
 
 ## Open System Questions
 

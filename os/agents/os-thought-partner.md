@@ -130,7 +130,7 @@ statuses below describe the current state of the AgentOS implementation.
 | Skills | `os/skills/` | Store reusable procedures that can be invoked repeatedly. | Active |
 | Memory | `os/memory/` | Store durable decisions, patterns, working memory, lessons, and domain memory. | Active |
 | Agents | `os/agents/` | Define agent roles, responsibilities, handoffs, and evaluation notes. | Active |
-| Verification | `PLAYBOOK.md` | Define checks before trusting or using agent output. | Not started |
+| Verification | `PLAYBOOK.md` | Define checks before trusting or using agent output. | Active |
 | Automations | `PLAYBOOK.md` | Track repeated workflows that may become scheduled or event-driven. | In progress |
 | Playbook | `PLAYBOOK.md` | Maintain the operating manual for the AgentOS. | In progress |
 
@@ -160,6 +160,10 @@ Concrete goals have not been defined yet. Add them here when they become clear.
   `os/context/current-projects.md` or becomes durable AgentOS project context,
   add it to the registry in the same change with an initial status of `Not
   prompted`. Update prompt and verification status only from evidence.
+- When an external project's inheritance status changes, regenerate and check
+  the playbook's **Inherited Project Surfaces** table with
+  `scripts/sync-playbook-project-surfaces.py`; the registry remains the only
+  source of truth for those rows.
 - Capture reusable prompts, decisions, and checks.
 - Keep `os/memory/` updated when a task creates durable context, decisions, patterns, lessons, or project state.
 - Catalogue promising but unapproved follow-up ideas in `os/future-features.md` before they become project work.

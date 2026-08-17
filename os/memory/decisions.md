@@ -161,7 +161,22 @@ Each entry should include the date, context, decision, reason, and evidence when
 - Maintenance: Keep a row for every durable project AgentOS knows about. Add a
   `Not prompted` row in the same change that introduces new project context;
   do not rely on unlisted projects as an implicit catch-all.
-- Current state: ThraxOS and Excelsior have received the prompt. Excelsior is
-  verified; ThraxOS implementation remains unverified.
-- Evidence: Kyle's instruction in this chat and the verified Excelsior
-  inheritance artifacts recorded in `os/context/excelsior.md`.
+- Current state: ThraxOS and Excelsior have verified selective implementations.
+  ThraxOS's local cache matched committed AgentOS `main`; upstream freshness
+  remains explicitly unverified.
+- Evidence: `projects/08-test-and-verify/runs/2026-08-16-thraxos-selective-inheritance.md`
+  and the verified Excelsior inheritance artifacts recorded in
+  `os/context/excelsior.md`.
+
+## 2026-08-17 - Generate Playbook Inherited-Project Rows From The Registry
+
+- Context: Project 10 needs an accurate cross-project ownership map, but
+  copying each external project's agents, skills, and runbooks into the main
+  playbook would cause drift.
+- Decision: Generate the playbook's inherited-project table from
+  `os/context/agentos-inheritance-registry.md` with
+  `scripts/sync-playbook-project-surfaces.py`. The registry remains the only
+  source of truth; detailed project procedures remain in their owning project.
+- Verification: The sync script has a `--check` mode that exits nonzero when
+  the generated table is stale. Run it whenever an external inheritance status
+  changes.
