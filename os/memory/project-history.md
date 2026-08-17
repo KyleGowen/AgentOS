@@ -8,7 +8,8 @@ Compact history of meaningful outcomes and milestones. This is not a full change
   canonical operating-manual artifact rather than creating a duplicate.
 - Added a source-grounded requirement review and corrected the manual's stale
   Project 09 status and next-step reference.
-- The next gate is Kyle's concise operating reflection and final manual review.
+- Kyle's concise operating reflection is recorded; the remaining gate is a
+  final manual review and a monthly review cadence.
 
 ### 2026-08-17 - Playbook Project-Surface Sync Added
 

@@ -1,6 +1,6 @@
 # Project 10 Playbook Review
 
-Status: Initial baseline
+Status: Reflection recorded; final review pending
 
 Reviewed: 2026-08-17
 
@@ -25,8 +25,8 @@ reviewable sources instead of treating a polished narrative as proof.
 | Verification | `PLAYBOOK.md` → Verification; `projects/08-test-and-verify/` | Documented with a reusable checklist and completed Project 08 evidence |
 | Agents and relationships | `PLAYBOOK.md` → My Agents | Documented for six agents, including the separate ThraxOS source of truth |
 | Automations | `PLAYBOOK.md` → Automations; `os/automations/` | Documented; Project 11 remains the completion owner |
-| What works, gaps, and next steps | `PLAYBOOK.md` → What's Working Best and Gaps & Next Steps | Gaps and next steps are present; the working summary needs Kyle's assessment |
-| Personal reflection | `PLAYBOOK.md` → Reflection | Intentionally open for Kyle; do not invent it |
+| What works, gaps, and next steps | `PLAYBOOK.md` → What's Working Best and Gaps & Next Steps | Gaps and next steps are present; Kyle's ThraxOS working assessment is recorded |
+| Personal reflection | `PLAYBOOK.md` → Reflection | Kyle's reflection is recorded |
 
 ## Baseline Corrections
 

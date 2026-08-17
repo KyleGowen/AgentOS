@@ -190,14 +190,15 @@ shared operational state, or machine-management authority.
 
 ## What's Working Best
 
-1. TBD
+1. **ThraxOS:** Its automated tasks are working well, and it makes managing the
+   ITG machine substantially easier than doing so manually.
 
 ## Gaps & Next Steps
 
 ### Current Next Steps
 
-- Complete the Project 10 reflection and confirm this manual remains an
-  accurate, useful snapshot of the operating system.
+- Confirm this manual remains an accurate, useful snapshot of the operating
+  system, and establish a lightweight monthly review cadence.
 - Finish the Project 11 completion notes, including end-to-end run and failure
   handling evidence for the active automations.
 
@@ -208,10 +209,14 @@ shared operational state, or machine-management authority.
 
 ## Reflection
 
-**Before AgentOS:** TBD
+**Before AgentOS:** I retyped the same prompts and guidelines into all of my
+projects. The consistency was there, but setting each project up was
+repetitive.
 
-**Now:** TBD
+**Now:** My projects inherit big-picture preferences and skills from AgentOS,
+so I do not have to tell each one the same thing.
 
-**What surprised me:** TBD
+**What surprised me:** The ease of how well AgentOS can manage itself.
 
-**What I'd tell someone starting:** TBD
+**What I'd tell someone starting:** Keep it high level, and think about big
+projects and small tasks separately.

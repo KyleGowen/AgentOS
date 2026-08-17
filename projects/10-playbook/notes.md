@@ -40,7 +40,8 @@ generated from `os/context/agentos-inheritance-registry.md` by
 
 - Review the playbook against its current source files and keep unsupported
   claims marked as open or unverified.
-- Add Kyle's concise reflection on what changed, what works, and what he would
-  tell another person building an AgentOS.
-- Confirm the current next steps and automation status are accurate, then
-  record the completed-project evidence in this folder and the tracker.
+- [x] Add Kyle's concise reflection on what changed, what works, and what he
+  would tell another person building an AgentOS.
+- Confirm the current next steps, automation status, and a lightweight monthly
+  review cadence are accurate, then record the completed-project evidence in
+  this folder and the tracker.

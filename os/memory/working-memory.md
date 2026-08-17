@@ -11,8 +11,9 @@ Update this at the end of a meaningful task, project shift, or planning session.
 - Project 07 is complete using ThraxOS, not the AI Office Hours Prep Agent. ThraxOS already has a custom Codex agent, context, skills, memory, safety rules, verification procedures, and real operating history.
 - Project 10, Your Playbook, began on 2026-08-17. `PLAYBOOK.md` is the
   operating-manual artifact and `projects/10-playbook/playbook-review.md`
-  records its source-grounded baseline. The next gate is Kyle's reflection and
-  a final accuracy/usefulness review; Project 11 remains separately in progress.
+  records its source-grounded baseline. Kyle's reflection is recorded; the
+  next gate is a final accuracy/usefulness review and monthly review cadence.
+  Project 11 remains separately in progress.
 - External inherited-project rows in `PLAYBOOK.md` are now generated from
   `os/context/agentos-inheritance-registry.md` by
   `scripts/sync-playbook-project-surfaces.py`. Run that script and its
