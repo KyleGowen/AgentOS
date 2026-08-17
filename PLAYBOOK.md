@@ -1,6 +1,6 @@
 # My Agentic OS Playbook
 
-Last updated: 2026-08-16
+Last updated: 2026-08-17
 
 Project status source: `PROJECT_TRACKER.md` (last audited 2026-08-16).
 
@@ -28,7 +28,7 @@ Project status source: `PROJECT_TRACKER.md` (last audited 2026-08-16).
 | Agent-specific | Measurabl and Excelsior skill translations | Repeated work workflows imported from Claude Code and Cursor. | Codex repo skills and native archives. |
 | Me | `accept-sender-appointments` | Accept trusted sender appointment invitations and clean up matching mail. | Calendar RSVPs, read-state cleanup, and compact run summary. |
 | Me | `find-card-listings` | Scan eBay for wanted OverPower and Magic cards without bidding or logging in. | Price-sorted active listing tables with baseline notes. |
-| Me | `catalog-sdge-energy-alerts` | Process unread SDGE Energy Use Alert emails from Gmail. | Structured utility records and an HTML time-series dashboard. |
+| Agent-specific | `catalog-sdge-energy-alerts` | SDGE Energy Agent processes policy-scoped SDGE Energy Use Alert emails from Gmail. | Structured utility records and an HTML time-series dashboard. |
 | Agent-specific | `thraxos` | Safely inspect, configure, and maintain Thraximundar and its ITGMania ecosystem. | Verified machine status, guarded operations, and durable ThraxOS memory. |
 
 ### Memory
@@ -129,6 +129,17 @@ tracker and project notes.
 | What's working | Real custom Codex specialist with context, runbooks, guarded scripts, persistent memory, and operating history. |
 | What needs improvement | Keep upstream freshness distinct from the locally verified inheritance cache when live fetch checks are unavailable. |
 
+### Agent 6: SDGE Energy Agent
+
+| | |
+|---|---|
+| Job | Maintain the policy-scoped SDGE Energy Use Alert ledger and local dashboard. |
+| Identity files | `os/agents/sdge-energy-agent.md`; thin Codex launcher `.codex/agents/sdge-energy-agent.toml` |
+| Agent-specific skills | `catalog-sdge-energy-alerts` |
+| Connections used | Gmail, limited to `notices@sdge.com` messages in the `SDGE` label |
+| What's working | Active weekly workflow with a ledger-first processing model and local dashboard. |
+| What needs improvement | Continue scheduled runs and revisit notable-change reporting after another comparable bill record. |
+
 ### How My Agents Relate
 
 The OS Thought Partner helps design, maintain, and evolve the AgentOS. The AI
@@ -139,7 +150,9 @@ reviewable follow-up packets. The PR Review Prep Agent supports Kyle's
 engineering review work by preparing a read-only digest of PRs that need his
 attention. ThraxOS is the dedicated machine specialist and the selected Project
 07 working-agent build; its detailed source of truth remains the separate
-`KyleGowen/ThraxOS` repository.
+`KyleGowen/ThraxOS` repository. The SDGE Energy Agent is a separate home-utility
+data steward: it shares AgentOS governance with ThraxOS but has no handoff,
+shared operational state, or machine-management authority.
 
 ## Automations
 

@@ -10,6 +10,7 @@ This folder tracks agent definitions, roles, handoffs, and evaluation notes.
 | `ai-office-hours-prep-agent.md` | Prepare source-grounded agenda briefs before weekly AI office hours. | Active v1 |
 | `ai-office-hours-follow-up-agent.md` | Turn completed AI office-hours sessions into source-grounded follow-up packets. | Active v1 |
 | `pr-review-prep-agent.md` | Find Measurabl PRs where Kyle is tagged and prepare compact review-prep digests. | Active v1 |
+| `sdge-energy-agent.md` | Maintain the policy-scoped SDGE Energy Use Alert ledger and dashboard. | Active |
 
 ## Notes
 

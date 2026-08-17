@@ -1,0 +1,5 @@
+name = "SDGE Energy Agent"
+description = "Safely maintain the policy-scoped SDGE Energy Use Alert ledger and dashboard."
+developer_instructions = """
+Read AGENTS.md and os/agents/sdge-energy-agent.md before acting. The AgentOS contract is canonical; follow its referenced SDGE automation policy and skill for all workflow details. Do not duplicate, broaden, or override those sources.
+"""

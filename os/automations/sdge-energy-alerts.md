@@ -8,6 +8,10 @@ database and regenerate the local dashboard.
 This file is the harness-neutral source of truth. A scheduler, agent runner, or
 Codex automation can implement it as long as it follows the contract below.
 
+The SDGE Energy Agent (`os/agents/sdge-energy-agent.md`) is the designated
+agent identity for this workflow. Its Codex profile is only a launcher; this
+policy remains authoritative for schedule, scope, and permitted mutations.
+
 ## Schedule
 
 Run once weekly on Monday at 7:00 AM Pacific time, observing PST/PDT

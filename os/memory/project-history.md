@@ -96,6 +96,13 @@ Compact history of meaningful outcomes and milestones. This is not a full change
 - Evidence: `projects/08-test-and-verify/notes.md` and
   `projects/08-test-and-verify/runs/2026-08-16-thraxos-selective-inheritance.md`.
 
+### 2026-08-17 - Project 09 - The Second Agent Completed
+
+- Marked AgentOS Project 09 - The Second Agent complete with the SDGE Energy
+  Agent, a policy-scoped home-utility data steward distinct from ThraxOS.
+- Evidence: `projects/09-agent-team/notes.md` and
+  `projects/09-agent-team/runs/2026-08-17-sdge-energy-agent.md`.
+
 ## Work
 
 - Keep detailed work source material in Jira, GitHub, Confluence, Slack, or other source systems.

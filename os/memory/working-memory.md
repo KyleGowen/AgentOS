@@ -24,6 +24,7 @@ Update this at the end of a meaningful task, project shift, or planning session.
 ## Recently Completed
 
 - 2026-08-16: Completed Project 08 - Test & Verify.
+- 2026-08-17: Completed Project 09 - The Second Agent.
 - 2026-08-16: Completed Project 07 - The Build.
 - 2026-08-13: Audited all AgentOS course project statuses against repository evidence and live automation configuration.
 - 2026-07-05: Completed Project 06 - The Job.

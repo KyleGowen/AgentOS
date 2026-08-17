@@ -47,6 +47,6 @@ Canonical tracker: `PROJECT_TRACKER.md`
 | 06 - The Job | `projects/06-the-job/` | Complete |
 | 07 - The Build | `projects/07-working-agent/` | Complete |
 | 08 - Test & Verify | `projects/08-test-and-verify/` | Complete |
-| 09 - The Second Agent | `projects/09-agent-team/` | In progress |
+| 09 - The Second Agent | `projects/09-agent-team/` | Complete |
 | 10 - Your Playbook | `projects/10-playbook/` | In progress |
 | 11 - Automations | `projects/11-automations/` | In progress |
