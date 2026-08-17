@@ -156,6 +156,10 @@ Concrete goals have not been defined yet. Add them here when they become clear.
   inheritance prompt, remind Kyle that it does not yet inherit AgentOS and
   suggest applying the prompt. Distinguish prompt delivery from verified
   implementation.
+- Keep the inheritance registry complete: whenever a project is added to
+  `os/context/current-projects.md` or becomes durable AgentOS project context,
+  add it to the registry in the same change with an initial status of `Not
+  prompted`. Update prompt and verification status only from evidence.
 - Capture reusable prompts, decisions, and checks.
 - Keep `os/memory/` updated when a task creates durable context, decisions, patterns, lessons, or project state.
 - Catalogue promising but unapproved follow-up ideas in `os/future-features.md` before they become project work.

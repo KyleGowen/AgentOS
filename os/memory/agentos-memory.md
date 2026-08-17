@@ -19,7 +19,8 @@ Memory about this AgentOS system, the course, and how the pieces should fit toge
 - `os/context/agentos-inheritance-registry.md` tracks which external projects
   have received the permanent inheritance prompt and which implementations
   have been verified. ThraxOS and Excelsior have received the prompt; only
-  Excelsior is currently verified.
+  Excelsior is currently verified. The registry must also contain every known
+  unprompted project and be updated whenever durable project context is added.
 - `os/agents/ai-office-hours-prep-agent.md` is the first real job agent.
 - `os/agents/ai-office-hours-follow-up-agent.md` is the paired post-session agent for AI office hours.
 - `os/agents/pr-review-prep-agent.md` is the review-prep agent for tagged Measurabl PRs.

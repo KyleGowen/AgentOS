@@ -149,3 +149,19 @@ Each entry should include the date, context, decision, reason, and evidence when
   material overrides should be visible rather than silent.
 - Evidence: Kyle's explicit preference on 2026-08-16 and
   `os/context/design-system.md`.
+
+## 2026-08-16 - Track AgentOS Inheritance Per Project
+
+- Context: Kyle is distributing a permanent AgentOS inheritance prompt to
+  individual projects and needs reminders when a referenced project has not
+  received it.
+- Decision: Maintain `os/context/agentos-inheritance-registry.md`, distinguishing
+  prompt delivery from verified implementation. Remind Kyle before substantive
+  work on an unprompted project, without interrupting trivial mentions.
+- Maintenance: Keep a row for every durable project AgentOS knows about. Add a
+  `Not prompted` row in the same change that introduces new project context;
+  do not rely on unlisted projects as an implicit catch-all.
+- Current state: ThraxOS and Excelsior have received the prompt. Excelsior is
+  verified; ThraxOS implementation remains unverified.
+- Evidence: Kyle's instruction in this chat and the verified Excelsior
+  inheritance artifacts recorded in `os/context/excelsior.md`.
