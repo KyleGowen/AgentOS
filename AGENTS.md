@@ -17,3 +17,24 @@ This repository is Kyle's AgentOS coursework and durable operating system for ag
   should carry this preference with source provenance.
 - Use `os/context/current-projects.md` for project context, but warn Kyle if it is more than 30 days old.
 - Use `PLAYBOOK.md` for the current operating manual and project status.
+
+## Specialized Agent Inheritance
+
+Every specialized agent defined inside this repository inherits AgentOS
+governance when it runs from this repository. It must read this file and its
+canonical definition in `os/agents/` before meaningful work.
+
+- Inherit the applicable global rules: Kyle's durable preferences, privacy and
+  approval boundaries, verification expectations, and the memory protocol.
+- Load only context and durable state relevant to the assigned job. Do not
+  treat inheritance as authorization to use unrelated work, home, or agent
+  data.
+- Give each agent definition an explicit context/state allowlist, boundaries,
+  and sources of truth. Its domain policy and implementation skill remain
+  canonical; do not copy them into a launcher or a second memory store.
+- Keep `.codex/agents/*.toml` profiles thin: they launch the agent and point
+  to this file plus the canonical definition. They must not duplicate policy,
+  preferences, or operational state.
+- Use `os/context/agentos-inheritance-registry.md` only for an agent in an
+  external project or repository. AgentOS-native agents do not need a
+  separate inheritance cache.

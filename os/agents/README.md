@@ -19,3 +19,22 @@ This folder tracks agent definitions, roles, handoffs, and evaluation notes.
 - The OS Thought Partner has a portable ChatGPT Project companion in
   `os-thought-partner-chatgpt-project.md`; keep it aligned with the main agent
   definition and repository memory rules.
+
+## New Specialized-Agent Checklist
+
+AgentOS-native agents inherit the root `AGENTS.md`; they do not inherit every
+AgentOS document or another agent's data by default. Before registering one,
+make sure its canonical definition includes:
+
+- a single, distinct job and clear invocation triggers;
+- its required sources, beginning with root `AGENTS.md` and the definition
+  itself;
+- the specific context files and durable state it may use, plus any excluded
+  context that would be unsafe or irrelevant;
+- privacy, authorization, and mutation boundaries;
+- verification and reporting expectations; and
+- its relationship or explicit non-relationship to other agents.
+
+If the agent has a Codex profile, keep it as a thin launcher that points to
+the canonical definition. Keep schedules in automation policy and repeatable
+procedures in skills, so one source remains authoritative for each concern.
