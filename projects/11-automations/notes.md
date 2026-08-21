@@ -45,7 +45,7 @@ Three harness-neutral automation policies exist and are paired with Codex
 scheduled jobs:
 
 - Appointment acceptance (`auto-accept-appointments` / `auto-accept-trusted-appointments`):
-  active daily at 6:00 AM Pacific.
+  active twice daily at 8:00 AM and 8:00 PM Pacific.
 - SDGE energy alerts (`sdge-energy-alerts`): active weekly Monday at 7:00 AM
   Pacific.
 - Wanted-card listings (`wanted-card-listings`): daily at 6:00 AM Pacific in policy,
@@ -93,7 +93,7 @@ scheduled jobs:
 ## Schedule and runner-state matrix
 
 - `auto-accept-appointments` (`auto-accept-trusted-appointments`)
-  - Schedule: daily at 6:00 AM Pacific
+  - Schedule: twice daily at 8:00 AM and 8:00 PM Pacific
   - Runner state: active
   - Evidence source: `os/automations/auto-accept-appointments.md`, `os/agents/os-thought-partner.md`, Playbook automation table
 

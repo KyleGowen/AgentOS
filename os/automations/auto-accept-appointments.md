@@ -8,7 +8,7 @@ This file is the harness-neutral source of truth. A scheduler, agent runner, she
 
 ## Schedule
 
-Run once daily at 6:00 AM Pacific time, observing PST/PDT.
+Run twice daily at 8:00 AM and 8:00 PM Pacific time, observing PST/PDT.
 
 ## Match List
 
@@ -18,6 +18,9 @@ Add new trusted senders by adding a row to this table.
 |---|---|---|---|---|
 | Samantha Young | `from:youngsamanth@gmail.com` | Mark appointment/invite messages read | Active | Leave unrelated social notification emails unread unless explicitly matched by this sender query and appointment evidence. |
 | Rula | `Rula` | Mark all matching Rula messages read | Active | Includes appointment confirmations, invitations, reschedules, and receipts from Rula sender domains. |
+| Acton | `from:(actonteam@actonacademysd.org OR mandy@actonacademysd.org)` | Mark processed event/deadline messages read | Active | Accept only events categorized as “All classes” or “Wonder Studio”, ignore other class names, and process all students events normally. |
+
+Add the row for Acton before backfilling historical messages.
 
 ## Efficient Runner State
 
@@ -37,10 +40,16 @@ For each active row in the match list:
 1. Search Gmail for unread message IDs matching `Gmail Query`, excluding spam and trash, then compare them with the runner ledger.
 2. Identify appointment or calendar-invitation evidence only for new, non-ledgered messages.
 3. Find matching Google Calendar events using concrete titles and bounded date windows from appointment candidates only.
-4. Accept each matching event once.
+4. For each matching Acton message:
+   - If an event invite is present, accept the matching Google Calendar event once.
+   - If event details are in email text or attachment and no invite exists, create the calendar event directly.
+   - If a matching email only contains a deadline and no event time, create a reminder event for the stated deadline with one reminder 1 day prior.
+5. For each row, honor the configured target calendar:
+   - Samantha and Rula continue using the authenticated default calendar.
+   - Acton events are written only to the `Acton` calendar (do not place on `primary`).
 5. Mark messages read according to `Message Cleanup`.
 6. Verify the unread search after a state-changing action; otherwise use the initial ID-only result.
-7. Report accepted event count, event dates/times, messages marked read, newly recorded non-calendar messages, and any skipped ambiguity.
+7. Report accepted/created event count, reminder-only items, event dates/times, messages marked read, newly recorded non-calendar messages, and any skipped ambiguity.
 
 ## Safety Rules
 
