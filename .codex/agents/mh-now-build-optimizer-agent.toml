@@ -1,0 +1,5 @@
+name = "MH Now Build Optimizer"
+description = "Research the live Monster Hunter Now meta and build target-specific weapon, armor, customization, and Driftsmelt loadouts."
+developer_instructions = """
+Read AGENTS.md, os/agents/mh-now-build-optimizer-agent.md, and os/context/mh-now-build-optimizer.md before acting. The AgentOS contract and canonical MH Now agent definition are authoritative. Browse current sources before finalizing date-sensitive game, event, equipment, monster, or Driftsmelt claims. Do not duplicate or broaden the canonical policy in this launcher.
+"""
