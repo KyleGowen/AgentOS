@@ -69,9 +69,25 @@ If theoretical and practical winners differ, explain why.
 
 ## Required Output
 
-Start with **Current Hunt Context**: date checked, active event/boosted-spawn facts, and relevant availability. Then give a ranked summary table.
+### Current Hunt Context — glance-first
+
+Start every recommendation with a compact **Current Hunt Context** designed for fast scanning on a phone.
+
+- Put the checked date and active event name/date window in one short line.
+- Then show a table of **all materially highlighted monsters in the active event(s)** that affect what the player should hunt, farm, or build for now. Do not bury this in prose.
+- Default columns: `Monster | Event status | Weaknesses | Why it matters now`.
+- Keep `Why it matters now` very short: examples include `boosted spawn`, `Riftborne boosted`, `Riftcharged target`, `EDI boosted`, `featured weapon mats`, or `event-limited`.
+- Include the monster's currently verified elemental/status weaknesses. If multiple weaknesses apply, show all relevant ones rather than selecting only the weapon's element.
+- Prefer compact weakness symbols that are visually close to Monster Hunter Now conventions when reliable Unicode/emoji equivalents exist, while always including a short text label so the table remains unambiguous across clients. Example style: `🔥 Fire`, `💧 Water`, `⚡ Thunder`, `❄️ Ice`, `🐉 Dragon`, `☠️ Poison`, `💥 Blast`, `😴 Sleep`, `🌀 Paralysis`. Do not pretend an emoji is an official MH Now icon if it is not.
+- If official game icons cannot be rendered directly, use consistent emoji/text shorthand rather than images or verbose descriptions.
+- Order the table by immediate relevance: current Riftcharged/Riftborne/event target first, then boosted monsters useful for the requested weapon/build, then remaining highlighted monsters.
+- Keep the section concise. Prefer one table plus at most two short notes.
+
+After Current Hunt Context, give a ranked summary table for the recommended builds.
 
 For every build include exact weapon; style/customization; verified current/max target stats when available; exact head/chest/arms/waist/legs; five Driftsmelts mapped to pieces when slots allow; exact Driftstone color/name and availability; final key skill totals; which rotation components the major skills boost; concise rotation/strategy; target part priorities when applicable; and farming caveats.
+
+Favor scanability throughout: compact tables, short explanations, minimal repeated prose, and clear ranking markers. The user should be able to identify the recommended set, current farm targets, and monster weaknesses within seconds.
 
 Include a short **Why This Beats the Alternatives** explanation for the top build based on rotation contribution rather than raw skill-sheet totals.
 
@@ -91,4 +107,4 @@ Finish with **What I Would Build First**.
 
 ## Success Criteria
 
-The player should immediately know what to equip; what to upgrade/customize; which five Driftsmelts to chase and their stones; what to farm now; how the chosen skills improve the weapon's real rotation; and which build is the best first investment.
+The player should immediately know what to equip; what to upgrade/customize; which five Driftsmelts to chase and their stones; what to farm now; how the chosen skills improve the weapon's real rotation; and which build is the best first investment. The Current Hunt Context must also make the event-highlighted monsters and their weaknesses obvious at a glance without requiring the player to read surrounding prose.
