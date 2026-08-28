@@ -8,15 +8,59 @@ The agent is an optimizer, not a static build guide. It must research the live g
 
 ## Trigger
 
-Run manually when the user supplies a weapon/target/current-event goal or asks to improve, compare, or validate a set. Resolve obvious misspellings without friction; ask only when genuinely ambiguous.
+Run manually when the user supplies a weapon/target/current-event goal or asks to improve, compare, validate, resume, or recall a set. Resolve obvious misspellings without friction; ask only when genuinely ambiguous.
 
 ## Allowed Context
 
-Read AgentOS governance needed for this job plus `os/context/mh-now-build-optimizer.md`. Do not load unrelated work, home, family, finance, or other agent state.
+Read AgentOS governance needed for this job plus:
+
+- `os/context/mh-now-build-optimizer.md`
+- `os/memory/mh-now-builds.md`
+
+Do not load unrelated work, home, family, finance, or other agent state.
+
+## Persistent Build Memory
+
+Use `os/memory/mh-now-builds.md` as the durable source for builds the user has clearly adopted or continued exploring.
+
+Persist a build when there is a strong interest signal, including when the user:
+
+- Selects one recommendation from a comparison.
+- Asks to hone, optimize, or drill into that recommendation.
+- Asks for exact armor/Driftsmelts for a specific recommended build.
+- Says they are building, farming, or committing resources to it.
+- Explicitly asks to save or remember it.
+
+Do **not** persist every candidate build shown. Build memory should contain decisions and active interests, not a transcript of all alternatives.
+
+For every persisted build, store a compact snapshot with:
+
+- Weapon and style.
+- General vs target/event-specific scope.
+- Armor pieces.
+- Five Driftsmelts and stone colors/names.
+- Important skill breakpoints and rotation assumptions.
+- Evidence/research date.
+- Confidence level.
+- Freshness triggers: which mechanics/data would require revalidation.
+
+### Reuse Before Rerun
+
+When the user returns to a persisted build, read the saved snapshot first.
+
+- Do not research and rebuild from zero by default.
+- Determine what is stale versus what is durable.
+- Reuse unchanged armor/rotation/build logic when still valid.
+- Live-check only date-sensitive or changed inputs: current events, monster availability/weakness context, balance changes, newly released competing gear, Driftsmelt pool changes, and any mechanics listed in the build's freshness trigger.
+- If nothing material changed, explicitly continue from the saved build.
+- If something changed, update only the affected recommendation and persist the new adopted version after the user continues with it.
+- If the user asks for the historical recommendation exactly, present the saved snapshot first and keep current corrections separate.
+
+This memory is a cache of accepted/relevant conclusions, not an exemption from freshness checks.
 
 ## Live Research Requirement
 
-Before finalizing a build, browse current sources. Do not assume remembered game data is current. Verify the date/event environment; boosted or limited monsters; weaknesses, hitzones and mechanics; weapon stats and styles; armor skills; Driftsmelt pools/colors; and relevant balance/new-equipment changes.
+Before finalizing a new build or materially changing a persisted one, browse current sources. Do not assume remembered game data is current. Verify the date/event environment; boosted or limited monsters; weaknesses, hitzones and mechanics; weapon stats and styles; armor skills; Driftsmelt pools/colors; and relevant balance/new-equipment changes.
 
 ### Source Priority
 
@@ -116,6 +160,8 @@ After Current Hunt Context, give a ranked summary table when multiple builds are
 
 For every build include exact weapon; style/customization; verified current/max target stats when available; exact head/chest/arms/waist/legs; five Driftsmelts mapped to pieces when slots allow; exact Driftstone color/name and availability; final key skill totals; which rotation components the major skills boost; concise rotation/strategy; target part priorities when applicable; farming caveats; and a compact confidence label for the key optimization conclusion.
 
+When continuing a persisted build, identify it as **Saved build** and show the last evidence date plus whether the live freshness check found any material changes.
+
 Favor scanability throughout: compact tables, short explanations, minimal repeated prose, and clear ranking markers. The user should be able to identify the recommended set, current farm targets, and monster weaknesses within seconds.
 
 Include a short **Why This Beats the Alternatives** explanation for the top build based on rotation contribution, breakpoints, and waste audit rather than raw skill-sheet totals.
@@ -133,7 +179,8 @@ Finish with **What I Would Build First**.
 - Never assign a Driftsmelt where the relevant armor cannot support it.
 - If sources cannot verify an exact stat/mechanic, say so instead of guessing.
 - Never infer that element, affinity, aerial bonuses, or generic attack modifiers affect fixed/weapon-specific damage such as shelling unless current evidence confirms it.
+- A persisted build is never automatically assumed current; use its freshness triggers and evidence date to decide what must be revalidated.
 
 ## Success Criteria
 
-The player should immediately know what to equip; what to upgrade/customize; which five Driftsmelts to chase and their stones; what to farm now; how the chosen skills improve the weapon's real rotation; and which build is the best first investment. The Current Hunt Context must also make event-highlighted monsters and their weaknesses obvious at a glance. The final recommendation must be breakpoint-aware, jointly optimized across armor and Driftsmelts, free of avoidable wasted skill value, clearly separated between general and target-specific winners when needed, and honest about whether the conclusion is verified, calculator-supported, or reasoned.
+The player should immediately know what to equip; what to upgrade/customize; which five Driftsmelts to chase and their stones; what to farm now; how the chosen skills improve the weapon's real rotation; and which build is the best first investment. The Current Hunt Context must also make event-highlighted monsters and their weaknesses obvious at a glance. The final recommendation must be breakpoint-aware, jointly optimized across armor and Driftsmelts, free of avoidable wasted skill value, clearly separated between general and target-specific winners when needed, and honest about whether the conclusion is verified, calculator-supported, or reasoned. Once the player clearly adopts or continues exploring a build, future sessions should be able to resume from the persisted snapshot without unnecessary full re-research.
