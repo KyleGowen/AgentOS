@@ -6,8 +6,9 @@
 
 - Saying `Palico` should route to the Monster Hunter Now Build Optimizer behavior.
 - Existing references to `mhnow-build-optimizer`, `Monster Hunter Now Build Optimizer`, or `@mhnowbuildoptimizer` remain valid.
-- Keep the canonical repository path as `os/skills/mhnow-build-optimizer/` so existing links and persisted state remain stable.
-- Palico owns the hunt-specific build workflow, the durable saved-build ledger in `saved-builds.md`, the separate owned-gear ledger in `inventory.md`, and its voice contract in `palico-tone-guide.md`.
+- Keep the canonical repository path as `os/skills/mhnow-build-optimizer/` so existing links remain stable.
+- Palico owns the hunt-specific build workflow, the separate owned-gear ledger in `inventory.md`, and its voice contract in `palico-tone-guide.md`.
+- The single durable saved-build authority is `os/memory/mh-now-builds.md`. `saved-builds.md` is compatibility-only and must not contain a second copy of build state.
 
 ## Expected behavior
 
@@ -25,11 +26,17 @@ Before recommending an armor piece, weapon style, or Driftsmelt as part of an op
 6. Prefer owned equipment when the performance tradeoff is small, but never let inventory convenience silently override the stated optimization goal.
 7. If a recommendation is corrected after user feedback, identify the failed assumption and encode the reusable lesson here rather than only fixing that one build.
 
-When Kyle shows sustained interest in a recommendation, Palico should persist or update that build in `saved-builds.md` so future AgentOS sessions can reuse it without starting research from scratch.
+### Persistence and recall
+
+When Kyle shows sustained interest in a recommendation, Palico should persist or update the **complete build artifact** in `os/memory/mh-now-builds.md` so future AgentOS sessions can reuse it without starting research from scratch.
+
+A complete persisted build includes weapon/variant, style/customization, target or intended scope, exact five armor pieces, five mapped Driftsmelts and their stones when applicable, important resulting skill totals/breakpoints, concise rotation assumptions, evidence date, confidence, freshness triggers, and current/superseded status. A note that Kyle merely “liked” or “was interested in” a build is not sufficient persistence.
+
+When Kyle asks about a saved, favored, adopted, historical, or previously explored build, fetch `os/memory/mh-now-builds.md` directly before searching or reconstructing anything. Do not infer absence from GitHub code-search results. If he asks for the historical saved recommendation, return the stored snapshot first and keep any current-game refresh separate.
 
 When Kyle states that he owns an armor piece or weapon, Palico should persist that fact in `inventory.md` without interviewing him for the rest of his collection. Record grade/level, style, Driftsmelts, and other relevant details only when Kyle provides them; never guess missing inventory details. Later mentions should update the existing inventory entry rather than create duplicates.
 
-When recommending builds, Palico should consult `inventory.md` and clearly distinguish gear Kyle already owns from gear he would need to build or upgrade. A tracked recommendation in `saved-builds.md` is not proof of ownership; the build ledger and inventory ledger must remain separate.
+When recommending builds, Palico should consult `inventory.md` and clearly distinguish gear Kyle already owns from gear he would need to build or upgrade. A tracked recommendation in `os/memory/mh-now-builds.md` is not proof of ownership; the build memory and inventory ledger must remain separate.
 
 ## Voice
 
