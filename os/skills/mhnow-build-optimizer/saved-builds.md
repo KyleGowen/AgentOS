@@ -1,44 +1,26 @@
 # Monster Hunter Now Saved Builds
 
-Durable build ledger for the Monster Hunter Now Build Optimizer skill (Palico).
+This file is retained for compatibility with older Palico/skill references. It is not an independent ledger.
+
+## Canonical persisted-build source
+
+Read and write all durable saved Monster Hunter Now builds in:
+
+`os/memory/mh-now-builds.md`
+
+Do not duplicate build payloads in this file. Do not treat this file, chat history, model memory, or GitHub code-search results as authoritative when recalling a saved build.
+
+## Retrieval rule
+
+When Kyle asks about a saved, favored, adopted, historical, or previously explored build:
+
+1. Fetch `os/memory/mh-now-builds.md` directly.
+2. Return the saved snapshot first when he asks what was persisted.
+3. Run current-data freshness checks separately when needed; do not overwrite historical facts merely because current optimization may differ.
+4. If a requested build is genuinely absent from the canonical memory file, say that it is not durably persisted instead of reconstructing it from a vague interest pointer.
 
 ## Persistence rule
 
-When Kyle shows sustained interest in a build (for example: asks to refine it, compares variants, or explicitly says to save/keep it), persist the build here so future ChatGPT and Codex sessions can reuse it without re-researching from scratch.
+When Kyle clearly selects, refines, farms for, commits resources to, asks to save, or asks to revisit a build, write the complete artifact to `os/memory/mh-now-builds.md`, including weapon/style, intended scope, five armor pieces, five mapped Driftsmelts and stones when applicable, key totals/breakpoints, rotation assumptions, evidence date, confidence, freshness triggers, and supersession status.
 
-Each saved build should capture:
-
-- Weapon and exact variant
-- Target monster or general use case
-- Armor: head / chest / arms / waist / legs
-- All 5 Driftsmelt skills
-- Important resulting skill totals
-- Style/customization choices where applicable
-- Short hunt/rotation notes
-- Source/verification note and date
-- Status: draft / current favorite / superseded
-
-## Seeded build
-
-### Mizutsune Gunlance — “Gold medal” favored build
-
-- Status: current favorite candidate
-- Context: build Kyle became interested in and refined during prior MH Now optimizer runs; currently being reconstructed as an Artillery-focused Blast Dash build.
-- Weapon: Mizutsune Gunlance
-- Style: Blast Dash
-- Current target context: Riftborn/Riftcharged Glavenus
-- Head: Bazelgeuse Helm — explicitly persisted by Kyle on 2026-08-27.
-- Chest: Basarios Mail — explicitly persisted by Kyle on 2026-08-27.
-- Arms: Shogun Ceanataur arms — explicitly persisted by Kyle on 2026-08-27; verify exact in-game armor-piece display name before presenting as authoritative.
-- Waist: Bazelgeuse Coil — explicitly persisted by Kyle on 2026-08-27.
-- Legs: Shogun Ceanataur legs — explicitly persisted by Kyle on 2026-08-27; verify exact in-game armor-piece display name before presenting as authoritative.
-- Driftsmelts: not yet persisted
-- Notes: Treat all five armor selections above as locked tracked pieces unless Kyle replaces them. Do not infer Driftsmelts or final skill totals from earlier provisional recommendations; verify them before persisting.
-- Persistence source: seeded from existing ChatGPT/skill context during AgentOS integration on 2026-08-27 and incrementally reconstructed from Kyle's explicit selections.
-
-## Update behavior
-
-- Prefer updating an existing saved build over creating duplicates.
-- Explicitly persisted equipment choices are treated as locked for that tracked build until Kyle changes or replaces them.
-- If a materially better verified variant replaces a saved build, mark the old one `superseded` and link the replacement.
-- Do not silently treat stale game data as current; re-verify when patches, new armor, new Driftsmelts, or balance changes could affect the recommendation.
+Partial interest markers are not valid persisted builds.
