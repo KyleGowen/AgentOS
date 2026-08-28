@@ -13,134 +13,80 @@ When Palico recommends a build, check this inventory, clearly mark owned gear ve
 ## Armor
 
 ### Ceanataur Set
-- Head — owned; defense 65.
-- Chest — owned; defense 100.
-- Arms — owned/equipped; defense 91.
-- Waist — owned; defense 65.
-- Legs — owned/equipped; defense 76.
-
+- Head 65; Chest 100; Arms 91 (equipped); Waist 65; Legs 76 (equipped) — all owned.
 ### Rimeguard Set
 - Head 113; Chest 100; Arms 100; Waist 109; Legs 100 — all owned.
-
 ### Carnival 2024 Set
-- Head / Chest / Arms / Waist / Legs — all owned; defense 142 each.
-
+- Full set owned; defense 142 each.
 ### Halloween Set
-- Head — owned; defense 132.
-- Chest / Arms / Waist / Legs — not shown as owned.
-
+- Head 132 owned; other slots not shown as owned.
 ### Halloween 2024 Set
-- Waist — owned; defense 132. Other slots not established.
-
+- Waist 132 owned; other slots not established.
 ### Glavenus Set
-- Head — owned; defense 149.
-- Chest — owned; defense 160.
-- Arms — not shown as owned (ghosted; defense display 82).
-- Waist — owned; defense 190.
-- Legs — owned; defense 106.
-
+- Head 149; Chest 160; Waist 190; Legs 106 owned. Arms ghosted/not shown as owned (82).
 ### Mizuha Set
-- Head — owned; defense 100.
-- Chest — owned; defense 167.
-- Arms — owned; defense 193.
-- Waist — owned; defense 186.
-- Legs — not shown as owned (ghosted; defense display 100).
-
+- Head 100; Chest 167; Arms 193; Waist 186 owned. Legs ghosted/not shown as owned (100).
 ### Wroggi Set
-- Head — owned; defense 49.
-- Chest — not shown as owned (ghosted; defense display 34).
-- Arms — owned; defense 36.
-- Waist — owned; defense 171.
-- Legs — not shown as owned (ghosted; defense display 34).
-
+- Head 49; Arms 36; Waist 171 owned. Chest and Legs ghosted/not shown as owned (34 each).
 ### Bishaten Set
-- Head — owned; defense 171.
-- Chest — not shown as owned (ghosted; defense display 49).
-- Arms — not shown as owned (ghosted; defense display 49).
-- Waist — owned; defense 100.
-- Legs — owned; defense 71.
-
+- Head 171; Waist 100; Legs 71 owned. Chest/Arms ghosted/not shown as owned (49 each).
 ### Beotodus Set
-- Head — not shown as owned (ghosted; defense display 65).
-- Chest — owned; defense 85.
-- Arms — owned; defense 171.
-- Waist — owned; defense 106.
-- Legs — owned; defense 65.
-
+- Chest 85; Arms 171; Waist 106; Legs 65 owned. Head ghosted/not shown as owned (65).
 ### Nargacuga Set
-- Head — owned; defense 129.
-- Chest — not shown as owned (ghosted; defense display 82).
-- Arms — owned; defense 122.
-- Waist — owned; defense 139; favorite marker visible.
-- Legs — owned; defense 160.
-
+- Head 129; Arms 122; Waist 139 (favorite); Legs 160 owned. Chest ghosted/not shown as owned (82).
 ### Tentacle Set
-- Head — owned; defense 100.
-- Chest — not shown as owned (ghosted; defense display 100).
-- Arms — owned; defense 171.
-- Waist — owned; defense 171.
-- Legs — owned; defense 153.
-
+- Head 100; Arms 171; Waist 171; Legs 153 owned. Chest ghosted/not shown as owned (100).
 ### Garangolm Set
-- Head — owned; defense 149.
-- Chest — owned; defense 171.
-- Arms — not shown as owned (ghosted; defense display 65).
-- Waist — owned; defense 91.
-- Legs — owned; defense 153.
-
+- Head 149; Chest 171; Waist 91; Legs 153 owned. Arms ghosted/not shown as owned (65).
 ### Lunagaron Set
-- Head — not shown as owned (ghosted; defense display 65).
-- Chest — owned; defense 193.
-- Arms — owned; defense 100.
-- Waist — owned; defense 190.
-- Legs — owned; defense 65.
-
+- Chest 193; Arms 100; Waist 190; Legs 65 owned. Head ghosted/not shown as owned (65).
 ### Espinas Set
-- Head — owned; defense 100.
-- Chest — owned; defense 82.
-- Arms — owned; defense 171.
-- Waist — owned; defense 149.
-- Legs — owned; defense 82.
-
+- Full set owned: Head 100; Chest 82; Arms 171; Waist 149; Legs 82.
 ### Malzeno Set
-- Head / Chest / Arms — not shown as owned (ghosted; defense display 100 each).
-- Waist — owned; defense 175.
-- Legs — owned; defense 100.
-
+- Waist 175; Legs 100 owned. Head/Chest/Arms ghosted/not shown as owned (100 each).
 ### Quematrice Set
-- Head — owned; defense 132.
-- Chest — owned; defense 139.
-- Arms — owned; defense 132.
-- Waist — not shown as owned (ghosted; defense display 34).
-- Legs — owned; defense 109.
-
+- Head 132; Chest 139; Arms 132; Legs 109 owned. Waist ghosted/not shown as owned (34).
 ### Goss Harag Set
-- Head — owned; defense 88.
-- Chest — owned; defense 113.
-- Arms — owned; defense 106.
-- Waist — owned; defense 88.
-- Legs — owned; defense 153.
-
+- Full set owned: Head 88; Chest 113; Arms 106; Waist 88; Legs 153.
 ### Astalos Set
-- Head — owned; defense 142.
-- Chest — owned; defense 82.
-- Arms — owned; defense 142.
-- Waist — owned; defense 142.
-- Legs — owned; defense 142.
-
+- Full set owned: Head 142; Chest 82; Arms 142; Waist 142; Legs 142.
 ### Almudron Set
-- Head — not shown as owned (ghosted; defense display 65).
-- Chest — owned; defense 82.
-- Arms — not shown as owned (ghosted; defense display 65).
-- Waist — owned; defense 167.
-- Legs — owned; defense 65.
-
+- Chest 82; Waist 167; Legs 65 owned. Head/Arms ghosted/not shown as owned (65 each).
 ### Regios Set
-- Head — owned; defense 139.
-- Chest — owned; defense 139.
-- Arms — owned; defense 82.
-- Waist — owned; defense 82.
-- Legs — owned; defense 160.
+- Full set owned: Head 139; Chest 139; Arms 82; Waist 82; Legs 160.
+
+### Kushala Set
+- Full set owned: Head 149 (favorite); Chest 132; Arms 132; Waist 142 (favorite); Legs 142.
+### Mizutsune Set
+- Full set owned: Head 197 (favorite); Chest 126; Arms 119; Waist 82; Legs 100.
+### Kaiser Set
+- Head 100; Chest 149; Arms 193 (favorite); Waist 132 owned. Legs ghosted/not shown as owned (100).
+### Aknosom Set
+- Head 197 (favorite); Chest 193 (favorite); Arms 54; Waist 49 owned. Legs ghosted/not shown as owned (49).
+### Sinister Set
+- Chest 132; Legs 113 owned. Head/Arms/Waist ghosted/not shown as owned (65 each).
+### Golden Set
+- Chest 197 (favorite); Arms 149; Waist 197 owned. Head and Legs ghosted/not shown as owned (82 each).
+### Nergigante Set
+- Legs 190 owned. Head/Chest/Arms/Waist ghosted/not shown as owned (100 each).
+### Lagombi Set
+- Chest 34 owned. Legs 100 owned. Head/Arms/Waist ghosted/not shown as owned (34 each).
+### Volvidon Set
+- Head 164; Chest 100; Arms 49 owned. Waist/Legs ghosted/not shown as owned (49 each).
+### Somnacanth Set
+- Full set owned: Head 113; Chest 65; Arms 142; Waist 193; Legs 167.
+### Tigrex Set
+- Waist 193; Legs 82 owned. Head/Chest/Arms ghosted/not shown as owned (82 each).
+### Rex Roar Set
+- Head 164; Chest 82; Arms 82; Waist 142 owned. Legs ghosted/not shown as owned (82).
+### Kirin Set
+- Chest 153; Waist 186; Legs 132 owned. Head and Arms ghosted/not shown as owned (100 each).
+### Bazelgeuse Set
+- Full set owned: Head 119 (equipped); Chest 100; Arms 182; Waist 129 (equipped); Legs 106.
+### Chatacabra Set
+- Legs 119 owned. Head/Chest/Arms/Waist ghosted/not shown as owned (34 each).
+### Arzuros Set
+- Arms 34; Waist 49; Legs 91 owned. Head/Chest ghosted/not shown as owned (34 each).
 
 ## Weapons
 
