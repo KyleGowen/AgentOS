@@ -1,30 +1,32 @@
 # Monster Hunter Now Build State
 
-Purpose: preserve Monster Hunter Now recommendations Kyle explicitly becomes interested in so ChatGPT and Codex can revisit them without rebuilding the recommendation from scratch.
+This file is a routing pointer, not a second build ledger.
 
-This is durable home/gaming context. Keep entries compact and source-aware. Do not save every generated candidate automatically.
+## Canonical persisted-build source
 
-## Persistence Rules
+The single durable source of truth for Monster Hunter Now builds is:
 
-Persist a build when Kyle explicitly says he likes it, wants to explore it, wants to save it, or wants to revisit it later.
+`os/memory/mh-now-builds.md`
 
-Each persisted build should include:
+All ChatGPT, Codex, Palico, agent, and skill retrieval must read that file directly before answering questions about saved, favored, adopted, historical, or previously explored builds.
 
-- Build name or short label.
-- Weapon.
-- Target monster or intended use.
-- Exact head, chest, arms, waist, and legs.
-- One driftsmelt per armor slot, five total.
-- Key resulting skill totals.
-- Weapon/style customization where applicable.
-- Why Kyle selected it or what role it serves.
-- Date last verified against current MHNow data.
-- Compact source/refresh notes.
+Do not store build payloads here. Do not infer that a build is missing because GitHub code search does not return it; fetch the canonical file directly.
 
-When revisiting a build, verify current game data first. Update the existing record rather than creating a duplicate when the build is the same concept.
+## Persistence contract
 
-## Persisted Builds
+When Kyle clearly adopts, selects, refines, farms for, asks to save, or asks to revisit a build, persist the complete snapshot in `os/memory/mh-now-builds.md`:
 
-No repository-grounded build records have been migrated yet.
+- build label
+- weapon and exact variant
+- style/customization
+- target or intended scope
+- exact head/chest/arms/waist/legs
+- exactly five mapped Driftsmelts when applicable, including stone names/colors
+- important resulting skill totals and breakpoints
+- concise rotation assumptions
+- evidence/research date
+- confidence
+- freshness triggers
+- status/current-vs-superseded history
 
-Known migration candidate from prior ChatGPT use: the favored Gold recommendation for the Mizutsune Gunlance / Blast Dash build. Reconstruct and verify its exact armor, driftsmelts, skill totals, and intended target before promoting it into a persisted build record.
+A pointer such as “Kyle liked this build” is not sufficient persistence.
