@@ -87,8 +87,74 @@ When Palico recommends a build, check this inventory, clearly mark owned gear ve
 - Legiana — Head 126; Chest 142; Arms 193 favorite; Waist 106 owned; Legs ghosted 82.
 
 ## Weapons
-_No weapon inventory added from the armor-list screenshots; exact weapon names and grade/level are not displayed clearly enough to persist without guessing._
+
+### Screenshot inventory — 2026-08-28
+The following weapon ownership and upgrade values were read directly from Kyle's four equipment-list screenshots. Displayed attack/element/status values are recorded only when legible; no hidden grade/level or weapon details were inferred.
+
+#### Grade 10
+- Datura Blossom 5 — Attack 1962; Poison 441.
+- Lunatic Rose 5 — Attack 2007; Poison 416.
+- Despot's Crookbolt 1 — Attack 1493; Thunder 1450.
+- Sinister Shadekeeper 5 — Attack 1917; Blast 556.
+- Crimson Viperclaws 6 — Attack 2040; Poison 360.
+- Freeze Chain 5 — Attack 1511; Ice 1580.
+- Khezu Skards 5 — Attack 1585; Thunder 1238.
+- Illusory Frilled Claw 5 — Attack 2100; Sleep 560.
+- Frostmoon Bloodclaws+ 5 — Attack 1222; Ice 1458.
+- Mud Twister 5 — Attack 1222; Water 1458.
+- Twin Wreathes 8 — Attack 1903; Thunder 516.
+- Wyvern Blade "Blood" 5 — Attack 1503; Fire 1468.
+- Despot's Boltbreaker 1 — Attack 1583; Thunder 1640.
+- Stygian Gula 5 — Attack 1506; Dragon 1506.
+- Dazzling Flash 5 — Attack 1903; Thunder 785.
+- Tamonowo 5 — Attack 1379; Water 1470.
+- Sinister Shade Sword 5 — Attack 1817; Blast 516.
+- Red Tail 5 — Attack 1643; Fire 1500.
+- Thunderpierce 6 — Attack 1683; Thunder 1540.
+- Sinister Shadespear 5 — Attack 1641; Blast 525.
+- Bazel Myniad Rookslayer 5 — Attack 2683; Blast 346.
+- Kadachi Striker 5 — Attack 1705; Thunder 1435.
+- Legiana Cannon 5 — Attack 1503; Ice 1468.
+- Insatiable Gunlance 5 — Attack 2007; Dragon 1668.
+- Firetrail Quemador 5 — Attack 1222; Fire 1458.
+- Glavenus Smasher 6 — Attack 1743; Fire 1618.
+- Lagombavarice 5 — Attack 2041; Ice 853.
+- Altair+ 5 — Attack 2045.
+- Bazel Typhoon 6 — Attack 1318; Fire 1271.
+- Rose Assault 5 — Attack 3108.
+- Datura Blaster 5 — Attack 2206.
+- Nightmare Cannon 6 — Attack 2371.
+- Dual Threat 5 — Attack 2507.
+- Dark Devourer 5 — Attack 1449; Dragon 1414.
+- Daora Grande 5 — Attack 1784; Ice 1151.
+- Burning Igna 6 — Attack 1775; Fire 1653.
+- Bishaten's Grace 5 — Attack 2407.
+- Wyvern Assault+ 5 — Attack 1363; Thunder 1436.
+- Summer Blaster 8 — Attack 1463; Fire 1420.
+- Wrapping Bow 5 — Attack 1222; Thunder 1458.
+
+#### Grade 9
+- Sandcrier 4 — Attack 1506.
+- Fiendish Tower 4 — Attack 1054; Dragon 984.
+- Esperanza Lance 4 — Attack 1513.
+- Esperanza Strongarm 4 — Attack 1513.
+- Donnerkanone+ 4 — Attack 990; Thunder 1019.
+- Rosenkugel+ 4 — Attack 1070; Fire 996.
+- Esperanza Cannon 4 — Attack 1513.
+
+#### Grade 8
+- Queen Rapier 3 — Attack 986; Poison 437.
+- Painful Razor 3 — Attack 825; Thunder 574.
+- Chef's Knife 3 — Attack 975; Ice 778.
+- Carnival 2024 Sword 5 — Attack 1022; Blast 278.
+
+#### Visible but not persisted as exact entries
+- A Mizutsune weapon at upgrade 5 is visible in the Grade 10 list, but its full weapon name and one displayed value are obscured by the screenshot overlay.
+- The equipped Grade 10 `Equilibrium 5` card is partially obscured; ownership is visually evident, but displayed values are not clear enough to record confidently.
+- `Piercing Crab+ 5` is visible, but its displayed values are partly covered by the screenshot overlay.
+- Additional Grade 8 cards are only partially visible at the bottom of the final screenshot; their names/values are not legible enough to persist without guessing.
 
 ## Baseline status
 - Armor inventory sweep: complete as of 2026-08-27 based on Kyle's screenshots.
+- Weapon inventory: partial baseline captured 2026-08-28 from four screenshots; legible entries persisted, obscured entries explicitly left unresolved rather than guessed.
 - Future changes: update entries incrementally when Kyle reports or shows a forge/upgrade. If a build decision depends on whether an entry is still current, Palico may ask for its current status.
