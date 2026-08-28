@@ -28,12 +28,12 @@ Each saved build should capture:
 - Style: Blast Dash
 - Current target context: Riftborn/Riftcharged Glavenus
 - Head: Bazelgeuse Helm — explicitly persisted by Kyle on 2026-08-27.
-- Chest: not yet persisted
-- Arms: not yet persisted
+- Chest: Basarios Mail — explicitly persisted by Kyle on 2026-08-27.
+- Arms: Shogun Ceanataur arms — explicitly persisted by Kyle on 2026-08-27; verify exact in-game armor-piece display name before presenting as authoritative.
 - Waist: Bazelgeuse Coil — explicitly persisted by Kyle on 2026-08-27.
-- Legs: not yet persisted
+- Legs: Shogun Ceanataur legs — explicitly persisted by Kyle on 2026-08-27; verify exact in-game armor-piece display name before presenting as authoritative.
 - Driftsmelts: not yet persisted
-- Notes: Treat Bazelgeuse Helm and Bazelgeuse Coil as locked tracked pieces unless Kyle replaces them. Do not infer the remaining armor, Driftsmelts, or skill totals from earlier provisional recommendations; verify them before persisting.
+- Notes: Treat all five armor selections above as locked tracked pieces unless Kyle replaces them. Do not infer Driftsmelts or final skill totals from earlier provisional recommendations; verify them before persisting.
 - Persistence source: seeded from existing ChatGPT/skill context during AgentOS integration on 2026-08-27 and incrementally reconstructed from Kyle's explicit selections.
 
 ## Update behavior
