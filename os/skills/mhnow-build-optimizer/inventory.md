@@ -4,7 +4,7 @@ Durable owned-gear ledger for Palico. This file is intentionally separate from `
 
 ## Capture rule
 
-When Kyle states that he owns an armor piece or weapon, persist it here without interviewing him for the rest of his inventory.
+When Kyle states or provides clear screenshot evidence that he owns an armor piece or weapon, persist it here without interviewing him for the rest of his inventory.
 
 For armor, record when available:
 
@@ -21,7 +21,7 @@ For weapons, record when available:
 - Current style, if applicable
 - Any relevant customization or notes Kyle explicitly provides
 
-If Kyle gives only partial details, save only what he said. Do not guess missing grades, levels, styles, or smelts. Update the existing entry when he later supplies newer information.
+If Kyle gives only partial details, save only what is established. Do not guess missing grades, levels, styles, or smelts. Update the existing entry when he later supplies newer information.
 
 ## Recommendation behavior
 
@@ -35,8 +35,45 @@ When Palico recommends a build:
 
 ## Armor
 
-_No owned armor recorded yet._
+### Ceanataur Set
+Screenshot evidence 2026-08-27. The armor screen explicitly labels the set `Ceanataur Set`; values below are the displayed defense values, not inferred grade/level.
+
+- Head — owned; displayed defense 65.
+- Chest — owned; displayed defense 100.
+- Arms — owned/equipped; displayed defense 91.
+- Waist — owned; displayed defense 65.
+- Legs — owned/equipped; displayed defense 76.
+
+### Rimeguard Set
+Screenshot evidence 2026-08-27.
+
+- Head — owned; displayed defense 113.
+- Chest — owned; displayed defense 100.
+- Arms — owned; displayed defense 100.
+- Waist — owned; displayed defense 109.
+- Legs — owned; displayed defense 100.
+
+### Carnival 2024 Set
+Screenshot evidence 2026-08-27.
+
+- Head — owned; displayed defense 142.
+- Chest — owned; displayed defense 142.
+- Arms — owned; displayed defense 142.
+- Waist — owned; displayed defense 142.
+- Legs — owned; displayed defense 142.
+
+### Halloween Set
+Screenshot evidence 2026-08-27.
+
+- Head — owned; displayed defense 132.
+- Chest / Arms / Waist / Legs — screenshot shows no owned piece in these slots.
+
+### Halloween 2024 Set
+Screenshot evidence 2026-08-27; only the visible portion is recorded.
+
+- Waist — owned; displayed defense 132.
+- Other slots — not recorded from this screenshot because visibility is incomplete/ambiguous.
 
 ## Weapons
 
-_No owned weapons recorded yet._
+_No weapon inventory added from this screenshot. The equipped weapon icon is visible, but its exact weapon name and grade/level are not displayed clearly enough here to persist without guessing._
