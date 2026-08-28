@@ -34,28 +34,48 @@ For a supplied weapon and target:
 1. Resolve the exact weapon, type, raw/element/status profile, shell/ammo/phial/charge behavior, and available style/customization choices.
 2. Resolve the target's weakness profile, hitzones, break priorities, Riftborne/Riftcharged/event mechanics, and realistic attack windows.
 3. Establish current event context and farming availability.
-4. **Model the weapon's actual style-specific damage rotation before selecting skills.** Identify the meaningful damage buckets in the intended rotation: e.g. physical/slash/blunt hits, elemental contribution, shelling/phials/ammo, aerial attacks, special damage, status, and other style-specific sources.
+4. **Model the weapon's actual style-specific damage rotation before selecting skills.** Identify the meaningful damage buckets in the intended rotation: physical/slash/blunt hits, elemental contribution, shelling/phials/ammo, aerial attacks, special damage, status, and other style-specific sources.
 5. For each candidate skill, explicitly determine which rotation components it affects and which it does not. Do not assume a skill boosts the entire rotation.
 6. Estimate practical rotation value using realistic uptime/frequency. A skill that boosts 40% of rotation damage by 20% is not equivalent to a 20% whole-rotation increase. Exact numerical DPS is optional; correct relative weighting is mandatory.
 7. Account for shell/ammo capacity and style interactions. For Gunlance Blast Dash specifically, account for Blast Dash, Aerial Shelling/Aerial Burst, Aerial Smash, Burst Fire, Ground Splitter's shelling buff, shelling type/capacity, physical hit portions, and the fact that Normal shelling is officially called out as especially effective for Burst Fire. Do not automatically recommend classic charged-shell Long Gunlance skills when Blast Dash replaces charged shelling.
-8. Generate candidate skill packages only after the rotation model exists. Do not blindly maximize elemental attack, affinity, Artillery, Skyward Striker, or another attractive sheet skill without comparing its contribution across the actual rotation.
-9. Evaluate all realistically obtainable armor, including Elder Dragon, event, rare-monster and Riftborne/Riftcharged gear.
-10. Add optimal Driftsmelts after establishing a coherent base set. Verify each recommended skill is obtainable from the stated current stone color/name and flag event-limited stones.
-11. Optimize weapon style/customization and requested 20/20 state where applicable; verify the live cap/mechanics before exact claims.
-12. Compare candidates on practical target-specific rotation DPS, uptime, execution burden, current-event usefulness, and farming cost.
-13. Select three to five genuinely different winners. Do not manufacture extra builds.
+8. **Identify skill breakpoints before finalizing armor.** Explicitly search for thresholds that materially change output or rotation, such as extra shell/ammo capacity, reload/recoil tiers, activation requirements for advanced elemental skills, affinity breakpoints, special-generation thresholds, or large per-level jumps. Prefer the breakpoint that maximizes real rotation value rather than simply pushing a skill to its highest possible level.
+9. **Optimize armor and Driftsmelts jointly.** Treat the five armor slots and five Driftsmelt slots as one combined optimization problem. Do not lock armor first and only then fill smelts if another native-skill distribution can reach the same breakpoint with fewer smelts or free a slot for a stronger multiplier.
+10. **Score skill compression.** Give extra value to armor pieces that solve several useful requirements at once, such as element + advanced element + Lock On, or weapon-specific skill + utility. Ignore compressed skills that do not actually contribute to the intended rotation.
+11. Evaluate all realistically obtainable armor, including Elder Dragon, event, rare-monster and Riftborne/Riftcharged gear.
+12. Verify every proposed Driftsmelt against the current stone color/name and flag event-limited or currently unavailable rolls.
+13. Optimize weapon style/customization and requested 20/20 state where applicable; verify the live cap/mechanics before exact claims.
+14. Compare candidates on practical target-specific rotation DPS, uptime, execution burden, current-event usefulness, and farming cost.
+15. **Separate general and target-specific winners.** If the best general build differs from the best build for a specific monster/event, label them separately (for example, `Gold — General` and `Gold — Riftcharged Glavenus`) rather than implying one set is universally optimal.
+16. Select three to five genuinely different winners when multiple builds are requested. Do not manufacture extra builds.
 
 ### Damage-Bucket Sanity Check
 
-Before ranking a build, state internally or in the answer when useful:
+Before ranking a build, determine:
 
-- What percentage/dominant share of the intended rotation is shell/ammo-style damage versus weapon-hit damage.
+- What dominant share of the intended rotation is shell/ammo-style damage versus weapon-hit damage.
 - Whether element/affinity affects each major component.
 - Whether Artillery or equivalent weapon-specific skills affect each major component.
 - Whether aerial/conditional skills affect the specific moves being spammed rather than merely being thematically related.
 - Whether a different shell/ammo/weapon profile would inherently fit the chosen style better; if so, mention that while still optimizing the user's requested weapon.
 
 Reject a build whose headline skill stack looks strong on the character sheet but loses to another candidate under the actual rotation.
+
+### Final Waste Audit
+
+Before presenting any recommended build, audit every armor skill, Driftsmelt, style choice, and weapon stat investment for wasted value.
+
+Check specifically for:
+
+- Skill levels above a meaningful cap or breakpoint.
+- Driftsmelts that duplicate a capped skill.
+- Affinity that does not affect a major damage bucket.
+- Element that does not affect fixed or weapon-specific damage.
+- Conditional skills with unrealistic uptime.
+- Shell/ammo-capacity increases that do not change the intended rotation.
+- Armor skills included only because they happen to be on the piece.
+- A native armor skill that could replace a Driftsmelt and free that smelt for a stronger effect.
+
+If a materially less wasteful combination exists, rerun the candidate selection before answering.
 
 ## Default Ranking
 
@@ -66,6 +86,16 @@ Reject a build whose headline skill stack looks strong on the character sheet bu
 5. **Comfort / Defensive** — only when it creates a meaningful alternative.
 
 If theoretical and practical winners differ, explain why.
+
+## Confidence Labels
+
+Use compact confidence labels for important optimization claims, especially the top build:
+
+- **Verified mechanic** — directly supported by current official documentation or structured live game data.
+- **Calculator-supported** — supported by a current build/damage calculator using stated assumptions.
+- **Reasoned recommendation** — derived from verified mechanics, rotation weighting, and current community evidence when no complete calculator proof exists.
+
+Do not present a reasoned recommendation as mathematically proven. If the exact DPS winner cannot be established from current tools/data, say so briefly.
 
 ## Required Output
 
@@ -78,18 +108,17 @@ Start every recommendation with a compact **Current Hunt Context** designed for 
 - Default columns: `Monster | Event status | Weaknesses | Why it matters now`.
 - Keep `Why it matters now` very short: examples include `boosted spawn`, `Riftborne boosted`, `Riftcharged target`, `EDI boosted`, `featured weapon mats`, or `event-limited`.
 - Include the monster's currently verified elemental/status weaknesses. If multiple weaknesses apply, show all relevant ones rather than selecting only the weapon's element.
-- Prefer compact weakness symbols that are visually close to Monster Hunter Now conventions when reliable Unicode/emoji equivalents exist, while always including a short text label so the table remains unambiguous across clients. Example style: `🔥 Fire`, `💧 Water`, `⚡ Thunder`, `❄️ Ice`, `🐉 Dragon`, `☠️ Poison`, `💥 Blast`, `😴 Sleep`, `🌀 Paralysis`. Do not pretend an emoji is an official MH Now icon if it is not.
-- If official game icons cannot be rendered directly, use consistent emoji/text shorthand rather than images or verbose descriptions.
+- Prefer compact weakness symbols with text labels: `🔥 Fire`, `💧 Water`, `⚡ Thunder`, `❄️ Ice`, `🐉 Dragon`, `☠️ Poison`, `💥 Blast`, `😴 Sleep`, `🌀 Paralysis`. Do not pretend an emoji is an official MH Now icon if it is not.
 - Order the table by immediate relevance: current Riftcharged/Riftborne/event target first, then boosted monsters useful for the requested weapon/build, then remaining highlighted monsters.
 - Keep the section concise. Prefer one table plus at most two short notes.
 
-After Current Hunt Context, give a ranked summary table for the recommended builds.
+After Current Hunt Context, give a ranked summary table when multiple builds are requested.
 
-For every build include exact weapon; style/customization; verified current/max target stats when available; exact head/chest/arms/waist/legs; five Driftsmelts mapped to pieces when slots allow; exact Driftstone color/name and availability; final key skill totals; which rotation components the major skills boost; concise rotation/strategy; target part priorities when applicable; and farming caveats.
+For every build include exact weapon; style/customization; verified current/max target stats when available; exact head/chest/arms/waist/legs; five Driftsmelts mapped to pieces when slots allow; exact Driftstone color/name and availability; final key skill totals; which rotation components the major skills boost; concise rotation/strategy; target part priorities when applicable; farming caveats; and a compact confidence label for the key optimization conclusion.
 
 Favor scanability throughout: compact tables, short explanations, minimal repeated prose, and clear ranking markers. The user should be able to identify the recommended set, current farm targets, and monster weaknesses within seconds.
 
-Include a short **Why This Beats the Alternatives** explanation for the top build based on rotation contribution rather than raw skill-sheet totals.
+Include a short **Why This Beats the Alternatives** explanation for the top build based on rotation contribution, breakpoints, and waste audit rather than raw skill-sheet totals.
 
 Finish with **What I Would Build First**.
 
@@ -107,4 +136,4 @@ Finish with **What I Would Build First**.
 
 ## Success Criteria
 
-The player should immediately know what to equip; what to upgrade/customize; which five Driftsmelts to chase and their stones; what to farm now; how the chosen skills improve the weapon's real rotation; and which build is the best first investment. The Current Hunt Context must also make the event-highlighted monsters and their weaknesses obvious at a glance without requiring the player to read surrounding prose.
+The player should immediately know what to equip; what to upgrade/customize; which five Driftsmelts to chase and their stones; what to farm now; how the chosen skills improve the weapon's real rotation; and which build is the best first investment. The Current Hunt Context must also make event-highlighted monsters and their weaknesses obvious at a glance. The final recommendation must be breakpoint-aware, jointly optimized across armor and Driftsmelts, free of avoidable wasted skill value, clearly separated between general and target-specific winners when needed, and honest about whether the conclusion is verified, calculator-supported, or reasoned.
