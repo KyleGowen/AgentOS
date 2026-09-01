@@ -17,7 +17,8 @@ Update this at the end of a meaningful task, project shift, or planning session.
   manual; its source-grounded final review and Kyle's reflection are recorded
   in `projects/10-playbook/playbook-review.md`. Run the manual monthly
   `os-map` review cadence to keep its map and skill/task inventory useful.
-  Project 11 remains separately in progress.
+  All twelve course projects are complete; the next AgentOS design decision is
+  post-course maturity, tracked in `os/future-features.md`.
 - External inherited-project rows in `PLAYBOOK.md` are now generated from
   `os/context/agentos-inheritance-registry.md` by
   `scripts/sync-playbook-project-surfaces.py`. Run that script and its
@@ -49,13 +50,17 @@ Update this at the end of a meaningful task, project shift, or planning session.
 
 - 2026-08-17: Completed Project 11 - Automations.
 - 2026-08-17: Completed Project 10 - Your Playbook.
-- 2026-08-16: Completed Project 08 - Test & Verify.
 - 2026-08-17: Completed Project 09 - The Second Agent.
+- 2026-08-16: Completed Project 08 - Test & Verify.
 - 2026-08-16: Completed Project 07 - The Build.
 - 2026-08-13: Audited all AgentOS course project statuses against repository evidence and live automation configuration.
 - 2026-07-05: Completed Project 06 - The Job.
 - 2026-07-03: Completed Project 05 - Your Connections.
 - 2026-07-03: Completed Project 04 - Your Memory.
+- 2026-07-03: Completed Project 03 - Your First Skills.
+- 2026-07-02: Completed Project 02 - Your Context.
+- 2026-07-01: Completed Project 01 - Your Identity.
+- 2026-07-01: Completed Project 00 - Your OS Thought Partner.
 
 ## Clear Soon
 

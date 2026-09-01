@@ -2,7 +2,7 @@
 
 Source: <https://aidbagentos.ai/projects>
 
-Last audited: 2026-08-17
+Last audited: 2026-09-01
 
 Statuses are evidence-based: `Complete` means the project artifact and completion notes are present; `In progress` means meaningful implementation exists but a documented completion gate is still open; `Not started` means no project-specific build or verification evidence exists yet. Unless Kyle explicitly selects an agent or project, future rows record only the course requirement and verified evidence—not a presumed next use case.
 

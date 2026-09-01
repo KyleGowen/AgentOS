@@ -131,7 +131,7 @@ statuses below describe the current state of the AgentOS implementation.
 | Memory | `os/memory/` | Store durable decisions, patterns, working memory, lessons, and domain memory. | Active |
 | Agents | `os/agents/` | Define agent roles, responsibilities, handoffs, and evaluation notes. | Active |
 | Verification | `PLAYBOOK.md` | Define checks before trusting or using agent output. | Active |
-| Automations | `PLAYBOOK.md` | Track repeated workflows that may become scheduled or event-driven. | In progress |
+| Automations | `PLAYBOOK.md` | Track repeated workflows that may become scheduled or event-driven. | Active |
 | Playbook | `PLAYBOOK.md` | Maintain the operating manual for the AgentOS. | Active |
 
 ### Goals

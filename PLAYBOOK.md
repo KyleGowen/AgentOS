@@ -1,8 +1,8 @@
 # My Agentic OS Playbook
 
-Last updated: 2026-08-17
+Last updated: 2026-09-01
 
-Project status source: `PROJECT_TRACKER.md` (last audited 2026-08-17).
+Project status source: `PROJECT_TRACKER.md` (last audited 2026-09-01).
 
 ## My OS Foundation
 
@@ -75,9 +75,9 @@ rewrite every component on a schedule.
 
 ## Course Projects
 
-The current course status is maintained in `PROJECT_TRACKER.md`. Projects 00–09
-are complete. Projects 10–11 are in progress with explicit evidence gaps
-recorded in the tracker and project notes.
+All twelve AgentOS course projects (00–11) are complete. The canonical
+completion evidence and dates are maintained in `PROJECT_TRACKER.md` and the
+matching project notes.
 
 ## Project Surfaces & Ownership
 
@@ -206,8 +206,9 @@ shared operational state, or machine-management authority.
 
 - Confirm this manual remains an accurate, useful snapshot of the operating
   system, and establish a lightweight monthly review cadence.
-- Finish the Project 11 completion notes, including end-to-end run and failure
-  handling evidence for the active automations.
+- Define post-course AgentOS maturity: operating outcomes, evidence standards,
+  review cadence, and next-level capabilities. The candidate is tracked in
+  `os/future-features.md`.
 
 ### Next Quarter
 
