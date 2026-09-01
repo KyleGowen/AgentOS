@@ -32,7 +32,11 @@ Memory about this AgentOS system, the course, and how the pieces should fit toge
   sources.
 - `os/automations/auto-accept-appointments.md` stores the first harness-neutral automation spec; Codex scheduling should read this file instead of hardcoding the sender list.
 - `os/automations/sdge-energy-alerts.md` stores the weekly SDGE Energy Alerts automation spec; Codex automation id `sdge-energy-alerts` runs Monday at 7:00 AM Pacific.
-- AgentOS no longer uses a daily automation-efficiency review. Skills should capture efficiency lessons through post-run learning loops and promote stable improvements into their own instructions only after review.
+- AgentOS no longer uses a daily automation-efficiency review. Every agent and
+  executable skill follows the root experiential-learning contract: meaningful
+  runs check for reusable successes or failures, deterministic state stays in
+  its approved source, and instruction or code changes require evidence,
+  review, and verification.
 - `PLAYBOOK.md` is the operating manual.
 
 ## Course Progress Notes

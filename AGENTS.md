@@ -18,6 +18,45 @@ This repository is Kyle's AgentOS coursework and durable operating system for ag
 - Use `os/context/current-projects.md` for project context, but warn Kyle if it is more than 30 days old.
 - Use `PLAYBOOK.md` for the current operating manual and project status.
 
+## Experiential Learning
+
+Every AgentOS agent and executable skill should learn from meaningful successes
+and failures without rewriting itself after every run.
+
+- At the end of a meaningful run, check for a reusable learning delta: a
+  clarified input, repeated ambiguity, source-of-truth drift, avoidable step,
+  reliable shortcut, verification improvement, or failure mode. Routine success
+  with no new reusable information requires no write.
+- Automatically update only deterministic operational state that the owning
+  policy explicitly allows, such as a ledger, cache, checkpoint, or last-seen
+  identifier. Keep that state in its existing authoritative location.
+- Do not automatically edit agent definitions, `SKILL.md` files, code,
+  permissions, approval boundaries, or safety rules after a run. Record a
+  compact improvement proposal in the agent's or skill's approved learning
+  destination instead.
+- Promote a proposal into the owning source only when it is source-grounded,
+  generalizable, and supported by the same signal in at least two runs or by a
+  retrospective after three meaningful runs. A single high-impact failure may
+  be promoted sooner, but only through an explicit reviewed change with
+  proportionate verification.
+- Change the one authoritative agent, skill, context, policy, or state source
+  that owns the behavior; do not duplicate the lesson across launchers or
+  unrelated memory files.
+- Keep learning records compact and within the agent's context/state allowlist.
+  Never store secrets, raw private content, customer details, cookies, API
+  keys, or unnecessary personal data.
+- Use the monthly AgentOS review to clear unresolved improvement proposals and
+  stale rules. The review supplements the per-run loop; it is not a reason to
+  rewrite every agent or skill on a schedule.
+- Treat this contract as inheritable global governance. External projects with
+  scoped AgentOS inheritance should carry or reference it with provenance,
+  while preserving project-local precedence and domain-specific learning
+  allowlists.
+
+Each specialized agent definition must name its permitted learning destination
+and mutation boundary. Each executable skill must include a compact
+`Post-Run Learning` section.
+
 ## Specialized Agent Inheritance
 
 Every specialized agent defined inside this repository inherits AgentOS

@@ -88,6 +88,23 @@ Each entry should include the date, context, decision, reason, and evidence when
 - Reason: Skill-local learning captures real friction at the moment it happens, avoids a broad daily review job, and keeps behavior changes reviewable before they are promoted into `SKILL.md`.
 - Evidence: Kyle asked to make the change and delete the scheduled task; `os/agents/os-thought-partner.md` now documents post-run learning rules.
 
+## 2026-09-01 - Extend Experiential Learning To Every Agent And Skill
+
+- Context: Skill-local post-run learning was active, but AgentOS did not yet
+  give every specialized agent an explicit learning destination and mutation
+  boundary.
+- Decision: Apply one global experiential-learning contract through root
+  `AGENTS.md`. Meaningful runs check for reusable learning; policy-approved
+  deterministic state may update automatically, while definitions, skills,
+  code, permissions, and safety rules remain review-only. Promote a normal
+  lesson after the same signal appears twice or during the three-run
+  retrospective; allow an earlier reviewed change for one high-impact failure.
+- Reason: This lets successes and failures improve future runs without
+  self-modification churn, one-off overfitting, duplicated rules, or weakened
+  safeguards.
+- Evidence: Root `AGENTS.md`, `os/agents/README.md`, `os/skills/README.md`, and
+  the post-run learning sections in each active AgentOS agent definition.
+
 ## 2026-08-16 - Use ChatGPT Project As Cross-device Thought-partner Surface
 
 - Context: Kyle wants the OS Thought Partner available across devices and is willing to keep Codex or ChatGPT open while using it.

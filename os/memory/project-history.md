@@ -2,6 +2,16 @@
 
 Compact history of meaningful outcomes and milestones. This is not a full changelog.
 
+### 2026-09-01 - AgentOS-Wide Experiential Learning Contract Added
+
+- Extended the existing skill-local learning loop to every AgentOS agent and
+  executable skill through root governance.
+- Kept deterministic policy-approved state automatic while making agent,
+  skill, code, permission, and safety changes evidence-gated and review-only.
+- Audited the executable skills and active agent definitions, then added
+  explicit learning destinations and privacy boundaries where they were
+  missing.
+
 ### 2026-08-17 - Project 10 Started
 
 - Began Project 10, Your Playbook, using the existing `PLAYBOOK.md` as the

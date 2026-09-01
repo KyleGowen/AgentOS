@@ -66,6 +66,13 @@ run records live in
 each meaningful run and hold a five-minute retrospective after a high-stakes
 operation or after three meaningful runs.
 
+Each meaningful agent or skill run also performs a learning-delta check under
+root `AGENTS.md`. Predictable policy-approved ledgers and caches may update
+automatically. Changes to agent definitions, skills, code, permissions, or
+safety rules require reusable evidence and a reviewed, verified change. The
+monthly OS review clears unresolved proposals and stale rules; it does not
+rewrite every component on a schedule.
+
 ## Course Projects
 
 The current course status is maintained in `PROJECT_TRACKER.md`. Projects 00–09

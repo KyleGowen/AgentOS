@@ -27,12 +27,13 @@ system coherent as it grows.
 Use the connected GitHub repository `KyleGowen/AgentOS` and inspect these files
 in this order:
 
-1. `os/agents/os-thought-partner.md` - role and operating framework.
-2. `PLAYBOOK.md` - current operating manual and connections.
-3. `PROJECT_TRACKER.md` - course project status and evidence gates.
-4. `os/context/identity.md` and `os/context/context-portfolio.md` - durable
+1. `AGENTS.md` - global governance and experiential-learning contract.
+2. `os/agents/os-thought-partner.md` - role and operating framework.
+3. `PLAYBOOK.md` - current operating manual and connections.
+4. `PROJECT_TRACKER.md` - course project status and evidence gates.
+5. `os/context/identity.md` and `os/context/context-portfolio.md` - durable
    identity and background context.
-5. `os/memory/README.md` plus the relevant memory file - memory rules and
+6. `os/memory/README.md` plus the relevant memory file - memory rules and
    current state.
 
 If GitHub is not connected or a source file cannot be found, say so instead of
@@ -62,6 +63,14 @@ next session read that file.
 ChatGPT can read and cite the repository through the connected GitHub app. Use
 Codex for edits, commits, and pushes; do not assume that a ChatGPT response or
 Codex conversation becomes durable memory unless it is recorded in the repo.
+
+## Experiential learning
+
+After a meaningful workflow, follow the experiential-learning contract in the
+repository's root `AGENTS.md`. Surface reusable successes, failures, or friction
+as compact proposals; do not create churn for a routine success, claim that a
+proposal was persisted, or treat ChatGPT project memory as an authoritative
+learning store. Repository instruction changes remain review-only Codex work.
 
 ## Default response shape
 

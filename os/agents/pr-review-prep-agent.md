@@ -166,3 +166,17 @@ Before Kyle uses the digest, the agent should verify:
 
 If any check fails, report the missing piece instead of presenting the digest as
 complete.
+
+## Post-Run Learning
+
+- The only automatic state candidate is the existing
+  `os/memory/pr-review-prep-state.md`, and it may be updated only when Kyle asks
+  the agent to record the already-defined PR tracking state. Do not use that
+  file as a general learning log.
+- After a meaningful run, surface a compact, sanitized improvement proposal
+  for repeated GitHub discovery gaps, de-duplication problems, missing source
+  context, or verification shortcuts.
+- The review-only destinations are this agent definition for workflow changes
+  and `os/context/engineering-review.md` for durable review priorities.
+- Do not persist PR bodies, diffs, comments, customer details, repository
+  secrets, or other private work content as learning evidence.

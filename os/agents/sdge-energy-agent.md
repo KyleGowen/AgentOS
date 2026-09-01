@@ -77,6 +77,21 @@ Before reporting completion, verify that:
 If an in-scope message is ambiguous or cannot be parsed, leave it eligible for
 a future run and report the blocker without broadening scope.
 
+## Post-Run Learning
+
+- Automatic learning writes are limited to the deterministic SDGE record,
+  processed-message ledger, and other state explicitly authorized by the
+  automation policy and catalog skill.
+- After a meaningful run, record only compact, private-free evidence of a
+  recurring alert-format ambiguity, redundant step, source drift, or
+  verification improvement.
+- The review-only destinations are the catalog skill for parsing/procedure
+  changes, the automation policy for workflow rules, and this definition for
+  agent-level boundaries. Do not rewrite any of them automatically.
+- Never retain raw email bodies, screenshots, account or address details,
+  meter identifiers, credentials, cookies, or unrelated Gmail content as
+  learning evidence.
+
 ## Relationship To The System
 
 The SDGE Energy Agent and ThraxOS share AgentOS governance, verification

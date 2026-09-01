@@ -6,6 +6,10 @@ Update this at the end of a meaningful task, project shift, or planning session.
 
 ## Active AgentOS Work
 
+- AgentOS-wide experiential learning is active through root `AGENTS.md`: every
+  meaningful agent or skill run checks for reusable learning, while only
+  policy-approved deterministic state updates automatically. Instruction and
+  code changes require reusable evidence, review, and verification.
 - Cross-device memory protocol is active: committed `main` in `KyleGowen/AgentOS` is the shared durable source for every signed-in Codex and ChatGPT instance. Chat history and built-in memory are surface-specific; record portable knowledge in `os/context/` or `os/memory/`, then commit and push it from Codex.
 - Permanent inheritance tracking is active in `os/context/agentos-inheritance-registry.md`: ThraxOS and Excelsior have verified selective implementations. Remind Kyle before substantive work on any other project that it does not yet inherit AgentOS.
 - Project 07 is complete using ThraxOS, not the AI Office Hours Prep Agent. ThraxOS already has a custom Codex agent, context, skills, memory, safety rules, verification procedures, and real operating history.

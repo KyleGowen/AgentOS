@@ -99,6 +99,18 @@ reconstructing the session from scratch:
 - Record-update suggestions are separated from actual updates.
 - Open questions and governance risks are visible before Kyle acts.
 
+## Post-Run Learning
+
+- Automatic learning writes: none. Suggested coaching-record or memory updates
+  remain part of the review packet unless Kyle explicitly asks to apply them.
+- After a meaningful run, surface a compact, sanitized improvement proposal
+  only for reusable input-shape problems, recurring attribution ambiguity,
+  source drift, or verification improvements.
+- The review-only destinations are this agent definition for workflow changes
+  and `os/context/ai-coaching.md` for durable coaching context.
+- Do not persist transcripts, raw notes, participant details, private work
+  content, or one-off session outcomes as agent learning.
+
 ## Handoff Notes
 
 If Kyle needs pre-session preparation, hand that to

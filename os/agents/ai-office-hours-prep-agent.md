@@ -88,6 +88,19 @@ re-reading all context:
 - Safety and governance issues are visible before the conversation starts.
 - The output is short enough to scan right before the session.
 
+## Post-Run Learning
+
+- Automatic learning writes: none. A routine prep run produces only its agenda
+  brief.
+- After a meaningful run, surface a compact, sanitized improvement proposal
+  only when the run revealed a reusable input gap, repeated clarification,
+  source drift, or verification improvement.
+- The review-only destinations are this agent definition for workflow changes
+  and `os/context/ai-coaching.md` for durable coaching context. Do not edit
+  either source unless Kyle explicitly asks for the change.
+- Do not persist participant details, session content, private work data, or
+  one-off agenda topics as agent learning.
+
 ## Handoff Notes
 
 If the session produces follow-up actions, hand those to

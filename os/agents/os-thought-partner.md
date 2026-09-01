@@ -151,6 +151,10 @@ Concrete goals have not been defined yet. Add them here when they become clear.
 - Treat the design-system preference as an inheritable global rule. Ensure
   AgentOS-aware subprojects include it in their scoped global-rules cache or
   reference it with provenance; report material repository-specific overrides.
+- Treat the experiential-learning contract in root `AGENTS.md` as inheritable
+  global governance. Ensure AgentOS-aware subprojects carry or reference it
+  with provenance while preserving project-local precedence and learning
+  allowlists.
 - Consult `os/context/agentos-inheritance-registry.md` when Kyle references a
   tracked project. For substantive work on a project that has not received the
   inheritance prompt, remind Kyle that it does not yet inherit AgentOS and
@@ -203,15 +207,21 @@ At the end of a chat that makes substantial changes to `os/memory/` or
 GitHub so every Codex and ChatGPT instance can read the same durable state. Do
 not commit or push without Kyle's approval.
 
-When using a skill or automation, prefer teaching the skill to update memory directly if the memory update is predictable. If judgment is required, update memory manually at the end of the task.
+## Post-Run Learning
 
-Skills should improve through a post-run learning loop instead of relying on a broad daily efficiency-review automation:
+When using an agent, skill, or automation, prefer teaching the owning component
+to update memory directly if the memory update is predictable and allowed. If
+judgment is required, update memory manually at the end of the task.
 
-- At the end of a meaningful skill run, capture compact lessons about wasted work, reusable state, clarified inputs, recurring ambiguity, verification shortcuts, and source-of-truth drift.
+Agents and skills should improve through the experiential-learning contract in
+root `AGENTS.md` instead of relying on a broad daily efficiency-review
+automation:
+
+- At the end of a meaningful run, capture compact lessons about wasted work, reusable state, clarified inputs, recurring ambiguity, verification shortcuts, and source-of-truth drift.
 - Write safe, durable facts to the appropriate `os/memory/`, `os/context/`, automation policy, or skill-owned state file. Do not store secrets, raw private content, customer details, cookies, API keys, or unnecessary personal data.
-- Let skills update predictable caches or ledgers when their policy allows it, but do not silently rewrite their own `SKILL.md` after every run.
-- Promote a lesson into `SKILL.md` only when it is stable, source-grounded, and likely to prevent repeated friction.
-- If a proposed skill change requires judgment, list it for Kyle or the OS Thought Partner instead of applying it automatically.
+- Let agents and skills update predictable caches or ledgers when their policy allows it, but do not silently rewrite their definitions, `SKILL.md`, or code after every run.
+- Promote a lesson into the authoritative agent, skill, context, or policy only when it meets the root contract's evidence and review gates.
+- If a proposed behavior change requires judgment, list it for Kyle or the OS Thought Partner instead of applying it automatically.
 
 For wanted-card searches, adding or activating one card should immediately trigger the `find-card-listings` workflow for all active wanted cards so the latest report stays list-wide.
 

@@ -32,7 +32,13 @@ Repeated workflows, preferences, and recurring shapes that may become skills, au
 - When Kyle asks to accept all appointments from a sender, use the `accept-sender-appointments` Codex skill: search bounded unread Gmail from the named sender, accept matching Google Calendar events once, then mark the requested sender messages read.
 - Keep mailbox mutations narrow: operate on explicit Gmail message IDs from the sender search, and do not delete, archive, forward, or broadly mark categories read.
 - For AgentOS automations, keep a harness-neutral spec under `os/automations/` and make the Codex scheduled job a thin runner over that spec so the workflow can be replicated outside Codex.
-- Skills should improve through post-run learning loops: after meaningful use, capture safe reusable facts, repeated friction, ambiguity, redundant reads, cache opportunities, verification shortcuts, and proposed skill improvements in the approved context, memory, output, or runner-owned ledger; promote changes into `SKILL.md` only after the lesson is stable, source-grounded, and likely to reduce future work.
+- Agents and skills should improve through post-run learning loops: after
+  meaningful use, capture safe reusable successes, failures, repeated friction,
+  ambiguity, redundant reads, cache opportunities, verification shortcuts, and
+  proposed improvements in the approved context, memory, output, or
+  runner-owned ledger. Automatically update only policy-approved deterministic
+  state; promote behavior changes through the evidence and review gates in root
+  `AGENTS.md`.
 
 ## Personal Collecting Automations
 

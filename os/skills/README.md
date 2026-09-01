@@ -22,6 +22,8 @@ For each skill, capture:
 ## Post-Run Learning
 
 Each executable skill should include a compact learning step near the end of its workflow.
+Follow the global experiential-learning contract in root `AGENTS.md`; the
+skill-specific section should name its approved state or proposal destination.
 
 - Record predictable, safe state in the skill's approved context, memory, output, or runner-owned ledger.
 - Capture repeated friction, ambiguity, redundant reads, cache opportunities, and verification shortcuts as proposed improvements.

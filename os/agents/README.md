@@ -33,6 +33,8 @@ make sure its canonical definition includes:
   context that would be unsafe or irrelevant;
 - privacy, authorization, and mutation boundaries;
 - verification and reporting expectations; and
+- a post-run learning destination that distinguishes automatically writable
+  deterministic state from review-only improvements to instructions or code;
 - its relationship or explicit non-relationship to other agents.
 
 If the agent has a Codex profile, keep it as a thin launcher that points to
