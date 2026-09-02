@@ -4,7 +4,7 @@ Tracks which external projects have received the permanent AgentOS inheritance
 prompt and whether implementation has been verified. This registry prevents a
 prompt handoff from being mistaken for active inheritance.
 
-Last updated: 2026-08-17
+Last updated: 2026-09-02
 
 ## Status Definitions
 
@@ -20,6 +20,8 @@ Last updated: 2026-08-17
 |---|---|---|---|---|
 | ThraxOS | <https://github.com/KyleGowen/ThraxOS> | Prompt delivered | Verified 2026-08-16 | `projects/08-test-and-verify/runs/2026-08-16-thraxos-selective-inheritance.md`; the local cache matched committed AgentOS `main`, while upstream freshness was explicitly unverified. |
 | Excelsior | <https://github.com/KyleGowen/excelsior> | Prompt delivered | Verified 2026-08-16 | Excelsior commit `33c1afe5`; AgentOS commit `b85ae39`; `os/context/excelsior.md`. |
+| Excelsior - Obscure TCG Partnership | Private local workspace: /Users/kyle/Documents/Excelsior Private/Obscure TCG Partnership | Prompt delivered | Verified 2026-09-02 | Project-local `AGENTS.md`, `.agentos/inheritance.json`, and `.agentos/global-rules.md`; scoped to global governance with local precedence, privacy boundaries, and sibling-project isolation. |
+| Excelsior - Supporter Program | Private local workspace: /Users/kyle/Documents/Excelsior Private/Supporter Program | Prompt delivered | Verified 2026-09-02 | Project-local `AGENTS.md`, `.agentos/inheritance.json`, and `.agentos/global-rules.md`; scoped to global governance with local precedence, privacy boundaries, and sibling-project isolation. |
 | GRESB Reporting Season | Work source systems; no standalone repository recorded | Not prompted | Not implemented | Identify the authoritative project surface and applicable work-policy boundary before generating an inheritance prompt. |
 | Data Locking | Work source systems; no standalone repository recorded | Not prompted | Not implemented | Identify the authoritative repository or project surface before generating an inheritance prompt. |
 | AI Coaching for Non-Engineers | Claude Cowork workspace and Measurabl source systems | Not prompted | Not implemented | Decide whether inheritance belongs in the coaching workspace, a dedicated repository, or its AgentOS-native agents. |

@@ -15,6 +15,11 @@ Keep this separate from work memory. Home project details can inform home projec
 - Excelsior now permanently inherits compact global AgentOS rules through a
   checked-in cache and provenance contract. Detailed and changing product or
   technical state remains in the Excelsior repository.
+- Two private Excelsior side projects are tracked as separate authoritative
+  local workspaces: `Excelsior - Obscure TCG Partnership` and `Excelsior -
+  Supporter Program`. Each has its own scoped AgentOS provenance cache, keeps
+  sibling context isolated, and requires a sanitized, separately authorized
+  handoff before public Excelsior implementation.
 - Care points: preserve user data and service continuity, verify source/runtime/
   production state separately, support desktop and mobile UX, and handle the
   game-owner relationship delicately.

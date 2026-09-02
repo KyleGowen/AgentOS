@@ -11,7 +11,11 @@ Update this at the end of a meaningful task, project shift, or planning session.
   policy-approved deterministic state updates automatically. Instruction and
   code changes require reusable evidence, review, and verification.
 - Cross-device memory protocol is active: committed `main` in `KyleGowen/AgentOS` is the shared durable source for every signed-in Codex and ChatGPT instance. Chat history and built-in memory are surface-specific; record portable knowledge in `os/context/` or `os/memory/`, then commit and push it from Codex.
-- Permanent inheritance tracking is active in `os/context/agentos-inheritance-registry.md`: ThraxOS and Excelsior have verified selective implementations. Remind Kyle before substantive work on any other project that it does not yet inherit AgentOS.
+- Permanent inheritance tracking is active in
+  `os/context/agentos-inheritance-registry.md`: ThraxOS, Excelsior, and the two
+  private Excelsior side-project workspaces have verified selective
+  implementations. Remind Kyle before substantive work on any other project
+  that it does not yet inherit AgentOS.
 - Project 07 is complete using ThraxOS, not the AI Office Hours Prep Agent. ThraxOS already has a custom Codex agent, context, skills, memory, safety rules, verification procedures, and real operating history.
 - Project 10, Your Playbook, is complete. `PLAYBOOK.md` is the operating
   manual; its source-grounded final review and Kyle's reflection are recorded
@@ -48,6 +52,9 @@ Update this at the end of a meaningful task, project shift, or planning session.
 
 ## Recently Completed
 
+- 2026-09-02: Added and verified scoped AgentOS inheritance for the private
+  Excelsior - Obscure TCG Partnership and Excelsior - Supporter Program
+  workspaces.
 - 2026-08-17: Completed Project 11 - Automations.
 - 2026-08-17: Completed Project 10 - Your Playbook.
 - 2026-08-17: Completed Project 09 - The Second Agent.

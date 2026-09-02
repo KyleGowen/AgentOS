@@ -2,6 +2,15 @@
 
 Compact history of meaningful outcomes and milestones. This is not a full changelog.
 
+### 2026-09-02 - Two Private Excelsior Projects Added To AgentOS
+
+- Added the Excelsior - Obscure TCG Partnership and Excelsior - Supporter
+  Program as separately tracked private projects.
+- Added project-local, provenance-tracked AgentOS caches that inherit only
+  global governance while preserving local precedence and sibling isolation.
+- Kept AgentOS tracking sanitized and retained the requirement for a separate,
+  sanitized handoff before any public Excelsior repository implementation.
+
 ### 2026-09-01 - AgentOS-Wide Experiential Learning Contract Added
 
 - Extended the existing skill-local learning loop to every AgentOS agent and

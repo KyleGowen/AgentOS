@@ -65,7 +65,7 @@ def render_section(projects: list[dict[str, str]]) -> str:
         BEGIN_MARKER,
         "> Generated from `os/context/agentos-inheritance-registry.md` by "
         "`scripts/sync-playbook-project-surfaces.py`. Do not edit this table manually.",
-        "> Project-local agents, skills, and runbooks remain authoritative in the linked project.",
+        "> Project-local instructions, agents, skills, and runbooks remain authoritative in the linked project.",
         "",
         "| Project | Detailed authority | Inheritance state | Evidence / next check |",
         "|---|---|---|---|",
@@ -73,7 +73,7 @@ def render_section(projects: list[dict[str, str]]) -> str:
     if projects:
         for project in projects:
             lines.append(
-                "| {project} | Project-local agents and skills; {repository} | {status} | {evidence} |".format(
+                "| {project} | Project-local authority; {repository} | {status} | {evidence} |".format(
                     project=cell(project["project"]),
                     repository=cell(render_source(project["repository"])),
                     status=cell(project["status"]),

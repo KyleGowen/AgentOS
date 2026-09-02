@@ -94,12 +94,14 @@ mistake an unprompted project for one governed by AgentOS.
 
 <!-- BEGIN GENERATED INHERITED PROJECT SURFACES -->
 > Generated from `os/context/agentos-inheritance-registry.md` by `scripts/sync-playbook-project-surfaces.py`. Do not edit this table manually.
-> Project-local agents, skills, and runbooks remain authoritative in the linked project.
+> Project-local instructions, agents, skills, and runbooks remain authoritative in the linked project.
 
 | Project | Detailed authority | Inheritance state | Evidence / next check |
 |---|---|---|---|
-| ThraxOS | Project-local agents and skills; [https://github.com/KyleGowen/ThraxOS](https://github.com/KyleGowen/ThraxOS) | Prompt delivered; Verified 2026-08-16 | `projects/08-test-and-verify/runs/2026-08-16-thraxos-selective-inheritance.md`; the local cache matched committed AgentOS `main`, while upstream freshness was explicitly unverified. |
-| Excelsior | Project-local agents and skills; [https://github.com/KyleGowen/excelsior](https://github.com/KyleGowen/excelsior) | Prompt delivered; Verified 2026-08-16 | Excelsior commit `33c1afe5`; AgentOS commit `b85ae39`; `os/context/excelsior.md`. |
+| ThraxOS | Project-local authority; [https://github.com/KyleGowen/ThraxOS](https://github.com/KyleGowen/ThraxOS) | Prompt delivered; Verified 2026-08-16 | `projects/08-test-and-verify/runs/2026-08-16-thraxos-selective-inheritance.md`; the local cache matched committed AgentOS `main`, while upstream freshness was explicitly unverified. |
+| Excelsior | Project-local authority; [https://github.com/KyleGowen/excelsior](https://github.com/KyleGowen/excelsior) | Prompt delivered; Verified 2026-08-16 | Excelsior commit `33c1afe5`; AgentOS commit `b85ae39`; `os/context/excelsior.md`. |
+| Excelsior - Obscure TCG Partnership | Project-local authority; `Private local workspace: /Users/kyle/Documents/Excelsior Private/Obscure TCG Partnership` | Prompt delivered; Verified 2026-09-02 | Project-local `AGENTS.md`, `.agentos/inheritance.json`, and `.agentos/global-rules.md`; scoped to global governance with local precedence, privacy boundaries, and sibling-project isolation. |
+| Excelsior - Supporter Program | Project-local authority; `Private local workspace: /Users/kyle/Documents/Excelsior Private/Supporter Program` | Prompt delivered; Verified 2026-09-02 | Project-local `AGENTS.md`, `.agentos/inheritance.json`, and `.agentos/global-rules.md`; scoped to global governance with local precedence, privacy boundaries, and sibling-project isolation. |
 <!-- END GENERATED INHERITED PROJECT SURFACES -->
 
 ## My Agents

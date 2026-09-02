@@ -1,13 +1,14 @@
 # Current Projects
 
-Last updated: 2026-08-17
+Last updated: 2026-09-02
 
-Status scope: personal-project status was audited on 2026-08-13 against the
-available local source repositories and artifacts below. Korlash was refreshed
-from its declared GitHub source on 2026-08-17. Work-project details remain
-high-level context and were not revalidated in this pass; consult Jira,
-Confluence, GitHub, or Slack before using them for work planning or
-prioritization.
+Status scope: two private Excelsior side-project workspaces were inspected and
+added on 2026-09-02. Other personal-project status was audited on 2026-08-13
+against the available local source repositories and artifacts below; Korlash
+was refreshed from its declared GitHub source on 2026-08-17. Work-project
+details remain high-level context and were not revalidated in this pass;
+consult Jira, Confluence, GitHub, or Slack before using them for work planning
+or prioritization.
 
 This file tracks ongoing work, home projects, hobbies, and life context that may affect planning, prioritization, drafting, and agent routing.
 
@@ -180,6 +181,8 @@ Notable context:
 | Project | Latest status | Evidence | Confidence / next action |
 |---|---|---|---|
 | Excelsior | Active development with permanent scoped AgentOS inheritance | On 2026-08-16, `/Users/kyle/cursored` was confirmed on `main` at `33c1afe5`, aligned to `origin/main`, with `origin` pointing to `KyleGowen/excelsior` | High for repository state. Use this confirmed checkout as local authority after rechecking its remote; do not choose an older checkout merely because it exists. Runtime and production state require separate verification. |
+| Excelsior - Obscure TCG Partnership | Active private partnership-planning workspace with permanent scoped AgentOS inheritance | Local `AGENTS.md` and `.agentos/` provenance cache verified 2026-09-02 in `/Users/kyle/Documents/Excelsior Private/Obscure TCG Partnership` | High for local workspace structure and documented scope. Treat the private folder as authority; require a sanitized, separately authorized handoff before public Excelsior implementation. |
+| Excelsior - Supporter Program | Active private product and business-planning workspace with permanent scoped AgentOS inheritance | Local `AGENTS.md` and `.agentos/` provenance cache verified 2026-09-02 in `/Users/kyle/Documents/Excelsior Private/Supporter Program` | High for local workspace structure and documented scope. Treat the private folder as authority; require a sanitized, separately authorized handoff before public Excelsior implementation. |
 | Home Media Server / Korlash | Up and running; intermittent system crashes remain unresolved | Current `main` README and supporting docs in `KyleGowen/plex-server-hardware`, refreshed 2026-08-17; newest recorded commit is 2026-08-02 | High for repository-documented deployment and risks. Verify the host directly before a live-health claim or any mutation. |
 | DDR/ITG Machine | Active hobby project, current operational status unverified | AgentOS snapshot is from 2026-07-05; documented source repos were not present locally and remote refresh failed in this run | Low for current activity/data. Refresh `itgmania-backup` and `Thraximundar-Backup` before summarizing recent play or backup health. |
 | Vimanas | Paused / background | `os/context/current-projects.md` concept and routing notes | High for priority state; no active implementation source was found or needed. |
@@ -206,6 +209,34 @@ maintained product rather than a disposable side project.
 - Preserve user data and service continuity, verify runtime and production state
   separately from source state, support desktop and mobile UX, and ask before
   production-impacting behavior unless explicitly authorized.
+
+### Excelsior - Obscure TCG Partnership
+
+Authoritative private workspace:
+`/Users/kyle/Documents/Excelsior Private/Obscure TCG Partnership`
+
+- This is a private partnership-planning project with its own project rules,
+  decisions, current artifacts, work area, and deliverables.
+- It permanently inherits only scoped global AgentOS governance through its
+  `.agentos/` provenance cache. Project-local instructions take precedence.
+- Keep its context independent from the Supporter Program. Do not place private
+  project details in AgentOS or the public Excelsior repository.
+- Public Excelsior implementation requires a sanitized technical handoff and a
+  separately authorized repository task.
+
+### Excelsior - Supporter Program
+
+Authoritative private workspace:
+`/Users/kyle/Documents/Excelsior Private/Supporter Program`
+
+- This is a private product and business-planning project with its own project
+  rules, decisions, current artifacts, work area, and deliverables.
+- It permanently inherits only scoped global AgentOS governance through its
+  `.agentos/` provenance cache. Project-local instructions take precedence.
+- Keep its context independent from the Obscure TCG Partnership. Do not place
+  private project details in AgentOS or the public Excelsior repository.
+- Public Excelsior implementation requires a sanitized technical handoff and a
+  separately authorized repository task.
 
 ### Home Media Server
 
