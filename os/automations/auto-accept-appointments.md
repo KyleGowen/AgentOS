@@ -18,7 +18,7 @@ Add new trusted senders by adding a row to this table.
 |---|---|---|---|---|
 | Samantha Young | `from:youngsamanth@gmail.com` | Mark appointment/invite messages read | Active | Leave unrelated social notification emails unread unless explicitly matched by this sender query and appointment evidence. |
 | Rula | `Rula` | Mark all matching Rula messages read | Active | Includes appointment confirmations, invitations, reschedules, and receipts from Rula sender domains. |
-| Acton | `from:(actonteam@actonacademysd.org OR mandy@actonacademysd.org)` | Mark processed event/deadline messages read | Active | Accept only events categorized as “All classes” or “Wonder Studio”, ignore other class names, and process all students events normally. |
+| Acton | `from:(actonteam@actonacademysd.org OR mandy@actonacademysd.org)` | Mark processed event/deadline messages read | Active | Accept events categorized as “All classes,” “Wonder Studio,” or school-wide parent meetings; ignore other class names, and process all students events normally. |
 
 Add the row for Acton before backfilling historical messages.
 

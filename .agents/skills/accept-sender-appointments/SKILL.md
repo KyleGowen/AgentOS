@@ -32,7 +32,7 @@ The workflow is harness-neutral. In Codex, use the Gmail and Google Calendar con
 2. Identify appointment/deadline messages.
    - Treat subjects like `Invitation:`, `Updated invitation:`, `appointment confirmed`, `appointment rescheduled`, or messages with `invite.ics` as appointment evidence.
    - Also parse message text and supported attachments for event details when no invite exists.
-   - For Acton, only process time-bounded school events labeled `All classes` or `Wonder Studio`. Ignore other class categories unless an event is explicitly for `All students`.
+   - For Acton, only process time-bounded school events labeled `All classes` or `Wonder Studio`, plus school-wide parent meetings. Ignore other class categories unless an event is explicitly for `All students`.
    - Independently process a clearly stated Acton deadline, even when the same message also describes an event for a non-allowlisted class. Create the deadline reminder on the `Acton` calendar when the date is unambiguous; leave the unrelated class-specific event unprocessed.
    - If the message is purely informational (for example side-door access guidance with no date/time), classify it as non-calendar.
    - Prefer accepting the underlying Calendar event, not replying by email.
@@ -114,7 +114,7 @@ After a meaningful run, capture safe efficiency lessons for future runs:
 Some trusted sender rows describe school or organization events in ordinary email text rather than a Calendar invitation. For those rows:
 
 - Treat email text and supported attachments as event sources. Read only attachments needed to resolve a relevant event's date, time, location, or deadline.
-- Apply the row's audience filter before creating time-bounded events. For an Acton-style row, include only events explicitly for the configured studio/class and events for all students or all studios; ignore other classroom-specific items. A clearly stated standalone deadline is an exception: create its deadline reminder on the Acton calendar even if the same message also contains a disallowed class-specific event.
+- Apply the row's audience filter before creating time-bounded events. For an Acton-style row, include only events explicitly for the configured studio/class, all students or all studios, and school-wide parent meetings; ignore other classroom-specific items. A clearly stated standalone deadline is an exception: create its deadline reminder on the Acton calendar even if the same message also contains a disallowed class-specific event.
 - Resolve the destination calendar by its configured name and always create direct events there, never on the primary calendar.
 - Before creating a direct event, use a bounded search of that destination calendar for the event name and date range. Treat an existing matching event as processed instead of creating a duplicate.
 - Create direct events only when the date and a usable time range are confirmed. Do not invent durations for date-only notices; leave those as ambiguities for the run report.
